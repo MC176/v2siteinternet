@@ -66,7 +66,7 @@ function Contact() {
 
   return (
     <div className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&q=80&w=2000")' }}
+      style={{ backgroundImage: 'url("/images/presentation/Image 2.jpg")' }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative py-20">

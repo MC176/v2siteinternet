@@ -1,125 +1,174 @@
 'use client'
 
 import React, { useEffect } from 'react';
-import { MapPin, Wine, Mountain, Castle, Building, Flower, ShoppingBag } from 'lucide-react';
+import { 
+  Cave,
+  Lavender,
+  Kayak,
+  HangGlider,
+  Hiking,
+  MapPin, 
+  Mountain, 
+  Compass, 
+  TreePine, 
+  Wind, 
+  Tent,
+  Camera,
+  Grape
+} from 'lucide-react';
 
 const destinations = [
   {
-    title: "DÉGUSTATION À CHÂTEAUNEUF-DU-PAPE",
-    description: "Découvrez l'histoire et le prestige des vins de Châteauneuf-du-Pape, berceau de grands crus reconnus mondialement.",
-    image: "https://images.unsplash.com/photo-1566903451935-7e8833a0f12f?auto=format&fit=crop&q=80&w=1200",
-    cta: "Organiser une dégustation avec nos partenaires",
-    icon: Wine
+    title: "LA GROTTE CHAUVET",
+    description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
+    image: "/images/presentation/Grotte.jpg",
+    cta: "Visitez le site internet de la Grotte Chauvet",
+    icon: Camera
   },
   {
-    title: "LES CALANQUES DE CASSIS",
-    description: "Explorez les majestueuses calanques, où les falaises calcaires plongent dans les eaux cristallines de la Méditerranée.",
-    image: "https://images.unsplash.com/photo-1548525207-59f432f2c172?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrir notre guide exclusif",
-    icon: Mountain
+    title: "LE MUSÉE DE LA LAVANDE",
+    description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
+    image: "/images/presentation/Image 5.jpg",
+    cta: "Réservez votre visite dès maintenant",
+    icon: TreePine
   },
   {
-    title: "GORDES ET LE LUBERON",
-    description: "Laissez-vous séduire par le charme authentique de Gordes, joyau perché du Luberon aux ruelles pavées centenaires.",
-    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=1200",
-    cta: "Explorer les plus beaux villages",
-    icon: Castle
+    title: "DESCENTE DES GORGES DE L'ARDÈCHE",
+    description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
+    image: "/images/presentation/gorge.jpg",
+    cta: "Réservez votre canoë-kayak chez notre partenaire",
+    icon: Compass
   },
   {
-    title: "VISITE D'AVIGNON",
-    description: "Plongez dans l'histoire fascinante d'Avignon, cité des papes, avec son palais gothique et son célèbre pont.",
-    image: "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?auto=format&fit=crop&q=80&w=1200",
-    cta: "Planifier votre journée à Avignon",
-    icon: Building
+    title: "VOL EN DELTAPLANE",
+    description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
+    image: "/images/presentation/Image 4.jpg",
+    cta: "Découvrez ces sensations uniques",
+    icon: TreePine
   },
   {
-    title: "LES LAVANDES DU PLATEAU DE VALENSOLE",
-    description: "Admirez l'infini des champs de lavande qui colorent le plateau de leurs tons violets envoûtants.",
-    image: "https://images.unsplash.com/photo-1563511083-76bde3516cb1?auto=format&fit=crop&q=80&w=1200",
-    cta: "Quand et où admirer la lavande en fleur ?",
-    icon: Flower
+    title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
+    description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
+    image: "/images/presentation/Image 7.jpg",
+    cta: "Organisez votre balade",
+    icon: TreePine
   },
   {
-    title: "JOURNÉE SHOPPING À AIX-EN-PROVENCE",
-    description: "Flânez dans les élégantes rues d'Aix-en-Provence, entre boutiques de créateurs et marchés provençaux.",
-    image: "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrez nos recommandations exclusives",
-    icon: ShoppingBag
+    title: "SPÉLÉOLOGIE EN ARDÈCHE",
+    description: "Partez à la découverte des grottes ardéchoises et explorez leurs merveilles souterraines en toute sécurité.",
+    image: "/images/presentation/Image 10.jpg",
+    cta: "Découvrez nos offres de spéléologie",
+    icon: TreePine
   }
 ];
 
 function App() {
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    document.querySelectorAll('.fade-in').forEach((el) => {
+      observer.observe(el);
+    });
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6]">
+    <div className="min-h-screen bg-[#FDFBF7]">
       {/* Hero Section */}
-      <div className="relative h-[60vh] flex items-center justify-center">
+      <div className="relative h-[80vh] flex items-center justify-center">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1504870712357-65ea720d6078?auto=format&fit=crop&q=80&w=2000")',
-            filter: 'brightness(0.7)'
+            backgroundImage: 'url("/images/presentation/background.png")',
+            filter: 'brightness(0.65)'
           }}
         />
-        <div className="relative text-center text-white z-10">
-          <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-4">
-            À DÉCOUVRIR À PROXIMITÉ
+        <div className="relative text-center text-white z-10 px-4">
+          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] mb-6 animate-fade-in">
+            DÉCOUVERTES
           </h1>
-          <div className="flex items-center justify-center gap-2">
+          <p className="text-xl md:text-2xl font-light tracking-wider mb-8 max-w-2xl mx-auto animate-fade-in-delay">
+            Une sélection d'expériences uniques en Ardèche méridionale
+          </p>
+          <div className="flex items-center justify-center gap-3 animate-fade-in-delay-2">
             <MapPin className="w-6 h-6" />
-            <p className="text-xl font-light">Ardèche méridionale</p>
+            <p className="text-xl font-light tracking-wide">Ardèche méridionale</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Provence Welcome Section */}
+      <div className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+            <img 
+              src="/images/presentation/pont.jpg"
+              alt="Provence"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="space-y-8">
+            <div className="flex justify-center mb-12">
+              <img 
+                src="https://example.com/logo.png" 
+                alt="Les Domaines de Patras"
+                className="h-16"
+              />
+            </div>
+            <h2 className="text-4xl font-light text-center tracking-wide text-[#2C3E50] mb-8">
+              BIENVENUE EN PROVENCE
+            </h2>
+            <h3 className="text-xl text-center text-[#34495E] mb-12">
+              UN DOMAINE IDÉALEMENT SITUÉ GÉOGRAPHIQUEMENT
+            </h3>
+            <div className="space-y-4 text-center text-[#34495E]">
+              <p>Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale,<br/>à mi-chemin entre Avignon et Montélimar.</p>
+              <p>Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de<br/>Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Destinations Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-24">
+        <div className="grid md:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
             <div 
               key={index}
-              className={`fade-in  transition-all duration-700 ease-out ${
-                index % 2 === 0 ? 'md:translate-x-8' : 'md:-translate-x-8'
-              }`}
+              className="fade-in"
             >
-              <div className="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                <div className="relative h-64 overflow-hidden">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
+                <div className="relative h-72 overflow-hidden">
                   <img 
                     src={destination.image} 
                     alt={destination.title}
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full">
-                    <destination.icon className="w-6 h-6 text-[#8B7355]" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
+                  <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-full shadow-md">
+                        {destination.icon && <destination.icon className="w-5 h-5 text-[#8B7355]" />}
                   </div>
                 </div>
-                <div className="p-6">
-                  <h2 className="text-2xl font-light tracking-wide text-[#8B7355] mb-3">
+                <div className="p-8">
+                  <h2 className="text-2xl font-light tracking-wide text-[#8B7355] mb-4">
                     {destination.title}
                   </h2>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {destination.description}
                   </p>
-                  <button className="w-full bg-[#8B7355] text-white py-3 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wide">
+                  <button className="w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase">
                     {destination.cta}
                   </button>
                 </div>
@@ -128,6 +177,59 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/* Provence Footer Section */}
+      <div className="relative h-[60vh] flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?auto=format&fit=crop&q=80&w=2000")',
+            filter: 'brightness(0.7)'
+          }}
+        />
+        <div className="relative text-center text-white z-10">
+          <h2 className="text-6xl font-light tracking-widest mb-4">L'ARDÈCHE</h2>
+          <p className="text-xl tracking-wide uppercase">VIVEZ LE FARNIENTE ARDÈCHOIX</p>
+        </div>
+      </div>
+
+      <style jsx global>{`
+        .fade-in {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-delay {
+          animation: fadeIn 0.8s ease-out 0.3s forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-delay-2 {
+          animation: fadeIn 0.8s ease-out 0.6s forwards;
+          opacity: 0;
+        }
+      `}</style>
     </div>
   );
 }

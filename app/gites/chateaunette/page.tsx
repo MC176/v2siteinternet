@@ -9,40 +9,70 @@ function App() {
 
   const climateData = [
     {
-      image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&q=80",
-      title: "Période 1971-2000",
-      description: "Température moyenne: 13.1°C"
+      image: "/images/gites/chateaunette/photo 16.png",
+      title: "Piscine",
+      description: "Profondeur : 1m10 - 2m20"
     },
     {
-      image: "https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?auto=format&fit=crop&q=80",
-      title: "Précipitations",
-      description: "Cumul annuel: 952 mm"
+      image: "/images/gites/chateaunette/photo 19.png",
+      title: "Piscine de nuit",
+      description: "Eclairage nocturne disponible"
     },
     {
-      image: "https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?auto=format&fit=crop&q=80",
-      title: "Horizon 2050",
-      description: "Projections climatiques"
+      image: "/images/gites/chateaunette/photo 11.png",
+      title: "Entrée du gîte",
+      description: "Lauriers roses"
     },
     {
-      image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80",
-      title: "Horizon 2060",
-      description: "Scénarios d'évolution"
+      image: "/images/gites/chateaunette/photo 4.png",
+      title: "Gîte Chateaunette",
+      description: "Superficie de 80m²"
+    },    
+    {
+      image: "/images/gites/chateaunette/photo 5.png",
+      title: "Accès terrasse",
+      description: "Le gîte surplombe le Mas"
+    },    
+    {
+      image: "/images/gites/chateaunette/photo 12.png",
+      title: "La vue de la terrasse",
+      description: "Verdure à perte de vue"
     },
     {
-      image: "https://images.unsplash.com/photo-1576269483449-3b694997ee50?auto=format&fit=crop&q=80",
-      title: "Horizon 2070",
-      description: "Prévisions à long terme"
+      image: "/images/gites/chateaunette/photo 35.png",
+      title: "Espace cuisine",
+      description: "Tout équipée"
     },
     {
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
-      title: "Horizon 2080",
-      description: "Modélisations futures"
+      image: "/images/gites/chateaunette/photo 36.png",
+      title: "Coin cuisine",
+      description: "Cuisine équipée"
     },
     {
-      image: "https://images.unsplash.com/photo-1597571063304-81f081944ee8?auto=format&fit=crop&q=80",
-      title: "Horizon 2100",
-      description: "Projections séculaires"
-    }
+      image: "/images/gites/chateaunette/photo 37.png",
+      title: "Chambre n°1",
+      description: "Lit 2 places"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 1.png",
+      title: "Chambre n°2",
+      description: "Lit 2 places"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 10.png",
+      title: "Vue de Chateaunette",
+      description: "Depuis la chambre"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 42.png",
+      title: "Salon",
+      description: "Mezzazine avec lit"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 38.png",
+      title: "Mezzazzine",
+      description: "Lit 1 place"
+    },
   ];
 
   useEffect(() => {
@@ -77,7 +107,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1565627264826-8c5c383b074b?auto=format&fit=crop&q=80")',
+            backgroundImage: 'url("/images/gites/chateaunette/photo 30.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -86,9 +116,9 @@ function App() {
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-5xl font-light mb-6 font-['Playfair_Display']">
-            Climat Méditerranéen
+            Gîte Chateaunette
           </h1>
-          <p className="text-xl font-light mb-12">Étude climatologique 1971-2020</p>
+          <p className="text-xl font-light mb-12">Pour 6 personnes</p>
           <ChevronDown className="animate-bounce w-8 h-8" />
         </div>
       </div>
@@ -99,7 +129,7 @@ function App() {
           {/* Image Gauche */}
           <div className="relative h-[600px] group overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80"
+              src="/images/gites/chateaunette/photo 14.png"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

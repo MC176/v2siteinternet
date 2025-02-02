@@ -11,7 +11,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1595877244574-e90ce41ce089?auto=format&fit=crop&q=80")',
+            backgroundImage: 'url("/images/gites/chateaunette/photo 30.png")',
           }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -21,7 +21,7 @@ function App() {
             Un havre de paix en Ardèche
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-3xl font-light">
-            Un domaine d'exception niché dans un écrin de verdure, où histoire et confort se rencontrent.
+            Calme, sérénité, vacances.
           </p>
           <ChevronDown className="absolute bottom-8 animate-bounce w-8 h-8" />
         </div>
