@@ -9,22 +9,22 @@ import { Instagram } from 'lucide-react';
 const InstagramGallery = () => {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80",
-      alt: "Vue extérieure du Mas"
+    url: "/images/Instagram/Photo 1.jpeg",
+    alt: "Photo 1"
     },
     {
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80",
-      alt: "Terrasse et jardin"
+    url: "/images/Instagram/Photo 2.jpeg",
+    alt: "Photo 2"
     },
     {
-      url: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80",
-      alt: "Intérieur chaleureux"
+    url: "/images/Instagram/Photo 3.jpeg",
+    alt: "Photo 3"
     },
     {
-      url: "https://images.unsplash.com/photo-1595877244574-e90ce41ce089?auto=format&fit=crop&q=80",
-      alt: "Vue sur la piscine"
+    url: "/images/Instagram/Photo 4.jpeg",
+    alt: "Photo 4"
     }
-  ];
+    ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 bg-gray-100 rounded-lg shadow-lg">
@@ -91,7 +91,7 @@ const HomeHero = () => {
               Le Mas d'Eylieux
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-light">
-              Découvrez nos 6 gîtes de charme dans un cadre exceptionnel en Ardèche
+              Un domaine d'exception au coeur de l'Ardèche
             </p>
             <Link
               href="/disponibilites"
@@ -106,7 +106,7 @@ const HomeHero = () => {
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-gray-900">Le Mas d'Eylieux accueille nos gîtes</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Le Mas d'Eylieux vous accueille</h3>
             <p className="text-lg text-gray-600">INSTAGRAM</p>
           </div>
           <InstagramGallery />

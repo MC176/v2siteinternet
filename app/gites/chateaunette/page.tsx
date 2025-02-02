@@ -1,10 +1,49 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const climateData = [
+    {
+      image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&q=80",
+      title: "Période 1971-2000",
+      description: "Température moyenne: 13.1°C"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?auto=format&fit=crop&q=80",
+      title: "Précipitations",
+      description: "Cumul annuel: 952 mm"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?auto=format&fit=crop&q=80",
+      title: "Horizon 2050",
+      description: "Projections climatiques"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&q=80",
+      title: "Horizon 2060",
+      description: "Scénarios d'évolution"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1576269483449-3b694997ee50?auto=format&fit=crop&q=80",
+      title: "Horizon 2070",
+      description: "Prévisions à long terme"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
+      title: "Horizon 2080",
+      description: "Modélisations futures"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1597571063304-81f081944ee8?auto=format&fit=crop&q=80",
+      title: "Horizon 2100",
+      description: "Projections séculaires"
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +57,23 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === climateData.length - 3 ? 0 : prev + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === 0 ? climateData.length - 3 : prev - 1
+    );
+  };
+
   return (
     <div className="relative min-h-screen bg-white">
       {/* Hero Section avec Parallax */}
       <div className="relative h-screen overflow-hidden">
-        <div 
+        <div
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
@@ -78,49 +129,42 @@ function App() {
           </div>
         </div>
 
-        {/* Section Données Climatiques */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="relative overflow-hidden rounded-xl group">
-            <img
-              src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&q=80"
-              alt="Données climatiques"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div className="text-white">
-                <h3 className="text-xl font-semibold mb-2">Période 1971-2000</h3>
-                <p className="text-sm">Température moyenne: 13.1°C</p>
+        {/* Section Données Climatiques avec Carrousel */}
+        <div className="mt-24 relative">
+          <div className="flex gap-8 transition-transform duration-500 ease-in-out" 
+               style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}>
+            {climateData.map((item, index) => (
+              <div key={index} className="relative overflow-hidden rounded-xl group min-w-[calc(33.333%-1.33rem)]">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                  <div className="text-white">
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm">{item.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          <div className="relative overflow-hidden rounded-xl group">
-            <img
-              src="https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?auto=format&fit=crop&q=80"
-              alt="Précipitations"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div className="text-white">
-                <h3 className="text-xl font-semibold mb-2">Précipitations</h3>
-                <p className="text-sm">Cumul annuel: 952 mm</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative overflow-hidden rounded-xl group">
-            <img
-              src="https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?auto=format&fit=crop&q=80"
-              alt="Projections 2050"
-              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-              <div className="text-white">
-                <h3 className="text-xl font-semibold mb-2">Horizon 2050</h3>
-                <p className="text-sm">Projections climatiques</p>
-              </div>
-            </div>
-          </div>
+          {/* Boutons de navigation */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+            aria-label="Précédent"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-800" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+            aria-label="Suivant"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-800" />
+          </button>
         </div>
 
         {/* Section Texte Final */}
