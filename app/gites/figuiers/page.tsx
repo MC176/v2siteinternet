@@ -1,144 +1,290 @@
-'use client';
+'use client'
+import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath } from 'lucide-react';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+function App() {
+  const parallaxRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isIntersecting, setIsIntersecting] = useState(false);
 
-const PropertyPage = () => {
-  const [mainImage, setMainImage] = useState(0);
-  
-  const property = {
-    name: "Mas en Ardèche",
-    rating: 8.7,
-    location: "Ardèche, France",
-    reviews: 124,
-    features: [
-      "Appartements",
-      "Cuisine",
-      "Vue sur nature",
-      "Animaux domestiques admis",
-      "Lave-linge"
-    ],
-    amenities: [
-      { icon: "wifi", label: "Connexion Wi-Fi gratuite" },
-      { icon: "terrace", label: "Terrasse" },
-      { icon: "balcony", label: "Balcon" },
-      { icon: "ac", label: "Climatisation" },
-      { icon: "bathroom", label: "Salle de bains privative" }
-    ],
-    images: [
-      "/images/gites/figuiers/image1.png",
-      "/images/gites/figuiers/image2.png",
-      "/images/gites/figuiers/image3.png",
-      "/images/gites/figuiers/image4.png",
-      "/images/gites/figuiers/image5.png"
-    ]
+  const climateData = [
+    {
+      image: "/images/gites/noisettiers/photo 16.png",
+      title: "Piscine",
+      description: "Profondeur : 1m10 - 2m20"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 19.png",
+      title: "Piscine de nuit",
+      description: "Eclairage nocturne disponible"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 11.png",
+      title: "Entrée du gîte",
+      description: "Lauriers roses"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 4.png",
+      title: "Gîte Noisettiers",
+      description: "Superficie de 80m²"
+    },    
+    {
+      image: "/images/gites/noisettiers/photo 5.png",
+      title: "Accès terrasse",
+      description: "Le gîte surplombe le Mas"
+    },    
+    {
+      image: "/images/gites/noisettiers/photo 12.png",
+      title: "La vue de la terrasse",
+      description: "Verdure à perte de vue"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 35.png",
+      title: "Espace cuisine",
+      description: "Tout équipée"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 36.png",
+      title: "Coin cuisine",
+      description: "Cuisine équipée"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 37.png",
+      title: "Chambre n°1",
+      description: "Lit 2 places"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 1.png",
+      title: "Chambre n°2",
+      description: "Lit 2 places"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 10.png",
+      title: "Vue des Noisettiers",
+      description: "Depuis la chambre"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 42.png",
+      title: "Salon",
+      description: "Mezzazine avec lit"
+    },
+    {
+      image: "/images/gites/noisettiers/photo 38.png",
+      title: "Mezzazzine",
+      description: "Lit 1 place"
+    },
+  ];
+
+  const luxuryAmenities = [
+    {
+      icon: <Wine className="w-8 h-8" />,
+      title: "Cave à Vin Privée",
+      description: "Sélection de vins locaux d'exception"
+    },
+    {
+      icon: <Utensils className="w-8 h-8" />,
+      title: "Chef Privé",
+      description: "Sur demande pour vos repas"
+    },
+    {
+      icon: <Wifi className="w-8 h-8" />,
+      title: "WiFi Haut Débit",
+      description: "Connexion fibre optique"
+    },
+    {
+      icon: <Coffee className="w-8 h-8" />,
+      title: "Machine Nespresso",
+      description: "Capsules premium offertes"
+    },
+    {
+      icon: <Sun className="w-8 h-8" />,
+      title: "Solarium Privé",
+      description: "Bains de soleil haut de gamme"
+    },
+    {
+      icon: <Bath className="w-8 h-8" />,
+      title: "Spa Extérieur",
+      description: "Vue panoramique"
+    }
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const scrolled = window.scrollY;
+        parallaxRef.current.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsIntersecting(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    const luxurySection = document.querySelector('.luxury-section');
+    if (luxurySection) {
+      observer.observe(luxurySection);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === climateData.length - 3 ? 0 : prev + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === 0 ? climateData.length - 3 : prev - 1
+    );
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="flex justify-between items-start mb-6">
-        <div>
-          <div className="flex items-center gap-2">
-            <div className="flex text-yellow-400">
-              {"★".repeat(4)}
-            </div>
-            <span className="text-sm text-gray-600">Gîtes de charme</span>
-          </div>
-          <h1 className="text-2xl font-bold mt-2">{property.name}</h1>
-          <div className="flex items-center gap-2 mt-2">
-            <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-            </svg>
-            <span className="text-blue-500 hover:underline cursor-pointer">
-              Voir sur la carte
-            </span>
-          </div>
+    <div className="relative min-h-screen bg-white">
+      {/* Hero Section avec Parallax - Amélioré */}
+      <div className="relative h-screen overflow-hidden">
+        <div
+          ref={parallaxRef}
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/images/gites/noisettiers/photo 30.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            transform: 'translateZ(0)',
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
+            Figuiers
+          </h1>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Ardèche</p>
+          <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
-          Réserver
-        </button>
       </div>
 
-      {/* Image Gallery */}
-      <div className="grid grid-cols-4 gap-2 mb-8">
-        <div className="col-span-2 row-span-2 relative h-[400px]">
-          <Image
-            src={property.images[mainImage]}
-            alt="Main view"
-            fill
-            className="object-cover rounded-l-lg"
-          />
-        </div>
-        {property.images.slice(1, 5).map((img, index) => (
-          <div key={index} className="relative h-[198px]">
-            <Image
-              src={img}
-              alt={`View ${index + 1}`}
-              fill
-              className="object-cover"
+      {/* Section Contenu Principal */}
+      <div className="max-w-7xl mx-auto px-4 py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Image Gauche */}
+          <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
+            <img
+              src="/images/gites/noisettiers/photo 14.png"
+              alt="Paysage ardéchois"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
-        ))}
-        <button className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-md shadow">
-          Voir plus de photos
-        </button>
-      </div>
 
-      {/* Main Content */}
-      <div className="grid grid-cols-3 gap-8">
-        <div className="col-span-2">
-          {/* Description */}
-          <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-            <h2 className="text-xl font-semibold mb-4">Description</h2>
-            <p className="text-gray-600">
-              Découvrez nos 6 gîtes de charme en Ardèche, nichés dans un environnement paisible. 
-              Chaque gîte dispose d'une terrasse privative avec vue imprenable sur la nature environnante.
-              Profitez d'un séjour authentique dans un cadre exceptionnel, à proximité des plus beaux sites touristiques de l'Ardèche.
+          {/* Texte Droit */}
+          <div className="flex flex-col justify-center space-y-12">
+            <div className="space-y-8">
+              <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
+                Le Charme de l'Ardèche
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Niché au cœur de l'Ardèche, le Gîte Les Noisettiers bénéficie d'un environnement exceptionnel. La beauté naturelle de la région s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8">
+              <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
+                <div className="text-4xl font-light text-blue-900">2 300</div>
+                <div className="text-sm text-gray-600 mt-3">Heures d'ensoleillement/an</div>
+              </div>
+              <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
+                <div className="text-4xl font-light text-blue-900">20°C</div>
+                <div className="text-sm text-gray-600 mt-3">Température estivale moyenne</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Nouvelle Section Luxe */}
+        <div className="mt-32 luxury-section">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
+              Services & Prestations d'Exception
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Découvrez nos services premium, pensés pour sublimer chaque instant de votre séjour
             </p>
           </div>
 
-          {/* Amenities */}
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">Les plus appréciés</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {property.amenities.map((amenity, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 text-sm">✓</span>
-                  </div>
-                  <span>{amenity.label}</span>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {luxuryAmenities.map((amenity, index) => (
+              <div 
+                key={index}
+                className={`p-8 bg-white rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1 ${
+                  isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="text-blue-900 mb-4">{amenity.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{amenity.title}</h3>
+                <p className="text-gray-600">{amenity.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Sidebar */}
-        <div className="space-y-6">
-          {/* Rating Card */}
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="flex justify-between items-center mb-4">
-              <div>
-                <h3 className="font-semibold">Superbe</h3>
-                <p className="text-sm text-gray-600">{property.reviews} commentaires</p>
+        {/* Section Carrousel */}
+        <div className="mt-32 relative">
+          <div className="flex gap-8 transition-transform duration-500 ease-in-out overflow-hidden" 
+               style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}>
+            {climateData.map((item, index) => (
+              <div key={index} className="relative overflow-hidden rounded-xl group min-w-[calc(33.333%-1.33rem)] shadow-lg">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                  <div className="text-white">
+                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm opacity-90">{item.description}</p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-blue-600 text-white px-3 py-2 rounded-tr-lg rounded-bl-lg font-bold">
-                {property.rating}
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Quick Booking */}
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">
-              Réserver maintenant
-            </button>
-          </div>
+          {/* Boutons de navigation */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            aria-label="Précédent"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-800" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            aria-label="Suivant"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-800" />
+          </button>
+        </div>
+
+        {/* Section Finale Améliorée */}
+        <div className="mt-32 max-w-4xl mx-auto text-center">
+          <p className="text-gray-600 leading-relaxed text-lg italic">
+            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          </p>
+          <button className="mt-12 px-12 py-4 bg-blue-900 text-white rounded-full hover:bg-blue-800 transition-all transform hover:-translate-y-1 hover:shadow-xl text-lg tracking-wide">
+            Réserver votre séjour
+          </button>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default PropertyPage;
+export default App;

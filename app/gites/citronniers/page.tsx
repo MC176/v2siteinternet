@@ -1,6 +1,6 @@
-'use client';
-
-import React, { useEffect, useRef, useState } from 'react';
+'use client'
+import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath } from 'lucide-react';
 
 function App() {
@@ -10,67 +10,67 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/chateaunette/photo 16.png",
+      image: "/images/gites/noisettiers/photo 16.png",
       title: "Piscine",
       description: "Profondeur : 1m10 - 2m20"
     },
     {
-      image: "/images/gites/chateaunette/photo 19.png",
+      image: "/images/gites/noisettiers/photo 19.png",
       title: "Piscine de nuit",
       description: "Eclairage nocturne disponible"
     },
     {
-      image: "/images/gites/chateaunette/photo 11.png",
+      image: "/images/gites/noisettiers/photo 11.png",
       title: "Entrée du gîte",
       description: "Lauriers roses"
     },
     {
-      image: "/images/gites/chateaunette/photo 4.png",
-      title: "Gîte Chateaunette",
+      image: "/images/gites/noisettiers/photo 4.png",
+      title: "Gîte Noisettiers",
       description: "Superficie de 80m²"
     },    
     {
-      image: "/images/gites/chateaunette/photo 5.png",
+      image: "/images/gites/noisettiers/photo 5.png",
       title: "Accès terrasse",
       description: "Le gîte surplombe le Mas"
     },    
     {
-      image: "/images/gites/chateaunette/photo 12.png",
+      image: "/images/gites/noisettiers/photo 12.png",
       title: "La vue de la terrasse",
       description: "Verdure à perte de vue"
     },
     {
-      image: "/images/gites/chateaunette/photo 35.png",
+      image: "/images/gites/noisettiers/photo 35.png",
       title: "Espace cuisine",
       description: "Tout équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo 36.png",
+      image: "/images/gites/noisettiers/photo 36.png",
       title: "Coin cuisine",
       description: "Cuisine équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo 37.png",
+      image: "/images/gites/noisettiers/photo 37.png",
       title: "Chambre n°1",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo 1.png",
+      image: "/images/gites/noisettiers/photo 1.png",
       title: "Chambre n°2",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo 10.png",
-      title: "Vue de Chateaunette",
+      image: "/images/gites/noisettiers/photo 10.png",
+      title: "Vue des Noisettiers",
       description: "Depuis la chambre"
     },
     {
-      image: "/images/gites/chateaunette/photo 42.png",
+      image: "/images/gites/noisettiers/photo 42.png",
       title: "Salon",
       description: "Mezzazine avec lit"
     },
     {
-      image: "/images/gites/chateaunette/photo 38.png",
+      image: "/images/gites/noisettiers/photo 38.png",
       title: "Mezzazzine",
       description: "Lit 1 place"
     },
@@ -154,7 +154,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/chateaunette/photo 30.png")',
+            backgroundImage: 'url("/images/gites/noisettiers/photo 30.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -163,9 +163,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Chateaunette
+            Citronniers
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Ardèche</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -176,8 +176,8 @@ function App() {
           {/* Image Gauche */}
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/chateaunette/photo 14.png"
-              alt="Paysage méditerranéen"
+              src="/images/gites/noisettiers/photo 14.png"
+              alt="Paysage ardéchois"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -187,20 +187,20 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Le Charme de l'Ardèche
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Chateaunette bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+                Niché au cœur de l'Ardèche, le Gîte Les Noisettiers bénéficie d'un environnement exceptionnel. La beauté naturelle de la région s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-8">
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
-                <div className="text-4xl font-light text-blue-900">2 600</div>
+                <div className="text-4xl font-light text-blue-900">2 300</div>
                 <div className="text-sm text-gray-600 mt-3">Heures d'ensoleillement/an</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
-                <div className="text-4xl font-light text-blue-900">21.5°C</div>
+                <div className="text-4xl font-light text-blue-900">20°C</div>
                 <div className="text-sm text-gray-600 mt-3">Température estivale moyenne</div>
               </div>
             </div>
