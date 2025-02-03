@@ -20,8 +20,8 @@ function Contact() {
   return (
     <div className="min-h-screen bg-[#F8F5F0]">
       {/* Hero Section */}
-      <div className="relative h-[40vh] bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/presentation/photo 16.png")' }}>
+      <div className="relative h-[80vh] bg-cover bg-center"
+        style={{ backgroundImage: 'url("/images/presentation/pont.jpg")' }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative h-full flex items-center justify-center">
           <h1 className="text-5xl font-light text-white tracking-wider">CONTACTEZ-NOUS</h1>
@@ -38,7 +38,7 @@ function Contact() {
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-5 h-5 text-[#9B8579] mt-1" />
                   <div>
-                    <p className="font-medium text-gray-800">Notre Adresse</p>
+                    <p className="font-medium text-gray-800">Notre Adresse à Saint Montant</p>
                     <p className="text-gray-600">15 Rue des Lavandes<br />13100 Aix-en-Provence</p>
                   </div>
                 </div>
