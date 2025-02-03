@@ -1,7 +1,9 @@
-'use client'; // This line makes the component a client component
+'use client';
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { Star, ExternalLink, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const googleReviews = [
   {
@@ -112,138 +114,144 @@ const guestBookImages = [
   { id: 1, path: '/images/avis/avis 1.png', alt: 'Avis client 1' },
   { id: 2, path: '/images/avis/avis 2.png', alt: 'Avis client 2' },
   { id: 3, path: '/images/avis/avis 3.png', alt: 'Avis client 3' },
-  { id: 3, path: '/images/avis/avis 4.png', alt: 'Avis client 4' },
-  { id: 3, path: '/images/avis/avis 5.png', alt: 'Avis client 5' },
-  { id: 3, path: '/images/avis/avis 6.png', alt: 'Avis client 6' },
+  { id: 4, path: '/images/avis/avis 4.png', alt: 'Avis client 4' },
+  { id: 5, path: '/images/avis/avis 5.png', alt: 'Avis client 5' },
+  { id: 6, path: '/images/avis/avis 6.png', alt: 'Avis client 6' },
 ];
 
-export default function AvisPage() {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [showEnlargedImage, setShowEnlargedImage] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
-    const reviewsPerPage = 5;
-  
-    const nextImage = () => {
-      setCurrentImageIndex((prev) => (prev + 1) % guestBookImages.length);
-    };
-  
-    const previousImage = () => {
-      setCurrentImageIndex((prev) => (prev === 0 ? guestBookImages.length - 1 : prev - 1));
-    };
-  
-    const openEnlargedImage = (index) => {
-      setCurrentImageIndex(index); // Set the clicked image as current
-      setShowEnlargedImage(true);
-    };
-  
-    const closeEnlargedImage = () => {
-      setShowEnlargedImage(false);
-    };
-  
-    const indexOfLastReview = currentPage * reviewsPerPage;
-    const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
-    const currentReviews = googleReviews.slice(indexOfFirstReview, indexOfLastReview);
-  
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  
 const googleReviewsLink = "https://www.google.com/search?sa=X&sca_esv=22c69e882f91db0f&rlz=1C1CHNY_frFR1114FR1114&tbm=lcl&sxsrf=AHTn8zr4zZRPZpqOZFY9PJEpczBymczvKw:1738521775349&q=Le+Mas+d%27Eylieux+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NbUwMjA1MDU3NbI0MTIxMDMw28DI-IpR1CdVwTexWCFF3bUyJzO1tELBsSyzeBErdnEAI9I_x0oAAAA&rldimm=5582050575294240606&hl=fr-FR&ved=2ahUKEwiVieqm0qWLAxV_U6QEHekkKI0Q9fQKegQIRxAF&biw=1705&bih=1270&dpr=1#lkt=LocalPoiReviews";
 
-    return (
-      <div className="space-y-6 pt-40 bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          Vos avis
-        </h1>
-  
-        <p className="text-center text-gray-600 mb-16">
-          Parce que vous en parlez le mieux
-        </p>
-  
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Livre d'Or Photos */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Notre Livre d'Or
-            </h2>
-  
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+export default function AvisPage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showEnlargedImage, setShowEnlargedImage] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const reviewsPerPage = 3; // Changed to 3 reviews per page
+
+  const indexOfLastReview = currentPage * reviewsPerPage;
+  const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
+  const currentReviews = googleReviews.slice(indexOfFirstReview, indexOfLastReview);
+  const totalPages = Math.ceil(googleReviews.length / reviewsPerPage);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % guestBookImages.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? guestBookImages.length - 1 : prev - 1));
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <div className="relative h-[60vh] w-full">
+        <Image
+          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Mas d'Eylieux Exterior"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white space-y-4 px-4">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+              Vos Témoignages
+            </h1>
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light">
+              Découvrez les expériences authentiques de nos hôtes au Mas d'Eylieux
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Livre d'Or Section */}
+          <div className="space-y-8">
+            <div className="flex items-center justify-between">
+              <h2 className="text-3xl font-semibold text-gray-900">Notre Livre d'Or</h2>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {guestBookImages.map((image, index) => (
-                <div key={image.id} className="relative group">
-                  <div
-                    className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl bg-white cursor-pointer transition-transform duration-300 transform hover:scale-105"
-                    onClick={() => openEnlargedImage(index)}
-                  >
-                    <Image
-                      src={image.path}
-                      alt={image.alt}
-                      fill
-                      className="object-contain transform transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
+                <div
+                  key={image.id}
+                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  onClick={() => {
+                    setCurrentImageIndex(index);
+                    setShowEnlargedImage(true);
+                  }}
+                >
+                  <Image
+                    src={image.path}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
             </div>
           </div>
-  
-  
-          {/* Google Reviews */}
-          <div className="space-y-6 bg-gradient-to-r from-indigo-50 to-violet-50 p-6 rounded-lg">
-          <div className="flex justify-end mb-4"> {/* Added container for button */}
-            <a
-              href={googleReviewsLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Laissez un avis
-            </a>
-          </div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Avis Google
-            </h2>
-  
-            <div className="space-y-4">
+
+          {/* Google Reviews Section */}
+          <div className="space-y-8">
+            <div className="flex items-center justify-between">
+              <h2 className="text-3xl font-semibold text-gray-900">Avis Google</h2>
+              <a
+                href={googleReviewsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium transition-colors hover:bg-blue-700"
+              >
+                Laissez votre avis
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="space-y-6">
               {currentReviews.map((review, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02]"
+                  className="bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px]"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-lg text-gray-800">
+                    <h3 className="font-semibold text-lg text-gray-900">
                       {review.author_name}
                     </h3>
-                    <div className="flex">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <svg
+                    <div className="flex gap-1">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star
                           key={i}
-                          className="w-5 h-5 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
+                          className={cn(
+                            "w-5 h-5",
+                            i < review.rating ? "text-yellow-400 fill-current" : "text-gray-300"
+                          )}
+                        />
                       ))}
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-2">{review.text}</p>
-                  <p className="text-sm text-gray-400">
-                    {review.relative_time_description} - {review.visited || ''}
+                  <p className="text-gray-700 leading-relaxed mb-3">{review.text}</p>
+                  <p className="text-sm text-gray-500">
+                    {review.relative_time_description}
+                    {review.visited && ` • ${review.visited}`}
                   </p>
                 </div>
               ))}
             </div>
-  
-  
-            {/* Pagination Controls */}
-            <div className="flex justify-center space-x-2">
-              {Array.from({
-                length: Math.ceil(googleReviews.length / reviewsPerPage),
-              }).map((_, index) => (
+
+            {/* Pagination */}
+            <div className="flex justify-center gap-2">
+              {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => paginate(index + 1)}
-                  className={`px-3 py-1 rounded-md transition-colors duration-300 ${
-                    currentPage === index + 1 ? 'bg-indigo-500 text-white' : 'bg-gray-200 hover:bg-gray-300'
-                  }`}
+                  onClick={() => setCurrentPage(index + 1)}
+                  className={cn(
+                    "w-10 h-10 rounded-full font-medium transition-colors",
+                    currentPage === index + 1
+                      ? "bg-blue-600 text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  )}
                 >
                   {index + 1}
                 </button>
@@ -251,41 +259,44 @@ const googleReviewsLink = "https://www.google.com/search?sa=X&sca_esv=22c69e882f
             </div>
           </div>
         </div>
-  
-        {/* Enlarged Image Modal */}
-        {showEnlargedImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 transition-opacity duration-300">
-            <div className="relative">
+      </div>
+
+      {/* Image Modal */}
+      {showEnlargedImage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+          <div className="relative w-full max-w-4xl mx-4">
+            <div className="relative aspect-[4/3]">
               <Image
                 src={guestBookImages[currentImageIndex].path}
                 alt={guestBookImages[currentImageIndex].alt}
-                width={800}
-                height={600}
-                className="object-contain rounded-2xl"
+                fill
+                className="object-contain"
               />
-              <button
-                onClick={closeEnlargedImage}
-                className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg"
-                aria-label="Fermer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
             </div>
+            
+            <button
+              onClick={() => setShowEnlargedImage(false)}
+              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={previousImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
           </div>
-        )}
-      </div>
-    );
-  }
+        </div>
+      )}
+    </div>
+  );
+}

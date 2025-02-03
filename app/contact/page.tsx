@@ -1,53 +1,7 @@
 'use client'
-
 import React from 'react';
 import { useState } from 'react';
-import { MapPin, Wine, Mountain, Castle, Building, Flower, ShoppingBag } from 'lucide-react';
-
-const destinations = [
-  {
-    title: "DÉGUSTATION À CHÂTEAUNEUF-DU-PAPE",
-    description: "Découvrez l'histoire et le prestige des vins de Châteauneuf-du-Pape, berceau de grands crus reconnus mondialement.",
-    image: "https://images.unsplash.com/photo-1566903451935-7e8833a0f12f?auto=format&fit=crop&q=80&w=1200",
-    cta: "Organiser une dégustation avec nos partenaires",
-    icon: Wine
-  },
-  {
-    title: "LES CALANQUES DE CASSIS",
-    description: "Explorez les majestueuses calanques, où les falaises calcaires plongent dans les eaux cristallines de la Méditerranée.",
-    image: "https://images.unsplash.com/photo-1548525207-59f432f2c172?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrir notre guide exclusif",
-    icon: Mountain
-  },
-  {
-    title: "GORDES ET LE LUBERON",
-    description: "Laissez-vous séduire par le charme authentique de Gordes, joyau perché du Luberon aux ruelles pavées centenaires.",
-    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=1200",
-    cta: "Explorer les plus beaux villages",
-    icon: Castle
-  },
-  {
-    title: "VISITE D'AVIGNON",
-    description: "Plongez dans l'histoire fascinante d'Avignon, cité des papes, avec son palais gothique et son célèbre pont.",
-    image: "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?auto=format&fit=crop&q=80&w=1200",
-    cta: "Planifier votre journée à Avignon",
-    icon: Building
-  },
-  {
-    title: "LES LAVANDES DU PLATEAU DE VALENSOLE",
-    description: "Admirez l'infini des champs de lavande qui colorent le plateau de leurs tons violets envoûtants.",
-    image: "https://images.unsplash.com/photo-1563511083-76bde3516cb1?auto=format&fit=crop&q=80&w=1200",
-    cta: "Quand et où admirer la lavande en fleur ?",
-    icon: Flower
-  },
-  {
-    title: "JOURNÉE SHOPPING À AIX-EN-PROVENCE",
-    description: "Flânez dans les élégantes rues d'Aix-en-Provence, entre boutiques de créateurs et marchés provençaux.",
-    image: "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrez nos recommandations exclusives",
-    icon: ShoppingBag
-  }
-];
+import { MapPin, Mail, Phone, Clock, Send } from 'lucide-react';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -60,23 +14,65 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement form submission
     console.log(formData);
   };
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: 'url("/images/presentation/Image 2.jpg")' }}
-    >
-      <div className="absolute inset-0 bg-black opacity-60"></div>
-      <div className="relative py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto bg-white bg-opacity-90 rounded-lg shadow-xl p-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Contactez-nous</h1>
-            
+    <div className="min-h-screen bg-[#F8F5F0]">
+      {/* Hero Section */}
+      <div className="relative h-[40vh] bg-cover bg-center"
+        style={{ backgroundImage: 'url("/images/presentation/photo 16.png")' }}>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative h-full flex items-center justify-center">
+          <h1 className="text-5xl font-light text-white tracking-wider">CONTACTEZ-NOUS</h1>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Contact Information */}
+          <div className="lg:col-span-1 space-y-8">
+            <div>
+              <h2 className="text-2xl font-light text-gray-800 mb-6">Informations</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <MapPin className="w-5 h-5 text-[#9B8579] mt-1" />
+                  <div>
+                    <p className="font-medium text-gray-800">Notre Adresse</p>
+                    <p className="text-gray-600">15 Rue des Lavandes<br />13100 Aix-en-Provence</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Mail className="w-5 h-5 text-[#9B8579] mt-1" />
+                  <div>
+                    <p className="font-medium text-gray-800">Email</p>
+                    <p className="text-gray-600">contact@provence-luxe.fr</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Phone className="w-5 h-5 text-[#9B8579] mt-1" />
+                  <div>
+                    <p className="font-medium text-gray-800">Téléphone</p>
+                    <p className="text-gray-600">+33 4 42 00 00 00</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Clock className="w-5 h-5 text-[#9B8579] mt-1" />
+                  <div>
+                    <p className="font-medium text-gray-800">Horaires</p>
+                    <p className="text-gray-600">Lundi - Vendredi: 9h - 19h<br />Samedi: 10h - 17h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2 bg-white p-8 shadow-sm rounded-lg">
+            <h2 className="text-2xl font-light text-gray-800 mb-8">Envoyez-nous un message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+                <div className="space-y-2">
                   <label htmlFor="nom" className="block text-sm font-medium text-gray-700">
                     Nom
                   </label>
@@ -84,13 +80,13 @@ function Contact() {
                     type="text"
                     id="nom"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#9B8579] focus:ring-[#9B8579] transition-colors"
                     value={formData.nom}
                     onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
                   />
                 </div>
                 
-                <div>
+                <div className="space-y-2">
                   <label htmlFor="prenom" className="block text-sm font-medium text-gray-700">
                     Prénom
                   </label>
@@ -98,14 +94,14 @@ function Contact() {
                     type="text"
                     id="prenom"
                     required
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#9B8579] focus:ring-[#9B8579] transition-colors"
                     value={formData.prenom}
                     onChange={(e) => setFormData({ ...formData, prenom: e.target.value })}
                   />
                 </div>
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email
                 </label>
@@ -113,13 +109,13 @@ function Contact() {
                   type="email"
                   id="email"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#9B8579] focus:ring-[#9B8579] transition-colors"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
                   Téléphone
                 </label>
@@ -127,20 +123,20 @@ function Contact() {
                   type="tel"
                   id="telephone"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#9B8579] focus:ring-[#9B8579] transition-colors"
                   value={formData.telephone}
                   onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
                 />
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   Message
                 </label>
                 <textarea
                   id="message"
-                  rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                  rows={6}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#9B8579] focus:ring-[#9B8579] transition-colors resize-none"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
@@ -149,9 +145,10 @@ function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                  className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg bg-[#9B8579] hover:bg-[#8A7468] text-white font-medium transition-colors"
                 >
-                  Envoyer
+                  <span>Envoyer le message</span>
+                  <Send className="w-5 h-5" />
                 </button>
               </div>
             </form>
@@ -163,11 +160,7 @@ function Contact() {
 }
 
 function App() {
-  return (
-    
-      <Contact />
-    
-  );
+  return <Contact />;
 }
 
 export default App;
