@@ -6,19 +6,9 @@ import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building
 
 const gites = [
   {
-    name: 'Châteaunette',
-    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable sur les montagnes environnantes.",
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1200',
-    capacity: '6 personnes',
-    rating: 4.9,
-    price: '180€',
-    features: ['Piscine privée', 'Terrasse panoramique', 'Cuisine équipée'],
-    href: '/gites/chateaunette'
-  },
-  {
     name: 'Côté Source',
     description: "Un havre de paix moderne avec des finitions luxueuses, parfait pour les familles en quête de tranquillité.",
-    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200',
+    image: "/images/gites/cote-source/photo1.png",
     capacity: '4 personnes',
     rating: 4.8,
     price: '150€',
@@ -28,7 +18,7 @@ const gites = [
   {
     name: 'Noisettiers',
     description: "Une authentique maison ardéchoise rénovée alliant le charme de l'ancien au confort moderne.",
-    image: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=1200',
+    image: "/images/gites/noisettiers/piscinevue.png",
     capacity: '8 personnes',
     rating: 4.9,
     price: '220€',
@@ -36,19 +26,19 @@ const gites = [
     href: '/gites/noisettiers'
   },
   {
-    name: 'Maisonette',
-    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure préservé.",
-    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200',
-    capacity: '2 personnes',
-    rating: 4.7,
-    price: '120€',
-    features: ['Jacuzzi', 'Petit jardin', 'Terrasse privée'],
-    href: '/gites/maisonette'
+    name: 'Figuiers',
+    description: "Un gîte de caractère avec pierres apparentes et poutres anciennes, rénové avec goût.",
+    image: "/images/gites/figuiers/photo 2.jpeg",
+    capacity: '4 personnes',
+    rating: 4.9,
+    price: '160€',
+    features: ['Cheminée', 'Jardin paysager', 'Cave à vin'],
+    href: '/gites/figuiers'
   },
   {
     name: 'Citronniers',
     description: "Une villa contemporaine baignée de lumière avec des espaces de vie généreux et confortables.",
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
+    image: "/images/gites/citronniers/salon3.jpg",
     capacity: '6 personnes',
     rating: 4.8,
     price: '190€',
@@ -56,15 +46,25 @@ const gites = [
     href: '/gites/citronniers'
   },
   {
-    name: 'Figuiers',
-    description: "Un gîte de caractère avec pierres apparentes et poutres anciennes, rénové avec goût.",
-    image: 'https://images.unsplash.com/photo-1574259392081-dbe3c19cd15e?auto=format&fit=crop&q=80&w=1200',
-    capacity: '4 personnes',
+    name: 'Maisonette',
+    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure préservé.",
+    image: "/images/gites/maisonnette/montagne.png",
+    capacity: '2 personnes',
+    rating: 4.7,
+    price: '120€',
+    features: ['Jacuzzi', 'Petit jardin', 'Terrasse privée'],
+    href: '/gites/maisonette'
+  },
+  {
+    name: 'Châteaunette',
+    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable sur les montagnes environnantes.",
+    image: "images/gites/chateaunette/photo 17.png",
+    capacity: '6 personnes',
     rating: 4.9,
-    price: '160€',
-    features: ['Cheminée', 'Jardin paysager', 'Cave à vin'],
-    href: '/gites/figuiers'
-  }
+    price: '180€',
+    features: ['Piscine privée', 'Terrasse panoramique', 'Cuisine équipée'],
+    href: '/gites/chateaunette'
+  },
 ];
 
 const privatisationFeatures = [
@@ -96,7 +96,7 @@ function GitesPage() {
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2070"
+          src="/images/gites/cote-source/photo 5.png"
           alt="Vue panoramique des gîtes"
           className="w-full h-full object-cover"
         />
