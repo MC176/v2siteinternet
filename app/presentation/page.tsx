@@ -1,9 +1,28 @@
 'use client'
 import React, { useState } from 'react';
-import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope } from 'lucide-react';
+import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone } from 'lucide-react';
 
 function App() {
   const [activeImage, setActiveImage] = useState(0);
+  
+  const poolImages = [
+    "/images/gites/piscine/photo 19.png",
+    "/images/gites/piscine/piscinevue.png",
+    "/images/gites/piscine/photo 18.png",
+  ];
+
+  const pizzaOvenImages = [
+    "/images/gites/four/four1.jpg",
+    "/images/gites/four/four2.jpg",
+    "/images/gites/four/four3.jpg",
+  ];
+
+  const receptionImages = [
+    "/images/gites/reception/reception1.jpg",
+    "/images/gites/reception/reception2.jpg",
+    "/images/gites/reception/reception3.jpg",
+  ];
+
   const commonAreaImages = [
     "/images/gites/cote-jardin/piece.jpg",
     "/images/gites/cote-jardin/cuisine.jpg",
@@ -37,6 +56,24 @@ function App() {
           <ChevronDown className="absolute bottom-8 animate-bounce w-8 h-8 cursor-pointer hover:scale-110 transition-transform" />
         </div>
       </div>
+
+      {/* Introduction Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
+              Bienvenue au Mas d'Ardèche
+            </h2>
+            <p className="text-lg leading-relaxed text-stone-600 mb-12">
+              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
+              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
+              rencontre le luxe contemporain, offrant une expérience unique de séjour 
+              en Ardèche.
+            </p>
+            <div className="h-px w-24 bg-stone-300 mx-auto"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Combined Historical and Farniente Section */}
       <section className="relative py-24 bg-stone-100">
@@ -105,37 +142,37 @@ function App() {
         </div>
       </section>
 
-      {/* Common Area Section */}
+      {/* Pool Section */}
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">Côté Jardin</h2>
+              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">La Piscine</h2>
               <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-                Un espace convivial face au jardin du mas, pensé pour les moments de partage. 
-                Une grande salle commune et sa cuisine équipée vous permettent d'organiser des repas 
-                mémorables avec famille et amis.
+                Un espace de détente avec vue panoramique sur la vallée.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {commonAreaImages.map((image, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {poolImages.map((image, index) => (
                 <div 
                   key={index}
-                  className="relative h-96 overflow-hidden rounded-xl group"
+                  className="relative h-80 overflow-hidden rounded-xl group"
                 >
                   <img 
-                    src={image} 
-                    alt={index === 0 ? "Salle commune" : "Cuisine équipée"} 
+                    src={image}
+                    alt={`Vue de la piscine ${index + 1}`}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-light tracking-wide">
-                      {index === 0 ? "Salle de réception" : "Cuisine commune"}
-                    </h3>
-                  </div>
                 </div>
               ))}
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <ul className="text-stone-600 space-y-2">
+                <li>• Piscine sécurisée et éclairée la nuit au besoin</li>
+                <li>• Profondeur : entre 1.10m et 2.20m</li>
+                <li>• Horaires d'ouverture : 8h-20h</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -175,45 +212,101 @@ function App() {
         </div>
       </section>
 
-      {/* Natural Features */}
-      <section className="py-24 bg-stone-100">
+      {/* Pizza Oven Section */}
+      <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <NatureFeature 
-                icon={<Waves className="w-8 h-8" />}
-                title="Source Naturelle"
-                description="Un bassin alimenté par une source naturelle, offrant un espace de détente unique"
-              />
-              <NatureFeature 
-                icon={<Heart className="w-8 h-8" />}
-                title="Jardins du Mas"
-                description="Des jardins paysagers où se mêlent fleurs locales et plantes aromatiques"
-              />
-              <NatureFeature 
-                icon={<Home className="w-8 h-8" />}
-                title="Terrasses Privatives"
-                description="Chaque gîte dispose de son espace extérieur privé avec vue sur la vallée"
-              />
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">Four à Pizza</h2>
+              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
+                Un espace convivial pour des moments de partage inoubliables.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {pizzaOvenImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="relative h-80 overflow-hidden rounded-xl group"
+                >
+                  <img 
+                    src={image}
+                    alt={`Four à pizza ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                </div>
+              ))}
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <p className="text-stone-600">
+                Four à pizza à disposition. Possibilité de faire du pain et partager des moments conviviaux.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stargazing Section */}
+      {/* Receptions Section */}
+      <section className="py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
+                Cousinades, Réceptions & Fêtes
+              </h2>
+              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
+                Un cadre exceptionnel pour vos événements spéciaux.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {receptionImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="relative h-80 overflow-hidden rounded-xl group"
+                >
+                  <img 
+                    src={image}
+                    alt={`Réception ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <p className="text-lg text-stone-600 mb-8">Nous contacter pour plus de détails</p>
+              <a 
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-stone-800 text-white px-8 py-4 rounded-full
+                  transition-all hover:bg-stone-700 hover:scale-105 hover:shadow-lg duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                Nous contacter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Stargazing Section */}
       <section className="relative py-32">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80")',
           }}
         >
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center text-white">
-            <div className="mb-16">
-              <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">
+            <div className="mb-16 space-y-4">
+              <div className="flex justify-center mb-8">
+                <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                  <Star className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-light mb-8 tracking-wide">
                 Là où les étoiles touchent la terre
               </h2>
               <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-3xl mx-auto">
@@ -224,36 +317,36 @@ function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-              <NatureFeature 
-                icon={<Moon className="w-8 h-8" />}
-                title="Ciel Préservé"
-                description="Zone protégée sans pollution lumineuse, offrant une visibilité exceptionnelle des constellations"
-                light
-              />
-              <NatureFeature 
-                icon={<Star className="w-8 h-8" />}
-                title="Site d'Exception"
-                description="Reconnu pour ses conditions optimales d'observation astronomique toute l'année"
-                light
-              />
-              <NatureFeature 
-                icon={<Telescope className="w-8 h-8" />}
-                title="Expérience Unique"
-                description="Des soirées d'observation guidées et des équipements professionnels à disposition"
-                light
-              />
+              <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
+                <Moon className="w-12 h-12 mb-6 mx-auto text-white" />
+                <h3 className="text-xl font-light mb-3 text-white">Ciel Préservé</h3>
+                <p className="text-stone-300">Zone protégée sans pollution lumineuse, offrant une visibilité exceptionnelle des constellations</p>
+              </div>
+              <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
+                <Star className="w-12 h-12 mb-6 mx-auto text-white" />
+                <h3 className="text-xl font-light mb-3 text-white">Site d'Exception</h3>
+                <p className="text-stone-300">Reconnu pour ses conditions optimales d'observation astronomique toute l'année</p>
+              </div>
+              <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
+                <Telescope className="w-12 h-12 mb-6 mx-auto text-white" />
+                <h3 className="text-xl font-light mb-3 text-white">Expérience Unique</h3>
+                <p className="text-stone-300">Des soirées d'observation guidées et des équipements professionnels à disposition</p>
+              </div>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              <p className="text-lg text-stone-200 italic mb-12">
+            <div className="max-w-2xl mx-auto relative">
+              <div className="absolute -top-12 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl" />
+              <div className="absolute -bottom-12 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl" />
+              <p className="text-lg text-stone-200 italic mb-12 relative">
                 "Un des rares endroits en France où l'on peut encore observer 
                 la Voie Lactée dans toute sa splendeur. Une expérience qui 
                 transforme à jamais notre perception du ciel nocturne."
               </p>
 
-              <button className="bg-transparent border-2 border-white px-8 py-4 rounded-full 
+              <button className="relative bg-transparent border-2 border-white/80 px-12 py-4 rounded-full 
                 text-lg transition-all hover:bg-white hover:text-stone-900 
-                hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300">
+                hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300
+                backdrop-blur-sm">
                 Réservez votre nuit sous les étoiles
               </button>
             </div>

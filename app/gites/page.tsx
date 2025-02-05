@@ -94,7 +94,7 @@ function GitesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <div className="relative h-[60vh] w-full overflow-hidden">
+      <div className="relative h-[80vh] w-full overflow-hidden">
         <img 
           src="/images/gites/cote-source/photo 5.png"
           alt="Vue panoramique des gîtes"

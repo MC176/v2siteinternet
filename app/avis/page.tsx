@@ -145,7 +145,7 @@ export default function AvisPage() {
       {/* Hero Section */}
       <div className="relative h-[80vh] w-full">
         <Image
-          src="/images/informations/maison.jpg"
+          src="/images/gites/chateaunette/chat.jpg"
           alt="Mas d'Eylieux Exterior"
           fill
           className="object-cover"
