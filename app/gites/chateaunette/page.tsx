@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath } from 'lucide-react';
 
@@ -10,17 +9,7 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/chateaunette/photo 16.png",
-      title: "Piscine",
-      description: "Profondeur : 1m10 - 2m20"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 19.png",
-      title: "Piscine de nuit",
-      description: "Eclairage nocturne disponible"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 11.png",
+      image: "/images/gites/chateaunette/photo 14.png",
       title: "Entrée du gîte",
       description: "Lauriers roses"
     },
@@ -73,6 +62,16 @@ function App() {
       image: "/images/gites/chateaunette/photo 38.png",
       title: "Mezzazzine",
       description: "Lit 1 place"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 16.png",
+      title: "Piscine",
+      description: "Profondeur : 1m10 - 2m20"
+    },
+    {
+      image: "/images/gites/chateaunette/photo 19.png",
+      title: "Piscine de nuit",
+      description: "Eclairage nocturne disponible"
     },
   ];
 
@@ -136,15 +135,22 @@ function App() {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => 
-      prev === climateData.length - 3 ? 0 : prev + 1
+      prev === climateData.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => 
-      prev === 0 ? climateData.length - 3 : prev - 1
+      prev === 0 ? climateData.length - 1 : prev - 1
     );
   };
+
+  // Calculer les indices des images visibles
+  const visibleImages = [];
+  for (let i = 0; i < 3; i++) {
+    const index = (currentSlide + i) % climateData.length;
+    visibleImages.push(climateData[index]);
+  }
 
   return (
     <div className="relative min-h-screen bg-white">
@@ -154,7 +160,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/chateaunette/photo 30.png")',
+            backgroundImage: 'url("/images/gites/chateaunette/photo 17.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -176,7 +182,7 @@ function App() {
           {/* Image Gauche */}
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/chateaunette/photo 14.png"
+              src="/images/gites/chateaunette/Photo 11.png"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -236,11 +242,10 @@ function App() {
         </div>
 
         {/* Section Carrousel */}
-        <div className="mt-32 relative">
-          <div className="flex gap-8 transition-transform duration-500 ease-in-out overflow-hidden" 
-               style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}>
-            {climateData.map((item, index) => (
-              <div key={index} className="relative overflow-hidden rounded-xl group min-w-[calc(33.333%-1.33rem)] shadow-lg">
+        <div className="mt-32 relative overflow-hidden">
+          <div className="flex gap-8">
+            {visibleImages.map((item, index) => (
+              <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
                 <img
                   src={item.image}
                   alt={item.title}

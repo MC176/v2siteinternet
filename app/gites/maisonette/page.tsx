@@ -1,6 +1,5 @@
 'use client'
-import React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath } from 'lucide-react';
 
 function App() {
@@ -10,70 +9,35 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/noisettiers/photo 16.png",
+      image: "/images/gites/chateaunette/photo 20.png",
+      title: "Gîte Chateaunette",
+      description: "Superficie de 80m²"
+    },    
+    {
+      image: "/images/gites/maisonnette/montagne.png",
       title: "Piscine",
       description: "Profondeur : 1m10 - 2m20"
     },
     {
-      image: "/images/gites/noisettiers/photo 19.png",
+      image: "/images/gites/maisonnette/vegetation.png",
       title: "Piscine de nuit",
       description: "Eclairage nocturne disponible"
     },
     {
-      image: "/images/gites/noisettiers/photo 11.png",
+      image: "/images/gites/maisonnette/chambre.png",
       title: "Entrée du gîte",
       description: "Lauriers roses"
     },
     {
-      image: "/images/gites/noisettiers/photo 4.png",
-      title: "Gîte Noisettiers",
+      image: "/images/gites/maisonnette/coincuisine.png",
+      title: "Gîte Chateaunette",
       description: "Superficie de 80m²"
     },    
     {
-      image: "/images/gites/noisettiers/photo 5.png",
+      image: "/images/gites/maisonnette/salledeau.png",
       title: "Accès terrasse",
       description: "Le gîte surplombe le Mas"
     },    
-    {
-      image: "/images/gites/noisettiers/photo 12.png",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 35.png",
-      title: "Espace cuisine",
-      description: "Tout équipée"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 36.png",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 37.png",
-      title: "Chambre n°1",
-      description: "Lit 2 places"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 1.png",
-      title: "Chambre n°2",
-      description: "Lit 2 places"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 10.png",
-      title: "Vue des Noisettiers",
-      description: "Depuis la chambre"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 42.png",
-      title: "Salon",
-      description: "Mezzazine avec lit"
-    },
-    {
-      image: "/images/gites/noisettiers/photo 38.png",
-      title: "Mezzazzine",
-      description: "Lit 1 place"
-    },
   ];
 
   const luxuryAmenities = [
@@ -136,15 +100,22 @@ function App() {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => 
-      prev === climateData.length - 3 ? 0 : prev + 1
+      prev === climateData.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => 
-      prev === 0 ? climateData.length - 3 : prev - 1
+      prev === 0 ? climateData.length - 1 : prev - 1
     );
   };
+
+  // Calculer les indices des images visibles
+  const visibleImages = [];
+  for (let i = 0; i < 3; i++) {
+    const index = (currentSlide + i) % climateData.length;
+    visibleImages.push(climateData[index]);
+  }
 
   return (
     <div className="relative min-h-screen bg-white">
@@ -154,7 +125,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/noisettiers/photo 30.png")',
+            backgroundImage: 'url("/images/gites/maisonnette/tondeuse.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -163,9 +134,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            maisonette
+            La Maisonette
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Ardèche</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -176,8 +147,8 @@ function App() {
           {/* Image Gauche */}
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/noisettiers/photo 14.png"
-              alt="Paysage ardéchois"
+              src="/images/gites/maisonnette/grenadier.png"
+              alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -187,20 +158,20 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Charme de l'Ardèche
+                Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de l'Ardèche, le Gîte Les Noisettiers bénéficie d'un environnement exceptionnel. La beauté naturelle de la région s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+                Niché au cœur de la Provence, le Gîte Chateaunette bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-8">
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
-                <div className="text-4xl font-light text-blue-900">2 300</div>
+                <div className="text-4xl font-light text-blue-900">2 600</div>
                 <div className="text-sm text-gray-600 mt-3">Heures d'ensoleillement/an</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
-                <div className="text-4xl font-light text-blue-900">20°C</div>
+                <div className="text-4xl font-light text-blue-900">21.5°C</div>
                 <div className="text-sm text-gray-600 mt-3">Température estivale moyenne</div>
               </div>
             </div>
@@ -236,11 +207,10 @@ function App() {
         </div>
 
         {/* Section Carrousel */}
-        <div className="mt-32 relative">
-          <div className="flex gap-8 transition-transform duration-500 ease-in-out overflow-hidden" 
-               style={{ transform: `translateX(-${currentSlide * (100 / 3)}%)` }}>
-            {climateData.map((item, index) => (
-              <div key={index} className="relative overflow-hidden rounded-xl group min-w-[calc(33.333%-1.33rem)] shadow-lg">
+        <div className="mt-32 relative overflow-hidden">
+          <div className="flex gap-8">
+            {visibleImages.map((item, index) => (
+              <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
                 <img
                   src={item.image}
                   alt={item.title}

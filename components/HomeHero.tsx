@@ -9,22 +9,22 @@ import { Instagram } from 'lucide-react';
 const InstagramGallery = () => {
   const images = [
     {
-    url: "/images/Instagram/Photo 1.jpeg",
-    alt: "Photo 1"
+      url: "/images/Instagram/Photo 1.jpeg",
+      alt: "Photo 1"
     },
     {
-    url: "/images/Instagram/Photo 2.jpeg",
-    alt: "Photo 2"
+      url: "/images/Instagram/Photo 2.jpeg",
+      alt: "Photo 2"
     },
     {
-    url: "/images/Instagram/Photo 3.jpeg",
-    alt: "Photo 3"
+      url: "/images/Instagram/Photo 3.jpeg",
+      alt: "Photo 3"
     },
     {
-    url: "/images/Instagram/Photo 4.jpeg",
-    alt: "Photo 4"
+      url: "/images/Instagram/Photo 4.jpeg",
+      alt: "Photo 4"
     }
-    ];
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 bg-gray-100 rounded-lg shadow-lg">
@@ -113,20 +113,24 @@ const HomeHero = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-100 py-6 text-center">
-        <div className="max-w-7xl mx-auto px-4">
+      <footer className="bg-gray-100 py-6">
+        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+          <Link 
+            href="/cgu" 
+            className="text-sm text-gray-600 hover:text-gray-900 underline"
+          >
+            Conditions Générales d'Utilisation
+          </Link>
+          <Link 
+            href="/cgv" 
+            className="text-sm text-gray-600 hover:text-gray-900 underline"
+          >
+            Conditions Générales de Vente
+          </Link>
         </div>
       </footer>
     </>
   );
 };
 
-function App() {
-  return (
-    
-      <HomeHero />
-    
-  );
-}
-
-export default App;
+export default HomeHero;

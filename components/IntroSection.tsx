@@ -41,10 +41,10 @@ export default function IntroSection() {
 
 
           <Link
-            href="/gites"
+            href="/presentation"
             className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 ease-in-out"
           >
-            Découvrir nos gîtes
+            Découvrir notre domaine
           </Link>
         </motion.div>
       </div>

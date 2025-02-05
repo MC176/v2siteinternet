@@ -2,68 +2,120 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Wine, Mountain, Castle, Building, Flower, ShoppingBag } from 'lucide-react';
+import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building2, PartyPopper, Users2Icon } from 'lucide-react';
 
-const destinations = [
+const gites = [
   {
-    title: "DÉGUSTATION À CHÂTEAUNEUF-DU-PAPE",
-    description: "Découvrez l'histoire et le prestige des vins de Châteauneuf-du-Pape, berceau de grands crus reconnus mondialement.",
-    image: "https://images.unsplash.com/photo-1566903451935-7e8833a0f12f?auto=format&fit=crop&q=80&w=1200",
-    cta: "Organiser une dégustation avec nos partenaires",
-    icon: Wine
+    name: 'Châteaunette',
+    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable sur les montagnes environnantes.",
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1200',
+    capacity: '6 personnes',
+    rating: 4.9,
+    price: '180€',
+    features: ['Piscine privée', 'Terrasse panoramique', 'Cuisine équipée'],
+    href: '/gites/chateaunette'
   },
   {
-    title: "LES CALANQUES DE CASSIS",
-    description: "Explorez les majestueuses calanques, où les falaises calcaires plongent dans les eaux cristallines de la Méditerranée.",
-    image: "https://images.unsplash.com/photo-1548525207-59f432f2c172?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrir notre guide exclusif",
-    icon: Mountain
+    name: 'Côté Source',
+    description: "Un havre de paix moderne avec des finitions luxueuses, parfait pour les familles en quête de tranquillité.",
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200',
+    capacity: '4 personnes',
+    rating: 4.8,
+    price: '150€',
+    features: ['Jardin privé', 'Spa', 'Vue sur la vallée'],
+    href: '/gites/cote-source'
   },
   {
-    title: "GORDES ET LE LUBERON",
-    description: "Laissez-vous séduire par le charme authentique de Gordes, joyau perché du Luberon aux ruelles pavées centenaires.",
-    image: "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&q=80&w=1200",
-    cta: "Explorer les plus beaux villages",
-    icon: Castle
+    name: 'Noisettiers',
+    description: "Une authentique maison ardéchoise rénovée alliant le charme de l'ancien au confort moderne.",
+    image: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=1200',
+    capacity: '8 personnes',
+    rating: 4.9,
+    price: '220€',
+    features: ['Grande terrasse', 'Barbecue', 'Salle de jeux'],
+    href: '/gites/noisettiers'
   },
   {
-    title: "VISITE D'AVIGNON",
-    description: "Plongez dans l'histoire fascinante d'Avignon, cité des papes, avec son palais gothique et son célèbre pont.",
-    image: "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?auto=format&fit=crop&q=80&w=1200",
-    cta: "Planifier votre journée à Avignon",
-    icon: Building
+    name: 'Maisonette',
+    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure préservé.",
+    image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200',
+    capacity: '2 personnes',
+    rating: 4.7,
+    price: '120€',
+    features: ['Jacuzzi', 'Petit jardin', 'Terrasse privée'],
+    href: '/gites/maisonette'
   },
   {
-    title: "LES LAVANDES DU PLATEAU DE VALENSOLE",
-    description: "Admirez l'infini des champs de lavande qui colorent le plateau de leurs tons violets envoûtants.",
-    image: "https://images.unsplash.com/photo-1563511083-76bde3516cb1?auto=format&fit=crop&q=80&w=1200",
-    cta: "Quand et où admirer la lavande en fleur ?",
-    icon: Flower
+    name: 'Citronniers',
+    description: "Une villa contemporaine baignée de lumière avec des espaces de vie généreux et confortables.",
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
+    capacity: '6 personnes',
+    rating: 4.8,
+    price: '190€',
+    features: ['Piscine chauffée', 'Home cinéma', "Cuisine d'été"],
+    href: '/gites/citronniers'
   },
   {
-    title: "JOURNÉE SHOPPING À AIX-EN-PROVENCE",
-    description: "Flânez dans les élégantes rues d'Aix-en-Provence, entre boutiques de créateurs et marchés provençaux.",
-    image: "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&q=80&w=1200",
-    cta: "Découvrez nos recommandations exclusives",
-    icon: ShoppingBag
+    name: 'Figuiers',
+    description: "Un gîte de caractère avec pierres apparentes et poutres anciennes, rénové avec goût.",
+    image: 'https://images.unsplash.com/photo-1574259392081-dbe3c19cd15e?auto=format&fit=crop&q=80&w=1200',
+    capacity: '4 personnes',
+    rating: 4.9,
+    price: '160€',
+    features: ['Cheminée', 'Jardin paysager', 'Cave à vin'],
+    href: '/gites/figuiers'
   }
 ];
 
-const gites = [
-  { name: 'Châteaunette', href: '/gites/chateaunette', description: 'Gîte en Ardèche' },
-  { name: 'Côté Source', href: '/gites/cote-source', description: 'Gîte en Ardèche' },
-  { name: 'Noisettiers', href: '/gites/noisettiers', description: 'Gîte en Ardèche' },
-  { name: 'Maisonette', href: '/gites/maisonette', description: 'Gîte en Ardèche' },
-  { name: 'Citronniers', href: '/gites/citronniers', description: 'Gîte en Ardèche' },
-  { name: 'Figuiers', href: '/gites/figuiers', description: 'Gîte en Ardèche' },
+const privatisationFeatures = [
+  {
+    icon: GlassWater,
+    title: "Réceptions de Prestige",
+    description: "Mariages, anniversaires et célébrations d'exception dans un cadre enchanteur"
+  },
+  {
+    icon: Building2,
+    title: "Séminaires d'Entreprise",
+    description: "Espaces de réunion, activités team-building et hébergement tout confort"
+  },
+  {
+    icon: PartyPopper,
+    title: "Événements Festifs",
+    description: "Enterrements de vie de célibataire dans un cadre privé et raffiné"
+  },
+  {
+    icon: Users2Icon,
+    title: "Réunions Familiales",
+    description: "Cousinades et retrouvailles dans un environnement spacieux et convivial"
+  }
 ];
 
 function GitesPage() {
   return (
-    <div className="min-h-screen bg-gray-100 pt-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-12 text-center">Nos Gîtes</h1>
-        
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      {/* Hero Section */}
+      <div className="relative h-[60vh] w-full overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2070"
+          alt="Vue panoramique des gîtes"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <motion.div 
+            className="text-center text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-6xl font-bold mb-4">Nos Gîtes d'Exception</h1>
+            <p className="text-xl max-w-2xl mx-auto">
+              Découvrez notre sélection de gîtes de charme en Ardèche, où luxe et authenticité se rencontrent pour des séjours inoubliables.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {gites.map((gite, index) => (
             <motion.div
@@ -71,35 +123,123 @@ function GitesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
+              className="group"
             >
-              <a href={gite.href}>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="h-48 bg-gray-200 relative">
-                    <div className="absolute inset-0 bg-gray-300 transform skew-y-3 origin-top-left"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-gray-500 text-2xl">Image</span>
+              <a href={gite.href} className="block">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                  <div className="relative h-64">
+                    <img 
+                      src={gite.image} 
+                      alt={gite.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                        <span className="text-sm font-semibold">{gite.rating}</span>
+                      </div>
                     </div>
                   </div>
+
                   <div className="p-6">
-                    <h2 className="text-xl font-semibold text-gray-900 mb-2">{gite.name}</h2>
-                    <p className="text-gray-600">{gite.description}</p>
+                    <div className="flex justify-between items-start mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900">{gite.name}</h2>
+                      <div className="text-right">
+                        <span className="text-2xl font-bold text-indigo-600">{gite.price}</span>
+                        <span className="text-gray-500 text-sm">/nuit</span>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-600 mb-4">{gite.description}</p>
+
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4 text-gray-400" />
+                        <span className="text-sm text-gray-600">{gite.capacity}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4 text-gray-400" />
+                        <span className="text-sm text-gray-600">Ardèche</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 mb-6">
+                      {gite.features.map((feature, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-indigo-600"></div>
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button className="w-full bg-indigo-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-indigo-700 transition-colors">
+                      En savoir plus
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </a>
             </motion.div>
           ))}
         </div>
+
+        {/* Privatisation Section */}
+        <motion.div 
+          className="mt-24 relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 transform -skew-y-6 origin-top-left"></div>
+          <div className="relative z-10 py-20 px-6">
+            <div className="max-w-7xl mx-auto text-center">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-bold text-white mb-8"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+              >
+                Privatisez l'Ensemble de nos Gîtes
+              </motion.h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                {privatisationFeatures.map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.2 + index * 0.1 }}
+                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                  >
+                    <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-white/80">{feature.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.button 
+                className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-50 inline-flex items-center gap-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.6 }}
+                whileHover={{ y: -2 }}
+              >
+                Contactez-nous pour une offre personnalisée
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
 }
 
 function App() {
-  return (
-    
-      <GitesPage />
-    
-  );
+  return <GitesPage />;
 }
 
 export default App;

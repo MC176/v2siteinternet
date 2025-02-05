@@ -1,19 +1,18 @@
-'use client';
-
+'use client'
 import React, { useState } from 'react';
-import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home } from 'lucide-react';
+import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope } from 'lucide-react';
 
 function App() {
   const [activeImage, setActiveImage] = useState(0);
   const commonAreaImages = [
-    'https://images.unsplash.com/photo-1597211684565-dca64d72c5cc?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&q=80'
+    "/images/gites/cote-jardin/piece.jpg",
+    "/images/gites/cote-jardin/cuisine.jpg",
   ];
 
   const outdoorSpaceImages = [
-    'https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1536746803623-cef87080bfc8?auto=format&fit=crop&q=80'
+    "/images/gites/notused/mare.jpg",
+    "/images/gites/notused/bananier.png",
+    "/images/gites/noisettiers/veggetation.png",
   ];
 
   return (
@@ -39,18 +38,31 @@ function App() {
         </div>
       </div>
 
-      {/* Historical Section */}
+      {/* Combined Historical and Farniente Section */}
       <section className="relative py-24 bg-stone-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl mb-8 font-light text-stone-800 tracking-wide">Notre Histoire</h2>
-            <p className="text-lg leading-relaxed text-stone-600">
-              En Ardèche, dans une ville qui surplombe le Rhône, une ancienne maladrerie du 12e siècle 
-              et son jardin vous invitent à un voyage dans le temps. Construite en 1158, cette bâtisse 
-              historique a accueilli Saint Louis lors de son retour des croisades. Transformée en hôpital 
-              sous Louis XIII, elle est aujourd'hui un domaine préservé, où charme et authenticité se 
-              conjuguent à la perfection.
-            </p>
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <div className="h-[32rem] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="images/presentation/chat.png"
+                  alt="Vue du domaine" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-4xl md:text-6xl font-light text-stone-800 tracking-wider mb-8">
+                Le farniente Ardéchois
+              </h2>
+              <p className="text-lg leading-relaxed text-stone-600">
+                En Ardèche, dans une ville qui surplombe le Rhône, une ancienne maladrerie du 12e siècle 
+                et son jardin vous invitent à un voyage dans le temps. Construite en 1158, cette bâtisse 
+                historique a accueilli Saint Louis lors de son retour des croisades. Transformée en hôpital 
+                sous Louis XIII, elle est aujourd'hui un domaine préservé, où charme et authenticité se 
+                conjuguent à la perfection.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -188,19 +200,64 @@ function App() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="relative py-24 bg-stone-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl mb-8 font-light tracking-wide">
-            Le luxe ultime, c'est le temps
-          </h2>
-          <p className="text-lg mb-12 text-stone-300">
-            Offrez-vous une pause hors du temps dans notre domaine d'exception
-          </p>
-          <button className="bg-white text-stone-900 px-8 py-4 rounded-full text-lg 
-            transition-all hover:bg-stone-100 hover:scale-105 hover:shadow-lg">
-            Réservez votre séjour
-          </button>
+      {/* Stargazing Section */}
+      <section className="relative py-32">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80")',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center text-white">
+            <div className="mb-16">
+              <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">
+                Là où les étoiles touchent la terre
+              </h2>
+              <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-3xl mx-auto">
+                Dans notre coin préservé d'Ardèche, loin des lumières de la ville, 
+                le ciel nocturne révèle toute sa splendeur. Un spectacle naturel 
+                qui fait de notre domaine un site reconnu pour l'observation des étoiles.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+              <NatureFeature 
+                icon={<Moon className="w-8 h-8" />}
+                title="Ciel Préservé"
+                description="Zone protégée sans pollution lumineuse, offrant une visibilité exceptionnelle des constellations"
+                light
+              />
+              <NatureFeature 
+                icon={<Star className="w-8 h-8" />}
+                title="Site d'Exception"
+                description="Reconnu pour ses conditions optimales d'observation astronomique toute l'année"
+                light
+              />
+              <NatureFeature 
+                icon={<Telescope className="w-8 h-8" />}
+                title="Expérience Unique"
+                description="Des soirées d'observation guidées et des équipements professionnels à disposition"
+                light
+              />
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <p className="text-lg text-stone-200 italic mb-12">
+                "Un des rares endroits en France où l'on peut encore observer 
+                la Voie Lactée dans toute sa splendeur. Une expérience qui 
+                transforme à jamais notre perception du ciel nocturne."
+              </p>
+
+              <button className="bg-transparent border-2 border-white px-8 py-4 rounded-full 
+                text-lg transition-all hover:bg-white hover:text-stone-900 
+                hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300">
+                Réservez votre nuit sous les étoiles
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -218,12 +275,12 @@ function FeatureCard({ icon, title, description }) {
   );
 }
 
-function NatureFeature({ icon, title, description }) {
+function NatureFeature({ icon, title, description, light }) {
   return (
     <div className="text-center p-8 rounded-lg transition-all hover:transform hover:scale-105">
-      <div className="text-stone-700 mb-4 flex justify-center">{icon}</div>
-      <h3 className="text-xl font-light mb-3 text-stone-800">{title}</h3>
-      <p className="text-stone-600">{description}</p>
+      <div className={`mb-4 flex justify-center ${light ? 'text-white' : 'text-stone-700'}`}>{icon}</div>
+      <h3 className={`text-xl font-light mb-3 ${light ? 'text-white' : 'text-stone-800'}`}>{title}</h3>
+      <p className={light ? 'text-stone-200' : 'text-stone-600'}>{description}</p>
     </div>
   );
 }

@@ -1,21 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react';
-import { 
-  Cave,
-  Lavender,
-  Kayak,
-  HangGlider,
-  Hiking,
-  MapPin, 
-  Mountain, 
-  Compass, 
-  TreePine, 
-  Wind, 
-  Tent,
-  Camera,
-  Grape
-} from 'lucide-react';
+import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape } from 'lucide-react';
 
 const destinations = [
   {
@@ -23,42 +9,48 @@ const destinations = [
     description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
     image: "/images/presentation/Grotte.jpg",
     cta: "Visitez le site internet de la Grotte Chauvet",
-    icon: Camera
+    icon: Camera,
+    url: "https://www.grottechauvet2ardeche.com/"
   },
   {
     title: "LE MUSÉE DE LA LAVANDE",
     description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
     image: "/images/presentation/Image 5.jpg",
     cta: "Réservez votre visite dès maintenant",
-    icon: TreePine
+    icon: TreePine,
+    url: "https://www.lamaisondelalavande.com/"
   },
   {
     title: "DESCENTE DES GORGES DE L'ARDÈCHE",
     description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
     image: "/images/presentation/gorge.jpg",
     cta: "Réservez votre canoë-kayak chez notre partenaire",
-    icon: Compass
+    icon: Compass,
+    url: "https://www.gorges-ardeche-pontdarc.fr/activites/canoe/infos-et-parcours/"
   },
   {
     title: "VOL EN DELTAPLANE",
     description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
     image: "/images/presentation/Image 4.jpg",
     cta: "Découvrez ces sensations uniques",
-    icon: TreePine
+    icon: TreePine,
+    url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
   },
   {
     title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
     image: "/images/presentation/Image 7.jpg",
     cta: "Organisez votre balade",
-    icon: TreePine
+    icon: TreePine,
+    url: "https://www.gr-infos.com/gr42.htm"
   },
   {
     title: "SPÉLÉOLOGIE EN ARDÈCHE",
     description: "Partez à la découverte des grottes ardéchoises et explorez leurs merveilles souterraines en toute sécurité.",
     image: "/images/presentation/Image 10.jpg",
     cta: "Découvrez nos offres de spéléologie",
-    icon: TreePine
+    icon: TreePine,
+    url: "https://www.face-sud.com/speleo-ardeche/"
   }
 ];
 
@@ -112,33 +104,45 @@ function App() {
       {/* Provence Welcome Section */}
       <div className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-lg max-w-md mx-auto">
             <img 
               src="/images/presentation/pont.jpg"
               alt="Provence"
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="space-y-8">
-            <div className="flex justify-center mb-12">
+          <div className="space-y-6">
+            <div className="flex justify-center">
               <img 
-                src="https://example.com/logo.png" 
-                alt="Les Domaines de Patras"
-                className="h-16"
+                src="/images/logo/logo.png" 
+                alt="Le Mas d'Eylieux"
+                className="h-60 mb-2"
               />
             </div>
-            <h2 className="text-4xl font-light text-center tracking-wide text-[#2C3E50] mb-8">
+            <h2 className="text-5xl font-cormorant font-light text-center tracking-wider text-[#2C3E50] -mt-4">
               BIENVENUE EN PROVENCE
             </h2>
-            <h3 className="text-xl text-center text-[#34495E] mb-12">
+            <h3 className="text-xl font-montserrat font-light text-center tracking-widest text-[#34495E] mt-8">
               UN DOMAINE IDÉALEMENT SITUÉ GÉOGRAPHIQUEMENT
             </h3>
-            <div className="space-y-4 text-center text-[#34495E]">
-              <p>Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale,<br/>à mi-chemin entre Avignon et Montélimar.</p>
-              <p>Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de<br/>Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
+            <div className="space-y-6 text-center font-montserrat font-light text-[#34495E] tracking-wide mt-12">
+              <p className="text-lg">Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale,<br/>à mi-chemin entre Avignon et Montélimar.</p>
+              <p className="text-lg">Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de<br/>Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Separator Image */}
+      <div className="relative h-[40vh] overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("images/presentation/photo 43.jpg")',
+            filter: 'brightness(0.85)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white opacity-50"></div>
       </div>
 
       {/* Destinations Grid */}
@@ -168,9 +172,14 @@ function App() {
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {destination.description}
                   </p>
-                  <button className="w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase">
+                  <a 
+                    href={destination.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase text-center"
+                  >
                     {destination.cta}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
