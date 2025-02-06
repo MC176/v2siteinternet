@@ -125,7 +125,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/noisettiers/piscinevue.png")',
+            backgroundImage: 'url("/images/gites/noisettiers/backbis.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',

@@ -41,7 +41,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
           style={{
-            backgroundImage: 'url("/images/gites/chateaunette/photo 30.png")',
+            backgroundImage: 'url("/images/gites/noisettiers/piscinevue.png")',
           }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -78,21 +78,39 @@ function App() {
       {/* Combined Historical and Farniente Section */}
       <section className="relative py-24 bg-stone-100">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
-              <div className="h-[32rem] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-7xl font-light text-stone-800 tracking-[0.2em] mb-3 uppercase">
+                Le Farniente
+              </h2>
+              <span className="text-2xl md:text-3xl text-stone-600 italic tracking-wide">Ardéchois</span>
+              <div className="w-24 h-1 bg-stone-300 mx-auto mt-8"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="images/presentation/chat.png"
-                  alt="Vue du domaine" 
+                  alt="Vue du domaine 1" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="images/gites/chateaunette/photo 30.png"
+                  alt="Vue du domaine 2" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="images/gites/notused/chat.jpg"
+                  alt="Vue du domaine 3" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/2">
-              <h2 className="text-4xl md:text-6xl font-light text-stone-800 tracking-wider mb-8">
-                Le farniente Ardéchois
-              </h2>
-              <p className="text-lg leading-relaxed text-stone-600">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-lg leading-relaxed text-stone-600 text-center">
                 En Ardèche, dans une ville qui surplombe le Rhône, une ancienne maladrerie du 12e siècle 
                 et son jardin vous invitent à un voyage dans le temps. Construite en 1158, cette bâtisse 
                 historique a accueilli Saint Louis lors de son retour des croisades. Transformée en hôpital 

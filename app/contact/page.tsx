@@ -55,7 +55,7 @@ export default function Contact() {
       <div 
         className="relative h-[60vh] bg-cover bg-center bg-fixed"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1504681869696-d977211a5f4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
+          backgroundImage: 'url("/images/gites/notused/chat4.png")'
         }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
