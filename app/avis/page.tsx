@@ -117,6 +117,16 @@ const guestBookImages = [
   { id: 4, path: '/images/avis/avis 4.png', alt: 'Avis client 4' },
   { id: 5, path: '/images/avis/avis 5.png', alt: 'Avis client 5' },
   { id: 6, path: '/images/avis/avis 6.png', alt: 'Avis client 6' },
+  { id: 6, path: '/images/avis/cerise.png', alt: 'Avis client 15' },
+  { id: 6, path: '/images/avis/remerciement.png', alt: 'Avis client 8' },
+  { id: 6, path: '/images/avis/chene.png', alt: 'Avis client 9' },
+  { id: 6, path: '/images/avis/sacha.png', alt: 'Avis client 10' },
+  { id: 6, path: '/images/avis/enfants.png', alt: 'Avis client 7' },
+  { id: 6, path: '/images/avis/audrey.png', alt: 'Avis client 11' },
+  { id: 6, path: '/images/avis/sonia.png', alt: 'Avis client 12' },
+  { id: 6, path: '/images/avis/quentin.png', alt: 'Avis client 13' },
+  { id: 6, path: '/images/avis/alice.png', alt: 'Avis client 14' },
+
 ];
 
 const googleReviewsLink = "https://www.google.com/search?sa=X&sca_esv=22c69e882f91db0f&rlz=1C1CHNY_frFR1114FR1114&tbm=lcl&sxsrf=AHTn8zr4zZRPZpqOZFY9PJEpczBymczvKw:1738521775349&q=Le+Mas+d%27Eylieux+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2NbUwMjA1MDU3NbI0MTIxMDMw28DI-IpR1CdVwTexWCFF3bUyJzO1tELBsSyzeBErdnEAI9I_x0oAAAA&rldimm=5582050575294240606&hl=fr-FR&ved=2ahUKEwiVieqm0qWLAxV_U6QEHekkKI0Q9fQKegQIRxAF&biw=1705&bih=1270&dpr=1#lkt=LocalPoiReviews";
@@ -158,7 +168,7 @@ export default function AvisPage() {
               Vos Témoignages
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto font-light">
-              Découvrez les expériences authentiques de nos hôtes au Mas d'Eylieux
+              Parce que vous en parlez le mieux.
             </p>
           </div>
         </div>

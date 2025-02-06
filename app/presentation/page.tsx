@@ -1,26 +1,32 @@
 'use client'
 import React, { useState } from 'react';
-import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone } from 'lucide-react';
+import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin } from 'lucide-react';
 
 function App() {
   const [activeImage, setActiveImage] = useState(0);
   
   const poolImages = [
-    "/images/gites/piscine/photo 19.png",
-    "/images/gites/piscine/piscinevue.png",
-    "/images/gites/piscine/photo 18.png",
+    "/images/gites/piscine/nature.jpg",
+    "/images/gites/piscine/photo1.png",
+    "/images/gites/chateaunette/Photo 16.png",
   ];
 
   const pizzaOvenImages = [
-    "/images/gites/four/four1.jpg",
-    "/images/gites/four/four2.jpg",
-    "/images/gites/four/four3.jpg",
+    "/images/gites/four/Photo 29.png",
+    "/images/gites/four/Photo 28.png",
+    "/images/gites/four/Photo 33.png",
   ];
 
   const receptionImages = [
-    "/images/gites/reception/reception1.jpg",
-    "/images/gites/reception/reception2.jpg",
-    "/images/gites/reception/reception3.jpg",
+    "/images/gites/cote-jardin/enceinte.jpg",
+    "/images/gites/cote-jardin/reception.png",
+    "/images/gites/cote-jardin/table.jpg",
+  ];
+
+  const nuitImages = [
+    "/images/gites/cote-jardin/gens.jpg",
+    "/images/gites/notused/nuit.jpg",
+    "/images/gites/piscine/piscinenuit3.png",
   ];
 
   const commonAreaImages = [
@@ -160,105 +166,151 @@ function App() {
         </div>
       </section>
 
-      {/* Pool Section */}
-      <section className="py-24 bg-stone-50">
+      {/* Pool Section - Updated with new design */}
+      <section className="relative py-24 bg-stone-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">La Piscine</h2>
-              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-                Un espace de détente avec vue panoramique sur la vallée.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {poolImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative h-80 overflow-hidden rounded-xl group"
-                >
-                  <img 
-                    src={image}
-                    alt={`Vue de la piscine ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-                </div>
-              ))}
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <ul className="text-stone-600 space-y-2">
-                <li>• Piscine sécurisée et éclairée la nuit au besoin</li>
-                <li>• Profondeur : entre 1.10m et 2.20m</li>
-                <li>• Horaires d'ouverture : 8h-20h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Outdoor Spaces Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-                Espaces Extérieurs
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider flex-shrink-0">
+                La Piscine
               </h2>
-              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-                Découvrez nos espaces extérieurs soigneusement aménagés, du four à pain traditionnel 
-                aux jardins paisibles. Un bassin naturel alimenté par une source offre un havre de 
-                fraîcheur au cœur de la propriété.
+              <div className="h-px w-full bg-stone-200 hidden lg:block" />
+              <p className="text-lg text-stone-600 max-w-2xl text-center lg:text-right">
+                Détendez-vous.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {outdoorSpaceImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative h-80 overflow-hidden rounded-xl group cursor-pointer"
-                  onClick={() => setActiveImage(index)}
-                >
-                  <img 
-                    src={image} 
-                    alt={`Espace extérieur ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+            
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+                {poolImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative h-[400px] overflow-hidden rounded-xl">
+                      <img 
+                        src={image}
+                        alt={`Vue de la piscine ${index + 1}`}
+                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                      />
+                      <div 
+                        className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4">
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Clock className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Horaires</span>
+                        <span className="text-stone-700 font-medium">8h - 20h</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Waves className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Profondeur</span>
+                        <span className="text-stone-700 font-medium">1.10m - 2.20m</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Heart className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Sécurité</span>
+                        <span className="text-stone-700 font-medium">Sécurisée</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Pizza Oven Section */}
-      <section className="py-24 bg-stone-50">
+            {/* De jour comme de nuit Section - Updated with new design */}
+            <section className="relative py-24 bg-stone-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">Four à Pizza</h2>
-              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-                Un espace convivial pour des moments de partage inoubliables.
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider flex-shrink-0">
+                La nuit au Mas
+              </h2>
+              <div className="h-px w-full bg-stone-200 hidden lg:block" />
+              <p className="text-lg text-stone-600 max-w-2xl text-center lg:text-right">
+                Détendez-vous.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {pizzaOvenImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative h-80 overflow-hidden rounded-xl group"
-                >
-                  <img 
-                    src={image}
-                    alt={`Four à pizza ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+            
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+                {nuitImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className="group cursor-pointer"
+                  >
+                    <div className="relative h-[400px] overflow-hidden rounded-xl">
+                      <img 
+                        src={image}
+                        alt={`Vue de la piscine ${index + 1}`}
+                        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                      />
+                      <div 
+                        className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4">
+                <div className="bg-white rounded-xl p-6 shadow-sm">
+                  <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Clock className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Horaires</span>
+                        <span className="text-stone-700 font-medium">8h - 20h</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Waves className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Profondeur</span>
+                        <span className="text-stone-700 font-medium">1.10m - 2.20m</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center p-4">
+                      <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
+                        <Heart className="w-6 h-6 text-stone-600" />
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm text-stone-500">Sécurité</span>
+                        <span className="text-stone-700 font-medium">Sécurisée</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <p className="text-stone-600">
-                Four à pizza à disposition. Possibilité de faire du pain et partager des moments conviviaux.
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -301,6 +353,133 @@ function App() {
                 <Phone className="w-5 h-5" />
                 Nous contacter
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Pizza Oven Section - Updated with new design */}
+      <section className="relative py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider flex-shrink-0">
+                Four à Pizza
+              </h2>
+              <div className="h-px w-full bg-stone-200 hidden lg:block" />
+              <p className="text-lg text-stone-600 max-w-2xl text-center lg:text-right">
+                Le four à pain et à pizza est à disposition pour tous à tout moment. Nos grands espaces permettent de déjeuner dehors ou dîner à la belle étoile.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {pizzaOvenImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative h-[400px] overflow-hidden rounded-xl">
+                    <img 
+                      src={image}
+                      alt={`Four à pizza ${index + 1}`}
+                      className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                  </div>
+                  <div className="mt-4 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <div className="h-[2px] w-8 bg-stone-400" />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">Disponible 24/7</span>
+              </div>
+              <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <CheckCircle className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">Matériel fourni</span>
+              </div>
+              <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">Espace extérieur</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Outdoor Spaces Section - Updated with new design */}
+      <section className="relative py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider flex-shrink-0">
+                Espaces Extérieurs
+              </h2>
+              <div className="h-px w-full bg-stone-200 hidden lg:block" />
+              <p className="text-lg text-stone-600 max-w-2xl text-center lg:text-right">
+                Découvrez nos espaces extérieurs soigneusement aménagés, du bassin naturel aux jardins paisibles.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {outdoorSpaceImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative h-[400px] overflow-hidden rounded-xl">
+                    <img 
+                      src={image}
+                      alt={`Espace extérieur ${index + 1}`}
+                      className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                  </div>
+                  <div className="mt-4 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                    <div className="h-[2px] w-8 bg-stone-400" />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <TreePine className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">40 hectares</span>
+              </div>
+              <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <Mountain className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">Vue panoramique</span>
+              </div>
+              <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+                  <Coffee className="w-6 h-6 text-stone-600" />
+                </div>
+                <span className="text-stone-600">Espaces détente</span>
+              </div>
             </div>
           </div>
         </div>

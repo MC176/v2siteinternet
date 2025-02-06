@@ -83,7 +83,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url("/images/presentation/background.png")',
+            backgroundImage: 'url("/images/presentation/image 7.jpg")',
             filter: 'brightness(0.65)'
           }}
         />
