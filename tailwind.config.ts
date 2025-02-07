@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        cormorant: ['var(--font-cormorant)', 'Cormorant Garamond', 'serif'],
+        vollkorn: ['var(--font-vollkorn)', 'vollkorn Garamond', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
       },

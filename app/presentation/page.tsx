@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin } from 'lucide-react';
 
 function App() {
@@ -40,21 +40,35 @@ function App() {
     "/images/gites/noisettiers/veggetation.png",
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const heroImage = document.querySelector('.hero-image') as HTMLElement;
+      if (heroImage) {
+        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="relative">
       {/* Hero Section */}
       <div className="relative h-screen">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+      <div 
+          className="hero-image absolute inset-0 bg-cover bg-center scale-110"
           style={{
             backgroundImage: 'url("/images/gites/noisettiers/piscinevue.png")',
+            willChange: 'transform',
           }}
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-light text-center mb-6 tracking-wider">
-            Un havre de paix en Ardèche
+            Votre havre de paix
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-3xl font-light tracking-wide">
             Calme, sérénité, vacances.
@@ -64,7 +78,7 @@ function App() {
       </div>
 
       {/* Introduction Section */}
-      <section className="py-32 bg-white">
+      <section className=" relative py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
@@ -82,14 +96,15 @@ function App() {
       </section>
 
       {/* Combined Historical and Farniente Section */}
-      <section className="relative py-24 bg-stone-100">
+      <section className="relative py-20 bg-stone-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-7xl font-light text-stone-800 tracking-[0.2em] mb-3 uppercase">
-                Le Farniente
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-poppins font-light text-stone-800 tracking-[0.1em] mb-2">
+               
               </h2>
-              <span className="text-2xl md:text-3xl text-stone-600 italic tracking-wide">Ardéchois</span>
+              <span className="text-2xl md:text-3xl text-stone-600 tracking-wide"> Le Farniente </span>
+              <span className="text-2xl md:text-3xl text-stone-600 italic tracking-wide"> Ardéchois</span>
               <div className="w-24 h-1 bg-stone-300 mx-auto mt-8"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
