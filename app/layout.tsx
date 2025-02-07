@@ -1,29 +1,27 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Navigation from '@/components/Navigation'
-import { Toaster } from 'react-hot-toast'
-
-const inter = Inter({ subsets: ['latin'] })
+import { cormorant, poppins } from './fonts';
+import './globals.css';
+import type { Metadata } from 'next';
+import Navigation from '@/components/Navigation';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
-  title: 'Gîtes en Ardèche | Location de Vacances',
-  description: 'Découvrez nos 6 gîtes de charme en Ardèche. Séjournez dans un cadre exceptionnel avec tout le confort moderne.',
-  keywords: 'gîte, Ardèche, location vacances, hébergement, tourisme',
-}
+  title: 'Gîte Chateaunnette - Hébergement de Luxe en Ardèche',
+  description: 'Découvrez notre gîte de luxe en Ardèche. Une expérience unique dans un cadre exceptionnel.',
+  keywords: 'gîte, Ardèche, location vacances, hébergement, tourisme, luxe',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
-      <body className={inter.className}>
+    <html lang="fr" className={`${cormorant.variable} ${poppins.variable}`}>
+      <body className={poppins.className}>
         <Navigation />
         {children}
         <Toaster position="bottom-right" />
       </body>
     </html>
-  )
+  );
 }

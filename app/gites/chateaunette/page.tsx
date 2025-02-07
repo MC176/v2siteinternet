@@ -251,17 +251,17 @@ function App() {
 
         {/* Services & Prestations d'Exception moved before final quote */}
         <div className="mt-16 luxury-section">
-          <div className="text-center mb-2">
+          <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
               Services & Prestations d'Exception
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Découvrez nos services premium, pensés pour sublimer chaque instant de votre séjour
+               
             </p>
           </div>
         </div>
 
-        <div className="mt-6 bg-gray-50 py-16">
+        <div className="mt-6 bg-gray-50 py-6">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl font-semibold text-gray-900 mb-8">Équipements et services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">

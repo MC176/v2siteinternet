@@ -1,6 +1,7 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,8 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        cormorant: ['Cormorant Garamond', 'serif'],
+        cormorant: ['var(--font-cormorant)', 'Cormorant Garamond', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -21,10 +23,28 @@ const config: Config = {
           DEFAULT: '#4A5568',
           dark: '#2D3748',
         },
+        cream: 'rgb(var(--color-cream))',
+        gold: 'rgb(var(--color-gold))',
+        navy: 'rgb(var(--color-navy))',
+        'deep-black': 'rgb(var(--color-black))',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require('tailwindcss-animate')],
+};
 
-export default config
+export default config;
