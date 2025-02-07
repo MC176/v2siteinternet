@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useEffect } from 'react';
 import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape } from 'lucide-react';
 
@@ -103,57 +102,48 @@ function App() {
 
       {/* Provence Welcome Section */}
       <div className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-lg max-w-md mx-auto">
-            <img 
-              src="/images/presentation/pont.jpg"
-              alt="Provence"
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="space-y-6">
-            <div className="flex justify-center">
-              <img 
-                src="/images/logo/logo.png" 
-                alt="Le Mas d'Eylieux"
-                className="h-60 mb-2"
-              />
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 items-center">
+            <div className="flex justify-end pr-8">
+              <div className="relative aspect-[3/4] overflow-hidden w-48">
+                <img 
+                  src="/images/presentation/pont.jpg"
+                  alt="Provence"
+                  className="object-cover w-full h-full"
+                />
+              </div>
             </div>
-            <h2 className="text-5xl font-cormorant font-light text-center tracking-wider text-[#2C3E50] -mt-4">
-              BIENVENUE EN PROVENCE
-            </h2>
-            <h3 className="text-xl font-montserrat font-light text-center tracking-widest text-[#34495E] mt-8">
-              UN DOMAINE IDÉALEMENT SITUÉ GÉOGRAPHIQUEMENT
-            </h3>
-            <div className="space-y-6 text-center font-montserrat font-light text-[#34495E] tracking-wide mt-12">
-              <p className="text-lg">Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale,<br/>à mi-chemin entre Avignon et Montélimar.</p>
-              <p className="text-lg">Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de<br/>Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
+            <div className="pl-8 space-y-6">
+              <h2 className="text-5xl font-cormorant font-light tracking-wider text-[#2C3E50]">
+                BIENVENUE EN PROVENCE
+              </h2>
+              <h3 className="text-xl font-montserrat font-light tracking-widest text-[#34495E] mt-8">
+                UN DOMAINE IDÉALEMENT SITUÉ GÉOGRAPHIQUEMENT
+              </h3>
+              <div className="space-y-6 font-montserrat font-light text-[#34495E] tracking-wide mt-12">
+                <p className="text-lg">Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar.</p>
+                <p className="text-lg">Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Separator Image */}
-      <div className="relative h-[40vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("images/presentation/photo 43.jpg")',
-            filter: 'brightness(0.85)'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white opacity-50"></div>
+      {/* Activities Title Section */}
+      <div className="py-16 text-center bg-[#FDFBF7]">
+        <h2 className="text-4xl font-light tracking-widest text-[#2C3E50] mb-4">ACTIVITÉS À DÉCOUVRIR</h2>
+        <div className="w-24 h-1 bg-[#8B7355] mx-auto"></div>
       </div>
 
       {/* Destinations Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-24">
+      <div className="max-w-7xl mx-auto px-4 pb-24">
         <div className="grid md:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
             <div 
               key={index}
-              className="fade-in"
+              className="fade-in h-full"
             >
-              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
+              <div className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group h-full flex flex-col">
                 <div className="relative h-72 overflow-hidden">
                   <img 
                     src={destination.image} 
@@ -162,21 +152,21 @@ function App() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                   <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-full shadow-md">
-                        {destination.icon && <destination.icon className="w-5 h-5 text-[#8B7355]" />}
+                    {destination.icon && <destination.icon className="w-5 h-5 text-[#8B7355]" />}
                   </div>
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <h2 className="text-2xl font-light tracking-wide text-[#8B7355] mb-4">
                     {destination.title}
                   </h2>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                     {destination.description}
                   </p>
                   <a 
                     href={destination.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase text-center"
+                    className="block w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase text-center mt-auto"
                   >
                     {destination.cta}
                   </a>

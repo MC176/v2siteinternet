@@ -235,6 +235,19 @@ function App() {
           </button>
         </div>
 
+
+        {/* Services & Prestations d'Exception moved before final quote */}
+        <div className="mt-16 luxury-section">
+          <div className="text-left mb-2">
+            <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
+              Services & Prestations d'Exception
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+               
+            </p>
+          </div>
+        </div>
+
         <div className="bg-white py-8 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ses points forts</h2>
@@ -264,18 +277,6 @@ function App() {
                 <span className="text-gray-700">Terrasse</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Services & Prestations d'Exception moved before final quote */}
-        <div className="mt-16 luxury-section">
-          <div className="text-left mb-2">
-            <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              Services & Prestations d'Exception
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-               
-            </p>
           </div>
         </div>
 

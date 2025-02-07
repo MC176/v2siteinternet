@@ -143,44 +143,6 @@ function App() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<TreePine className="w-8 h-8" />}
-              title="Domaine Naturel"
-              description="40 hectares de nature préservée avec bois, vignes et champs de lavande"
-            />
-            <FeatureCard 
-              icon={<Pool className="w-8 h-8" />}
-              title="Piscine Panoramique"
-              description="Une piscine à débordement avec vue imprenable sur la vallée"
-            />
-            <FeatureCard 
-              icon={<Mountain className="w-8 h-8" />}
-              title="Cadre Exceptionnel"
-              description="Un site historique surplombant le Rhône dans un calme absolu"
-            />
-            <FeatureCard 
-              icon={<Utensils className="w-8 h-8" />}
-              title="Équipements"
-              description="Four à pain, terrain de pétanque, et espaces de détente"
-            />
-            <FeatureCard 
-              icon={<Users className="w-8 h-8" />}
-              title="6 Gîtes de Caractère"
-              description="Des hébergements alliant authenticité et confort moderne"
-            />
-            <FeatureCard 
-              icon={<Coffee className="w-8 h-8" />}
-              title="Moments Privilégiés"
-              description="Des espaces conviviaux pour des instants inoubliables"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Receptions Section */}
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-4">
