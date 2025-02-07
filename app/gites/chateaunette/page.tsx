@@ -182,7 +182,25 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-32 relative overflow-hidden">
+      {/* Introduction Section */}
+      <section className=" relative py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
+              Bienvenue au Mas d'Ardèche
+            </h2>
+            <p className="text-lg leading-relaxed text-stone-600 mb-12">
+              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
+              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
+              rencontre le luxe contemporain, offrant une expérience unique de séjour 
+              en Ardèche.
+            </p>
+            <div className="h-px w-24 bg-stone-300 mx-auto"></div>
+          </div>
+        </div>
+      </section>
+
+        <div className="mt-0 relative overflow-hidden">
           <div className="flex gap-8">
             {visibleImages.map((item, index) => (
               <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">

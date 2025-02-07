@@ -181,6 +181,48 @@ function App() {
         </div>
       </section>
 
+      {/* Receptions Section */}
+      <section className="py-24 bg-stone-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
+                Cousinades, Réceptions & Fêtes
+              </h2>
+              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
+                Un cadre exceptionnel pour vos événements spéciaux.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {receptionImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="relative h-80 overflow-hidden rounded-xl group"
+                >
+                  <img 
+                    src={image}
+                    alt={`Réception ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <p className="text-lg text-stone-600 mb-8">Nous contacter pour plus de détails</p>
+              <a 
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-stone-800 text-white px-8 py-4 rounded-full
+                  transition-all hover:bg-stone-700 hover:scale-105 hover:shadow-lg duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                Nous contacter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pool Section - Updated with new design */}
       <section className="relative py-24 bg-stone-50">
         <div className="container mx-auto px-4">
@@ -257,7 +299,7 @@ function App() {
       </section>
 
             {/* De jour comme de nuit Section - Updated with new design */}
-            <section className="relative py-24 bg-stone-50">
+            <section className="relative py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
@@ -331,51 +373,8 @@ function App() {
         </div>
       </section>
 
-      {/* Receptions Section */}
-      <section className="py-24 bg-stone-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-                Cousinades, Réceptions & Fêtes
-              </h2>
-              <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-                Un cadre exceptionnel pour vos événements spéciaux.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              {receptionImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative h-80 overflow-hidden rounded-xl group"
-                >
-                  <img 
-                    src={image}
-                    alt={`Réception ${index + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-                </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <p className="text-lg text-stone-600 mb-8">Nous contacter pour plus de détails</p>
-              <a 
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-stone-800 text-white px-8 py-4 rounded-full
-                  transition-all hover:bg-stone-700 hover:scale-105 hover:shadow-lg duration-300"
-              >
-                <Phone className="w-5 h-5" />
-                Nous contacter
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       {/* Pizza Oven Section - Updated with new design */}
-      <section className="relative py-24 bg-stone-50">
+      <section className="relative py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
