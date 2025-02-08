@@ -7,62 +7,62 @@ import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building
 const gites = [
   {
     name: 'Côté Source',
-    description: "Un havre de paix moderne avec des finitions luxueuses, parfait pour les familles en quête de tranquillité.",
+    description: "Terrasse majestueuse, vue sur jardins et source naturelle, ambiance authentique et apaisante.",
     image: "/images/gites/cote-source/photo1.png",
     capacity: '4 personnes',
     rating: 4.8,
     price: '150€',
-    features: ['Jardin privé', 'Spa', 'Vue sur la vallée'],
+    features: ['Grande Terrasse 60m²', 'Vue sur le domaine','Grands espaces'],
     href: '/gites/cote-source'
   },
   {
     name: 'Noisettiers',
-    description: "Une authentique maison ardéchoise rénovée alliant le charme de l'ancien au confort moderne.",
+    description: "Rénové, vue sur noisetiers, accès par un porche pittoresque, couchers de soleil splendides.",
     image: "/images/gites/noisettiers/piscinevue.png",
     capacity: '2 personnes',
     rating: 4.9,
-    price: '220€',
-    features: ['Grande terrasse', 'Barbecue', 'Salle de jeux'],
+    price: '130€',
+    features: ['Gîte rénové en 2023', 'Gîte traversant Est/Ouest ', 'Accès possible par 2 terrasses'],
     href: '/gites/noisettiers'
   },
   {
     name: 'Figuiers',
-    description: "Un gîte de caractère avec pierres apparentes et poutres anciennes, rénové avec goût.",
+    description: "Panoramas spectaculaires, terrasse surélevée, salon lumineux, salle de bain moderne, atmosphère paisible.",
     image: "/images/gites/figuiers/photo 2.jpeg",
     capacity: '3 personnes',
     rating: 4.9,
     price: '130€',
-    features: ['Cheminée', 'Jardin paysager', 'Cave à vin'],
+    features: ['Gîte rénové en 2023', 'Vue exceptionnelle', 'Luminosité exceptionnelle'],
     href: '/gites/figuiers'
   },
   {
     name: 'Citronniers',
-    description: "Une villa contemporaine baignée de lumière avec des espaces de vie généreux et confortables.",
+    description: "Fraîcheur estivale, vue sur cour fleurie, baigné de lumière, parfums légers de citronniers.",
     image: "/images/gites/citronniers/salon3.jpg",
     capacity: '3 personnes',
     rating: 4.8,
     price: '130€',
-    features: ['Piscine chauffée', 'Home cinéma', "Cuisine d'été"],
+    features: ['Vue sur les jardins intérieurs', "Végétation luxuriante et apaisante", 'Lumière naturelle '],
     href: '/gites/citronniers'
   },
   {
     name: 'Maisonette',
-    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure naturel et préservé.",
+    description: "Duplex cosy, proche piscine, charme rustique, ombragé par un mûrier centenaire.",
     image: "/images/gites/maisonnette/montagne.png",
     capacity: '2 personnes',
     rating: 4.7,
     price: '120€',
-    features: ['Jacuzzi', 'Petit jardin', 'Terrasse privée'],
+    features: ['Charme atypique', 'Dupleix chaleureux', 'Terrasse ombragée'],
     href: '/gites/maisonette'
   },
   {
     name: 'Châteaunette',
-    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable et mangifique.",
+    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, inspiré d’un château belge.",
     image: "images/gites/chateaunette/photo 17.png",
     capacity: '7 personnes',
     rating: 4.9,
     price: '180€',
-    features: ['Piscine privée', 'Terrasse panoramique', 'Cuisine équipée'],
+    features: ['Spacieux et lumineux', 'Grande hauteur sous plafond', 'Esprit convivial et familial'],
     href: '/gites/chateaunette'
   },
 ];
