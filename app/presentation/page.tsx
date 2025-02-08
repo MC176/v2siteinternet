@@ -222,10 +222,10 @@ function App() {
           ))}
         </div>
 
-        <div className="mt-4">
+        {/*<div className="mt-4">
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
-              <div className="flex flex-col items-center justify-center p-4">
+              {/*<div className="flex flex-col items-center justify-center p-4">
                 <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
                   <Clock className="w-6 h-6 text-stone-600" />
                 </div>
@@ -253,14 +253,37 @@ function App() {
                   <span className="text-sm text-stone-500">Sécurité</span>
                   <span className="text-stone-700 font-medium">Sécurisée</span>
                 </div>
-              </div>
+              </div>*}
             </div>
           </div>
+        </div>*/}
+      </div>
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-stone-50 rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Clock className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">8h - 20h</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Waves className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">1.10m - 2.20m</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Heart className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">Sécurisée</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 {/* De jour comme de nuit Section - Updated with new design */}
 <section className="relative py-24 bg-stone-50">
@@ -297,10 +320,10 @@ function App() {
           ))}
         </div>
 
-        <div className="mt-4">
+        {/*<div className="mt-4">
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
-              <div className="flex flex-col items-center justify-center p-4">
+              {/*<div className="flex flex-col items-center justify-center p-4">
                 <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center mb-3">
                   <Clock className="w-6 h-6 text-stone-600" />
                 </div>
@@ -328,14 +351,37 @@ function App() {
                   <span className="text-sm text-stone-500">Sécurité</span>
                   <span className="text-stone-700 font-medium">Sécurisée</span>
                 </div>
-              </div>
+              </div>*}
             </div>
           </div>
+        </div>*/}
+      </div>
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Clock className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">8h - 20h</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Waves className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">1.10m - 2.20m</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Heart className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">Sécurisée</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 {/* Pizza Oven Section - Updated with new design */}
 <section className="relative py-24 bg-white">
@@ -374,7 +420,7 @@ function App() {
         ))}
       </div>
 
-      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-stone-50 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Clock className="w-6 h-6 text-stone-600" />
@@ -436,27 +482,26 @@ function App() {
           </div>
         ))}
       </div>
-
       <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <TreePine className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">40 hectares</span>
+          <span className="text-stone-600">Bassin naturel</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Mountain className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Vue panoramique</span>
+          <span className="text-stone-600">Jardins paisibles</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Coffee className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Espaces détente</span>
+          <span className="text-stone-600">Terrasse</span>
         </div>
       </div>
     </div>
