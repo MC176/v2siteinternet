@@ -528,49 +528,56 @@ function App() {
                 </div>
               </div>
               <h2 className="text-4xl md:text-6xl font-light mb-8 tracking-wide">
-                Là où les étoiles touchent la terre
+                La magie des étoiles
               </h2>
               <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-3xl mx-auto">
-                Dans notre coin préservé d'Ardèche, loin des lumières de la ville, 
-                le ciel nocturne révèle toute sa splendeur. Un spectacle naturel 
-                qui fait de notre domaine un site reconnu pour l'observation des étoiles.
+                Loin de toute pollution lumineuse, le firmamen révèle ses plus beaux secrets. 
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Moon className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Ciel Préservé</h3>
-                <p className="text-stone-300">Zone protégée sans pollution lumineuse, offrant une visibilité exceptionnelle des constellations</p>
+                <h3 className="text-xl font-light mb-3 text-white">Perséides d'Août</h3>
+                <p className="text-stone-300">Vivez la magie de la plus belle pluie d'étoiles filantes de l'année, avec jusqu'à 100 météores par heure dans un ciel parfaitement noir</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Star className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Site d'Exception</h3>
-                <p className="text-stone-300">Reconnu pour ses conditions optimales d'observation astronomique toute l'année</p>
+                <h3 className="text-xl font-light mb-3 text-white">Voie Lactée</h3>
+                <p className="text-stone-300">Admirez notre galaxie dans toute sa splendeur, visible à l'œil nu grâce à l'absence totale de pollution lumineuse sur plusieurs kilomètres</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Telescope className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Expérience Unique</h3>
-                <p className="text-stone-300">Des soirées d'observation guidées et des équipements professionnels à disposition</p>
+                <h3 className="text-xl font-light mb-3 text-white">Constellations</h3>
+                <p className="text-stone-300">Découvrez les constellations lors de nos soirées d'observation douces et reposantes sous un ciel d'une luminosité inégalée</p>
               </div>
             </div>
 
             <div className="max-w-2xl mx-auto relative">
               <div className="absolute -top-12 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-12 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl" />
-              <p className="text-lg text-stone-200 italic mb-12 relative">
-                "Un des rares endroits en France où l'on peut encore observer 
-                la Voie Lactée dans toute sa splendeur. Une expérience qui 
-                transforme à jamais notre perception du ciel nocturne."
-              </p>
+              <div className="relative mb-16">
+                <div className="relative">
+                  <p className="text-lg text-stone-200 text-justify">
+                    "Un des rares endroits en France où l'absence totale de pollution lumineuse
+                    permet d'observer la Voie Lactée et les étoiles filantes dans des conditions
+                    exceptionnelles."
+                  </p>
+                  <p className="text-lg text-stone-200 text-right italic mt-6">
+                    Claudine et Armand
+                  </p>
+                </div>
+              </div>
 
-              <button className="relative bg-transparent border-2 border-white/80 px-12 py-4 rounded-full 
+              <a href="/contact" 
+                className="relative inline-block bg-transparent border-2 border-white/80 px-12 py-4 rounded-full 
                 text-lg transition-all hover:bg-white hover:text-stone-900 
                 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300
                 backdrop-blur-sm">
                 Réservez votre nuit sous les étoiles
-              </button>
+              </a>
             </div>
+
           </div>
         </div>
       </section>
