@@ -159,7 +159,11 @@ function App() {
                 Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Figuiers bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              Situé au point le plus haut du domaine, le gîte Figuier séduit par sa vue spectaculaire et son intérieur baigné de lumière. 
+              Grâce à de larges baies vitrées, le salon offre un panorama sur la nature environnante, 
+              plongeant les visiteurs dans une immersion totale avec les paysages ardéchois. Sa salle de bain rénovée, sa cuisine moderne et équipée, 
+              ainsi que sa spacieuse terrasse bordée de balustres font de ce gîte un lieu d’exception. 
+              Parfait pour des moments de détente, on peut y déguster des figues et profiter du ciel étoilé de l’Ardèche.
               </p>
             </div>
 
@@ -187,13 +191,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              Le Gîte du Soleil
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+            Perché en hauteur, Figuiers est le gîte qui offre les plus belles vues du domaine. 
+            Son salon baigne dans la lumière avec une vision panoramique sur la végétation luxuriante. 
+            Sa salle de bain et sa cuisine moderne récemment refaites en font un parfait équilibre entre confort et authenticité.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>

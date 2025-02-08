@@ -156,10 +156,14 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Châteaunette, un gîte format XXL
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Chateaunette bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              <p className="text-gray-600 leading-relaxed text-lg"> 
+                Le gîte Châteaunette est le plus grand des hébergements du Mas. 
+                Doté de deux chambres, d’une mezzanine avec lit, et d’une grande cuisine équipée, 
+                il allie charme authentique et confort moderne. La terrasse privative, orientée plein sud, 
+                invite à des repas conviviaux avec vue sur la nature environnante. 
+                Un gîte chargé d’histoire, parfait pour un séjour en famille ou entre amis.
               </p>
             </div>
 
@@ -167,7 +171,7 @@ function App() {
             <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">6</div>
+                  <div className="text-4xl font-light text-blue-900">7</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
               </div>
@@ -187,13 +191,13 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              L'Histoire de Chateaunette
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+            Lorsque nos premiers hôtes découvrirent ce gîte, ils le baptisèrent "Châteaunette", 
+            tant les grands espaces ainsi que la hauteur sous plafond leur rappelaient un petit château. Spacieux et lumineux, avec ses deux chambres, 
+            son salon et sa mezzanine, il offre un véritable espace de vie où le confort moderne côtoie 
+            l'authenticité du mas.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -258,7 +262,7 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Wifi className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
+                <span className="text-gray-700">Grands espaces</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
@@ -267,10 +271,6 @@ function App() {
               <div className="flex items-center gap-2">
                 <Ban className="w-5 h-5 text-green-600" />
                 <span className="text-gray-700">Chambres non-fumeurs</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Plane className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Navette aéroport</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
@@ -290,8 +290,8 @@ function App() {
                     <Car className="w-5 h-5 text-blue-900" />
                     Parking
                   </h3>
-                  <p className="text-gray-600 text-sm mb-1">Un parking privé est disponible sur place <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></p>
-                  <p className="text-gray-600 text-sm">€20 par jour (sur réservation)</p>
+                  <p className="text-gray-600 text-sm mb-1">Un parking privé <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded"></span></p>
+                  <p className="text-gray-600 text-sm"></p>
                 </div>
 
                 <div>
@@ -301,7 +301,7 @@ function App() {
                   </h3>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-blue-900" />
-                    <span className="text-gray-600 text-sm">Wi-Fi gratuit dans tout l'établissement</span>
+                    <span className="text-gray-600 text-sm">Wi-Fi accessible à certains endroits</span>
                   </div>
                 </div>
 
@@ -377,13 +377,11 @@ function App() {
           </h3>
           <div className="space-y-1">
             {[
-              'Prise près du lit',
+              'Prises près du lit',
               'Portant',
               'Couvertures',
-              'Anti-allergie',
-              'Sol carrelé',
-              'Insonorisation',
-              'Repassage'
+              'Repassage',
+              'Couvertures supplémentaires disponibles'
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-1.5">
                 <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -409,7 +407,7 @@ function App() {
             </div>
             <div className="flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-blue-900" />
-              <span className="text-gray-600 text-sm">Navette aéroport <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
+              <span className="text-gray-600 text-sm"> <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
             </div>
           </div>
         </div>
@@ -458,7 +456,6 @@ function App() {
     </div>
   </div>
 </div>
-
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">

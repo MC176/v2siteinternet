@@ -135,7 +135,7 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Noisettiers
+            Noisetiers
           </h1>
           <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
@@ -159,7 +159,10 @@ function App() {
                 Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Noisettiers bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              Rénové en 2023, le gîte Noisetier bénéficie d’un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
+              Accessible par un porche en pierre plein de caractère, il mêle subtilement tradition et modernité. Son intérieur, décoré dans des tons rappelant la teinte dorée des noisettes, 
+              procure une atmosphère douce et apaisante. Ce lieu, 
+              où l’on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l’esprit du Mas : un havre de paix où nature et confort se rejoignent.
               </p>
             </div>
 
@@ -187,13 +190,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              L'Orée du Noisetier
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+              Fraîchement rénové, ce gîte doit son nom aux beaux noisetiers qui l'entourent. Accessible par un petit porche au cachet indéniable, 
+              il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude, mêlant tradition et modernité,
+              parfait pour des vacances au soleil dans le Sud de l'Ardèche.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>

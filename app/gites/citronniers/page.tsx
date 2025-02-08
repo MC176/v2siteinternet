@@ -159,7 +159,10 @@ function App() {
                 Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Citronniers bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+                Donnant directement sur la cour fleurie du Mas, le gîte Citronnier est entouré de roses trémières et de citronniers dont les fruits parfumés
+                 évoquent la douceur méditerranéenne. Son intérieur lumineux, où le soleil pénètre sans jamais surchauffer,
+                  garantit une fraîcheur agréable même en plein été. Exposé au nord, il reste tempéré, offrant un confort naturel à ses occupants.
+                   Chaque matin, le spectacle des rayons dorés illuminant la cour, mêlé au parfum des fleurs, fait de cet endroit un véritable havre de paix.
               </p>
             </div>
 
@@ -187,13 +190,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              L'Escapade Acidulée
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+              Ce gîte doit son nom aux citronniers qui bordent sa cour, 
+              offrant chaque année des fruits parfumés que nous avons plaisir à partager. Entouré de fleurs et baigné de lumière, 
+              il est une véritable bulle de bien-être pour se reconnecter à la nature.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>

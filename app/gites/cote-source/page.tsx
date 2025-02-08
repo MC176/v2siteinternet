@@ -159,7 +159,11 @@ function App() {
                 Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Côté Source bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              Avec sa terrasse panoramique exceptionnelle, bordée de balustres élégantes, le gîte Côté Source surplombe les jardins du Mas et 
+              la source millénaire qui irrigue encore aujourd’hui nos terres. Témoignage du passé, cette eau précieuse était essentielle aux générations 
+              qui nous ont précédés, façonnant la vie du domaine bien avant l’arrivée de l’eau courante. Depuis votre terrasse, 
+              vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars 
+              et saules pleureurs, un véritable tableau vivant évoluant au fil des saisons.
               </p>
             </div>
 
@@ -187,13 +191,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              Au Rythme de l’Eau
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+              Dominant les jardins, ce gîte bénéficie d’une terrasse exceptionnelle avec balustrades ouvrant sur la nature environnante. 
+              Il tient son nom de la source naturelle qui, depuis des siècles, abreuve ces terres, irriguant les jardins et le bassin aux nénuphars. 
+              Une oasis de fraîcheur et de sérénité en plein cœur de l’Ardèche.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>

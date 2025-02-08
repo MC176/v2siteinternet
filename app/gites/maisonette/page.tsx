@@ -159,7 +159,10 @@ function App() {
                 Le Climat Idéal de la Provence
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Niché au cœur de la Provence, le Gîte Maisonnette bénéficie d'un microclimat exceptionnel. La douceur méditerranéenne s'y exprime dans toute sa splendeur, offrant des conditions parfaites pour profiter de votre séjour tout au long de l'année.
+              Derrière sa façade discrète, la Maisonnette cache une architecture spéciale en Ardèche. Son entrée semblable à celle d’une maison traditionnelle, 
+              donne accès à un duplex astucieusement aménagé. À l’étage, un salon cosy, baigné de lumière, 
+              invite à la détente, tandis qu’en contrebas, la chambre et la salle d’eau offrent un espace nuit confortable et paisible. 
+              À l’extérieur, un mûrier centenaire ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
               </p>
             </div>
 
@@ -187,13 +190,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              L'Exception du Mas : une ode à la sérénité
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+              Un duplex au charme fou, isolé du mas et proche de la piscine. 
+              Son architecture rappelle une maisonnette de conte, avec son salon en étage et sa chambre cosy en rez-de-chaussée. 
+              Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un cocon douillet en hiver.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>

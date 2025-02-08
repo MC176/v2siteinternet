@@ -10,7 +10,7 @@ const gites = [
     description: "Terrasse majestueuse, vue sur jardins et source naturelle, ambiance authentique et apaisante.",
     image: "/images/gites/cote-source/photo1.png",
     capacity: '4 personnes',
-    rating: 4.8,
+    rating: 4.9,
     price: '150€',
     features: ['Grande Terrasse 60m²', 'Vue sur le domaine','Grands espaces'],
     href: '/gites/cote-source'
