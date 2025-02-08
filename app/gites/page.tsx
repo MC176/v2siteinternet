@@ -47,7 +47,7 @@ const gites = [
   },
   {
     name: 'Maisonette',
-    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure préservé.",
+    description: "Un cocon intimiste parfait pour les couples, niché dans un écrin de verdure naturel et préservé.",
     image: "/images/gites/maisonnette/montagne.png",
     capacity: '2 personnes',
     rating: 4.7,
@@ -57,7 +57,7 @@ const gites = [
   },
   {
     name: 'Châteaunette',
-    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable.",
+    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable et mangifique.",
     image: "images/gites/chateaunette/photo 17.png",
     capacity: '6 personnes',
     rating: 4.9,
