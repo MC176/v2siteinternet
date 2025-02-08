@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -27,6 +27,33 @@ const navigation = [
 
 export default function Navigation() {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [lineWidth, setLineWidth] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const linkRef = useRef(null);
+
+  useEffect(() => {
+    if (hoveredItem) {
+      setIsVisible(true);
+      let animationFrameId;
+
+      const animate = (startTime) => {
+        const progress = Math.min((Date.now() - startTime) / 200, 1); // Animation duration: 200ms
+        setLineWidth(progress * 100);
+
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(() => animate(startTime));
+        }
+      };
+
+      animationFrameId = requestAnimationFrame(() => animate(Date.now()));
+
+      return () => cancelAnimationFrame(animationFrameId);
+    } else {
+      setLineWidth(0);
+      setIsVisible(false);
+    }
+  }, [hoveredItem]);
 
   return (
     <Disclosure as="nav" className="bg-transparent absolute w-full z-50">
@@ -45,16 +72,41 @@ export default function Navigation() {
                     <div
                       key={item.name}
                       className="relative group"
-                      onMouseEnter={() => item.submenu && setIsSubmenuOpen(true)}
-                      onMouseLeave={() => item.submenu && setIsSubmenuOpen(false)}
+                      onMouseEnter={() => {
+                        setHoveredItem(item.name);
+                        if (item.submenu) {
+                          setIsSubmenuOpen(true);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredItem(null);
+                        if (item.submenu) {
+                          setIsSubmenuOpen(false);
+                        }
+                      }}
                     >
                       <Link
+                        ref={linkRef}
                         href={item.href}
                         className="nav-link"
                       >
                         {item.name}
                       </Link>
-                      {item.submenu && isSubmenuOpen && (
+                      {isVisible && hoveredItem === item.name && (
+                        <span
+                          style={{
+                            width: `${lineWidth}%`,
+                            transition: 'none',
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            height: '2px',
+                            backgroundColor: 'white',
+                          }}
+                          className=" "
+                        />
+                      )}
+                      {item.submenu && isSubmenuOpen && hoveredItem === item.name && (
                         <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                           <div className="py-1">
                             {item.submenu.map((subitem) => (

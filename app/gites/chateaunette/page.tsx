@@ -240,7 +240,7 @@ function App() {
         <div className="mt-16 luxury-section">
           <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              Services & Prestations d'Exception
+              
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                
@@ -248,7 +248,7 @@ function App() {
           </div>
         </div>
 
-        <div className="bg-white py-8 border-b border-gray-100">
+        <div className="bg-white py-6 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ses points forts</h2>
             <div className="flex flex-wrap gap-6 items-center">
