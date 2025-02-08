@@ -112,7 +112,7 @@ function App() {
               </div>
               <div>
                 <p className="font-medium text-gray-900">Email</p>
-                <p className="text-gray-600 mt-1">lemasdeylieux@gmail.com</p>
+                <p className="text-gray-600 mt-1">contact@lemasdeylieux.fr</p>
               </div>
             </div>
 

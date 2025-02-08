@@ -35,9 +35,15 @@ function App() {
   ];
 
   const outdoorSpaceImages = [
-    "/images/gites/notused/mare.jpg",
+    "/images/gites/notused/cour.jpg",
     "/images/gites/notused/bananier.png",
     "/images/gites/noisettiers/veggetation.png",
+  ];
+
+  const SourceImages = [
+    "/images/gites/notused/mare.jpg",
+    "/images/gites/chateaunette/Photo 32.png",
+    "/images/gites/noisettiers/arbre.png",
   ];
 
   useEffect(() => {
@@ -82,13 +88,11 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Ardèche
+              Bienvenue au Mas d'Eylieux
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez six gîtes d'exception 
-              nichés dans une ancienne maladrerie du XIIe siècle. Un lieu où l'histoire 
-              rencontre le luxe contemporain, offrant une expérience unique de séjour 
-              en Ardèche.
+              Au cœur d'un domaine de 40 hectares, découvrez nos 6 gîtes d'exception 
+              au sein d'un Mas en pierres du XIIe siècle, entièrement rénové. 
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -132,11 +136,8 @@ function App() {
             </div>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg leading-relaxed text-stone-600 text-center">
-                En Ardèche, dans une ville qui surplombe le Rhône, une ancienne maladrerie du 12e siècle 
-                et son jardin vous invitent à un voyage dans le temps. Construite en 1158, cette bâtisse 
-                historique a accueilli Saint Louis lors de son retour des croisades. Transformée en hôpital 
-                sous Louis XIII, elle est aujourd'hui un domaine préservé, où charme et authenticité se 
-                conjuguent à la perfection.
+              Construit en 1158, le Mas d'Eylieux est un lieu chargé d’histoire. Il abrite des vestiges d’une petite cité gallo-romaine et fut le passage du roi Charles VIII lors de sa campagne en Italie à la fin du XVe siècle. 
+              Aujourd'hui, ce domaine préservé séduit par son charme authentique et son atmosphère unique, offrant un cadre unique.
               </p>
             </div>
           </div>
@@ -149,10 +150,10 @@ function App() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Cousinades, Réceptions & Fêtes
+          Réceptions & Fêtes
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Un cadre exceptionnel pour vos événements spéciaux.
+          Un cadre exceptionnel pour vos événements en famille ou entre amis.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -172,7 +173,7 @@ function App() {
         ))}
       </div>
       <div className="text-center">
-        <p className="text-lg text-stone-600 mb-8">Nous contacter pour plus de détails</p>
+        <p className="text-lg text-stone-600 mb-8">Contactez-nous pour plus de détails</p>
         <a
           href="/contact"
           className="inline-flex items-center gap-2 bg-stone-800 text-white px-8 py-4 rounded-full
@@ -196,7 +197,7 @@ function App() {
           La Piscine
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Détendez-vous.
+          Espace de détente au coeur du Mas.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -277,7 +278,7 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Heart className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Sécurisée</span>
+          <span className="text-stone-600">Transats, bancs et balancelle</span>
         </div>
       </div>
     </div>
@@ -294,7 +295,7 @@ function App() {
           La nuit au Mas
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Détendez-vous.
+          Éclairage nocturne disponible dans l'ensemble du Mas.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -361,21 +362,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Clock className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">8h - 20h</span>
+          <span className="text-stone-600">Espaces intérieurs lumineux</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Waves className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">1.10m - 2.20m</span>
+          <span className="text-stone-600">Lumières extérieures</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Heart className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Sécurisée</span>
+          <span className="text-stone-600">Piscine éclairée</span>
         </div>
       </div>
     </div>
@@ -392,7 +393,7 @@ function App() {
           Four à Pizza
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Le four à pain et à pizza est à disposition pour tous à tout moment. Nos grands espaces permettent de déjeuner dehors ou dîner à la belle étoile.
+          Le four à pizza est à disposition pour tous, à tout moment.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -439,7 +440,7 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <MapPin className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Espace extérieur</span>
+          <span className="text-stone-600">Tables, bancs et chaises disponibles (40personnes)</span>
         </div>
       </div>
     </div>
@@ -455,7 +456,8 @@ function App() {
           Espaces Extérieurs
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Découvrez nos espaces extérieurs soigneusement aménagés, du bassin naturel aux jardins paisibles.
+        Profitez d’un cadre exceptionnel où la nature s’épanouit dans toute sa diversité,
+         offrant un véritable havre de paix pour la faune et la flore.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -487,7 +489,69 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <TreePine className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Bassin naturel</span>
+          <span className="text-stone-600">Biodiversité</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Mountain className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">Nature préservée</span>
+        </div>
+        <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <Coffee className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">Havre de paix</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Source Section - Updated with new design */}
+<section className="relative py-24 bg-stone-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
+          La Source du Mas d'Eylieux
+        </h2>
+        <p className="text-lg text-stone-600 max-w-3xl mx-auto">
+        Cette source naturelle, filtrée par les montagnes, irrigue nos terres et nos bassins. 
+        </p>
+        <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {SourceImages.map((image, index) => (
+          <div
+            key={index}
+            className="group cursor-pointer"
+          >
+            <div className="relative h-[400px] overflow-hidden rounded-xl">
+              <img
+                src={image}
+                alt={`Espace extérieur ${index + 1}`}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
+            </div>
+            <div className="mt-4 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+              <div className="h-[2px] w-8 bg-stone-400" />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-white rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
+            <TreePine className="w-6 h-6 text-stone-600" />
+          </div>
+          <span className="text-stone-600">Source naturelle</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
@@ -501,13 +565,12 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Coffee className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Terrasse</span>
+          <span className="text-stone-600">Espaces ombragés</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
       {/* Enhanced Stargazing Section */}
       <section className="relative py-32">
