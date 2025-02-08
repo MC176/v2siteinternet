@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import YouTube from 'react-youtube';
-import { Instagram } from 'lucide-react';
+import { Instagram, ArrowRight } from 'lucide-react';
 
 const InstagramGallery = () => {
   const images = [
@@ -93,11 +93,13 @@ const HomeHero = () => {
             <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-light">
               Un domaine d'exception au coeur de l'Ardèche
             </p>
-            <Link
-              href="/disponibilites"
-              className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all hover:scale-105 inline-block"
+            <Link 
+              href="/presentation"
+              className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
             >
-              Réserver maintenant
+              <span className="relative z-10">Nous découvrir </span>
+              <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
+              <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
           </motion.div>
         </div>

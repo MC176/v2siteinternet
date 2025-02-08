@@ -11,14 +11,6 @@ const navigation = [
   { 
     name: 'Nos Gîtes', 
     href: '/gites',
-    submenu: [
-      { name: 'Châteaunette', href: '/gites/chateaunette' },
-      { name: 'Côté Source', href: '/gites/cote-source' },
-      { name: 'Noisettiers', href: '/gites/noisettiers' },
-      { name: 'Maisonette', href: '/gites/maisonette' },
-      { name: 'Citronniers', href: '/gites/citronniers' },
-      { name: 'Figuiers', href: '/gites/figuiers' },
-    ]
   },
   { name: 'Informations', href: '/informations' },
   { name: 'Avis', href: '/avis' },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building2, PartyPopper, Users2Icon } from 'lucide-react';
+import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building2, PartyPopper, Users2Icon, ChevronDown } from 'lucide-react';
 
 const gites = [
   {
@@ -57,7 +57,7 @@ const gites = [
   },
   {
     name: 'Châteaunette',
-    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable sur les montagnes environnantes.",
+    description: "Une demeure de charme nichée au cœur de l'Ardèche, offrant une vue imprenable.",
     image: "images/gites/chateaunette/photo 17.png",
     capacity: '6 personnes',
     rating: 4.9,
@@ -91,6 +91,11 @@ const privatisationFeatures = [
 ];
 
 function GitesPage() {
+  const scrollToPrivatisation = () => {
+    const privatisationSection = document.getElementById('privatisation');
+    privatisationSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -183,18 +188,36 @@ function GitesPage() {
           ))}
         </div>
 
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="flex flex-col items-center mt-16 mb-8 cursor-pointer"
+          onClick={scrollToPrivatisation}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          whileHover={{ y: 5 }}
+        >
+          <p className="text-lg font-semibold text-indigo-600 mb-2">Découvrez nos offres de privatisation</p>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ChevronDown className="w-8 h-8 text-indigo-600" />
+          </motion.div>
+        </motion.div>
+
         {/* Privatisation Section */}
         <motion.div 
-          className="mt-24 relative overflow-hidden"
+          id="privatisation"
+          className="mt-24 relative"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 transform -skew-y-6 origin-top-left"></div>
-          <div className="relative z-10 py-20 px-6">
+          <div className="relative z-10 py-20 px-6 bg-stone-50">
             <div className="max-w-7xl mx-auto text-center">
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold text-white mb-8"
+                className="text-4xl md:text-5xl font-bold text-black mb-8"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
@@ -209,27 +232,29 @@ function GitesPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2 + index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                    className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
                   >
-                    <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="bg-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-white/80">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
+                    <p className="text-gray-600">{feature.description}</p>
                   </motion.div>
                 ))}
               </div>
 
-              <motion.button 
-                className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-50 inline-flex items-center gap-2"
+              <motion.a 
+                href="/contact"
+                className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:text-white relative overflow-hidden group"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.6 }}
                 whileHover={{ y: -2 }}
               >
-                Contactez-nous pour une offre personnalisée
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
+                <span className="relative z-10">Contactez-nous pour une offre personnalisée</span>
+                <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
+                <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </motion.a>
             </div>
           </div>
         </motion.div>
