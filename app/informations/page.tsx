@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect } from 'react';
-import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape } from 'lucide-react';
+import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape, ArrowRight } from 'lucide-react';
 
 const destinations = [
   {
     title: "LA GROTTE CHAUVET",
     description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
     image: "/images/presentation/Grotte.jpg",
-    cta: "Visitez le site internet de la Grotte Chauvet",
+    cta: "Visitez le site internet",
     icon: Camera,
     url: "https://www.grottechauvet2ardeche.com/"
   },
@@ -15,7 +15,7 @@ const destinations = [
     title: "LE MUSÉE DE LA LAVANDE",
     description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
     image: "/images/presentation/Image 5.jpg",
-    cta: "Réservez votre visite dès maintenant",
+    cta: "Réserver votre visite",
     icon: TreePine,
     url: "https://www.lamaisondelalavande.com/"
   },
@@ -23,7 +23,7 @@ const destinations = [
     title: "DESCENTE DES GORGES DE L'ARDÈCHE",
     description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
     image: "/images/presentation/gorge.jpg",
-    cta: "Réservez votre canoë-kayak chez notre partenaire",
+    cta: "Réserver votre canoë",
     icon: Compass,
     url: "https://www.gorges-ardeche-pontdarc.fr/activites/canoe/infos-et-parcours/"
   },
@@ -31,7 +31,7 @@ const destinations = [
     title: "VOL EN DELTAPLANE",
     description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
     image: "/images/presentation/Image 4.jpg",
-    cta: "Découvrez ces sensations uniques",
+    cta: "Découvrir l'expérience",
     icon: TreePine,
     url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
   },
@@ -39,7 +39,7 @@ const destinations = [
     title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
     image: "/images/presentation/Image 7.jpg",
-    cta: "Organisez votre balade",
+    cta: "Organiser votre balade",
     icon: TreePine,
     url: "https://www.gr-infos.com/gr42.htm"
   },
@@ -47,7 +47,7 @@ const destinations = [
     title: "SPÉLÉOLOGIE EN ARDÈCHE",
     description: "Partez à la découverte des grottes ardéchoises et explorez leurs merveilles souterraines en toute sécurité.",
     image: "/images/presentation/Image 10.jpg",
-    cta: "Découvrez nos offres de spéléologie",
+    cta: "Découvrir nos offres",
     icon: TreePine,
     url: "https://www.face-sud.com/speleo-ardeche/"
   }
@@ -76,7 +76,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative h-[80vh] flex items-center justify-center">
         <div 
@@ -101,28 +101,50 @@ function App() {
       </div>
 
       {/* Provence Welcome Section */}
-      <div className="bg-white py-24">
+      <div className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 items-center">
-            <div className="flex justify-end pr-8">
-              <div className="relative aspect-[3/4] overflow-hidden w-48">
-                <img 
-                  src="/images/presentation/pont.jpg"
-                  alt="Provence"
-                  className="object-cover w-full h-full"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            {/* Left side - Image with Hover Effect */}
+            <div className="relative h-[500px] group overflow-hidden rounded-2xl">
+              <img 
+                src="images/presentation/pont.jpg"
+                alt="Provence Landscape"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-500 flex items-center justify-center">
+                <p className="text-white text-lg font-light leading-relaxed px-8 text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar, avec un accès facile depuis l'Aéroport de Marseille Provence et la Gare d'Avignon TGV.
+                </p>
               </div>
             </div>
-            <div className="pl-8 space-y-6">
-              <h2 className="text-5xl font-cormorant font-light tracking-wider text-[#2C3E50]">
-                BIENVENUE EN PROVENCE
-              </h2>
-              <h3 className="text-xl font-montserrat font-light tracking-widest text-[#34495E] mt-8">
-                UN DOMAINE IDÉALEMENT SITUÉ GÉOGRAPHIQUEMENT
-              </h3>
-              <div className="space-y-6 font-montserrat font-light text-[#34495E] tracking-wide mt-12">
-                <p className="text-lg">Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar.</p>
-                <p className="text-lg">Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.</p>
+
+            {/* Right side - Text Content */}
+            <div className="space-y-12">
+              <div className="space-y-4">
+                <div className="w-16 h-1 bg-black"></div>
+                <h2 className="text-6xl font-cormorant font-light tracking-wider text-gray-900 leading-tight">
+                  Bienvenue<br/>en Provence
+                </h2>
+              </div>
+              
+              <div className="space-y-8">
+                <h3 className="text-2xl font-montserrat font-light tracking-widest text-gray-800 leading-relaxed">
+                  Un domaine idéalement<br/>situé géographiquement
+                </h3>
+                
+                <div className="space-y-6">
+                  <div className="relative pl-8 border-l-2 border-gray-400">
+                    <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
+                      Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar.
+                    </p>
+                  </div>
+                  
+                  <div className="relative pl-8 border-l-2 border-gray-400">
+                    <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
+                      Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -130,9 +152,9 @@ function App() {
       </div>
 
       {/* Activities Title Section */}
-      <div className="py-16 text-center bg-[#FDFBF7]">
-        <h2 className="text-4xl font-light tracking-widest text-[#2C3E50] mb-4">ACTIVITÉS À DÉCOUVRIR</h2>
-        <div className="w-24 h-1 bg-[#8B7355] mx-auto"></div>
+      <div className="py-16 text-center bg-white">
+        <h2 className="text-4xl font-light tracking-widest text-gray-900 mb-4">ACTIVITÉS À DÉCOUVRIR</h2>
+        <div className="w-24 h-1 bg-black mx-auto"></div>
       </div>
 
       {/* Destinations Grid */}
@@ -152,11 +174,11 @@ function App() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                   <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-full shadow-md">
-                    {destination.icon && <destination.icon className="w-5 h-5 text-[#8B7355]" />}
+                    {destination.icon && <destination.icon className="w-5 h-5 text-gray-900" />}
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-grow">
-                  <h2 className="text-2xl font-light tracking-wide text-[#8B7355] mb-4">
+                  <h2 className="text-2xl font-light tracking-wide text-gray-900 mb-4">
                     {destination.title}
                   </h2>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
@@ -166,9 +188,13 @@ function App() {
                     href={destination.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-[#8B7355] text-white py-4 px-6 rounded-lg hover:bg-[#6B573D] transition-colors duration-300 font-light tracking-wider text-sm uppercase text-center mt-auto"
+                    className="group relative overflow-hidden px-6 py-4 w-full bg-white border-2 border-black text-black hover:text-white transition-colors duration-300 text-center"
                   >
-                    {destination.cta}
+                    <span className="relative z-10 flex items-center justify-center">
+                      {destination.cta}
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </span>
+                    <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                   </a>
                 </div>
               </div>
@@ -177,7 +203,7 @@ function App() {
         </div>
       </div>
 
-      {/* Provence Footer Section */}
+      {/* Footer Section */}
       <div className="relative h-[60vh] flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -227,6 +253,10 @@ function App() {
         .animate-fade-in-delay-2 {
           animation: fadeIn 0.8s ease-out 0.6s forwards;
           opacity: 0;
+        }
+
+        .group:hover .text-black {
+          color: white;
         }
       `}</style>
     </div>
