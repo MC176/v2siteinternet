@@ -173,7 +173,7 @@ function App() {
         ))}
       </div>
       <div className="text-center">
-        <p className="text-lg text-stone-600 mb-8">Contactez-nous pour plus de détails</p>
+        <p className="text-lg text-stone-600 mb-8">Contactez-nous pour plus de détails.</p>
         <a
           href="/contact"
           className="group inline-flex items-center px-12 py-4 bg-white border border-black rounded-full relative overflow-hidden transition-colors duration-300"

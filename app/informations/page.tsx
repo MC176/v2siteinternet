@@ -113,7 +113,9 @@ function App() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-500 flex items-center justify-center">
                 <p className="text-white text-lg font-light leading-relaxed px-8 text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar, avec un accès facile depuis l'Aéroport de Marseille Provence et la Gare d'Avignon TGV.
+                Le village de Saint Montan est idéalement situé. <br /> <br />
+                D'un côté, les Gorges de l’Ardèche et la Grotte Chauvet. <br />
+                De l'autre, Montélimar, célèbre pour ses nougats, ses marchés et ses vignobles.
                 </p>
               </div>
             </div>
@@ -123,25 +125,25 @@ function App() {
               <div className="space-y-4">
                 <div className="w-16 h-1 bg-black"></div>
                 <h2 className="text-6xl font-cormorant font-light tracking-wider text-gray-900 leading-tight">
-                  Bienvenue<br/>en Provence
+                  Bienvenue<br/>en Ardèche
                 </h2>
               </div>
               
               <div className="space-y-8">
                 <h3 className="text-2xl font-montserrat font-light tracking-widest text-gray-800 leading-relaxed">
-                  Un domaine idéalement<br/>situé géographiquement
+                  Un domaine idéalement situé
                 </h3>
                 
                 <div className="space-y-6">
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                      Les Domaines de Patras se situent à Solérieux, dans la Drôme Provençale, à mi-chemin entre Avignon et Montélimar.
+                    Le Mas d'Eylieux se situe sur les hauteurs de Saint Montan, en Ardèche, localisé entre Lyon et Marseille. 
                     </p>
                   </div>
                   
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                      Le Domaine est idéalement desservi, et se situe à moins d'1h30 de l'Aéroport de Marseille Provence, et à moins d'1h de la Gare d'Avignon TGV.
+                    Nous sommes à environ 25 minutes de la gare de Montélimar et à un peu plus d'une heure de la Gare TGV d'Avignon.
                     </p>
                   </div>
                 </div>

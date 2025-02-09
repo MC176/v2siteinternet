@@ -32,7 +32,7 @@
         {
           image: "/images/gites/chateaunette/photo 35.png",
           title: "Espace cuisine",
-          description: "Tout équipée"
+          description: "Toute équipée"
         },
         {
           image: "/images/gites/chateaunette/photo 36.png",
@@ -57,7 +57,7 @@
         {
           image: "/images/gites/chateaunette/photo 42.png",
           title: "Salon",
-          description: "Mezzazine avec lit"
+          description: "Mezzazine avec accès au lit"
         },
         {
           image: "/images/gites/chateaunette/photo 38.png",

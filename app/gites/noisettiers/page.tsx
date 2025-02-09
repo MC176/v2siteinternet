@@ -39,41 +39,6 @@ function App() {
       title: "Coin cuisine",
       description: "Cuisine équipée"
     },
-    {
-      image: "/images/gites/chateaunette/photo 37.png",
-      title: "Chambre n°1",
-      description: "Lit 2 places"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 1.png",
-      title: "Chambre n°2",
-      description: "Lit 2 places"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 10.png",
-      title: "Vue de Noisettiers",
-      description: "Depuis la chambre"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 42.png",
-      title: "Salon",
-      description: "Mezzazine avec lit"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 38.png",
-      title: "Mezzazzine",
-      description: "Lit 1 place"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 16.png",
-      title: "Piscine",
-      description: "Profondeur : 1m10 - 2m20"
-    },
-    {
-      image: "/images/gites/chateaunette/photo 19.png",
-      title: "Piscine de nuit",
-      description: "Eclairage nocturne disponible"
-    },
   ];
 
   useEffect(() => {
@@ -267,14 +232,6 @@ function App() {
                 <span className="text-gray-700">Chambres familiales</span>
               </div>
               <div className="flex items-center gap-2">
-                <Ban className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres non-fumeurs</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Plane className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Navette aéroport</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
                 <span className="text-gray-700">Terrasse</span>
               </div>
@@ -282,185 +239,189 @@ function App() {
           </div>
         </div>
 
+
         <div className="mt-6 bg-gray-50 py-6">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-8">Équipements et services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Car className="w-5 h-5 text-blue-900" />
-                    Parking
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-1">Un parking privé est disponible sur place <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></p>
-                  <p className="text-gray-600 text-sm">€20 par jour (sur réservation)</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Wifi className="w-5 h-5 text-blue-900" />
-                    Internet
-                  </h3>
-                  <div className="flex items-center gap-1.5">
-                    <Check className="w-3.5 h-3.5 text-blue-900" />
-                    <span className="text-gray-600 text-sm">Wi-Fi gratuit dans tout l'établissement</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Kitchen className="w-5 h-5 text-blue-900" />
-                    Cuisine
-                  </h3>
-                  <div className="space-y-1">
-                    {[
-                      'Chaise haute',
-                      'Table à manger',
-                      'Machine à café',
-                      'Produits ménagers',
-                      'Plaque cuisson',
-                      'Four',
-                      'Ustensiles',
-                      'Bouilloire'
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-1.5">
+              <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">Équipements et services</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Car className="w-5 h-5 text-blue-900" />
+                        Parking privé
+                      </h3>
+                      <div className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
-                        <span className="text-gray-600 text-sm">{item}</span>
+                        <span className="text-gray-600 text-sm">Places de Parking </span>
                       </div>
-                    ))}
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Wifi className="w-5 h-5 text-blue-900" />
+                        Internet
+                      </h3>
+                      <div className="flex items-center gap-1.5">
+                        <Check className="w-3.5 h-3.5 text-blue-900" />
+                        <span className="text-gray-600 text-sm">Wi-Fi accessible à certains endroits</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Bed className="w-5 h-5 text-blue-900" />
+                        Chambre
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          '2 lits en 160cm avec oreillers',
+                          'Draps en option (10€/personne avec serviette)',
+                          'Couvertures',
+                          'Couvertures supplémentaires disponibles',
+                          'Armoire',
+                          'Table de chevet avec lampe',
+                          'Volets',
+                          'Prises près du lit',
+                          'Table et fer à repasser sur demande',
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Bath className="w-5 h-5 text-blue-900" />
+                        Salle de bain
+                      </h3>
+                      <div className="space-y-1">
+                        {["Douche à l'italienne"].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Kitchen className="w-5 h-5 text-blue-900" />
+                        Cuisine
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          'Réfrigérateur avec partie congélation',
+                          'Plaque de cuisson à induction',
+                          'Four',
+                          'Micro-ondes',
+                          'Hotte aspirante',
+                          'Lave-vaisselle'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Utensils className="w-5 h-5 text-blue-900" />
+                        Coin cuisine
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          'Cafetière (filtre)',
+                          'Nespresso sur demande',
+                          'Bouilloire électrique',
+                          'Grille-pain',
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Baby className="w-5 h-5 text-blue-900" />
+                        Équipements pour enfants
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          'Lit bébé (sur demande)',
+                          'Chaise haute (sur demande)'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Tv className="w-5 h-5 text-blue-900" />
+                        Salon &amp; Divertissement
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          'Télévision',
+                          '2 Canapés',
+                          'Livres',
+                          'Jeux de société (sur demande)'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Sun className="w-5 h-5 text-blue-900" />
+                        Espaces communs
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          'Grands espaces (Football, badminton...)',
+                          'Terrain de pétanque',
+                          'Tennis de table',
+                          'Baby-foot'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                    <Tv className="w-5 h-5 text-blue-900" />
-                    Coin salon
-                  </h3>
-                  <div className="space-y-1">
-                    {[
-              'Coin repas',
-              'Canapé',
-              'Coin salon'
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-1.5">
-                <Check className="w-3.5 h-3.5 text-blue-900" />
-                <span className="text-gray-600 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* High-tech */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            <Tv className="w-5 h-5 text-blue-900" />
-            High-tech
-          </h3>
-          <div className="space-y-1">
-            {[
-              'TV écran plat',
-              'Télévision'
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-1.5">
-                <Check className="w-3.5 h-3.5 text-blue-900" />
-                <span className="text-gray-600 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Chambre */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            <Bed className="w-5 h-5 text-blue-900" />
-            Chambre
-          </h3>
-          <div className="space-y-1">
-            {[
-              'Prise près du lit',
-              'Portant',
-              'Couvertures',
-              'Anti-allergie',
-              'Sol carrelé',
-              'Insonorisation',
-              'Repassage'
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-1.5">
-                <Check className="w-3.5 h-3.5 text-blue-900" />
-                <span className="text-gray-600 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Colonne 3 */}
-      <div className="space-y-6">
-        {/* Transports */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            <Plane className="w-5 h-5 text-blue-900" />
-            Transports
-          </h3>
-          <div className="space-y-1">
-            <div className="flex items-center gap-1.5">
-              <Check className="w-3.5 h-3.5 text-blue-900" />
-              <span className="text-gray-600 text-sm">Service de navette <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <Check className="w-3.5 h-3.5 text-blue-900" />
-              <span className="text-gray-600 text-sm">Navette aéroport <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
-            </div>
-          </div>
-        </div>
 
-        {/* Réception */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            <DoorOpen className="w-5 h-5 text-blue-900" />
-            Réception
-          </h3>
-          <div className="space-y-1">
-            {[
-              'Facture sur demande',
-              'Check-in privé',
-              'Check-in rapide'
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-1.5">
-                <Check className="w-3.5 h-3.5 text-blue-900" />
-                <span className="text-gray-600 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Divers */}
-        <div>
-          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            <Sun className="w-5 h-5 text-blue-900" />
-            Divers
-          </h3>
-          <div className="space-y-1">
-            {[
-              'Espace fumeurs',
-              'Climatisation',
-              'Non-fumeurs',
-              'Anti-allergie'
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-1.5">
-                <Check className="w-3.5 h-3.5 text-blue-900" />
-                <span className="text-gray-600 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+            <div className="flex justify-center">
+        <Link
+          href="/contact"
+          className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
+        >
+          <span className="relative z-10">Réserver votre séjour</span>
+          <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
+          <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </Link>
       </div>
-    </div>
-  </div>
-</div>
-
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
@@ -470,14 +431,6 @@ function App() {
           <p className="text-lg text-grey-600 text-right mt-6">
                    ~ Extrait du guide d'initiation à la Botanique
                   </p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
-          >
-            <span className="relative z-10">Réserver votre séjour</span>
-            <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
-            <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-          </Link>
         </div>
       </div>
     </div>
