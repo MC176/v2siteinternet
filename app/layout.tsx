@@ -1,13 +1,15 @@
-import { cormorant, poppins } from './fonts';
 import './globals.css';
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/footer';
 import { Toaster } from 'react-hot-toast';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
-  title: 'Gîte Chateaunnette - Hébergement de Luxe en Ardèche',
-  description: 'Découvrez notre gîte de luxe en Ardèche. Une expérience unique dans un cadre exceptionnel.',
-  keywords: 'gîte, Ardèche, location vacances, hébergement, tourisme, luxe',
+  title: 'Le Mas d\'Eylieux',
+  description: 'Un domaine d\'exception au coeur de l\'Ardèche',
 };
 
 export default function RootLayout({
@@ -16,10 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${poppins.variable}`}>
-      <body className={poppins.className}>
+    <html lang="fr">
+      <body className={inter.className}>
         <Navigation />
-        {children}
+        <main className="flex-grow">{children}</main>
+        <Footer />
         <Toaster position="bottom-right" />
       </body>
     </html>

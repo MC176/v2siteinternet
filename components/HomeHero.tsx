@@ -114,23 +114,6 @@ const HomeHero = () => {
           <InstagramGallery />
         </div>
       </section>
-
-      <footer className="bg-gray-100 py-6">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <Link 
-            href="/cgu" 
-            className="text-sm text-gray-600 hover:text-gray-900 underline"
-          >
-            Conditions Générales d'Utilisation
-          </Link>
-          <Link 
-            href="/cgv" 
-            className="text-sm text-gray-600 hover:text-gray-900 underline"
-          >
-            Conditions Générales de Vente
-          </Link>
-        </div>
-      </footer>
     </>
   );
 };
