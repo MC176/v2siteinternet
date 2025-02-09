@@ -6,6 +6,7 @@ import { Star, ExternalLink, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const googleReviews = [
+  // Groupe "il y a 6 mois" (le plus récent)
   {
     author_name: "nadia",
     rating: 5,
@@ -13,18 +14,19 @@ const googleReviews = [
     relative_time_description: "il y a 6 mois",
     visited: "Visité en juillet 2024"
   },
+  // Groupe "il y a un an"
+  {
+    author_name: "Magali Faroult",
+    rating: 5,
+    text: "Magnifique Mas qui compte 6 gites en pleine Ardèche provençale ! Un très bel endroit où il fait bon vivre !",
+    relative_time_description: "il y a un an"
+  },
   {
     author_name: "Sylvie Oule",
     rating: 4,
     text: "Gîte très bien tenu . accueil très agréable. Belle Bastide de charme . très calme. Mise à disposition de la salle collective pour le repas du soir gratuitement.. expérience à refaire.",
     relative_time_description: "il y a un an",
     visited: "Visité en avril 2023"
-  },
-  {
-    author_name: "Magali Faroult",
-    rating: 5,
-    text: "Magnifique Mas qui compte 6 gites en pleine Ardèche provençale ! Un très bel endroit où il fait bon vivre !",
-    relative_time_description: "il y a un an"
   },
   {
     author_name: "Loic Gac",
@@ -55,13 +57,6 @@ const googleReviews = [
     visited: "Visité en septembre 2023"
   },
   {
-    author_name: "Cerise Thiebot",
-    rating: 5,
-    text: "Incroyable endroit qui nous a profondément marqué ! Découvert il y a 20 ans, nous y sommes retournés d'innombrables fois, année après année. Au delà d'un simple séjour unique, nous nous sommes liés d'amitié avec cette famille exceptionnelle.",
-    relative_time_description: "il y a 2 ans",
-    visited: "Visité en septembre 2022"
-  },
-  {
     author_name: "Maxence RIEU",
     rating: 5,
     text: "Notre séjour au Mas d'Eylieux a été exceptionnel. L'accueil chaleureux, la beauté du cadre et le confort des chambres ont dépassé nos attentes.",
@@ -83,17 +78,61 @@ const googleReviews = [
     visited: "Visité en décembre 2023"
   },
   {
-    author_name: "Helene Baldie",
-    rating: 5,
-    text: "Un lieu magnifique, naturel d'où se dégage une grande chaleur humaine. Nous y allons regulierement depuis des années et nous avons toujours été enchantés de ce lieu arrangé, décoré avec goût au fil des années. Nous recommandons vivement un séjour au Mas dEylieux. Un accueil de Yeyette très attentionné, toujours disponible.",
-    relative_time_description: "il y a 6 ans"
-  },
-  {
     author_name: "Rex Rex",
     rating: 5,
     text: "Bonjour et merci pour cette semaine merveilleuse. Ce petit coin de nature au calme fût des plus vivifiant. A très vite.",
     relative_time_description: "il y a un an",
     visited: "Visité en août 2023"
+  },
+  {
+    author_name: "Mej",
+    rating: 5,
+    text: "Incroyable lieu, dans le calme et la tranquillité avec un accueil chaleureux, je recommande sincèrement !",
+    relative_time_description: "il y a un an",
+    visited: "Visité en janvier 2024"
+  },
+  {
+    author_name: "ANNE-HELENE garret",
+    rating: 5,
+    text: "Un très beau séjour au calme. Avec de magnifiques paysages",
+    relative_time_description: "il y a un an",
+    visited: "Visité en août 2020"
+  },
+  {
+    author_name: "Cyril LAFORCE",
+    rating: 5,
+    text: "Tres bel endroit superbe bâtisse et gîte. Belle découverte",
+    relative_time_description: "il y a un an",
+    visited: "Visité en septembre 2023"
+  },
+  {
+    author_name: "Annie Dussert",
+    rating: 5,
+    text: "Très bien accueilli",
+    relative_time_description: "il y a un an",
+    visited: "Visité en mai 2023"
+  },
+  {
+    author_name: "puma kunz",
+    rating: 5,
+    text: "Un endroit merveilleux pour se détendre et se ressourcer qui restera longtemps dans nos bons souvenirs. Nous avons apprécié le séjour avec toute notre famille et avons bénéficié de beaucoup d'hospitalité.",
+    relative_time_description: "il y a un an",
+    visited: "Visité en juillet 2023"
+  },
+  {
+    author_name: "Hugo JANSSEN",
+    rating: 5,
+    text: "Très bel endroit, j'y vais depuis 25 ans, il y avait un enfant à la maison, je me suis bien amusé.",
+    relative_time_description: "il y a un an",
+    visited: "Visité en décembre 2023"
+  },
+  // Groupe "il y a 2 ans"
+  {
+    author_name: "Cerise Thiebot",
+    rating: 5,
+    text: "Incroyable endroit qui nous a profondément marqué ! Découvert il y a 20 ans, nous y sommes retournés d’innombrables fois, année après année. Au delà d’un simple séjour unique, nous nous sommes liés d'amitié avec cette famille exceptionnelle.",
+    relative_time_description: "il y a 2 ans",
+    visited: "Visité en septembre 2022"
   },
   {
     author_name: "Sophie JUIN",
@@ -102,10 +141,58 @@ const googleReviews = [
     relative_time_description: "il y a 2 ans",
     visited: "Visité en avril 2022"
   },
+  // Groupe "il y a 3 ans"
+  {
+    author_name: "Claire koell",
+    rating: 5,
+    text: "",
+    relative_time_description: "il y a 3 ans",
+    visited: "Visité en juillet 2021"
+  },
+  // Groupe "il y a 4 ans"
+  {
+    author_name: "jeanine mortreux",
+    rating: 5,
+    text: "Lieu magnifique , on y retourne avec grand plaisir et bonheur très régulièrement. Que dire des Propriétaires extraordinaires de gentillesse , bienveillance et convivialité!! On recommande avec tendresse.",
+    relative_time_description: "il y a 4 ans",
+    visited: "Visité en mai 2020"
+  },
+  // Groupe "il y a 5 ans"
+  {
+    author_name: "Chantal Boudre",
+    rating: 5,
+    text: "Vacances. Un lieu magnifique, un très beau domaine, ou nous avons passé une très bonne semaine. Nous le recommandons à tous nos amis !",
+    relative_time_description: "il y a 5 ans"
+  },
+  {
+    author_name: "Gilles Ben Rekassa",
+    rating: 5,
+    text: "",
+    relative_time_description: "il y a 5 ans"
+  },
+  // Groupe "il y a 6 ans" (le plus ancien)
+  {
+    author_name: "Helene Baldie",
+    rating: 5,
+    text: "Un lieu magnifique, naturel d'où se dégage une grande chaleur humaine. Nous y allons regulierement depuis des années et nous avons toujours été enchantés de ce lieu arrangé, décoré avec goût au fil des années. Nous recommandons vivement un séjour au Mas dEylieux. Un accueil de Yeyette très attentionné, toujours disponible.",
+    relative_time_description: "il y a 6 ans"
+  },
   {
     author_name: "Geneviève Cazes",
     rating: 5,
     text: "J'ai passé de très bonnes et belles vacances, une très belle piscine et de très jolis sites à visiter : le village de Saint Montan, les gorges de l'Ardèche et le pont d'arc,sans avoir la foule, les grottes Marzal, de la Madèle ne, la ferme au crocodiles... et un excellent accueil, aux petits soins. Merci",
+    relative_time_description: "il y a 6 ans"
+  },
+  {
+    author_name: "Frédéric Metais",
+    rating: 5,
+    text: "Coin très agréable. On s'y repose parfaitement entre la lavande et les vignes. Sans parler de l'accueil qui est formidable. On s'y sent comme chez soi. Super.",
+    relative_time_description: "il y a 6 ans"
+  },
+  {
+    author_name: "Charles-Edouard Leroy",
+    rating: 5,
+    text: "",
     relative_time_description: "il y a 6 ans"
   }
 ];
