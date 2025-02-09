@@ -87,7 +87,7 @@ function App() {
           }}
         />
         <div className="relative text-center text-white z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-extralight tracking-[0.2em] mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in">
             DÉCOUVERTES
           </h1>
           <p className="text-xl md:text-2xl font-light tracking-wider mb-8 max-w-2xl mx-auto animate-fade-in-delay">

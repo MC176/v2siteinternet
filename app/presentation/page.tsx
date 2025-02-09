@@ -73,7 +73,7 @@ function App() {
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-light text-center mb-6 tracking-wider">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in">
             Votre havre de paix
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-3xl font-light tracking-wide">
@@ -629,7 +629,7 @@ function App() {
                     exceptionnelles."
                   </p>
                   <p className="text-lg text-stone-200 text-right mt-6">
-                   ~ Claudine et Armand
+                    Claudine et Armand
                   </p>
                 </div>
               </div>

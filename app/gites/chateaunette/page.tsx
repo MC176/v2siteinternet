@@ -282,7 +282,7 @@
 
             <div className="mt-6 bg-gray-50 py-6">
               <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-8">Équipements et services</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">Équipements et services</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
                   <div className="space-y-6">
                     <div>
@@ -452,6 +452,17 @@
               </div>
             </div>
 
+            <div className="flex justify-center">
+        <Link
+          href="/contact"
+          className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
+        >
+          <span className="relative z-10">Réserver votre séjour</span>
+          <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
+          <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </Link>
+      </div>
+
             {/* Section Finale Améliorée */}
             <div className="mt-32 max-w-4xl mx-auto text-center">
               <p className="text-black leading-relaxed text-lg italic">
@@ -461,14 +472,6 @@
                 ~ Antoine de Saint-Exupéry, Le Petit Prince
               </p>
 
-              <Link
-                href="/contact"
-                className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
-              >
-                <span className="relative z-10">Réserver votre séjour</span>
-                <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
-                <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-              </Link>
             </div>
           </div>
         </div>
