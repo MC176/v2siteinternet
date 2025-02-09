@@ -137,7 +137,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Figuiers
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une oasis perchée avec vue panoramique</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -156,7 +156,7 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Une vue panoramique exceptionnelle
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
               Situé au point le plus haut du domaine, le gîte Figuier séduit par sa vue spectaculaire et son intérieur baigné de lumière. 
@@ -171,14 +171,14 @@ function App() {
             <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">6</div>
+                  <div className="text-4xl font-light text-blue-900">3</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">59</div>
+                  <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
               </div>
@@ -465,8 +465,11 @@ function App() {
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 leading-relaxed text-lg italic">
-            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          <p className="text-black leading-relaxed text-lg italic">
+            "Sous les branches du figuier, on trouve toujours un coin d’ombre et un instant de paix. Là où il pousse, la terre est généreuse et l’esprit s’apaise."
+          </p>
+          <p className="text-lg text-gray-600 text-right mt-2">
+                   ~ Proverbe Méditerranéen
           </p>
           <Link 
             href="/contact"

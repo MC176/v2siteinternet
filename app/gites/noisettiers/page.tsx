@@ -137,7 +137,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Noisetiers
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un gîte lumineux face aux Noisetiers </p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -156,7 +156,7 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Un ballet de lumière parmi les Noisetiers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
               Rénové en 2023, le gîte Noisetier bénéficie d’un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
@@ -170,14 +170,14 @@ function App() {
             <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">6</div>
+                  <div className="text-4xl font-light text-blue-900">2</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">59</div>
+                  <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
               </div>
@@ -464,9 +464,12 @@ function App() {
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 leading-relaxed text-lg italic">
-            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          <p className="text-black leading-relaxed text-lg italic">
+            "Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l’ombre du noisetier, le temps ralentit et la nature reprend ses droits."
           </p>
+          <p className="text-lg text-grey-600 text-right mt-6">
+                   ~ Extrait du guide d'initiation à la Botanique
+                  </p>
           <Link 
             href="/contact"
             className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"

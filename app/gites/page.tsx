@@ -16,7 +16,7 @@ const gites = [
     href: '/gites/cote-source'
   },
   {
-    name: 'Noisettiers',
+    name: 'Noisetiers',
     description: "Rénové, vue sur noisetiers, accès par un porche pittoresque, couchers de soleil splendides.",
     image: "/images/gites/noisettiers/piscinevue.png",
     capacity: '2 personnes',
@@ -47,7 +47,7 @@ const gites = [
   },
   {
     name: 'Maisonette',
-    description: "Duplex cosy, proche piscine, charme rustique, ombragé par un mûrier centenaire.",
+    description: "Duplex cosy, proche piscine, charme atypique, ombragé par un mûrier, avec superbe vue sur les montagnes.",
     image: "/images/gites/maisonnette/montagne.png",
     capacity: '2 personnes',
     rating: 4.7,

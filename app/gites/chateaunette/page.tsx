@@ -137,7 +137,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Chateaunette
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un petit chateau Ardèchois</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -459,9 +459,13 @@ function App() {
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 leading-relaxed text-lg italic">
-            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          <p className="text-black leading-relaxed text-lg italic">
+            "Les grandes maisons sont comme les grands livres : elles ont toujours une histoire à raconter."
           </p>
+          <p className="text-lg text-gray-600 text-right mt-6">
+              ~ Jean-Baptiste Alphonse Karr, écrivain du XIXe siècle
+          </p>
+
           <Link 
             href="/contact"
             className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"

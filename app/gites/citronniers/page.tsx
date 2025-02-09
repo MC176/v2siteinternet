@@ -137,7 +137,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Citronniers
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un havre de fraîcheur et de verdure</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -156,7 +156,7 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Un grand Zeste d'Ardèche
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Donnant directement sur la cour fleurie du Mas, le gîte Citronnier est entouré de roses trémières et de citronniers dont les fruits parfumés
@@ -170,14 +170,14 @@ function App() {
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">6</div>
+                  <div className="text-4xl font-light text-blue-900">3</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">59</div>
+                  <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
               </div>
@@ -464,8 +464,11 @@ function App() {
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 leading-relaxed text-lg italic">
-            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          <p className="text-black leading-relaxed text-lg italic">
+            "Rien n’est plus vibrant que la lumière jouant sur des feuilles de citronnier, ni plus doux que l’air parfumé de ses fruits. Un coin de nature où chaque souffle d'air semble une invitation à la sérénité." 
+          </p>
+          <p className="text-lg text-gray-600 text-right mt-6">
+             ~ Le Vent dans les Saules - Kenneth Grahame
           </p>
           <Link 
             href="/contact"

@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin } from 'lucide-react';
+import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
 
 function App() {
   const [activeImage, setActiveImage] = useState(0);
@@ -176,17 +176,19 @@ function App() {
         <p className="text-lg text-stone-600 mb-8">Contactez-nous pour plus de détails</p>
         <a
           href="/contact"
-          className="inline-flex items-center gap-2 bg-stone-800 text-white px-8 py-4 rounded-full
-                  transition-all hover:bg-stone-700 hover:scale-105 hover:shadow-lg duration-300"
+          className="group inline-flex items-center px-12 py-4 bg-white border border-black rounded-full relative overflow-hidden transition-colors duration-300"
         >
-          <Phone className="w-5 h-5" />
-          Nous contacter
+          <span className="relative z-10 font-medium group-hover:text-white transition-colors duration-300">
+            <Phone className="inline-block w-5 h-5 mr-2" />
+               Nous contacter
+          </span>
+          <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:text-white transition-colors duration-300" />
+          <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
         </a>
       </div>
     </div>
   </div>
 </section>
-
 
 {/* Pool Section - Updated with new design */}
 <section className="relative py-24 bg-white">
@@ -621,22 +623,19 @@ function App() {
               <div className="absolute -bottom-12 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl" />
               <div className="relative mb-16">
                 <div className="relative">
-                  <p className="text-lg text-stone-200 text-justify">
+                  <p className="text-lg text-stone-200 text-justify italic">
                     "Un des rares endroits en France où l'absence totale de pollution lumineuse
                     permet d'observer la Voie Lactée et les étoiles filantes dans des conditions
                     exceptionnelles."
                   </p>
-                  <p className="text-lg text-stone-200 text-right italic mt-6">
-                    Claudine et Armand
+                  <p className="text-lg text-stone-200 text-right mt-6">
+                   ~ Claudine et Armand
                   </p>
                 </div>
               </div>
 
               <a href="/contact" 
-                className="relative inline-block bg-transparent border-2 border-white/80 px-12 py-4 rounded-full 
-                text-lg transition-all hover:bg-white hover:text-stone-900 
-                hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] duration-300
-                backdrop-blur-sm">
+                className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group">
                 Réservez votre nuit sous les étoiles
               </a>
             </div>

@@ -137,7 +137,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Côté Source
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une expérience unique en Provence</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une terrasse avec vue à couper le souffle</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -156,10 +156,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Le Climat Idéal de la Provence
+                Un belvédère ouvert sur la nature
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-              Avec sa terrasse panoramique exceptionnelle, bordée de balustres élégantes, le gîte Côté Source surplombe les jardins du Mas et 
+              Avec sa terrasse panoramique exceptionnelle, bordée de balustres, le gîte Côté Source surplombe les jardins du Mas et 
               la source millénaire qui irrigue encore aujourd’hui nos terres. Témoignage du passé, cette eau précieuse était essentielle aux générations 
               qui nous ont précédés, façonnant la vie du domaine bien avant l’arrivée de l’eau courante. Depuis votre terrasse, 
               vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars 
@@ -171,14 +171,14 @@ function App() {
             <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">6</div>
+                  <div className="text-4xl font-light text-blue-900">4</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">59</div>
+                  <div className="text-4xl font-light text-blue-900">50</div>
                 </div>
                 <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
               </div>
@@ -465,9 +465,13 @@ function App() {
 
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
-          <p className="text-gray-600 leading-relaxed text-lg italic">
-            "Vivez l'expérience unique d'un séjour d'exception où chaque détail a été pensé pour votre confort absolu. Notre équipe dédiée est à votre disposition pour personnaliser votre séjour selon vos désirs."
+          <p className="text-black leading-relaxed text-lg italic">
+            "On ne se baigne jamais deux fois dans le même fleuve"
           </p>
+          <p className="text-lg text-gray-600 text-right mt-6">
+             ~ Héraclite
+          </p>
+
           <Link 
             href="/contact"
             className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
