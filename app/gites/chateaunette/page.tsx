@@ -403,11 +403,11 @@ function App() {
           <div className="space-y-1">
             <div className="flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-blue-900" />
-              <span className="text-gray-600 text-sm">Service de navette <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
+              <span className="text-gray-600 text-sm">Service de navette <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded"></span></span>
             </div>
             <div className="flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-blue-900" />
-              <span className="text-gray-600 text-sm"> <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded">en supplément</span></span>
+              <span className="text-gray-600 text-sm"> <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-0.5 rounded"></span></span>
             </div>
           </div>
         </div>
@@ -470,6 +470,130 @@ function App() {
             <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
             <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Link>
+        </div>
+      </div>
+
+      <div className="mt-6 bg-gray-50 py-6">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-8">Équipements de Châteaunette</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
+            
+            {/* Colonne 1 */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                  <Tv className="w-5 h-5 text-blue-900" />
+                  Salon &amp; Divertissement
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    'Télévision',
+                    'Livres',
+                    'Jeux de société (sur demande)',
+                    'Wifi (accessible à certains endroits)'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-blue-900" />
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                  <Kitchen className="w-5 h-5 text-blue-900" />
+                  Cuisine équipée
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    'Réfrigérateur avec partie congélation',
+                    'Four',
+                    'Plaque de cuisson à induction',
+                    'Hotte aspirante',
+                    'Lave-vaisselle',
+                    'Micro-ondes',
+                    'Bouilloire électrique',
+                    'Grille-pain',
+                    'Cafetière (filtre)',
+                    'Nespresso (sur demande)',
+                    'Vaisselle',
+                    'Grande table',
+                    'Table d’appoint pour enfants (sur demande)'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-blue-900" />
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Colonne 2 */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                  <Baby className="w-5 h-5 text-blue-900" />
+                  Équipements pour enfants
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    'Chaise haute (sur demande)',
+                    'Lit bébé (sur demande)'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-blue-900" />
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                  <Bed className="w-5 h-5 text-blue-900" />
+                  Chambres
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    'Deux lits en 160 cm avec oreillers',
+                    'Draps (sur demande, avec supplément de 10 € par personne, incluant serviette de toilette)',
+                    'Serviette de bain non fournie',
+                    'Table de chevet avec lampe',
+                    'Armoire',
+                    'Volets'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-blue-900" />
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Colonne 3 */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                  <Bath className="w-5 h-5 text-blue-900" />
+                  Salle de bain &amp; WC
+                </h3>
+                <div className="space-y-1">
+                  {[
+                    'Douche à l\'italienne',
+                    'Salle de bain avec WC intégré'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-blue-900" />
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
