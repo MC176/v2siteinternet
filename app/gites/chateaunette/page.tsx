@@ -313,12 +313,12 @@
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '2 lits en 160cm avec oreillers',
+                          '2 lits en 160cm & 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
                           'Armoire',
-                          'Table de chevet avec lampe',
+                          'Tables de chevet avec lampe',
                           'Volets',
                           'Prises près du lit',
                           'Table et fer à repasser sur demande',
@@ -355,7 +355,7 @@
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          'Réfrigérateur avec partie congélation',
+                          'Réfrigérateur 2 portes avec partie congélation',
                           'Plaque de cuisson à induction',
                           'Four',
                           'Micro-ondes',
@@ -416,8 +416,8 @@
                       </h3>
                       <div className="space-y-1">
                         {[
+                          '3 lits en 90 (2 séjours & 1 mezzanine)',
                           'Télévision',
-                          '2 Canapés',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (
@@ -436,6 +436,7 @@
                       <div className="space-y-1">
                         {[
                           'Grands espaces (Football, badminton...)',
+                          'Terrasse partagée',
                           'Terrain de pétanque',
                           'Tennis de table',
                           'Baby-foot'

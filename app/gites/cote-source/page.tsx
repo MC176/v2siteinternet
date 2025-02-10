@@ -264,16 +264,20 @@ function App() {
                     <span className="text-gray-700">Grands espaces</span>
                   </div>
                   <div className="flex items-center gap-2">
+                    <DoorOpen className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Escaliers</span>
+                  </div>
+                  <div className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-green-600" />
                     <span className="text-gray-700">Chambres familiales</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Ban className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Chambres non-fumeurs</span>
+                    <Umbrella className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Terrasse privative 60m²</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Umbrella className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Terrasse</span>
+                    <Sun className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Vue panoramique exceptionnelle</span>
                   </div>
                 </div>
               </div>
@@ -312,7 +316,7 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '2 lits en 160cm avec oreillers',
+                          '2 chambres avec lit 160cm & 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
@@ -415,8 +419,8 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[
+                          "Banquette",
                           'Télévision',
-                          '2 Canapés',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (

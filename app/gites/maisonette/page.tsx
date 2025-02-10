@@ -224,11 +224,15 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres familiales</span>
+                <span className="text-gray-700">Gîte atypique</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Terrasse</span>
+                <span className="text-gray-700">Escaliers en bois</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Sun className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Magnifique vue</span>
               </div>
             </div>
           </div>
@@ -264,11 +268,11 @@ function App() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                         <Bed className="w-5 h-5 text-blue-900" />
-                        Chambre
+                        Coin Chambre
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '2 lits en 160cm avec oreillers',
+                          '1 lits en 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
@@ -371,8 +375,8 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[
+                          "Banquette angulaire à l'étage",
                           'Télévision',
-                          '2 Canapés',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (

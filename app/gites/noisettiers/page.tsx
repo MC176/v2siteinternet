@@ -273,7 +273,7 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '2 lits en 160cm avec oreillers',
+                          '2 lits en 80cm articulés avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
@@ -377,7 +377,7 @@ function App() {
                       <div className="space-y-1">
                         {[
                           'Télévision',
-                          '2 Canapés',
+                          '1 banquette',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (

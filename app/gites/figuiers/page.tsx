@@ -224,7 +224,11 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Terrasse</span>
+                <span className="text-gray-700">Terrasse privée</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Sun className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Magnifique vue</span>
               </div>
             </div>
           </div>
@@ -264,12 +268,12 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '2 lits en 160cm avec oreillers',
+                          '1 lit 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
                           'Armoire',
-                          'Table de chevet avec lampe',
+                          'Tables de chevet avec lampe',
                           'Volets',
                           'Prises près du lit',
                           'Table et fer à repasser sur demande',
@@ -367,8 +371,8 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[
+                          '2 lits en 90',
                           'Télévision',
-                          '2 Canapés',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (
