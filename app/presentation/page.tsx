@@ -91,8 +91,8 @@ function App() {
               Bienvenue au Mas d'Eylieux
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Au cœur d'un domaine de 40 hectares, découvrez nos 6 gîtes d'exception 
-              au sein d'un Mas en pierres du XIIe siècle, entièrement rénové. 
+              Découvrez nos 6 gîtes d'exception au sein d'un Mas rénové en pierres du XIIe siècle, <br/>
+              au cœur d'un domaine de 40 hectares, en Ardèche méridionale.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -618,26 +618,27 @@ function App() {
               </div>
             </div>
 
+            <a href="/contact" 
+                className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group">
+                Réservez votre nuit sous les étoiles
+              </a>
+
             <div className="max-w-2xl mx-auto relative">
               <div className="absolute -top-12 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-12 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl" />
               <div className="relative mb-16">
                 <div className="relative">
                   <p className="text-lg text-stone-200 text-justify italic">
-                    "Un des rares endroits en France où l'absence totale de pollution lumineuse
+                    <br/><br/><br/>"Un des rares endroits en France où l'absence totale de pollution lumineuse
                     permet d'observer la Voie Lactée et les étoiles filantes dans des conditions
                     exceptionnelles."
                   </p>
                   <p className="text-lg text-stone-200 text-right mt-6">
-                    Claudine et Armand
+                    Claudine et Armand, Grands Amis du Mas
                   </p>
                 </div>
               </div>
 
-              <a href="/contact" 
-                className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group">
-                Réservez votre nuit sous les étoiles
-              </a>
             </div>
 
           </div>
