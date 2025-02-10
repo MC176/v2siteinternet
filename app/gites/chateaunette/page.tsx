@@ -265,6 +265,10 @@
                     <span className="text-gray-700">Grands espaces</span>
                   </div>
                   <div className="flex items-center gap-2">
+                    <DoorOpen className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Escaliers</span>
+                  </div>
+                  <div className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-green-600" />
                     <span className="text-gray-700">Chambres familiales</span>
                   </div>
