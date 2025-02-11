@@ -10,69 +10,54 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/cote-source/photo1.png",
-      title: "Entrée du gîte",
-      description: "Lauriers roses"
+      image: "/images/gites/cote-source/photo1.avif",
+      title: "Vue de la terrasse",
+      description: "Un coucher de soleil lors d'un dîner"
     },
     {
-      image: "/images/gites/cote-source/photo 2.png",
-      title: "Gîte Côté Source",
-      description: "Superficie de 80m²"
+      image: "/images/gites/cote-source/photo 2.avif",
+      title: "Le charme de la terrasse",
+      description: "Superficie de 61 m²"
     },    
     {
-      image: "/images/gites/cote-source/photo 4.png",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      image: "/images/gites/cote-source/photo 4.avif",
+      title: "Exposition pleine nature",
+      description: "Votre vue chaque jour"
     },    
     {
-      image: "/images/gites/cote-source/photo 8.png",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      image: "/images/gites/cote-source/photo 8.avif",
+      title: "Un autre point de vue",
+      description: "Le seul vis-à-vis est avec la nature"
     },
     {
-      image: "/images/gites/cote-source/photo 12.png",
-      title: "Espace cuisine",
-      description: "Tout équipée"
+      image: "/images/gites/cote-source/photo 12.avif",
+      title: "Espace salon",
+      description: "Décoration sobre et moderne"
     },
     {
-      image: "/images/gites/cote-source/photo 9.png",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
+      image: "/images/gites/cote-source/photo 9.avif",
+      title: "Salle de bain",
+      description: "Douche à l'italienne"
     },
     {
-      image: "/images/gites/cote-source/chambre.jpg",
-      title: "Chambre n°1",
-      description: "Lit 2 places"
+      image: "/images/gites/cote-source/chambre.avif",
+      title: "Première chambre",
+      description: "Lit 2 places 160 cm"
     },
     {
-      image: "/images/gites/cote-source/photo 10.png",
-      title: "Chambre n°2",
-      description: "Lit 2 places"
+      image: "/images/gites/cote-source/photo 10.avif",
+      title: "Deuxième chambre",
+      description: "Lit 2 places 140 cm"
     },
     {
-      image: "/images/gites/cote-source/cuisine.jpg",
-      title: "Vue de Côté Source",
-      description: "Depuis la chambre"
+      image: "/images/gites/cote-source/cuisine.avif",
+      title: "Coin Cuisine",
+      description: "Aménagement très lumineux"
     },
     {
-      image: "/images/gites/cote-source/cuisine2.jpg",
-      title: "Salon",
-      description: "Mezzazine avec lit"
-    },
-    {
-      image: "/images/gites/cote-source/photo1.png",
-      title: "Mezzazzine",
-      description: "Lit 1 place"
-    },
-    {
-      image: "/images/gites/cote-source/photo 2.png",
-      title: "Piscine",
-      description: "Profondeur : 1m10 - 2m20"
-    },
-    {
-      image: "/images/gites/cote-source/photo 4.png",
-      title: "Piscine de nuit",
-      description: "Eclairage nocturne disponible"
+      image: "/images/gites/cote-source/cuisine2.avif",
+      title: "Depuis la cuisine",
+      description: "Vue panoramique de notre Domaine"
     },
   ];
 
@@ -126,7 +111,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/cote-source/photo 5.png")',
+            backgroundImage: 'url("/images/gites/cote-source/photo 5.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -146,7 +131,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/cote-source/table.png"
+              src="/images/gites/cote-source/table.avif"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

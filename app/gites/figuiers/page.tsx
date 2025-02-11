@@ -10,24 +10,24 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/figuiers/vue5.png",
-      title: "Entrée du gîte",
-      description: "Lauriers roses"
+      image: "/images/gites/figuiers/vue5.avif",
+      title: "Vue depuis le gîte",
+      description: "Une véritable prise de hauteur"
     },
     {
-      image: "/images/gites/figuiers/table.png",
-      title: "Gîte Figuiers",
-      description: "Superficie de 80m²"
+      image: "/images/gites/figuiers/table.avif",
+      title: "Salon",
+      description: "Pour un bain de soleil"
     },    
     {
       image: "/images/gites/figuiers/Cuisine 2.jpeg",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      title: "Cuisine",
+      description: "Moderne et Design"
     },    
     {
-      image: "/images/gites/figuiers/image1.png",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      image: "/images/gites/figuiers/image1.avif",
+      title: "Salle de bain",
+      description: "Douche à l'italienne moderne"
     },
   ];
 
@@ -81,7 +81,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/figuiers/vue3.png")',
+            backgroundImage: 'url("/images/gites/figuiers/vue3.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -101,7 +101,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/figuiers/vue4.png"
+              src="/images/gites/figuiers/vue4.avif"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -8,7 +8,7 @@ const gites = [
   {
     name: 'Côté Source',
     description: "Terrasse majestueuse, vue sur jardins et source naturelle, ambiance authentique et apaisante.",
-    image: "/images/gites/cote-source/photo1.png",
+    image: "/images/gites/cote-source/photo1.avif",
     capacity: '4 personnes',
     rating: 4.9,
     price: '150€',
@@ -18,7 +18,7 @@ const gites = [
   {
     name: 'Noisetiers',
     description: "Rénové, vue sur noisetiers, accès par un porche pittoresque, couchers de soleil splendides.",
-    image: "/images/gites/noisettiers/piscinevue.png",
+    image: "/images/gites/noisettiers/piscinevue.avif",
     capacity: '2 personnes',
     rating: 4.9,
     price: '130€',
@@ -38,7 +38,7 @@ const gites = [
   {
     name: 'Citronniers',
     description: "Fraîcheur estivale, vue sur cour fleurie, baigné de lumière, parfums légers de citronniers.",
-    image: "/images/gites/citronniers/salon3.jpg",
+    image: "/images/gites/citronniers/salon3.avif",
     capacity: '3 personnes',
     rating: 4.8,
     price: '130€',
@@ -48,7 +48,7 @@ const gites = [
   {
     name: 'Maisonette',
     description: "Duplex cosy, proche piscine, charme atypique, ombragé par un mûrier, avec superbe vue sur les montagnes.",
-    image: "/images/gites/maisonnette/montagne.png",
+    image: "/images/gites/maisonnette/montagne.avif",
     capacity: '2 personnes',
     rating: 4.7,
     price: '120€',
@@ -58,7 +58,7 @@ const gites = [
   {
     name: 'Châteaunette',
     description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, inspiré d’un château belge.",
-    image: "images/gites/chateaunette/photo 17.png",
+    image: "images/gites/chateaunette/photo 17.avif",
     capacity: '7 personnes',
     rating: 4.9,
     price: '180€',
@@ -101,7 +101,7 @@ function GitesPage() {
       {/* Hero Section */}
       <div className="relative h-[80vh] w-full overflow-hidden">
         <img 
-          src="/images/gites/cote-source/photo 5.png"
+          src="/images/gites/cote-source/photo 5.avif"
           alt="Vue panoramique des gîtes"
           className="w-full h-full object-cover"
         />

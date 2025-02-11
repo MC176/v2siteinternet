@@ -10,34 +10,29 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/noisettiers/porche.png",
+      image: "/images/gites/noisettiers/porche.avif",
       title: "Entrée du gîte",
-      description: "Lauriers roses"
+      description: "L'entrée se fait sous un porche en pierre"
     },
     {
-      image: "/images/gites/noisettiers/terrasse.png",
-      title: "Gîte Noisettiers",
-      description: "Superficie de 80m²"
+      image: "/images/gites/noisettiers/terrasse.avif",
+      title: "Vue depuis le porche",
+      description: "Idéal pour un petit déjeuner proche de la piscine"
     },    
     {
-      image: "/images/gites/noisettiers/salon.png",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      image: "/images/gites/noisettiers/salon.avif",
+      title: "Salon",
+      description: "Entièrement rénové en 2023"
     },    
     {
-      image: "/images/gites/noisettiers/cuisine.png",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      image: "/images/gites/noisettiers/cuisine.avif",
+      title: "Coin Cuisine",
+      description: "Cuisine moderne et équipée"
     },
     {
-      image: "/images/gites/noisettiers/chambre2.png",
-      title: "Espace cuisine",
-      description: "Tout équipée"
-    },
-    {
-      image: "/images/gites/noisettiers/arbre.png",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
+      image: "/images/gites/noisettiers/chambre2.avif",
+      title: "Coin chambre",
+      description: "Sol en travertin - fraicheur lors des nuits d'été"
     },
   ];
 
@@ -91,7 +86,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/noisettiers/backbis.png")',
+            backgroundImage: 'url("/images/gites/noisettiers/backbis.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -111,7 +106,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/noisettiers/ping.png"
+              src="/images/gites/noisettiers/ping.avif"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -78,7 +78,7 @@ function App() {
       <div 
         className="relative h-[70vh] bg-cover bg-center bg-fixed transform-gpu"
         style={{ 
-          backgroundImage: 'url("images/gites/notused/chat4.png")'
+          backgroundImage: 'url("images/gites/notused/chat4.avif")'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>

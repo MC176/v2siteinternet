@@ -10,29 +10,29 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/maisonnette/montagne.png",
+      image: "/images/gites/maisonnette/montagne.avif",
       title: "Gîte Maisonnette",
-      description: "Superficie de 80m²"
+      description: "Vue en hauteur du gîte"
     },    
     {
-      image: "/images/gites/maisonnette/vegetation.png",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      image: "/images/gites/maisonnette/vegetation.avif",
+      title: "En pleine nature",
+      description: "Derrière ces agaves, l'entrée - la voyez-vous?"
     },    
     {
-      image: "/images/gites/maisonnette/chambre.png",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      image: "/images/gites/maisonnette/chambre.avif",
+      title: "Coin Chambre",
+      description: "Ambiance cosy et délicate"
     },
     {
-      image: "/images/gites/maisonnette/coincuisine.png",
-      title: "Espace cuisine",
-      description: "Tout équipée"
+      image: "/images/gites/maisonnette/coincuisine.avif",
+      title: "Espace Cuisine",
+      description: "Cuisine minimaliste et moderne"
     },
     {
-      image: "/images/gites/maisonnette/salledeau.png",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
+      image: "/images/gites/maisonnette/salledeau.avif",
+      title: "Salle de bain",
+      description: "Douche à l'italienne"
     },
   ];
 
@@ -86,7 +86,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/maisonnette/tondeuse.jpg")',
+            backgroundImage: 'url("/images/gites/maisonnette/tondeuse.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -106,7 +106,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/maisonnette/grenadier.png"
+              src="/images/gites/maisonnette/grenadier.avif"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -10,39 +10,39 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/citronniers/interieur.png",
-      title: "Entrée du gîte",
-      description: "Lauriers roses"
+      image: "/images/gites/citronniers/interieur.avif",
+      title: "Salon du gîte",
+      description: "Très lumineux, bain de soleil"
     },
     {
-      image: "/images/gites/citronniers/salon2.jpg",
+      image: "/images/gites/citronniers/salon2.avif",
       title: "Gîte Citronniers",
-      description: "Superficie de 80m²"
+      description: "Vue sur la cour intérieure fleurie"
     },    
     {
-      image: "/images/gites/citronniers/chambre.jpg",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      image: "/images/gites/citronniers/chambre.avif",
+      title: "Chambre ",
+      description: "Lit 140cm avec nombreux rangements"
     },    
     {
-      image: "/images/gites/citronniers/terrasse.jpg",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      image: "/images/gites/citronniers/terrasse.avif",
+      title: "Espace fraicheur",
+      description: "Possibilité de se reposer à l'extérieur"
     },
     {
-      image: "/images/gites/citronniers/sdb.png",
-      title: "Espace cuisine",
-      description: "Tout équipée"
+      image: "/images/gites/citronniers/sdb.avif",
+      title: "Salle de bain",
+      description: "Douche à l'italienne"
     },
     {
-      image: "/images/gites/citronniers/cour.jpg",
-      title: "Coin cuisine",
+      image: "/images/gites/citronniers/cour.avif",
+      title: "Verdure cour intérieure",
       description: "Cuisine équipée"
     },
     {
-      image: "/images/gites/citronniers/olivie.png",
-      title: "Chambre n°1",
-      description: "Lit 2 places"
+      image: "/images/gites/citronniers/olivie.avif",
+      title: "Nature et microhabitat",
+      description: "A quelques mètres du gîte"
     }
   ];
 
@@ -96,7 +96,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/citronniers/salon3.jpg")',
+            backgroundImage: 'url("/images/gites/citronniers/salon3.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -116,7 +116,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="/images/gites/citronniers/devant.jpg"
+              src="/images/gites/citronniers/devant.avif"
               alt="Paysage méditerranéen"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

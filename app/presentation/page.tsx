@@ -6,44 +6,44 @@ function App() {
   const [activeImage, setActiveImage] = useState(0);
   
   const poolImages = [
-    "/images/gites/piscine/nature.jpg",
-    "/images/gites/piscine/photo1.png",
-    "/images/gites/chateaunette/Photo 16.png",
+    "/images/gites/piscine/nature.avif",
+    "/images/gites/piscine/photo1.avif",
+    "/images/gites/chateaunette/Photo 16.avif",
   ];
 
   const pizzaOvenImages = [
-    "/images/gites/four/Photo 29.png",
-    "/images/gites/four/Photo 28.png",
-    "/images/gites/four/Photo 33.png",
+    "/images/gites/four/Photo 29.avif",
+    "/images/gites/four/Photo 28.avif",
+    "/images/gites/four/Photo 33.avif",
   ];
 
   const receptionImages = [
-    "/images/gites/cote-jardin/enceinte.jpg",
-    "/images/gites/cote-jardin/reception.png",
-    "/images/gites/cote-jardin/table.jpg",
+    "/images/gites/cote-jardin/enceinte.avif",
+    "/images/gites/cote-jardin/reception.avif",
+    "/images/gites/cote-jardin/table.avif",
   ];
 
   const nuitImages = [
-    "/images/gites/cote-jardin/gens.jpg",
-    "/images/gites/notused/nuit.jpg",
-    "/images/gites/piscine/piscinenuit3.png",
+    "/images/gites/cote-jardin/gens.avif",
+    "/images/gites/notused/nuit.avif",
+    "/images/gites/piscine/piscinenuit3.avif",
   ];
 
   const commonAreaImages = [
-    "/images/gites/cote-jardin/piece.jpg",
-    "/images/gites/cote-jardin/cuisine.jpg",
+    "/images/gites/cote-jardin/piece.avif",
+    "/images/gites/cote-jardin/cuisine.avif",
   ];
 
   const outdoorSpaceImages = [
-    "/images/gites/notused/cour.jpg",
-    "/images/gites/notused/bananier.png",
-    "/images/gites/noisettiers/veggetation.png",
+    "/images/gites/notused/cour.avif",
+    "/images/gites/notused/bananier.avif",
+    "/images/gites/noisettiers/veggetation.avif",
   ];
 
   const SourceImages = [
-    "/images/gites/notused/mare.jpg",
-    "/images/gites/chateaunette/Photo 32.png",
-    "/images/gites/noisettiers/arbre.png",
+    "/images/gites/notused/mare.avif",
+    "/images/gites/chateaunette/Photo 32.avif",
+    "/images/gites/noisettiers/arbre.avif",
   ];
 
   useEffect(() => {
@@ -66,7 +66,7 @@ function App() {
       <div 
           className="hero-image absolute inset-0 bg-cover bg-center scale-110"
           style={{
-            backgroundImage: 'url("/images/gites/noisettiers/piscinevue.png")',
+            backgroundImage: 'url("/images/gites/noisettiers/piscinevue.avif")',
             willChange: 'transform',
           }}
         >
@@ -114,21 +114,21 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="images/presentation/chat.png"
+                  src="images/presentation/chat.avif"
                   alt="Vue du domaine 1" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="images/gites/chateaunette/photo 30.png"
+                  src="images/gites/chateaunette/photo 30.avif"
                   alt="Vue du domaine 2" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="images/gites/notused/chat.jpg"
+                  src="images/gites/notused/chat.avif"
                   alt="Vue du domaine 3" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />

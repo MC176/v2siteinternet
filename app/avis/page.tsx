@@ -198,21 +198,21 @@ const googleReviews = [
 ];
 
 const guestBookImages = [
-  { id: 1, path: '/images/avis/avis 1.png', alt: 'Avis client 1' },
-  { id: 2, path: '/images/avis/avis 2.png', alt: 'Avis client 2' },
-  { id: 3, path: '/images/avis/avis 3.png', alt: 'Avis client 3' },
-  { id: 4, path: '/images/avis/avis 4.png', alt: 'Avis client 4' },
-  { id: 5, path: '/images/avis/avis 5.png', alt: 'Avis client 5' },
-  { id: 6, path: '/images/avis/avis 6.png', alt: 'Avis client 6' },
-  { id: 6, path: '/images/avis/cerise.png', alt: 'Avis client 15' },
-  { id: 6, path: '/images/avis/remerciement.png', alt: 'Avis client 8' },
-  { id: 6, path: '/images/avis/chene.png', alt: 'Avis client 9' },
-  { id: 6, path: '/images/avis/sacha.png', alt: 'Avis client 10' },
-  { id: 6, path: '/images/avis/enfants.png', alt: 'Avis client 7' },
-  { id: 6, path: '/images/avis/audrey.png', alt: 'Avis client 11' },
-  { id: 6, path: '/images/avis/sonia.png', alt: 'Avis client 12' },
-  { id: 6, path: '/images/avis/quentin.png', alt: 'Avis client 13' },
-  { id: 6, path: '/images/avis/alice.png', alt: 'Avis client 14' },
+  { id: 1, path: '/images/avis/avis 1.avif', alt: 'Avis client 1' },
+  { id: 2, path: '/images/avis/avis 2.avif', alt: 'Avis client 2' },
+  { id: 3, path: '/images/avis/avis 3.avif', alt: 'Avis client 3' },
+  { id: 4, path: '/images/avis/avis 4.avif', alt: 'Avis client 4' },
+  { id: 5, path: '/images/avis/avis 5.avif', alt: 'Avis client 5' },
+  { id: 6, path: '/images/avis/avis 6.avif', alt: 'Avis client 6' },
+  { id: 6, path: '/images/avis/cerise.avif', alt: 'Avis client 15' },
+  { id: 6, path: '/images/avis/remerciement.avif', alt: 'Avis client 8' },
+  { id: 6, path: '/images/avis/chene.avif', alt: 'Avis client 9' },
+  { id: 6, path: '/images/avis/sacha.avif', alt: 'Avis client 10' },
+  { id: 6, path: '/images/avis/enfants.avif', alt: 'Avis client 7' },
+  { id: 6, path: '/images/avis/audrey.avif', alt: 'Avis client 11' },
+  { id: 6, path: '/images/avis/sonia.avif', alt: 'Avis client 12' },
+  { id: 6, path: '/images/avis/quentin.avif', alt: 'Avis client 13' },
+  { id: 6, path: '/images/avis/alice.avif', alt: 'Avis client 14' },
 
 ];
 
@@ -242,7 +242,7 @@ export default function AvisPage() {
       {/* Hero Section */}
       <div className="relative h-[80vh] w-full">
         <Image
-          src="/images/gites/chateaunette/chat.jpg"
+          src="/images/gites/chateaunette/chat.avif"
           alt="Mas d'Eylieux Exterior"
           fill
           className="object-cover"

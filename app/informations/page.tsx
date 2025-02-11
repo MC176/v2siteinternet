@@ -6,7 +6,7 @@ const destinations = [
   {
     title: "LA GROTTE CHAUVET",
     description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
-    image: "/images/presentation/Grotte.jpg",
+    image: "/images/presentation/Grotte.avif",
     cta: "Visitez le site internet",
     icon: Camera,
     url: "https://www.grottechauvet2ardeche.com/"
@@ -14,7 +14,7 @@ const destinations = [
   {
     title: "LE MUSÉE DE LA LAVANDE",
     description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
-    image: "/images/presentation/Image 5.jpg",
+    image: "/images/presentation/Image 5.avif",
     cta: "Réserver votre visite",
     icon: TreePine,
     url: "https://www.lamaisondelalavande.com/"
@@ -22,7 +22,7 @@ const destinations = [
   {
     title: "DESCENTE DES GORGES DE L'ARDÈCHE",
     description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
-    image: "/images/presentation/gorge.jpg",
+    image: "/images/presentation/gorge.avif",
     cta: "Réserver votre canoë",
     icon: Compass,
     url: "https://www.gorges-ardeche-pontdarc.fr/activites/canoe/infos-et-parcours/"
@@ -30,7 +30,7 @@ const destinations = [
   {
     title: "VOL EN DELTAPLANE",
     description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
-    image: "/images/presentation/Image 4.jpg",
+    image: "/images/presentation/Image 4.avif",
     cta: "Découvrir l'expérience",
     icon: TreePine,
     url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
@@ -38,7 +38,7 @@ const destinations = [
   {
     title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
-    image: "/images/presentation/Image 7.jpg",
+    image: "/images/presentation/Image 7.avif",
     cta: "Organiser votre balade",
     icon: TreePine,
     url: "https://www.gr-infos.com/gr42.htm"
@@ -46,7 +46,7 @@ const destinations = [
   {
     title: "SPÉLÉOLOGIE EN ARDÈCHE",
     description: "Partez à la découverte des grottes ardéchoises et explorez leurs merveilles souterraines en toute sécurité.",
-    image: "/images/presentation/Image 10.jpg",
+    image: "/images/presentation/Image 10.avif",
     cta: "Découvrir nos offres",
     icon: TreePine,
     url: "https://www.face-sud.com/speleo-ardeche/"
@@ -82,7 +82,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url("/images/presentation/image 7.jpg")',
+            backgroundImage: 'url("/images/presentation/image 7.avif")',
             filter: 'brightness(0.65)'
           }}
         />
@@ -107,7 +107,7 @@ function App() {
             {/* Left side - Image with Hover Effect */}
             <div className="relative h-[500px] group overflow-hidden rounded-2xl">
               <img 
-                src="images/presentation/pont.jpg"
+                src="images/presentation/pont.avif"
                 alt="Provence Landscape"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />

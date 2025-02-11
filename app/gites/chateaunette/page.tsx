@@ -10,67 +10,67 @@
 
       const climateData = [
         {
-          image: "/images/gites/chateaunette/photo 14.png",
+          image: "/images/gites/chateaunette/photo 14.avif",
           title: "Entrée du gîte",
           description: "Lauriers roses"
         },
         {
-          image: "/images/gites/chateaunette/photo 4.png",
+          image: "/images/gites/chateaunette/photo 4.avif",
           title: "Gîte Chateaunette",
-          description: "Superficie de 80m²"
+          description: "Superficie de 59m²"
         },
         {
-          image: "/images/gites/chateaunette/photo 5.png",
+          image: "/images/gites/chateaunette/photo 5.avif",
           title: "Accès terrasse",
           description: "Le gîte surplombe le Mas"
         },
         {
-          image: "/images/gites/chateaunette/photo 12.png",
+          image: "/images/gites/chateaunette/photo 12.avif",
           title: "La vue de la terrasse",
           description: "Verdure à perte de vue"
         },
         {
-          image: "/images/gites/chateaunette/photo 35.png",
+          image: "/images/gites/chateaunette/photo 35.avif",
           title: "Espace cuisine",
           description: "Toute équipée"
         },
         {
-          image: "/images/gites/chateaunette/photo 36.png",
+          image: "/images/gites/chateaunette/photo 36.avif",
           title: "Coin cuisine",
           description: "Cuisine équipée"
         },
         {
-          image: "/images/gites/chateaunette/photo 37.png",
+          image: "/images/gites/chateaunette/photo 37.avif",
           title: "Chambre n°1",
           description: "Lit 2 places"
         },
         {
-          image: "/images/gites/chateaunette/photo 1.png",
+          image: "/images/gites/chateaunette/photo 1.avif",
           title: "Chambre n°2",
           description: "Lit 2 places"
         },
         {
-          image: "/images/gites/chateaunette/photo 10.png",
+          image: "/images/gites/chateaunette/photo 10.avif",
           title: "Vue de Chateaunette",
           description: "Depuis la chambre"
         },
         {
-          image: "/images/gites/chateaunette/photo 42.png",
+          image: "/images/gites/chateaunette/photo 42.avif",
           title: "Salon",
           description: "Mezzazine avec accès au lit"
         },
         {
-          image: "/images/gites/chateaunette/photo 38.png",
+          image: "/images/gites/chateaunette/photo 38.avif",
           title: "Mezzazzine",
           description: "Lit 1 place"
         },
         {
-          image: "/images/gites/chateaunette/photo 16.png",
+          image: "/images/gites/chateaunette/photo 16.avif",
           title: "Piscine",
           description: "Profondeur : 1m10 - 2m20"
         },
         {
-          image: "/images/gites/chateaunette/photo 19.png",
+          image: "/images/gites/chateaunette/photo 19.avif",
           title: "Piscine de nuit",
           description: "Eclairage nocturne disponible"
         },
@@ -126,7 +126,7 @@
               ref={parallaxRef}
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url("/images/gites/chateaunette/photo 17.png")',
+                backgroundImage: 'url("/images/gites/chateaunette/photo 17.avif")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 transform: 'translateZ(0)',
@@ -146,7 +146,7 @@
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/images/gites/chateaunette/Photo 11.png"
+                  src="/images/gites/chateaunette/Photo 11.avif"
                   alt="Paysage méditerranéen"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
