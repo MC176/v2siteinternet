@@ -574,9 +574,9 @@ function App() {
   </div>
 </section>
 
-      {/* Enhanced Stargazing Section */}
-      <section className="relative py-32">
-        <div 
+     {/* Enhanced Stargazing Section */}
+     <section className="relative py-32">
+        <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80")',
@@ -596,7 +596,7 @@ function App() {
                 La magie des étoiles
               </h2>
               <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-3xl mx-auto">
-                Loin de toute pollution lumineuse, le firmamen révèle ses plus beaux secrets. 
+                Loin de toute pollution lumineuse, le firmament révèle ses plus beaux secrets.
               </p>
             </div>
 
@@ -618,10 +618,12 @@ function App() {
               </div>
             </div>
 
-            <a href="/contact" 
-                className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group">
-                Réservez votre nuit sous les étoiles
-              </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
+            >
+              Réservez votre nuit sous les étoiles
+            </a>
 
             <div className="max-w-2xl mx-auto relative">
               <div className="absolute -top-12 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl" />
@@ -629,42 +631,22 @@ function App() {
               <div className="relative mb-16">
                 <div className="relative">
                   <p className="text-lg text-stone-200 text-justify italic">
-                    <br/><br/><br/>"Un des rares endroits en France où l&apos;absence totale de pollution lumineuse
+                    <br />
+                    <br />
+                    <br />
+                    &quot;Un des rares endroits en France où l&apos;absence totale de pollution lumineuse
                     permet d&apos;observer la Voie Lactée et les étoiles filantes dans des conditions
-                    exceptionnelles."
+                    exceptionnelles.&quot;
                   </p>
                   <p className="text-lg text-stone-200 text-right mt-6">
                     Claudine et Armand, Grands Amis du Mas
                   </p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-
-function FeatureCard({ icon, title, description }) {
-  return (
-    <div className="p-8 rounded-lg bg-stone-50 hover:bg-stone-100 transition-all 
-      hover:scale-105 cursor-pointer hover:shadow-lg duration-300">
-      <div className="text-stone-800 mb-4">{icon}</div>
-      <h3 className="text-xl font-medium mb-2 text-stone-800">{title}</h3>
-      <p className="text-stone-600">{description}</p>
-    </div>
-  );
-}
-
-function NatureFeature({ icon, title, description, light }) {
-  return (
-    <div className="text-center p-8 rounded-lg transition-all hover:transform hover:scale-105">
-      <div className={`mb-4 flex justify-center ${light ? 'text-white' : 'text-stone-700'}`}>{icon}</div>
-      <h3 className={`text-xl font-light mb-3 ${light ? 'text-white' : 'text-stone-800'}`}>{title}</h3>
-      <p className={light ? 'text-stone-200' : 'text-stone-600'}>{description}</p>
     </div>
   );
 }
