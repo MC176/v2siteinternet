@@ -1,11 +1,11 @@
-'use client'
+'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
 
 function App() {
-  const parallaxRef = useRef(null);
+  const parallaxRef = useRef<HTMLDivElement>(null); // Fix: Define type for useRef
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -51,7 +51,7 @@ function App() {
     const handleScroll = () => {
       if (parallaxRef.current) {
         const scrolled = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrolled * 0.5}px)`;
+        parallaxRef.current.style.transform = `translateY(${scrolled * 0.5}px)`; // Fix: TypeScript now knows parallaxRef.current is an HTMLDivElement
       }
     };
 
