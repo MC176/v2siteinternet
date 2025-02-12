@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import { useState, useRef, useEffect } from 'react'
-import Link from 'next/link'
-import { Menu } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -11,10 +11,10 @@ const navigation = [
   { name: 'Informations', href: '/informations' },
   { name: 'Avis', href: '/avis' },
   { name: 'Contact', href: '/contact' },
-]
+];
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [lineWidth, setLineWidth] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -23,33 +23,43 @@ export default function Navigation() {
   useEffect(() => {
     if (hoveredItem) {
       setIsVisible(true);
-      let animationFrameId;
+      const startTime = Date.now();
 
-      const animate = (startTime) => {
+      const animate = () => {
         const progress = Math.min((Date.now() - startTime) / 200, 1);
         setLineWidth(progress * 100);
 
         if (progress < 1) {
-          animationFrameId = requestAnimationFrame(() => animate(startTime));
+          requestAnimationFrame(animate);
         }
       };
 
-      animationFrameId = requestAnimationFrame(() => animate(Date.now()));
-
-      return () => cancelAnimationFrame(animationFrameId);
+      animate();
     } else {
       setLineWidth(0);
       setIsVisible(false);
     }
   }, [hoveredItem]);
 
+  // Fermer le menu lors du clic en dehors
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (linkRef.current && !linkRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <nav className="bg-transparent absolute w-full z-50">
+    <nav className="bg-transparent absolute w-full z-50" ref={linkRef}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex">
             <Link href="/" className="flex flex-shrink-0 items-center">
-              <span className="text-2xl font-bold text-white">Le Mas d'Eylieux</span>
+              <span className="text-2xl font-bold text-white">Le Mas d&apos;Eylieux</span>
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
@@ -61,7 +71,10 @@ export default function Navigation() {
                   onMouseEnter={() => setHoveredItem(item.name)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <Link href={item.href} className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">
+                  <Link
+                    href={item.href}
+                    className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                  >
                     {item.name}
                   </Link>
                   {isVisible && hoveredItem === item.name && (
@@ -111,5 +124,5 @@ export default function Navigation() {
         </div>
       )}
     </nav>
-  )
+  );
 }
