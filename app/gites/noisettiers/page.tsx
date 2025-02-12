@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function App() {
-  const parallaxRef = useRef(null);
+  const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
