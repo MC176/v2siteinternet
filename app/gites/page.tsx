@@ -57,7 +57,7 @@ const gites = [
   },
   {
     name: 'Châteaunette',
-    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, inspiré d’un château belge.",
+    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, inspiré d&apos;un château belge.",
     image: "images/gites/chateaunette/photo 17.avif",
     capacity: '7 personnes',
     rating: 4.9,
@@ -71,11 +71,11 @@ const privatisationFeatures = [
   {
     icon: GlassWater,
     title: "Réceptions de Prestige",
-    description: "Mariages, anniversaires et célébrations d'exception dans un cadre enchanteur"
+    description: "Mariages, anniversaires et célébrations d&apos;exception dans un cadre enchanteur"
   },
   {
     icon: Building2,
-    title: "Séminaires d'Entreprise",
+    title: "Séminaires d&apos;Entreprise",
     description: "Espaces de réunion, activités team-building et hébergement tout confort"
   },
   {
@@ -112,7 +112,7 @@ function GitesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl font-bold mb-4">Nos Gîtes d'Exception</h1>
+            <h1 className="text-6xl font-bold mb-4">Nos Gîtes d&apos;Exception</h1>
             <p className="text-xl max-w-2xl mx-auto">
               Découvrez notre sélection de gîtes de charme en Ardèche, où luxe et authenticité se rencontrent pour des séjours inoubliables.
             </p>
@@ -222,7 +222,7 @@ function GitesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
               >
-                Privatisez l'Ensemble de nos Gîtes
+                Privatisez l&apos;Ensemble de nos Gîtes
               </motion.h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

@@ -88,11 +88,11 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d'Eylieux
+              Bienvenue au Mas d&apos;Eylieux
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Découvrez nos 6 gîtes d'exception au sein d'un Mas rénové en pierres du XIIe siècle, <br/>
-              au cœur d'un domaine de 40 hectares, en Ardèche méridionale.
+              Découvrez nos 6 gîtes d&apos;exception au sein d&apos;un Mas rénové en pierres du XIIe siècle, <br/>
+              au cœur d&apos;un domaine de 40 hectares, en Ardèche méridionale.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -136,8 +136,8 @@ function App() {
             </div>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg leading-relaxed text-stone-600 text-center">
-              Construit en 1158, le Mas d'Eylieux est un lieu chargé d’histoire. Il abrite des vestiges d’une petite cité gallo-romaine et fut le passage du roi Charles VIII lors de sa campagne en Italie à la fin du XVe siècle. 
-              Aujourd'hui, ce domaine préservé séduit par son charme authentique et son atmosphère unique, offrant un cadre unique.
+              Construit en 1158, le Mas d&apos;Eylieux est un lieu chargé d&apos;histoire. Il abrite des vestiges d&apos;une petite cité gallo-romaine et fut le passage du roi Charles VIII lors de sa campagne en Italie à la fin du XVe siècle. 
+              Aujourd&apos;hui, ce domaine préservé séduit par son charme authentique et son atmosphère unique, offrant un cadre unique.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ function App() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Réceptions & Fêtes
+          Réceptions &amp; Fêtes
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
           Un cadre exceptionnel pour vos événements en famille ou entre amis.
@@ -297,7 +297,7 @@ function App() {
           La nuit au Mas
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Éclairage nocturne disponible dans l'ensemble du Mas.
+          Éclairage nocturne disponible dans l&apos;ensemble du Mas.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -458,7 +458,7 @@ function App() {
           Espaces Extérieurs
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-        Profitez d’un cadre exceptionnel où la nature s’épanouit dans toute sa diversité,
+        Profitez d&apos;un cadre exceptionnel où la nature s&apos;épanouit dans toute sa diversité,
          offrant un véritable havre de paix pour la faune et la flore.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
@@ -518,7 +518,7 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          La Source du Mas d'Eylieux
+          La Source du Mas d&apos;Eylieux
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
         Cette source naturelle, filtrée par les montagnes, irrigue nos terres et nos bassins. 
@@ -603,18 +603,18 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Moon className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Perséides d'Août</h3>
-                <p className="text-stone-300">Vivez la magie de la plus belle pluie d'étoiles filantes de l'année, avec jusqu'à 100 météores par heure dans un ciel parfaitement noir</p>
+                <h3 className="text-xl font-light mb-3 text-white">Perséides d&apos;Août</h3>
+                <p className="text-stone-300">Vivez la magie de la plus belle pluie d&apos;étoiles filantes de l&apos;année, avec jusqu&apos;à 100 météores par heure dans un ciel parfaitement noir</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Star className="w-12 h-12 mb-6 mx-auto text-white" />
                 <h3 className="text-xl font-light mb-3 text-white">Voie Lactée</h3>
-                <p className="text-stone-300">Admirez notre galaxie dans toute sa splendeur, visible à l'œil nu grâce à l'absence totale de pollution lumineuse sur plusieurs kilomètres</p>
+                <p className="text-stone-300">Admirez notre galaxie dans toute sa splendeur, visible à l&apos;œil nu grâce à l&apos;absence totale de pollution lumineuse sur plusieurs kilomètres</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Telescope className="w-12 h-12 mb-6 mx-auto text-white" />
                 <h3 className="text-xl font-light mb-3 text-white">Constellations</h3>
-                <p className="text-stone-300">Découvrez les constellations lors de nos soirées d'observation douces et reposantes sous un ciel d'une luminosité inégalée</p>
+                <p className="text-stone-300">Découvrez les constellations lors de nos soirées d&apos;observation douces et reposantes sous un ciel d&apos;une luminosité inégalée</p>
               </div>
             </div>
 
@@ -629,8 +629,8 @@ function App() {
               <div className="relative mb-16">
                 <div className="relative">
                   <p className="text-lg text-stone-200 text-justify italic">
-                    <br/><br/><br/>"Un des rares endroits en France où l'absence totale de pollution lumineuse
-                    permet d'observer la Voie Lactée et les étoiles filantes dans des conditions
+                    <br/><br/><br/>"Un des rares endroits en France où l&apos;absence totale de pollution lumineuse
+                    permet d&apos;observer la Voie Lactée et les étoiles filantes dans des conditions
                     exceptionnelles."
                   </p>
                   <p className="text-lg text-stone-200 text-right mt-6">
