@@ -119,7 +119,7 @@ const HomeHero = () => {
                 }}
                 className="w-full h-full"
                 iframeClassName="w-full h-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[177.77vh] min-h-[56.25vw]"
-                onReady={(event) => {
+                onReady={(event: { target: { mute: () => void; playVideo: () => void } }) => {
                   event.target.mute();
                   event.target.playVideo();
                 }}
