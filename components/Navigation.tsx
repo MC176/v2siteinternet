@@ -15,10 +15,10 @@ const navigation = [
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [lineWidth, setLineWidth] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const linkRef = useRef(null);
+  const linkRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (hoveredItem) {
@@ -43,8 +43,8 @@ export default function Navigation() {
 
   // Fermer le menu lors du clic en dehors
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (linkRef.current && !linkRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (linkRef.current && !linkRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
     };
