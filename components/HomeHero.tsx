@@ -46,9 +46,6 @@ const InstagramGallery = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 bg-gray-100 rounded-lg shadow-lg relative">
-      <div className="absolute left-[-80px] bottom-[16.5%] transform translate-y-1/2 hidden md:block">
-        <p className="text-xl text-gray-600 transform -rotate-90">INSTAGRAM</p>
-      </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {images.map((image, index) => (
           <a

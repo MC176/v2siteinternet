@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 function App() {
@@ -105,10 +106,12 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
-            <img
+            <Image
               src="/images/gites/noisettiers/ping.avif"
               alt="Paysage méditerranéen"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              fill
+              style={{ objectFit: 'cover' }}
+              className="transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
@@ -166,10 +169,12 @@ function App() {
           <div className="flex gap-8">
             {visibleImages.map((item, index) => (
               <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
                   <div className="text-white">
@@ -421,7 +426,7 @@ function App() {
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <p className="text-black leading-relaxed text-lg italic">
-            "Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l&apos;ombre du noisetier, le temps ralentit et la nature reprend ses droits."
+            &quot;Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l&apos;ombre du noisetier, le temps ralentit et la nature reprend ses droits.&quot;
           </p>
           <p className="text-lg text-grey-600 text-right mt-6">
                    ~ Extrait du guide d&apos;initiation à la Botanique
