@@ -102,7 +102,7 @@ function App() {
               </div>
               <div>
                 <p className="font-medium text-gray-900">Notre Adresse</p>
-                <p className="text-gray-600 mt-1">Le Mas d'Eylieux<br />07220 Saint Montant</p>
+                <p className="text-gray-600 mt-1">Le Mas d&apos;Eylieux<br />07220 Saint Montant</p>
               </div>
             </div>
             

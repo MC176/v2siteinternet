@@ -17,7 +17,7 @@ function App() {
     {
       image: "/images/gites/maisonnette/vegetation.avif",
       title: "En pleine nature",
-      description: "Derrière ces agaves, l'entrée - la voyez-vous?"
+      description: "Derrière ces agaves, une entrée - la voyez-vous?"
     },    
     {
       image: "/images/gites/maisonnette/chambre.avif",
@@ -32,7 +32,7 @@ function App() {
     {
       image: "/images/gites/maisonnette/salledeau.avif",
       title: "Salle de bain",
-      description: "Douche à l'italienne"
+      description: "Douche à l&apos;italienne"
     },
   ];
 
@@ -119,10 +119,10 @@ function App() {
                 Entre Soleil et Mûrier
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-              Derrière sa façade discrète, la Maisonnette cache une architecture spéciale en Ardèche. Son entrée semblable à celle d’une maison traditionnelle, 
-              donne accès à un duplex astucieusement aménagé. À l’étage, un salon cosy, baigné de lumière, 
-              invite à la détente, tandis qu’en contrebas, la chambre et la salle d’eau offrent un espace nuit confortable et paisible. 
-              À l’extérieur, un mûrier centenaire ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
+              Derrière sa façade discrète, la Maisonnette cache une architecture spéciale en Ardèche. Son entrée semblable à celle d&apos;une maison traditionnelle, 
+              donne accès à un duplex astucieusement aménagé. À l&apos;étage, un salon cosy, baigné de lumière, 
+              invite à la détente, tandis qu&apos;en contrebas, la chambre et la salle d&apos;eau offrent un espace nuit confortable et paisible. 
+              À l&apos;extérieur, un mûrier centenaire ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              L'Exception du Mas : une ode à la sérénité
+              L&apos;Exception du Mas : une Ode à la sérénité
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
               Un duplex au charme fou, isolé du mas et proche de la piscine. 
@@ -298,7 +298,7 @@ function App() {
                         Salle de bain
                       </h3>
                       <div className="space-y-1">
-                        {["Douche à l'italienne"].map((item, index) => (
+                        {['Douche italienne'].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
                             <span className="text-gray-600 text-sm">{item}</span>

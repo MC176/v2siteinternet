@@ -12,7 +12,7 @@ function App() {
     {
       image: "/images/gites/noisettiers/porche.avif",
       title: "Entrée du gîte",
-      description: "L'entrée se fait sous un porche en pierre"
+      description: "L&apos;entrée se fait sous un porche en pierre"
     },
     {
       image: "/images/gites/noisettiers/terrasse.avif",
@@ -32,7 +32,7 @@ function App() {
     {
       image: "/images/gites/noisettiers/chambre2.avif",
       title: "Coin chambre",
-      description: "Sol en travertin - fraicheur lors des nuits d'été"
+      description: "Sol en travertin - fraicheur lors des nuits d&apos;été"
     },
   ];
 
@@ -119,10 +119,10 @@ function App() {
                 Un ballet de lumière parmi les Noisetiers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-              Rénové en 2023, le gîte Noisetier bénéficie d’un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
+              Rénové en 2023, le gîte Noisetier bénéficie d&apos;un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
               Accessible par un porche en pierre plein de caractère, il mêle subtilement tradition et modernité. Son intérieur, décoré dans des tons rappelant la teinte dorée des noisettes, 
               procure une atmosphère douce et apaisante. Ce lieu, 
-              où l’on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l’esprit du Mas : un havre de paix où nature et confort se rejoignent.
+              où l&apos;on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l&apos;esprit du Mas : un havre de paix où nature et confort se rejoignent.
               </p>
             </div>
 
@@ -150,12 +150,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              L'Orée du Noisetier
+              L&apos;Orée du Noisetier
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Fraîchement rénové, ce gîte doit son nom aux beaux noisetiers qui l'entourent. Accessible par un petit porche au cachet indéniable, 
+              Fraîchement rénové, ce gîte doit son nom aux beaux noisetiers qui l&apos;entourent. Accessible par un petit porche au cachet indéniable, 
               il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude, mêlant tradition et modernité,
-              parfait pour des vacances au soleil dans le Sud de l'Ardèche.
+              parfait pour des vacances au soleil dans le Sud de l&apos;Ardèche.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -294,7 +294,7 @@ function App() {
                         Salle de bain
                       </h3>
                       <div className="space-y-1">
-                        {["Douche à l'italienne"].map((item, index) => (
+                        {['Douche italienne'].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
                             <span className="text-gray-600 text-sm">{item}</span>
@@ -421,10 +421,10 @@ function App() {
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <p className="text-black leading-relaxed text-lg italic">
-            "Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l’ombre du noisetier, le temps ralentit et la nature reprend ses droits."
+            "Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l&apos;ombre du noisetier, le temps ralentit et la nature reprend ses droits."
           </p>
           <p className="text-lg text-grey-600 text-right mt-6">
-                   ~ Extrait du guide d'initiation à la Botanique
+                   ~ Extrait du guide d&apos;initiation à la Botanique
                   </p>
         </div>
       </div>

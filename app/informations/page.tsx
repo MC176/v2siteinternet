@@ -5,7 +5,7 @@ import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider,
 const destinations = [
   {
     title: "LA GROTTE CHAUVET",
-    description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
+    description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l&apos;UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
     image: "/images/presentation/Grotte.avif",
     cta: "Visitez le site internet",
     icon: Camera,
@@ -13,15 +13,15 @@ const destinations = [
   },
   {
     title: "LE MUSÉE DE LA LAVANDE",
-    description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
+    description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l&apos;histoire de cette plante emblématique de la Provence.",
     image: "/images/presentation/Image 5.avif",
     cta: "Réserver votre visite",
     icon: TreePine,
     url: "https://www.lamaisondelalavande.com/"
   },
   {
-    title: "DESCENTE DES GORGES DE L'ARDÈCHE",
-    description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
+    title: "DESCENTE DES GORGES DE L&apos;ARDÈCHE",
+    description: "Parcourez les majestueuses Gorges de l&apos;Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
     image: "/images/presentation/gorge.avif",
     cta: "Réserver votre canoë",
     icon: Compass,
@@ -31,12 +31,12 @@ const destinations = [
     title: "VOL EN DELTAPLANE",
     description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
     image: "/images/presentation/Image 4.avif",
-    cta: "Découvrir l'expérience",
+    cta: "Découvrir l&apos;expérience",
     icon: TreePine,
     url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
   },
   {
-    title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
+    title: "RANDONNÉES PROCHE DU MAS D&apos;EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
     image: "/images/presentation/Image 7.avif",
     cta: "Organiser votre balade",
@@ -91,7 +91,7 @@ function App() {
             DÉCOUVERTES
           </h1>
           <p className="text-xl md:text-2xl font-light tracking-wider mb-8 max-w-2xl mx-auto animate-fade-in-delay">
-            Une sélection d'expériences uniques en Ardèche méridionale
+            Une sélection d&apos;expériences uniques en Ardèche méridionale
           </p>
           <div className="flex items-center justify-center gap-3 animate-fade-in-delay-2">
             <MapPin className="w-6 h-6" />
@@ -114,8 +114,8 @@ function App() {
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-500 flex items-center justify-center">
                 <p className="text-white text-lg font-light leading-relaxed px-8 text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                 Le village de Saint Montan est idéalement situé. <br /> <br />
-                D'un côté, les Gorges de l’Ardèche et la Grotte Chauvet. <br />
-                De l'autre, Montélimar, célèbre pour ses nougats, ses marchés et ses vignobles.
+                D&apos;un côté, les Gorges de l&apos;Ardèche et la Grotte Chauvet. <br />
+                De l&apos;autre, Montélimar, célèbre pour ses nougats, ses marchés et ses vignobles.
                 </p>
               </div>
             </div>
@@ -137,13 +137,13 @@ function App() {
                 <div className="space-y-6">
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                    Le Mas d'Eylieux se situe sur les hauteurs de Saint Montan, en Ardèche, localisé entre Lyon et Marseille. 
+                    Le Mas d&apos;Eylieux se situe sur les hauteurs de Saint Montan, en Ardèche, localisé entre Lyon et Marseille. 
                     </p>
                   </div>
                   
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                    Nous sommes à environ 25 minutes de la gare de Montélimar et à un peu plus d'une heure de la Gare TGV d'Avignon.
+                    Nous sommes à environ 25 minutes de la gare de Montélimar et à un peu plus d&apos;une heure de la Gare TGV d&apos;Avignon.
                     </p>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ function App() {
           }}
         />
         <div className="relative text-center text-white z-10">
-          <h2 className="text-6xl font-light tracking-widest mb-4">L'ARDÈCHE</h2>
+          <h2 className="text-6xl font-light tracking-widest mb-4">L&apos;ARDÈCHE</h2>
           <p className="text-xl tracking-wide uppercase">VIVEZ LE FARNIENTE ARDÈCHOIX</p>
         </div>
       </div>

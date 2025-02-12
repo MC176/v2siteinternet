@@ -27,7 +27,7 @@ function App() {
     {
       image: "/images/gites/figuiers/image1.avif",
       title: "Salle de bain",
-      description: "Douche à l'italienne moderne"
+      description: "Douche à l&apos;italienne moderne"
     },
   ];
 
@@ -117,8 +117,8 @@ function App() {
               Situé au point le plus haut du domaine, le gîte Figuier séduit par sa vue spectaculaire et son intérieur baigné de lumière. 
               Grâce à de larges baies vitrées, le salon offre un panorama sur la nature environnante, 
               plongeant les visiteurs dans une immersion totale avec les paysages ardéchois. Sa salle de bain rénovée, sa cuisine moderne et équipée, 
-              ainsi que sa spacieuse terrasse bordée de balustres font de ce gîte un lieu d’exception. 
-              Parfait pour des moments de détente, on peut y déguster des figues et profiter du ciel étoilé de l’Ardèche.
+              ainsi que sa spacieuse terrasse bordée de balustres font de ce gîte un lieu d&apos;exception. 
+              Parfait pour des moments de détente, on peut y déguster des figues et profiter du ciel étoilé de l&apos;Ardèche.
               </p>
             </div>
 
@@ -294,7 +294,7 @@ function App() {
                         Salle de bain
                       </h3>
                       <div className="space-y-1">
-                        {["Douche à l'italienne"].map((item, index) => (
+                        {['Rénovée, moderne et design'].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
                             <span className="text-gray-600 text-sm">{item}</span>

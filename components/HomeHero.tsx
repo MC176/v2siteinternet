@@ -20,25 +20,25 @@ const InstagramGallery = () => {
   const images = [
     {
       url: "/images/Instagram/Photo 1.jpeg",
-      alt: "Le Mas d'Eylieux - Vue extérieure",
+      alt: "Le Mas - Vue extérieure",
       width: 640,
       height: 480
     },
     {
       url: "/images/Instagram/Photo 2.jpeg",
-      alt: "Le Mas d'Eylieux - Intérieur",
+      alt: "Le Mas - Intérieur",
       width: 640,
       height: 480
     },
     {
       url: "/images/Instagram/Photo 3.jpeg",
-      alt: "Le Mas d'Eylieux - Jardin",
+      alt: "Le Mas - Jardin",
       width: 640,
       height: 480
     },
     {
       url: "/images/Instagram/Photo 4.jpeg",
-      alt: "Le Mas d'Eylieux - Piscine",
+      alt: "Le Mas - Piscine",
       width: 640,
       height: 480
     }
@@ -141,10 +141,10 @@ const HomeHero = () => {
             className="text-white px-4"
           >
             <h1 className="text-4xl md:text-7xl font-bold mb-6">
-              Le Mas d'Eylieux
+              Le Mas d&apos;Eylieux
             </h1>
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto font-light">
-              Un domaine d'exception au coeur de l'Ardèche
+              Un domaine d&apos;exception au coeur de l&apos;Ardèche
             </p>
             <Link
               href="/presentation"
@@ -160,7 +160,7 @@ const HomeHero = () => {
       <section className="bg-gray-50 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between mb-6 md:mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Le Mas d'Eylieux vous accueille</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Le Mas d&apos;Eylieux vous accueille</h2>
           </div>
           <InstagramGallery />
         </div>
