@@ -61,26 +61,6 @@ const Footer = () => {
                 className="w-full h-full object-cover"
               />
             </button>
-            <button
-              onClick={() => switchLanguage('en')}
-              className="w-5 h-5 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
-                alt="English"
-                className="w-full h-full object-cover"
-              />
-            </button>
-            <button
-              onClick={() => switchLanguage('nl')}
-              className="w-5 h-5 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/nl.svg"
-                alt="Dutch"
-                className="w-full h-full object-cover"
-              />
-            </button>
           </div>
         </div>
       </div>
