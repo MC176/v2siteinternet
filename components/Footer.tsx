@@ -19,7 +19,7 @@ const Footer = () => {
               href="/cgu"
               className="text-xs text-gray-600 hover:text-gray-900 transition-colors underline block"
             >
-              Conditions Générales d'Utilisation
+              Conditions Générales d&apos;Utilisation
             </Link>
             <Link
               href="/cgv"
