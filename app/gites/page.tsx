@@ -57,7 +57,7 @@ const gites = [
   },
   {
     name: 'Châteaunette',
-    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, inspiré d&apos;un château belge.",
+    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, idéal pour une famille ou des amis.",
     image: "images/gites/chateaunette/photo 17.avif",
     capacity: '7 personnes',
     rating: 4.9,

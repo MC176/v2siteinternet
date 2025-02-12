@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
 
 function App() {
-  const parallaxRef = useRef(null);
+  const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
