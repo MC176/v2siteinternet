@@ -71,11 +71,11 @@ const privatisationFeatures = [
   {
     icon: GlassWater,
     title: "Réceptions de Prestige",
-    description: "Mariages, anniversaires et célébrations d&apos;exception dans un cadre enchanteur"
+    description: "Mariages, anniversaires et célébrations extraordinaire dans un cadre magnifique"
   },
   {
     icon: Building2,
-    title: "Séminaires d&apos;Entreprise",
+    title: "Séminaires",
     description: "Espaces de réunion, activités team-building et hébergement tout confort"
   },
   {

@@ -5,7 +5,7 @@ import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider,
 const destinations = [
   {
     title: "LA GROTTE CHAUVET",
-    description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l&apos;UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
+    description: "Explorez la Grotte Chauvet, classée au patrimoine mondial de l'UNESCO, et émerveillez-vous devant ses peintures préhistoriques exceptionnelles.",
     image: "/images/presentation/Grotte.avif",
     cta: "Visitez le site internet",
     icon: Camera,
@@ -13,15 +13,15 @@ const destinations = [
   },
   {
     title: "LE MUSÉE DE LA LAVANDE",
-    description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l&apos;histoire de cette plante emblématique de la Provence.",
+    description: "Découvrez les secrets de la lavande au Musée de la Lavande et plongez dans l'histoire de cette plante emblématique de la Provence.",
     image: "/images/presentation/Image 5.avif",
     cta: "Réserver votre visite",
     icon: TreePine,
     url: "https://www.lamaisondelalavande.com/"
   },
   {
-    title: "DESCENTE DES GORGES DE L&apos;ARDÈCHE",
-    description: "Parcourez les majestueuses Gorges de l&apos;Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
+    title: "DESCENTE DES GORGES DE L'ARDÈCHE",
+    description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
     image: "/images/presentation/gorge.avif",
     cta: "Réserver votre canoë",
     icon: Compass,
@@ -31,12 +31,12 @@ const destinations = [
     title: "VOL EN DELTAPLANE",
     description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
     image: "/images/presentation/Image 4.avif",
-    cta: "Découvrir l&apos;expérience",
+    cta: "Découvrir l'expérience",
     icon: TreePine,
     url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
   },
   {
-    title: "RANDONNÉES PROCHE DU MAS D&apos;EYLIEUX",
+    title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
     image: "/images/presentation/Image 7.avif",
     cta: "Organiser votre balade",

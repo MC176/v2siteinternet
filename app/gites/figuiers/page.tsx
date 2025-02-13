@@ -203,7 +203,7 @@ function App() {
         <div className="mt-16 luxury-section">
           <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              Ses points forts
+              
             </h2>
           </div>
         </div>

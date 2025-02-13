@@ -13,7 +13,7 @@ function App() {
     {
       image: "/images/gites/noisettiers/porche.avif",
       title: "Entrée du gîte",
-      description: "L&apos;entrée se fait sous un porche en pierre"
+      description: "Entrée sous le porche en pierre"
     },
     {
       image: "/images/gites/noisettiers/terrasse.avif",
@@ -149,7 +149,7 @@ function App() {
         </div>
 
       {/* Introduction Section */}
-      <section className=" relative py-32 bg-white">
+      <section className="relative py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
@@ -165,55 +165,44 @@ function App() {
         </div>
       </section>
 
-        <div className="mt-0 relative overflow-hidden">
-          <div className="flex gap-8">
-            {visibleImages.map((item, index) => (
-              <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
-                  <div className="text-white">
-                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm opacity-90">{item.description}</p>
-                  </div>
+      {/* Photo Gallery Section */}
+      <div className="mt-16 mb-24 relative overflow-hidden">
+        <div className="flex gap-8">
+          {visibleImages.map((item, index) => (
+            <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={800}
+                height={500}
+                style={{ objectFit: 'cover' }}
+                className="h-[500px] transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                <div className="text-white">
+                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm opacity-90">{item.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <button 
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-            aria-label="Précédent"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-800" />
-          </button>
-          <button 
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-            aria-label="Suivant"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-800" />
-          </button>
+            </div>
+          ))}
         </div>
 
-
-        {/* Services & Prestations d'Exception moved before final quote */}
-        <div className="mt-16 luxury-section">
-          <div className="text-left mb-2">
-            <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-               
-            </p>
-          </div>
-        </div>
+        <button 
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+          aria-label="Précédent"
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-800" />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+          aria-label="Suivant"
+        >
+          <ChevronRight className="w-6 h-6 text-gray-800" />
+        </button>
+      </div>
 
         <div className="bg-white py-6 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4">

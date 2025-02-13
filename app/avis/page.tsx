@@ -10,7 +10,7 @@ const googleReviews = [
   {
     author_name: "nadia",
     rating: 5,
-    text: "Magnifique lieu ressourçant et paisible en pleine nature. Le gîte est bien entretenu et propre, c&apos;est un endroit où on s&apos;y sent tout simplement bien! Pascale est une belle personne d&apos;un accueil mémorable. Il a été difficile de partir! N&apos;hésitez pas!",
+    text: "Magnifique lieu ressourçant et paisible en pleine nature. Le gîte est bien entretenu et propre, c'est un endroit où on s'y sent tout simplement bien! Pascale est une belle personne d'un accueil mémorable. Il a été difficile de partir! N'hésitez pas!",
     relative_time_description: "il y a 6 mois",
     visited: "Visité en juillet 2024"
   },
@@ -45,7 +45,7 @@ const googleReviews = [
   {
     author_name: "Coleen verret",
     rating: 5,
-    text: "Endroit calme et paisible en pleine nature. Parfait pour se détendre et profiter de la beauté des paysages. Proche des magnifiques Gorges de l&apos;Ardèche. Merci pour ces vacances inoubliables",
+    text: "Endroit calme et paisible en pleine nature. Parfait pour se détendre et profiter de la beauté des paysages. Proche des magnifiques Gorges de l'Ardèche. Merci pour ces vacances inoubliables",
     relative_time_description: "il y a un an",
     visited: "Visité en août 2023"
   },
@@ -59,7 +59,7 @@ const googleReviews = [
   {
     author_name: "Maxence RIEU",
     rating: 5,
-    text: "Notre séjour au Mas d&apos;Eylieux a été exceptionnel. L&apos;accueil chaleureux, la beauté du cadre et le confort des chambres ont dépassé nos attentes.",
+    text: "Notre séjour au Mas d'Eylieux a été exceptionnel. L'accueil chaleureux, la beauté du cadre et le confort des chambres ont dépassé nos attentes.",
     relative_time_description: "il y a un an",
     visited: "Visité en octobre 2023"
   },
@@ -115,14 +115,14 @@ const googleReviews = [
   {
     author_name: "puma kunz",
     rating: 5,
-    text: "Un endroit merveilleux pour se détendre et se ressourcer qui restera longtemps dans nos bons souvenirs. Nous avons apprécié le séjour avec toute notre famille et avons bénéficié de beaucoup d&apos;hospitalité.",
+    text: "Un endroit merveilleux pour se détendre et se ressourcer qui restera longtemps dans nos bons souvenirs. Nous avons apprécié le séjour avec toute notre famille et avons bénéficié de beaucoup d'hospitalité.",
     relative_time_description: "il y a un an",
     visited: "Visité en juillet 2023"
   },
   {
     author_name: "Hugo JANSSEN",
     rating: 5,
-    text: "Très bel endroit, j&apos;y vais depuis 25 ans, il y avait un enfant à la maison, je me suis bien amusé.",
+    text: "Très bel endroit, j'y vais depuis 25 ans, il y avait un enfant à la maison, je me suis bien amusé.",
     relative_time_description: "il y a un an",
     visited: "Visité en décembre 2023"
   },
@@ -130,14 +130,14 @@ const googleReviews = [
   {
     author_name: "Cerise Thiebot",
     rating: 5,
-    text: "Incroyable endroit qui nous a profondément marqué ! Découvert il y a 20 ans, nous y sommes retournés d&apos;innombrables fois, année après année. Au delà d&apos;un simple séjour unique, nous nous sommes liés d&apos;amitié avec cette famille exceptionnelle.",
+    text: "Incroyable endroit qui nous a profondément marqué ! Découvert il y a 20 ans, nous y sommes retournés d'innombrables fois, année après année. Au delà d'un simple séjour unique, nous nous sommes liés d'amitié avec cette famille exceptionnelle.",
     relative_time_description: "il y a 2 ans",
     visited: "Visité en septembre 2022"
   },
   {
     author_name: "Sophie JUIN",
     rating: 5,
-    text: "Plusieurs années que nous venons en Ardèche et que nous nous arrêtons au Mas d&apos;Eylieux où l&apos;accueil est très chaleureux et le cadre idyllique. Allez y séjourner!!! Vous y retournerez...😉",
+    text: "Plusieurs années que nous venons en Ardèche et que nous nous arrêtons au Mas d'Eylieux où l'accueil est très chaleureux et le cadre idyllique. Allez y séjourner!!! Vous y retournerez...😉",
     relative_time_description: "il y a 2 ans",
     visited: "Visité en avril 2022"
   },
@@ -174,19 +174,19 @@ const googleReviews = [
   {
     author_name: "Helene Baldie",
     rating: 5,
-    text: "Un lieu magnifique, naturel d&apos;où se dégage une grande chaleur humaine. Nous y allons regulierement depuis des années et nous avons toujours été enchantés de ce lieu arrangé, décoré avec goût au fil des années. Nous recommandons vivement un séjour au Mas dEylieux. Un accueil de Yeyette très attentionné, toujours disponible.",
+    text: "Un lieu magnifique, naturel d'où se dégage une grande chaleur humaine. Nous y allons regulierement depuis des années et nous avons toujours été enchantés de ce lieu arrangé, décoré avec goût au fil des années. Nous recommandons vivement un séjour au Mas dEylieux. Un accueil de Yeyette très attentionné, toujours disponible.",
     relative_time_description: "il y a 6 ans"
   },
   {
     author_name: "Geneviève Cazes",
     rating: 5,
-    text: "J&apos;ai passé de très bonnes et belles vacances, une très belle piscine et de très jolis sites à visiter : le village de Saint Montan, les gorges de l&apos;Ardèche et le pont d&apos;arc,sans avoir la foule, les grottes Marzal, de la Madèle ne, la ferme au crocodiles... et un excellent accueil, aux petits soins. Merci",
+    text: "J'ai passé de très bonnes et belles vacances, une très belle piscine et de très jolis sites à visiter : le village de Saint Montan, les gorges de l'Ardèche et le pont d'arc,sans avoir la foule, les grottes Marzal, de la Madèle ne, la ferme au crocodiles... et un excellent accueil, aux petits soins. Merci",
     relative_time_description: "il y a 6 ans"
   },
   {
     author_name: "Frédéric Metais",
     rating: 5,
-    text: "Coin très agréable. On s&apos;y repose parfaitement entre la lavande et les vignes. Sans parler de l&apos;accueil qui est formidable. On s&apos;y sent comme chez soi. Super.",
+    text: "Coin très agréable. On s'y repose parfaitement entre la lavande et les vignes. Sans parler de l'accueil qui est formidable. On s'y sent comme chez soi. Super.",
     relative_time_description: "il y a 6 ans"
   },
   {

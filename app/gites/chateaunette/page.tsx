@@ -214,8 +214,8 @@ function App() {
                   src={item.image}
                   alt={item.title}
                   width={500}
-                  height={300}
-                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  height={500}
+                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
                   <div className="text-white">

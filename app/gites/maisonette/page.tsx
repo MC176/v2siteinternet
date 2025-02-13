@@ -173,8 +173,8 @@ function App() {
                   src={item.image}
                   alt={item.title}
                   width={500}
-                  height={400}
-                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  height={500}
+                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
@@ -207,7 +207,7 @@ function App() {
         <div className="mt-16 luxury-section">
           <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              Ses points forts
+
             </h2>
           </div>
         </div>

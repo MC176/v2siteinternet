@@ -13,7 +13,7 @@ function App() {
     {
       image: "/images/gites/cote-source/photo1.avif",
       title: "Vue de la terrasse",
-      description: "Un coucher de soleil lors d&apos;un dîner"
+      description: "Un coucher de soleil lors du dîner"
     },
     {
       image: "/images/gites/cote-source/photo 2.avif",
@@ -38,7 +38,7 @@ function App() {
     {
       image: "/images/gites/cote-source/photo 9.avif",
       title: "Salle de bain",
-      description: "Douche à l&apos;italienne"
+      description: "Douche italienne"
     },
     {
       image: "/images/gites/cote-source/chambre.avif",
@@ -233,7 +233,7 @@ function App() {
         <div className="mt-16 luxury-section">
           <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6">
-              Ses points forts
+
             </h2>
           </div>
         </div>
@@ -329,7 +329,7 @@ function App() {
                         Salle de bain
                       </h3>
                       <div className="space-y-1">
-                        {['Douche à l&apos;italienne'].map((item, index) => (
+                        {['Douche italienne'].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
                             <span className="text-gray-600 text-sm">{item}</span>
