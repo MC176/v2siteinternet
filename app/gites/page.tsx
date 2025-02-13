@@ -28,7 +28,7 @@ const gites = [
   {
     name: 'Figuiers',
     description: "Panoramas spectaculaires, terrasse surélevée, salon lumineux, salle de bain moderne, atmosphère paisible.",
-    image: "/images/gites/figuiers/photo 2.jpeg",
+    image: "/images/gites/figuiers/photo2.jpeg",
     capacity: '3 personnes',
     rating: 4.9,
     price: '130€',
@@ -58,7 +58,7 @@ const gites = [
   {
     name: 'Châteaunette',
     description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, idéal pour une famille ou des amis.",
-    image: "images/gites/chateaunette/photo 17.avif",
+    image: "images/gites/chateaunette/photo17.avif",
     capacity: '7 personnes',
     rating: 4.9,
     price: '180€',
@@ -101,7 +101,7 @@ function GitesPage() {
       {/* Hero Section */}
       <div className="relative h-[80vh] w-full overflow-hidden">
         <img 
-          src="/images/gites/cote-source/photo 5.avif"
+          src="/images/gites/cote-source/photo5.avif"
           alt="Vue panoramique des gîtes"
           className="w-full h-full object-cover"
         />

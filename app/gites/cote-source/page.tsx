@@ -16,27 +16,27 @@ function App() {
       description: "Un coucher de soleil lors du dîner"
     },
     {
-      image: "/images/gites/cote-source/photo 2.avif",
+      image: "/images/gites/cote-source/photo2.avif",
       title: "Le charme de la terrasse",
       description: "Superficie de 61 m²"
     },    
     {
-      image: "/images/gites/cote-source/photo 4.avif",
+      image: "/images/gites/cote-source/photo4.avif",
       title: "Exposition pleine nature",
       description: "Votre vue chaque jour"
     },    
     {
-      image: "/images/gites/cote-source/photo 8.avif",
+      image: "/images/gites/cote-source/photo8.avif",
       title: "Un autre point de vue",
       description: "Le seul vis-à-vis est avec la nature"
     },
     {
-      image: "/images/gites/cote-source/photo 12.avif",
+      image: "/images/gites/cote-source/photo12.avif",
       title: "Espace salon",
       description: "Décoration sobre et moderne"
     },
     {
-      image: "/images/gites/cote-source/photo 9.avif",
+      image: "/images/gites/cote-source/photo9.avif",
       title: "Salle de bain",
       description: "Douche italienne"
     },
@@ -46,7 +46,7 @@ function App() {
       description: "Lit 2 places 160 cm"
     },
     {
-      image: "/images/gites/cote-source/photo 10.avif",
+      image: "/images/gites/cote-source/photo10.avif",
       title: "Deuxième chambre",
       description: "Lit 2 places 140 cm"
     },
