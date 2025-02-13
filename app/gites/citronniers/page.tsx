@@ -28,12 +28,12 @@ function App() {
     {
       image: "/images/gites/citronniers/terrasse.avif",
       title: "Espace fraicheur",
-      description: "Possibilité de se reposer à l&apos;extérieur"
+      description: "Possibilité de se reposer à l'extérieur"
     },
     {
       image: "/images/gites/citronniers/sdb.avif",
       title: "Salle de bain",
-      description: "Douche à l&apos;italienne"
+      description: "Douche italienne"
     },
     {
       image: "/images/gites/citronniers/cour.avif",
@@ -250,14 +250,177 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-6 bg-gray-50 py-6">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">Équipements et services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
-              {/* ... (le reste du contenu des équipements et services reste inchangé) ... */}
+            <div className="mt-6 bg-gray-50 py-6">
+              <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">Équipements et services</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Car className="w-5 h-5 text-blue-900" />
+                        Parking privé
+                      </h3>
+                      <div className="flex items-center gap-1.5">
+                        <Check className="w-3.5 h-3.5 text-blue-900" />
+                        <span className="text-gray-600 text-sm">Places de Parking </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Wifi className="w-5 h-5 text-blue-900" />
+                        Internet
+                      </h3>
+                      <div className="flex items-center gap-1.5">
+                        <Check className="w-3.5 h-3.5 text-blue-900" />
+                        <span className="text-gray-600 text-sm">Wi-Fi accessible à certains endroits</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Bed className="w-5 h-5 text-blue-900" />
+                        Chambre
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          '1 lit 140cm avec oreillers',
+                          'Draps en option (10€/personne avec serviette)',
+                          'Couvertures',
+                          'Couvertures supplémentaires disponibles',
+                          'Armoire',
+                          'Tables de chevet avec lampe',
+                          'Volets',
+                          'Prises près du lit',
+                          'Table et fer à repasser sur demande',
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Bath className="w-5 h-5 text-blue-900" />
+                        Salle de bain
+                      </h3>
+                      <div className="space-y-1">
+                        {['Rénovée, moderne et design'].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Kitchen className="w-5 h-5 text-blue-900" />
+                        Cuisine
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          'Réfrigérateur avec partie congélation',
+                          'Plaque de cuisson à induction',
+                          'Four',
+                          'Micro-ondes',
+                          'Hotte aspirante',
+                          'Lave-vaisselle'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Utensils className="w-5 h-5 text-blue-900" />
+                        Coin cuisine
+                      </h3>
+                      <div className="space-y-1">
+                        {[ 
+                          'Cafetière (filtre)',
+                          'Nespresso sur demande',
+                          'Bouilloire électrique',
+                          'Grille-pain',
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Baby className="w-5 h-5 text-blue-900" />
+                        Équipements pour enfants
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          'Lit bébé (sur demande)',
+                          'Chaise haute (sur demande)'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Tv className="w-5 h-5 text-blue-900" />
+                        Salon &amp; Divertissement
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          '2 lits en 90',
+                          'Télévision',
+                          'Livres',
+                          'Jeux de société (sur demande)'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                        <Sun className="w-5 h-5 text-blue-900" />
+                        Espaces communs
+                      </h3>
+                      <div className="space-y-1">
+                        {[
+                          'Grands espaces (Football, badminton...)',
+                          'Terrain de pétanque',
+                          'Tennis de table',
+                          'Baby-foot'
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Check className="w-3.5 h-3.5 text-blue-900" />
+                            <span className="text-gray-600 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
         <div className="flex justify-center">
           <Link

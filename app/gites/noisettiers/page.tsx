@@ -33,7 +33,7 @@ function App() {
     {
       image: "/images/gites/noisettiers/chambre2.avif",
       title: "Coin chambre",
-      description: "Sol en travertin - fraicheur lors des nuits d&apos;été"
+      description: "Sol en travertin - fraicheur lors des nuits d'été"
     },
   ];
 
