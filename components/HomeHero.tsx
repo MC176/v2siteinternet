@@ -142,7 +142,7 @@ const HomeHero = () => {
               Le Mas d&apos;Eylieux
             </h1>
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto font-light">
-              Un domaine d&apos;exception au coeur de l&apos;Ardèche
+              Un domaine d&apos;exception au Sud de l&apos;Ardèche
             </p>
             <Link
               href="/presentation"
