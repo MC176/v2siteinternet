@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin, ArrowRight } from 'lucide-react';
+import { ChevronDown, School as Pool, Mountain, Utensils, Users, TreePine, Coffee, Heart, Waves, Home, Moon, Star, Telescope, Phone, Clock, CheckCircle, MapPin, ArrowRight, Ruler } from 'lucide-react';
 
 function App() {
   const [activeImage, setActiveImage] = useState(0);
@@ -74,7 +74,7 @@ function App() {
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in">
-            Votre havre de paix
+            Un havre de paix
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-3xl font-light tracking-wide">
             Calme, sérénité, vacances.
@@ -121,7 +121,7 @@ function App() {
               </div>
               <div className="h-[24rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="images/gites/chateaunette/photo 30.avif"
+                  src="images/gites/chateaunette/photo30.avif"
                   alt="Vue du domaine 2" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -150,10 +150,10 @@ function App() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Réceptions &amp; Fêtes
+          Privatisation du domaine
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Un cadre exceptionnel pour vos événements en famille ou entre amis.
+          Pour vos réceptions & fêtes.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -173,7 +173,7 @@ function App() {
         ))}
       </div>
       <div className="text-center">
-        <p className="text-lg text-stone-600 mb-8">Contactez-nous pour plus de détails.</p>
+        <p className="text-lg text-stone-600 mb-8">Un cadre exceptionnel pour vos événements en famille ou entre amis.</p>
         <a
           href="/contact"
           className="group inline-flex items-center px-12 py-4 bg-white border border-black rounded-full relative overflow-hidden transition-colors duration-300"
@@ -196,7 +196,7 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          La Piscine
+          La piscine
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
           Espace de détente au coeur du Mas.
@@ -264,9 +264,9 @@ function App() {
       <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 bg-stone-50 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
-            <Clock className="w-6 h-6 text-stone-600" />
+            <Ruler className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">8h - 20h</span>
+          <span className="text-stone-600">10m x 5m</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
@@ -392,10 +392,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Four à Pizza
+          Four à pizza
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Le four à pizza est à disposition pour tous, à tout moment.
+          Le four à pizza est à votre disposition.
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -442,7 +442,7 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <MapPin className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Tables, bancs et chaises disponibles (40personnes)</span>
+          <span className="text-stone-600">Tables, bancs et chaises disponibles (40 personnes)</span>
         </div>
       </div>
     </div>
@@ -455,7 +455,7 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Espaces Extérieurs
+          Espaces extérieurs
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
         Profitez d&apos;un cadre exceptionnel où la nature s&apos;épanouit dans toute sa diversité,
@@ -521,7 +521,7 @@ function App() {
           La Source du Mas d&apos;Eylieux
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-        Cette source naturelle, filtrée par les montagnes, irrigue nos terres et nos bassins. 
+        Cette source naturelle - filtrée par les montagnes - alimente nos bassins. 
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -579,7 +579,7 @@ function App() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80")',
+            backgroundImage: 'url("images/presentation/ciel4.jpg")',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />

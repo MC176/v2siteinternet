@@ -7,22 +7,22 @@ import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building
 const gites = [
   {
     name: 'Côté Source',
-    description: "Terrasse majestueuse, vue sur jardins et source naturelle, ambiance authentique et apaisante.",
+    description: "Terrasse majestueuse, vue sur la nature et la source du Mas, ambiance authentique et apaisante.",
     image: "/images/gites/cote-source/photo1.avif",
     capacity: '4 personnes',
     rating: 4.9,
     price: '150€',
-    features: ['Grande Terrasse 60m²', 'Vue sur le domaine','Grands espaces'],
+    features: ['Grande terrasse panoramique de 60m²', 'Vue sur le domaine','Grands espaces'],
     href: '/gites/cote-source'
   },
   {
     name: 'Noisetiers',
-    description: "Rénové, vue sur noisetiers, accès par un porche pittoresque, couchers de soleil splendides.",
+    description: "Logement traversant Est/Ouest, proche des noisetiers, accès par un porche pittoresque, couchers de soleil splendides.",
     image: "/images/gites/noisettiers/piscinevue.avif",
     capacity: '2 personnes',
     rating: 4.9,
     price: '130€',
-    features: ['Gîte rénové en 2023', 'Gîte traversant Est/Ouest ', 'Accès possible par 2 terrasses'],
+    features: ['Accès possible par 2 terrasses', 'Porche en pierre, entrée plein de charme', 'Attrait authentique et confort moderne'],
     href: '/gites/noisettiers'
   },
   {
@@ -112,9 +112,9 @@ function GitesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl font-bold mb-4">Nos Gîtes d&apos;Exception</h1>
+            <h1 className="text-6xl font-bold mb-4">Nos gîtes d&apos;exception</h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Découvrez notre sélection de gîtes de charme en Ardèche, où luxe et authenticité se rencontrent pour des séjours inoubliables.
+              Découvrez nos gîtes de charme en Ardèche, où authenticité et modernité se rencontrent pour des séjours inoubliables.
             </p>
           </motion.div>
         </div>

@@ -31,14 +31,14 @@ const InstagramGallery = () => {
       height: 480
     },
     {
-      url: "/images/Instagram/Photo 3.jpeg",
-      alt: "Le Mas - Jardin",
+      url: "/images/Instagram/Photo 4.jpeg",
+      alt: "Le Mas - Piscine",
       width: 640,
       height: 480
     },
     {
-      url: "/images/Instagram/Photo 4.jpeg",
-      alt: "Le Mas - Piscine",
+      url: "/images/Instagram/Photo 3.jpeg",
+      alt: "Le Mas - Jardin",
       width: 640,
       height: 480
     }
@@ -81,8 +81,9 @@ const InstagramGallery = () => {
 };
 
 const HomeHero = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const [isClient, setIsClient] = useState(true); // Immediately set to true
+  const [isVideoVisible, setIsVideoVisible] = useState(true); // Immediately set to true
+
 
   useEffect(() => {
     setIsClient(true);
