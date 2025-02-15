@@ -136,7 +136,7 @@ function App() {
             </div>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg leading-relaxed text-stone-600 text-center">
-              Construit en 1158, le Mas d'Eylieux est un lieu chargé d&apos;histoire. Il abrite des vestiges d&apos;une petite cité gallo-romaine et fut, au XIIIe siècle, une halte sur la route empruntée par le roi Louis IX. En chemin vers la cathédrale de Viviers, ce dernier aurait traversé la région, marquant de son passage ce domaine empreint d&apos;authenticité. Aujourd&apos;hui encore, le Mas d&apos;Eylieux séduit par son charme préservé et son atmosphère unique, témoins d&apos;un riche héritage historique.
+              Construit en 1158, le Mas d&apos;Eylieux est un lieu chargé d&apos;histoire. Il abrite des vestiges d&apos;une petite cité gallo-romaine et fut, au XIIIe siècle, une halte sur la route empruntée par le roi Louis IX. En chemin vers la cathédrale de Viviers, ce dernier aurait traversé la région, marquant de son passage ce domaine empreint d&apos;authenticité. Aujourd&apos;hui encore, le Mas d&apos;Eylieux séduit par son charme préservé et son atmosphère unique, témoins d&apos;un riche héritage historique.
               </p>
             </div>
           </div>
