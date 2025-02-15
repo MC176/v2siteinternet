@@ -11,67 +11,67 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/chateaunette/photo 14.avif",
+      image: "/images/gites/chateaunette/photo14.avif",
       title: "Entrée du gîte",
       description: "Lauriers roses"
     },
     {
-      image: "/images/gites/chateaunette/photo 4.avif",
+      image: "/images/gites/chateaunette/photo4.avif",
       title: "Gîte Chateaunette",
       description: "Superficie de 59m²"
     },
     {
-      image: "/images/gites/chateaunette/photo 5.avif",
+      image: "/images/gites/chateaunette/photo5.avif",
       title: "Accès terrasse",
       description: "Le gîte surplombe le Mas"
     },
     {
-      image: "/images/gites/chateaunette/photo 12.avif",
+      image: "/images/gites/chateaunette/photo12.avif",
       title: "La vue de la terrasse",
       description: "Verdure à perte de vue"
     },
     {
-      image: "/images/gites/chateaunette/photo 35.avif",
+      image: "/images/gites/chateaunette/photo35.avif",
       title: "Espace cuisine",
       description: "Toute équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo 36.avif",
+      image: "/images/gites/chateaunette/photo36.avif",
       title: "Coin cuisine",
       description: "Cuisine équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo 37.avif",
+      image: "/images/gites/chateaunette/photo37.avif",
       title: "Chambre n°1",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo 1.avif",
+      image: "/images/gites/chateaunette/photo1.avif",
       title: "Chambre n°2",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo 10.avif",
+      image: "/images/gites/chateaunette/photo10.avif",
       title: "Vue de Chateaunette",
       description: "Depuis la chambre"
     },
     {
-      image: "/images/gites/chateaunette/photo 42.avif",
+      image: "/images/gites/chateaunette/photo42.avif",
       title: "Salon",
       description: "Mezzazine avec accès au lit"
     },
     {
-      image: "/images/gites/chateaunette/photo 38.avif",
+      image: "/images/gites/chateaunette/photo38.avif",
       title: "Mezzazzine",
       description: "Lit 1 place"
     },
     {
-      image: "/images/gites/chateaunette/photo 16.avif",
+      image: "/images/gites/chateaunette/photo16.avif",
       title: "Piscine",
       description: "Profondeur : 1m10 - 2m20"
     },
     {
-      image: "/images/gites/chateaunette/photo 19.avif",
+      image: "/images/gites/chateaunette/photo19.avif",
       title: "Piscine de nuit",
       description: "Eclairage nocturne disponible"
     },
@@ -127,7 +127,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/chateaunette/photo 17.avif")',
+            backgroundImage: 'url("/images/gites/chateaunette/photo17.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
