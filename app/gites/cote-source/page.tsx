@@ -11,7 +11,7 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/cote-source/photo1.avif",
+      image: "/images/gites/cote-source/photo1.png",
       title: "Vue de la terrasse",
       description: "Un coucher de soleil lors du dîner"
     },
@@ -41,7 +41,7 @@ function App() {
       description: "Douche italienne"
     },
     {
-      image: "/images/gites/cote-source/chambre.avif",
+      image: "/images/gites/cote-source/photo10.avif",
       title: "Première chambre",
       description: "Lit 2 places 160 cm"
     },
@@ -112,7 +112,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/cote-source/photo 5.avif")',
+            backgroundImage: 'url("/images/gites/cote-source/photo5.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
