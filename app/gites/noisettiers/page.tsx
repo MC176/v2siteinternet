@@ -142,7 +142,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>

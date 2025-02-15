@@ -16,7 +16,7 @@ function App() {
       description: "Lauriers roses"
     },
     {
-      image: "/images/gites/chateaunette/photo4.avif",
+      image: "/images/gites/citronniers/interieur.avif",
       title: "Gîte Chateaunette",
       description: "Superficie de 59m²"
     },
@@ -26,52 +26,52 @@ function App() {
       description: "Le gîte surplombe le Mas"
     },
     {
-      image: "/images/gites/chateaunette/photo12.avif",
+      image: "/images/gites/chateaunette/vueduhaut.avif",
       title: "La vue de la terrasse",
       description: "Verdure à perte de vue"
     },
     {
-      image: "/images/gites/chateaunette/photo35.avif",
+      image: "/images/gites/chateaunette/cuisine.avif",
       title: "Espace cuisine",
       description: "Toute équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo36.avif",
+      image: "/images/gites/chateaunette/cuisineproche.avif",
       title: "Coin cuisine",
       description: "Cuisine équipée"
     },
     {
-      image: "/images/gites/chateaunette/photo37.avif",
+      image: "/images/gites/chateaunette/chambre.avif",
       title: "Chambre n°1",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo1.avif",
+      image: "/images/gites/chateaunette/chambre2.avif",
       title: "Chambre n°2",
       description: "Lit 2 places"
     },
     {
-      image: "/images/gites/chateaunette/photo10.avif",
+      image: "/images/gites/chateaunette/depuisfenetre.avif",
       title: "Vue de Chateaunette",
       description: "Depuis la chambre"
     },
     {
-      image: "/images/gites/chateaunette/photo42.avif",
+      image: "/images/gites/chateaunette/salon.avif",
       title: "Salon",
       description: "Mezzazine avec accès au lit"
     },
     {
-      image: "/images/gites/chateaunette/photo38.avif",
+      image: "/images/gites/chateaunette/mezzanine.avif",
       title: "Mezzazzine",
       description: "Lit 1 place"
     },
     {
-      image: "/images/gites/chateaunette/photo16.avif",
+      image: "/images/gites/chateaunette/piscine.avif",
       title: "Piscine",
       description: "Profondeur : 1m10 - 2m20"
     },
     {
-      image: "/images/gites/chateaunette/photo19.avif",
+      image: "/images/gites/chateaunette/nuit.avif",
       title: "Piscine de nuit",
       description: "Eclairage nocturne disponible"
     },
@@ -182,7 +182,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">59</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>
