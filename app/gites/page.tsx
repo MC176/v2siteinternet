@@ -8,7 +8,7 @@ const gites = [
   {
     name: 'Côté Source',
     description: "Terrasse majestueuse, vue sur la nature et la source du Mas, ambiance authentique et apaisante.",
-    image: "/images/gites/cote-source/photo1.avif",
+    image: "/images/gites/cote-source/photo1.png",
     capacity: '4 personnes',
     rating: 4.9,
     price: '150€',
