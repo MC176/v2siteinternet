@@ -11,7 +11,7 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/chateaunette/photo14.avif",
+      image: "/images/gites/chateaunette/entree.avif",
       title: "Entrée du gîte",
       description: "Lauriers roses"
     },
@@ -147,7 +147,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/images/gites/chateaunette/Photo 11.avif"
+              src="/images/gites/chateaunette/photo11.avif"
               alt="Paysage méditerranéen"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -273,7 +273,7 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Ban className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres non-fumeurs</span>
+                <span className="text-gray-700">Logement non-fumeurs</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
