@@ -16,12 +16,12 @@ function App() {
       description: "Lauriers roses"
     },
     {
-      image: "/images/gites/citronniers/interieur.avif",
+      image: "/images/gites/citronniers/vue.avif",
       title: "Gîte Chateaunette",
       description: "Superficie de 59m²"
     },
     {
-      image: "/images/gites/chateaunette/photo5.avif",
+      image: "/images/gites/citronniers/photo12.avif",
       title: "Accès terrasse",
       description: "Le gîte surplombe le Mas"
     },
@@ -147,7 +147,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/images/gites/chateaunette/photo11.avif"
+              src="/images/gites/citronniers/photo11.avif"
               alt="Paysage méditerranéen"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
