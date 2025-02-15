@@ -38,7 +38,7 @@ const gites = [
   {
     name: 'Citronniers',
     description: "Fraîcheur estivale, vue sur cour fleurie, baigné de lumière, parfums légers de citronniers.",
-    image: "/images/gites/citronniers/salon3.avif",
+    image: "/images/gites/citronniers/salon3.png",
     capacity: '3 personnes',
     rating: 4.8,
     price: '130€',

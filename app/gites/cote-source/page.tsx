@@ -41,7 +41,7 @@ function App() {
       description: "Douche italienne"
     },
     {
-      image: "/images/gites/cote-source/photo10.avif",
+      image: "/images/gites/cote-source/chambre.png",
       title: "Première chambre",
       description: "Lit 2 places 160 cm"
     },
