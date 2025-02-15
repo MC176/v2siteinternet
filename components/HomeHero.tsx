@@ -19,8 +19,14 @@ const YouTubePlaceholder = () => (
 const InstagramGallery = () => {
   const images = [
     {
-      url: "/images/Instagram/Photo 1.jpeg",
-      alt: "Le Mas - Vue extérieure",
+      url: "/images/Instagram/Photo 3.jpeg",
+      alt: "Le Mas - Jardin",
+      width: 640,
+      height: 480
+    },
+    {
+      url: "/images/Instagram/photo5.avif",
+      alt: "Le Mas - Vue Nature et olivier",
       width: 640,
       height: 480
     },
@@ -36,12 +42,6 @@ const InstagramGallery = () => {
       width: 640,
       height: 480
     },
-    {
-      url: "/images/Instagram/Photo 3.jpeg",
-      alt: "Le Mas - Jardin",
-      width: 640,
-      height: 480
-    }
   ];
 
   return (
