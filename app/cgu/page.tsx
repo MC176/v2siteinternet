@@ -19,19 +19,23 @@ export default function CGU() {
           <p>Le site internet  est la propriété exclusive du Mas d&apos;Eylieux, qui l&apos;a conçu et développé intégralement. Toute utilisation, reproduction, ou représentation, totale ou partielle, sans autorisation expresse est interdite.</p>
           <br/><br/>
 
-          <span className="text-xl font-bold underline">Article 2 - Protection des données personnelles :</span><br/><br/>
+          <span className="text-xl font-bold underline">Article 3 - Protection des données personnelles :</span><br/><br/>
           <p>Les informations recueillies sur ce site sont utilisées uniquement dans le cadre de la relation client et ne sont en aucun cas communiquées à des tiers.</p>
           <br/><br/>
 
-          <span className="text-xl font-bold underline">Article 3 - Propriété intellectuelle :</span><br/><br/>
+          <span className="text-xl font-bold underline">Article 4 - Propriété intellectuelle :</span><br/><br/>
           <p>L&apos;ensemble des éléments figurant sur ce site (textes, photographies, logos, etc.) est protégé par les lois en vigueur sur la propriété intellectuelle. Toute reproduction ou représentation, en tout ou partie, est interdite.</p>
           <br/><br/>
 
-          <span className="text-xl font-bold underline">Article 4 - Responsabilité :</span><br/><br/>
+          <span className="text-xl font-bold underline">Article 5 - Photographies et crédits :</span><br/><br/>
+          <p>Certaines photographies utilisées dans l'onglet -Information- peuvent provenir de différentes sources Internet. Si une photographie vous appartient et vous souhaitez qu'elle soit retireée, veuillez nous contacter.</p>
+          <br/><br/>
+
+          <span className="text-xl font-bold underline">Article 6 - Responsabilité :</span><br/><br/>
           <p>Le Mas d&apos;Eylieux s&apos;efforce d&apos;assurer au mieux l&apos;exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de corriger le contenu à tout moment et sans préavis.</p>
           <br/><br/>
 
-          <span className="text-xl font-bold underline">Article 5 - Liens hypertextes :</span><br/><br/>
+          <span className="text-xl font-bold underline">Article 7 - Liens hypertextes :</span><br/><br/>
           <p>Les liens hypertextes mis en place dans le cadre du présent site internet en direction d&apos;autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité du Mas d&apos;Eylieux.</p>
           <br/><br/>
         </div>

@@ -22,8 +22,8 @@ function App() {
     },
     {
       image: "/images/gites/citronniers/photo12.avif",
-      title: "Accès terrasse",
-      description: "Le gîte surplombe le Mas"
+      title: "Vue de la terrasse",
+      description: "Le gîte donne sur cour intérieure"
     },
     {
       image: "/images/gites/chateaunette/vueduhaut.avif",
@@ -42,13 +42,13 @@ function App() {
     },
     {
       image: "/images/gites/chateaunette/chambre.avif",
-      title: "Chambre n°1",
-      description: "Lit 2 places"
+      title: "Chambre des Lilas",
+      description: "Lit 2 places 160cm"
     },
     {
       image: "/images/gites/chateaunette/chambre2.avif",
-      title: "Chambre n°2",
-      description: "Lit 2 places"
+      title: "Chambre de la Lavande",
+      description: "Lit 2 places 140cm"
     },
     {
       image: "/images/gites/chateaunette/depuisfenetre.avif",
@@ -163,7 +163,7 @@ function App() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 Le gîte Châteaunette est le plus grand des hébergements du Mas.
                 Doté de deux chambres, d&apos;une mezzanine avec lit, et d&apos;une grande cuisine équipée,
-                il allie charme authentique et confort moderne. La terrasse privative, orientée plein sud,
+                il allie charme authentique et confort moderne. La terrasse, orientée Est,
                 invite à des repas conviviaux avec vue sur la nature environnante.
               </p>
             </div>
