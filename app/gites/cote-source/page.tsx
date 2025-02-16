@@ -247,16 +247,12 @@ function App() {
                 <span className="text-gray-700">Parking privé</span>
               </div>
               <div className="flex items-center gap-2">
-                <Wifi className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Grands espaces</span>
+                <Ban className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Logement non-fumeurs</span>
               </div>
               <div className="flex items-center gap-2">
                 <DoorOpen className="w-5 h-5 text-green-600" />
                 <span className="text-gray-700">Escaliers</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres familiales</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />

@@ -138,7 +138,7 @@ function App() {
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
             Chateaunette
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un petit chateau Ardèchois</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un gîte aux grands volumes</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -158,14 +158,13 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Châteaunette, un gîte format XXL
+                Un gîte lumineux et spacieux
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Le gîte Châteaunette est le plus grand des hébergements du Mas.
                 Doté de deux chambres, d&apos;une mezzanine avec lit, et d&apos;une grande cuisine équipée,
                 il allie charme authentique et confort moderne. La terrasse privative, orientée plein sud,
                 invite à des repas conviviaux avec vue sur la nature environnante.
-                Un gîte chargé d&apos;histoire, parfait pour un séjour en famille ou entre amis.
               </p>
             </div>
 
@@ -261,7 +260,7 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Wifi className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Grands espaces</span>
+                <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
               </div>
               <div className="flex items-center gap-2">
                 <DoorOpen className="w-5 h-5 text-green-600" />
@@ -376,7 +375,7 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Utensils className="w-5 h-5 text-blue-900" />
-                    Coin cuisine
+                    Equipement cuisine
                   </h3>
                   <div className="space-y-1">
                     {[

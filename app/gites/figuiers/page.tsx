@@ -221,6 +221,10 @@ function App() {
                 <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
               </div>
               <div className="flex items-center gap-2">
+                <Ban className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Logement non-fumeurs</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <DoorOpen className="w-5 h-5 text-green-600" />
                 <span className="text-gray-700">Escaliers</span>
               </div>
@@ -329,7 +333,7 @@ function App() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                         <Utensils className="w-5 h-5 text-blue-900" />
-                        Coin cuisine
+                        Equipement cuisine
                       </h3>
                       <div className="space-y-1">
                         {[ 

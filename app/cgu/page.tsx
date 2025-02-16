@@ -15,6 +15,10 @@ export default function CGU() {
           <p>L&apos;accès et l&apos;utilisation du site Le Mas d&apos;Eylieux sont soumis aux présentes conditions générales d&apos;utilisation ainsi qu&apos;aux lois et/ou règlements applicables.</p>
           <br/><br/>
 
+          <span className="text-xl font-bold underline">Article 2 - Propriété et création du site Internet :</span><br/><br/>
+          <p>Le site internet  est la propriété exclusive du Mas d&apos;Eylieux, qui l&apos;a conçu et développé intégralement. Toute utilisation, reproduction, ou représentation, totale ou partielle, sans autorisation expresse est interdite.</p>
+          <br/><br/>
+
           <span className="text-xl font-bold underline">Article 2 - Protection des données personnelles :</span><br/><br/>
           <p>Les informations recueillies sur ce site sont utilisées uniquement dans le cadre de la relation client et ne sont en aucun cas communiquées à des tiers.</p>
           <br/><br/>

@@ -225,6 +225,10 @@ function App() {
                 <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
               </div>
               <div className="flex items-center gap-2">
+                <Ban className="w-5 h-5 text-green-600" />
+                <span className="text-gray-700">Logement non-fumeurs</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
                 <span className="text-gray-700">Gîte atypique</span>
               </div>
@@ -374,7 +378,7 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[
-                          "Banquette angulaire à l'étage",
+                          "Banquette",
                           'Télévision',
                           'Livres',
                           'Jeux de société (sur demande)'
