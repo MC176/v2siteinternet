@@ -8,7 +8,7 @@ function App() {
   const poolImages = [
     "/images/gites/piscine/nature.avif",
     "/images/gites/piscine/photo1.avif",
-    "/images/gites/chateaunette/Photo 16.avif",
+    "/images/gites/piscine/piscine.avif",
   ];
 
   const pizzaOvenImages = [
@@ -42,7 +42,7 @@ function App() {
 
   const SourceImages = [
     "/images/gites/notused/mare.avif",
-    "/images/gites/chateaunette/Photo 32.avif",
+    "/images/gites/chateaunette/photo32.avif",
     "/images/gites/noisettiers/arbre.avif",
   ];
 
