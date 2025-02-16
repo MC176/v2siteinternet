@@ -42,17 +42,17 @@ function App() {
     },
     {
       image: "/images/gites/cote-source/chambre.png",
-      title: "Première chambre",
-      description: "Lit 2 places 160 cm"
-    },
-    {
-      image: "/images/gites/cote-source/photo10.avif",
-      title: "Deuxième chambre",
+      title: "Chambre Magniolia",
       description: "Lit 2 places 140 cm"
     },
     {
+      image: "/images/gites/cote-source/photo10.avif",
+      title: "Chambre Romarin",
+      description: "Lit 2 places 160 cm"
+    },
+    {
       image: "/images/gites/cote-source/cuisine.avif",
-      title: "Coin Cuisine",
+      title: "Cuisine",
       description: "Aménagement très lumineux"
     },
     {
@@ -148,7 +148,7 @@ function App() {
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Avec sa terrasse panoramique exceptionnelle, bordée de balustres, le gîte Côté Source surplombe les jardins du Mas et 
-                la source millénaire qui irrigue encore aujourd&apos;hui nos terres. Témoignage du passé, cette eau précieuse était essentielle aux générations 
+                la source millénaire qui irrigue encore aujourd&apos;hui nos bassins. Témoignage du passé, cette eau précieuse était essentielle aux générations 
                 qui nous ont précédés, façonnant la vie du domaine bien avant l&apos;arrivée de l&apos;eau courante. Depuis votre terrasse, 
                 vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars 
                 et saules pleureurs, un véritable tableau vivant évoluant au fil des saisons.
@@ -168,7 +168,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">50</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>
@@ -308,10 +308,10 @@ function App() {
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
                           'Armoire',
-                          'Table de chevet avec lampe',
+                          'Tables de chevet avec lampe',
                           'Volets',
                           'Prises près du lit',
-                          'Table et fer à repasser sur demande',
+                          'Table et fer à repasser (sur demande)',
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -349,7 +349,7 @@ function App() {
                           'Plaque de cuisson à induction',
                           'Four',
                           'Micro-ondes',
-                          'Hotte aspirante',
+                          'Table',
                           'Lave-vaisselle'
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
@@ -363,7 +363,7 @@ function App() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                         <Utensils className="w-5 h-5 text-blue-900" />
-                        Coin cuisine
+                        Equipement cuisine
                       </h3>
                       <div className="space-y-1">
                         {[ 
@@ -408,6 +408,7 @@ function App() {
                         {[
                           "Banquette",
                           'Télévision',
+                          'Table',
                           'Livres',
                           'Jeux de société (sur demande)'
                         ].map((item, index) => (

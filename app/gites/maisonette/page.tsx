@@ -33,7 +33,7 @@ function App() {
     {
       image: "/images/gites/maisonnette/salledeau.avif",
       title: "Salle de bain",
-      description: "Douche à l&apos;italienne"
+      description: "Douche italienne"
     },
   ];
 
@@ -125,7 +125,7 @@ function App() {
                 Derrière sa façade discrète, la Maisonnette cache une architecture spéciale en Ardèche. Son entrée semblable à celle d&apos;une maison traditionnelle, 
                 donne accès à un duplex astucieusement aménagé. À l&apos;étage, un salon cosy, baigné de lumière, 
                 invite à la détente, tandis qu&apos;en contrebas, la chambre et la salle d&apos;eau offrent un espace nuit confortable et paisible. 
-                À l&apos;extérieur, un mûrier centenaire ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
+                À l&apos;extérieur, un mûrier ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">31</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ function App() {
                       </h3>
                       <div className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
-                        <span className="text-gray-600 text-sm">Places de Parking </span>
+                        <span className="text-gray-600 text-sm">Places de parking </span>
                       </div>
                     </div>
 
@@ -273,7 +273,7 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '1 lits en 140cm avec oreillers',
+                          '1 lit en 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
@@ -319,8 +319,6 @@ function App() {
                           'Plaque de cuisson à induction',
                           'Four',
                           'Micro-ondes',
-                          'Hotte aspirante',
-                          'Lave-vaisselle'
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />

@@ -23,16 +23,16 @@ function App() {
     {
       image: "/images/gites/noisettiers/salon.avif",
       title: "Salon",
-      description: "Entièrement rénové en 2023"
+      description: "Pièce principale avec cheminée décorative"
     },    
     {
       image: "/images/gites/noisettiers/cuisine.avif",
-      title: "Coin Cuisine",
+      title: "Cuisine",
       description: "Cuisine moderne et équipée"
     },
     {
       image: "/images/gites/noisettiers/chambre2.avif",
-      title: "Coin chambre",
+      title: "Chambre",
       description: "Sol en travertin - fraicheur lors des nuits d'été"
     },
   ];
@@ -122,7 +122,7 @@ function App() {
                 Un ballet de lumière parmi les Noisetiers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-              Rénové en 2023, le gîte Noisetier bénéficie d&apos;un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
+              Le gîte Noisetier bénéficie d&apos;un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
               Accessible par un porche en pierre plein de caractère, il mêle subtilement tradition et modernité. Son intérieur, décoré dans des tons rappelant la teinte dorée des noisettes, 
               procure une atmosphère douce et apaisante. Ce lieu, 
               où l&apos;on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l&apos;esprit du Mas : un havre de paix où nature et confort se rejoignent.
@@ -156,8 +156,8 @@ function App() {
               L&apos;Orée du Noisetier
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Fraîchement rénové, ce gîte doit son nom aux beaux noisetiers qui l&apos;entourent. Accessible par un petit porche au cachet indéniable, 
-              il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude, mêlant tradition et modernité,
+              Ce gîte doit son nom aux noisetiers qui l&apos;entourent. Accessible par un petit porche au cachet indéniable, 
+              il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude,
               parfait pour des vacances au soleil dans le Sud de l&apos;Ardèche.
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
@@ -218,7 +218,7 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres familiales</span>
+                <span className="text-gray-700">Chambre voûtée</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
@@ -267,7 +267,7 @@ function App() {
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
                           'Armoire',
-                          'Table de chevet avec lampe',
+                          'Tables de chevet avec lampe',
                           'Volets',
                           'Prises près du lit',
                           'Table et fer à repasser sur demande',
@@ -309,7 +309,7 @@ function App() {
                           'Four',
                           'Micro-ondes',
                           'Hotte aspirante',
-                          'Lave-vaisselle'
+                          'Cheminée décorative'
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -322,7 +322,7 @@ function App() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                         <Utensils className="w-5 h-5 text-blue-900" />
-                        Coin cuisine
+                        Equipement cuisine
                       </h3>
                       <div className="space-y-1">
                         {[ 

@@ -38,7 +38,7 @@ function App() {
     {
       image: "/images/gites/citronniers/cour.avif",
       title: "Verdure cour intérieure",
-      description: "Cuisine équipée"
+      description: "Roses tremières parmi les plantes"
     },
     {
       image: "/images/gites/citronniers/olivie.avif",
@@ -129,12 +129,12 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un grand Zeste d&apos;Ardèche
+                Un grand zeste d&apos;Ardèche
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Donnant directement sur la cour fleurie du Mas, le gîte Citronnier est entouré de roses trémières et de citronniers dont les fruits parfumés
                  évoquent la douceur méditerranéenne. Son intérieur lumineux, où le soleil pénètre sans jamais surchauffer,
-                  garantit une fraîcheur agréable même en plein été. Exposé au nord, il reste tempéré, offrant un confort naturel à ses occupants.
+                  garantit une fraîcheur agréable même en plein été. Tempéré, même en été, ce gîte offre un confort naturel à ses occupants.
                    Chaque matin, le spectacle des rayons dorés illuminant la cour, mêlé au parfum des fleurs, fait de cet endroit un véritable havre de paix.
               </p>
             </div>
@@ -152,7 +152,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                L&apos;Escapade Acidulée
+                L&apos;Escapade acidulée
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
                 Ce gîte doit son nom aux citronniers qui bordent sa cour, 
@@ -232,7 +232,7 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Wifi className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Grands espaces</span>
+                <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
@@ -240,11 +240,11 @@ function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Ban className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres non-fumeurs</span>
+                <span className="text-gray-700">Logement non-fumeurs</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Terrasse privative</span>
+                <span className="text-gray-700">Terrasse privative semi-couverte</span>
               </div>
             </div>
           </div>
@@ -283,7 +283,7 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
-                          '1 lit 140cm avec oreillers',
+                          '1 lit en 140cm avec oreillers',
                           'Draps en option (10€/personne avec serviette)',
                           'Couvertures',
                           'Couvertures supplémentaires disponibles',
@@ -309,7 +309,7 @@ function App() {
                         Salle de bain
                       </h3>
                       <div className="space-y-1">
-                        {['Rénovée, moderne et design'].map((item, index) => (
+                        {['Moderne et design'].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
                             <span className="text-gray-600 text-sm">{item}</span>
@@ -325,12 +325,12 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[ 
+                          'Espace ouvert',
                           'Réfrigérateur avec partie congélation',
                           'Plaque de cuisson à induction',
                           'Four',
                           'Micro-ondes',
-                          'Hotte aspirante',
-                          'Lave-vaisselle'
+                          'Hotte aspirante'
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -343,7 +343,7 @@ function App() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                         <Utensils className="w-5 h-5 text-blue-900" />
-                        Coin cuisine
+                        Equipement cuisine
                       </h3>
                       <div className="space-y-1">
                         {[ 
@@ -386,7 +386,8 @@ function App() {
                       </h3>
                       <div className="space-y-1">
                         {[
-                          '2 lits en 90',
+                          '1 lit en 90',
+                          'Banquette',
                           'Télévision',
                           'Livres',
                           'Jeux de société (sur demande)'

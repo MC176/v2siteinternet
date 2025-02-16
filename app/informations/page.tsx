@@ -21,25 +21,25 @@ const destinations = [
   },
   {
     title: "DESCENTE DES GORGES DE L'ARDÈCHE",
-    description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos amis et votre famille pour une aventure inoubliable.",
+    description: "Parcourez les majestueuses Gorges de l'Ardèche en canoë ou kayak avec vos proches pour une aventure inoubliable.",
     image: "/images/presentation/gorge.avif",
     cta: "Réserver votre canoë",
     icon: Compass,
-    url: "https://www.gorges-ardeche-pontdarc.fr/activites/canoe/infos-et-parcours/"
+    url: "https://acqua-bateaux.com/"
   },
   {
-    title: "VOL EN DELTAPLANE",
-    description: "Volez comme un oiseau au-dessus des falaises ardéchoises et vivez des sensations fortes en deltaplane.",
-    image: "/images/presentation/Image 4.avif",
+    title: "CHATEAU MEDIEVAL DE SAINT MONTAN",
+    description: "Partez à la découverte d'un château fortifié. Explorez ses remparts, ses ruelles et plongez dans l'histoire du village.",
+    image: "/images/presentation/chateau.jpg",
     cta: "Découvrir l'expérience",
     icon: TreePine,
-    url: "https://www.taranis-parapente.com/baptemes-de-parapente-en-ardeche/"
+    url: "https://chateausaintmontan.com/"
   },
   {
     title: "RANDONNÉES PROCHE DU MAS D'EYLIEUX",
     description: "Évadez-vous en pleine nature ardéchoise en suivant des sentiers pittoresques à travers des paysages variés.",
-    image: "/images/presentation/Image 7.avif",
-    cta: "Organiser votre balade",
+    image: "/images/presentation/image7.avif",
+    cta: "Organiser vos balades",
     icon: TreePine,
     url: "https://www.gr-infos.com/gr42.htm"
   },
@@ -47,7 +47,7 @@ const destinations = [
     title: "SPÉLÉOLOGIE EN ARDÈCHE",
     description: "Partez à la découverte des grottes ardéchoises et explorez leurs merveilles souterraines en toute sécurité.",
     image: "/images/presentation/Image 10.avif",
-    cta: "Découvrir nos offres",
+    cta: "Découvrir les visites",
     icon: TreePine,
     url: "https://www.face-sud.com/speleo-ardeche/"
   }
@@ -95,7 +95,7 @@ function App() {
           </p>
           <div className="flex items-center justify-center gap-3 animate-fade-in-delay-2">
             <MapPin className="w-6 h-6" />
-            <p className="text-xl font-light tracking-wide">Ardèche méridionale</p>
+            <p className="text-xl font-light tracking-wide">Saint Montan</p>
           </div>
         </div>
       </div>
@@ -123,7 +123,6 @@ function App() {
             {/* Right side - Text Content */}
             <div className="space-y-12">
               <div className="space-y-4">
-                <div className="w-16 h-1 bg-black"></div>
                 <h2 className="text-6xl font-cormorant font-light tracking-wider text-gray-900 leading-tight">
                   Bienvenue<br/>en Ardèche
                 </h2>

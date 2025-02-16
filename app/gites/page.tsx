@@ -32,7 +32,7 @@ const gites = [
     capacity: '3 personnes',
     rating: 4.9,
     price: '130€',
-    features: ['Gîte rénové en 2023', 'Vue exceptionnelle', 'Luminosité exceptionnelle'],
+    features: ['Vue panoramique sur la nature environnante', 'Luminosité exceptionnelle', 'Gîte en hauteur'],
     href: '/gites/figuiers'
   },
   {
@@ -42,7 +42,7 @@ const gites = [
     capacity: '3 personnes',
     rating: 4.8,
     price: '130€',
-    features: ['Vue sur les jardins intérieurs', "Végétation luxuriante et apaisante", 'Lumière naturelle '],
+    features: ["Végétation luxuriante et apaisante", 'Vue sur les jardins intérieurs', 'Lumière naturelle'],
     href: '/gites/citronniers'
   },
   {
@@ -52,12 +52,12 @@ const gites = [
     capacity: '2 personnes',
     rating: 4.7,
     price: '120€',
-    features: ['Charme atypique', 'Dupleix chaleureux', 'Terrasse ombragée'],
+    features: ['Esplanade ombragée', 'Dupleix chaleureux', 'Charme atypique',],
     href: '/gites/maisonette'
   },
   {
     name: 'Châteaunette',
-    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse, idéal pour une famille ou des amis.",
+    description: "Spacieux, chaleureux, avec mezzanine, grande cuisine et terrasse partagée, idéal pour une famille ou des amis.",
     image: "images/gites/chateaunette/photo17.avif",
     capacity: '7 personnes',
     rating: 4.9,
@@ -70,23 +70,23 @@ const gites = [
 const privatisationFeatures = [
   {
     icon: GlassWater,
-    title: "Réceptions de Prestige",
-    description: "Mariages, anniversaires et célébrations extraordinaire dans un cadre magnifique"
+    title: "Réceptions",
+    description: "Anniversaires et célébrations extraordinaire dans un cadre convivial et naturel."
   },
   {
     icon: Building2,
     title: "Séminaires",
-    description: "Espaces de réunion, activités team-building et hébergement tout confort"
+    description: "Espaces de réunion, activités team-building et hébergement tout confort."
   },
   {
     icon: PartyPopper,
-    title: "Événements Festifs",
-    description: "Enterrements de vie de célibataire dans un cadre privé et raffiné"
+    title: "Événements festifs",
+    description: "Enterrements de vie de célibataire dans un cadre privé et raffiné."
   },
   {
     icon: Users2Icon,
-    title: "Réunions Familiales",
-    description: "Cousinades et retrouvailles dans un environnement spacieux et convivial"
+    title: "Réunions familiales",
+    description: "Cousinades et retrouvailles dans un environnement spacieux et convivial."
   }
 ];
 
@@ -222,7 +222,7 @@ function GitesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
               >
-                Privatisez l&apos;Ensemble de nos Gîtes
+                Privatisez l&apos;ensemble de nos gîtes
               </motion.h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

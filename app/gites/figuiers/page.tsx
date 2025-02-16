@@ -138,7 +138,7 @@ function App() {
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
               </div>
             </div>
           </div>
@@ -316,7 +316,7 @@ function App() {
                           'Four',
                           'Micro-ondes',
                           'Hotte aspirante',
-                          'Lave-vaisselle'
+                          'Espace ouvert',
                         ].map((item, index) => (
                           <div key={index} className="flex items-center gap-1.5">
                             <Check className="w-3.5 h-3.5 text-blue-900" />
