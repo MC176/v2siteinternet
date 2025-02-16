@@ -28,7 +28,7 @@ export default function CGU() {
           <br/><br/>
 
           <span className="text-xl font-bold underline">Article 5 - Photographies et crédits :</span><br/><br/>
-          <p>Certaines photographies utilisées dans l'onglet -Information- peuvent provenir de différentes sources Internet. Si une photographie vous appartient et vous souhaitez qu'elle soit retireée, veuillez nous contacter.</p>
+          <p>Certaines photographies utilisées dans l&apos;onglet -Information- peuvent provenir de différentes sources Internet. Si une photographie vous appartient et vous souhaitez qu&apos;elle soit retireée, veuillez nous contacter.</p>
           <br/><br/>
 
           <span className="text-xl font-bold underline">Article 6 - Responsabilité :</span><br/><br/>
