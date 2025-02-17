@@ -101,7 +101,7 @@ const HomeHero = () => {
           {isClient && isVideoVisible && (
             <Suspense fallback={<YouTubePlaceholder />}>
               <YouTube
-                videoId="con7hSv03D0"
+                videoId="Rf-0p465Lp4"
                 opts={{
                   host: 'https://www.youtube-nocookie.com',
                   playerVars: {
@@ -112,7 +112,7 @@ const HomeHero = () => {
                     rel: 0,
                     showinfo: 0,
                     modestbranding: 1,
-                    playlist: 'con7hSv03D0',
+                    playlist: 'Rf-0p465Lp4',
                     playsinline: 1,
                   },
                   width: '100%',

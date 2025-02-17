@@ -39,7 +39,7 @@ export default function CGV() {
             Le solde du prix du séjour est à régler au plus tard 7 jours avant votre arrivée dans les lieux.<br/><br/>
             
             <span className="text-xl font-bold underline">Article 7 - Taxe de séjour :</span><br/><br/>
-            La taxe de séjour (d&apos;un montant de 1.30 pour les gîtes 3 étoiles et 0.99 pour les gîtes 2 étoiles par jour et par personne de plus de 18 ans) est un impôt local que le client doit acquitter auprès du propriétaire qui la reverse ensuite au Trésor Public.<br/><br/>
+            La taxe de séjour est un impôt local que le client doit acquitter auprès du propriétaire qui la reverse ensuite au Trésor Public.<br/><br/>
             
             <span className="text-xl font-bold underline">Article 8 - Dépôt de garantie ou caution :</span><br/><br/>
             À l&apos;arrivée du client, un dépôt de garantie dont le montant est indiqué sur le contrat, est demandé par le propriétaire. Après l&apos;établissement contradictoire de l&apos;état des lieux de sortie, ce dépôt est restitué sous 7 jours maximum, déduction faite du coût de remise en état des lieux, si des dégradations ont été constatées.<br/><br/>
@@ -63,7 +63,7 @@ export default function CGV() {
             Le client est responsable de tous les dommages survenant de son fait. Il est invité à souscrire un contrat d&apos;assurance type villégiature pour ces différents risques.<br/><br/>
             
             <span className="text-xl font-bold underline">Article 15 - Paiement des charges :</span><br/><br/>
-            En fin de séjour, le client doit acquitter auprès du propriétaire, les charges non incluses dans le prix du séjour. Leur montant s&apos;établit sur la base de calcul mentionnée sur le contrat, et un justificatif est remis par le propriétaire.<br/><br/>
+            En fin de séjour, le client doit acquitter auprès du propriétaire, les charges non incluses dans le prix du séjour. Leur montant s&apos;établit sur la base de calcul mentionnée sur le contrat, et sur demande, un justificatif est remis par le propriétaire.<br/><br/>
             
             <span className="text-xl font-bold underline">Article 16 - Litiges :</span><br/><br/>
             Toute réclamation relative à l&apos;état des lieux doit être soumise au propriétaire dans les trois jours suivant la date du début du séjour. Toute autre réclamation doit lui être adressée dans les meilleurs délais, par lettre.<br/><br/>
