@@ -42,7 +42,7 @@ function App() {
 
   const SourceImages = [
     "/images/gites/notused/mare.avif",
-    "/images/gites/chateaunette/photo32.avif",
+    "/images/presentation/mare.png",
     "/images/gites/noisettiers/arbre.avif",
   ];
 
