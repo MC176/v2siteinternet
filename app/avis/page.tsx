@@ -184,7 +184,7 @@ const googleReviews = [
     relative_time_description: "il y a 6 ans"
   },
   {
-    author_name: "Frédéric Metais",
+    author_name: "Frédéric Metais ",
     rating: 5,
     text: "Coin très agréable. On s'y repose parfaitement entre la lavande et les vignes. Sans parler de l'accueil qui est formidable. On s'y sent comme chez soi. Super.",
     relative_time_description: "il y a 6 ans"
@@ -208,10 +208,10 @@ const guestBookImages = [
   { id: 8, path: '/images/avis/remerciement.avif', alt: 'Avis client 8' },
   { id: 9, path: '/images/avis/chene.avif', alt: 'Avis client 9' },
   { id: 10, path: '/images/avis/sacha.avif', alt: 'Avis client 10' },
-  { id: 11, path: '/images/avis/enfants.avif', alt: 'Avis client 7' },
+  { id: 11, path: '/images/avis/enfant.avif', alt: 'Avis client 7' },
   { id: 12, path: '/images/avis/audrey.avif', alt: 'Avis client 11' },
-  { id: 13, path: '/images/avis/sonia.avif', alt: 'Avis client 12' },
-  { id: 14, path: '/images/avis/quentin.avif', alt: 'Avis client 13' },
+  { id: 13, path: '/images/avis/sonias.avif', alt: 'Avis client 12' },
+  { id: 14, path: '/images/avis/quentins.avif', alt: 'Avis client 13' },
   { id: 15, path: '/images/avis/alice.avif', alt: 'Avis client 14' },
 
 ];
