@@ -5,7 +5,6 @@ import { Instagram, Facebook, Globe } from 'lucide-react'
 
 const Footer = () => {
   const switchLanguage = (lang: string) => {
-    // Language switching logic will be implemented here
     console.log(`Switching to ${lang}`)
   }
 
@@ -29,8 +28,17 @@ const Footer = () => {
             </Link>
           </div>
 
-          {/* Social Media Links */}
-          <div className="flex items-center justify-center md:justify-center gap-2">
+          {/* Social Media & Blog Link */}
+          <div className="flex items-center justify-center gap-4">
+            {/* Blog Link */}
+            <Link
+              href="/blog"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+            >
+              📝 Blog
+            </Link>
+
+            {/* Social Media Links */}
             <a
               href="https://www.instagram.com/le_mas_deylieux/"
               target="_blank"

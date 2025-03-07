@@ -1,5 +1,10 @@
 # public/robots.txt
 User-agent: *
 Allow: /
+
+# Empêcher les robots d'accéder à certaines pages administratives
 Disallow: /admin
 Disallow: /private
+
+# Indication du sitemap pour aider Google à mieux indexer le site
+Sitemap: https://lemasdeylieux.fr/sitemap.xml
