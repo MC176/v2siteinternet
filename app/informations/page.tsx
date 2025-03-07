@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect } from 'react';
-import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape, ArrowRight, BookOpen, ChevronRight, ChevronDown } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -55,6 +55,57 @@ const destinations = [
     url: "https://www.face-sud.com/speleo-ardeche/"
   }
 ];
+
+// FAQ data
+const faqs = [
+  {
+    id: 1,
+    question: "Comment se rendre à Saint-Montan ?",
+    answer: "Saint-Montan est accessible en voiture depuis l'autoroute A7, sortie Montélimar Sud. Le village se trouve à environ 20 minutes de la sortie. En train, la gare la plus proche est celle de Montélimar, puis il faut prendre un bus ou un taxi."
+  },
+  {
+    id: 2,
+    question: "Quels sont les meilleurs moments pour visiter ?",
+    answer: "La période idéale s'étend d'avril à octobre. Le printemps offre un climat doux et des paysages fleuris, l'été est parfait pour les activités de plein air, et l'automne propose des couleurs magnifiques avec moins de touristes."
+  },
+  {
+    id: 3,
+    question: "Y a-t-il des restaurants dans le village ?",
+    answer: "Oui, Saint-Montan compte plusieurs restaurants de qualité, notamment 'La Table de la Fontaine' au cœur du village et 'L'Auberge de Montfleury' avec sa terrasse panoramique. Nous recommandons de réserver en haute saison."
+  },
+  {
+    id: 4,
+    question: "Que faire avec des enfants à Saint-Montan ?",
+    answer: "Le village offre de nombreuses activités familiales : visite du château médiéval, chasse au trésor dans les ruelles, randonnées adaptées, et baignade dans l'Ardèche à proximité. La grotte Chauvet 2 est également à 30 minutes en voiture."
+  }
+];
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-200 last:border-0">
+      <button
+        className="flex justify-between items-center w-full py-6 text-left"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="text-lg font-medium text-gray-900">{question}</span>
+        <ChevronDown 
+          className={`w-5 h-5 text-gray-500 transition-transform ${
+            isOpen ? 'transform rotate-180' : ''
+          }`}
+        />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+        }`}
+      >
+        <p className="text-gray-600">{answer}</p>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -156,40 +207,37 @@ function App() {
       </div>
 
       {/* Blog Introduction Section */}
-      <div 
+      <div
         className="relative min-h-screen py-32 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/images/informations/sunset.jpg")',
-        }}
+        style={{ backgroundImage: 'url("/images/informations/sunset.jpg")' }}
       >
-<div className="absolute inset-0 bg-black/50"></div>
-<div className="relative mx-auto px-4">
-  <div className="flex flex-col items-center text-center text-white space-y-12">
-    
-    {/* Titre */}
-    <div className="space-y-6 max-w-3xl">
-      <h2 className="text-5xl md:text-6xl font-light tracking-wide leading-tight">
-        Notre Ardèche 
-      </h2>
-    </div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative mx-auto px-4">
+          <div className="flex flex-col items-center text-center text-white space-y-12">
+            {/* Titre */}
+            <div className="space-y-6 max-w-3xl">
+              <h2 className="text-5xl md:text-6xl font-light tracking-wide leading-tight">
+                Notre Ardèche
+              </h2>
+            </div>
 
-    {/* Bouton Explorer notre blog */}
-    <a 
-      href="/blog" 
-      className="group relative inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-500 overflow-hidden"
-    >
-      <span className="relative z-10 font-medium group-hover:text-white transition-colors duration-300">
-        <BookOpen className="inline-block w-5 h-5 mr-2" />
-        Notre carnet de voyage
-      </span>
-      <ChevronRight className="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform duration-500" />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-    </a>
+            {/* Sous-titre */}
+            <p className="text-xl font-light tracking-wide text-white/90 mt-12">
+              Choisissez un thème ci-dessous pour accéder à notre blog et nos conseils
+            </p>
 
-    {/* Sous-titre */}
-    <p className="text-xl font-light tracking-wide text-white/90">
-       
-    </p>
+            {/* Bouton Explorer notre blog */}
+            <a
+              href="/blog"
+              className="group relative inline-flex items-center space-x-3 bg-indigo-600 px-8 py-4 rounded-full shadow-xl hover:bg-indigo-700 transition-all duration-500 overflow-hidden"
+            >
+              <span className="relative z-10 font-medium group-hover:text-white transition-colors duration-300">
+                <BookOpen className="inline-block w-5 h-5 mr-2" />
+                Notre carnet de voyage
+              </span>
+              <ChevronRight className="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            </a>
 
             {/* Articles Carousel */}
             <div className="w-screen -mx-4 mt-12 overflow-hidden">
@@ -208,65 +256,42 @@ function App() {
                   responsive={[
                     {
                       breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 2,
-                      }
+                      settings: { slidesToShow: 2 },
                     },
                     {
                       breakpoint: 640,
-                      settings: {
-                        slidesToShow: 1,
-                      }
-                    }
+                      settings: { slidesToShow: 1 },
+                    },
                   ]}
                 >
                   <div className="px-3">
-                    <a 
+                    <a
                       href="/blog/gastronomie-ardeche"
                       className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
                     >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Gastronomie Ardéchoise</p>
+                      <p className="text-sm font-medium truncate group-hover:text-white">
+                        Gastronomie Ardéchoise
+                      </p>
                     </a>
                   </div>
                   <div className="px-3">
-                    <a 
+                    <a
                       href="/blog/decouvrir-ardeche"
                       className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
                     >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Découvrir l'Ardèche</p>
+                      <p className="text-sm font-medium truncate group-hover:text-white">
+                        Découvrir l'Ardèche
+                      </p>
                     </a>
                   </div>
                   <div className="px-3">
-                    <a 
+                    <a
                       href="/blog/activites-famille-ardeche"
                       className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
                     >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Activités en Famille</p>
-                    </a>
-                  </div>
-                  {/* Duplicate items for smooth infinite scroll */}
-                  <div className="px-3">
-                    <a 
-                      href="/blog/gastronomie-ardeche"
-                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
-                    >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Gastronomie Ardéchoise</p>
-                    </a>
-                  </div>
-                  <div className="px-3">
-                    <a 
-                      href="/blog/decouvrir-ardeche"
-                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
-                    >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Découvrir l'Ardèche</p>
-                    </a>
-                  </div>
-                  <div className="px-3">
-                    <a 
-                      href="/blog/activites-famille-ardeche"
-                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
-                    >
-                      <p className="text-sm font-medium truncate group-hover:text-white">Activités en Famille</p>
+                      <p className="text-sm font-medium truncate group-hover:text-white">
+                        Activités en Famille
+                      </p>
                     </a>
                   </div>
                 </Slider>
@@ -327,6 +352,28 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="max-w-3xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Questions Fréquentes
+          </h2>
+          <p className="text-gray-600">
+            Tout ce que vous devez savoir pour votre séjour à Saint-Montan
+          </p>
+        </div>
+        
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          {faqs.map((faq) => (
+            <FAQItem
+              key={faq.id}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </section>
 
       {/* Footer Section */}
       <div className="relative h-[60vh] flex items-center justify-center">

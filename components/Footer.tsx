@@ -35,7 +35,7 @@ const Footer = () => {
               href="/blog"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              📝 Blog
+              Blog
             </Link>
 
             {/* Social Media Links */}
