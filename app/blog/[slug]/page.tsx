@@ -1,152 +1,183 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Clock, Calendar, Share2, Bookmark } from 'lucide-react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Search, Filter, ArrowRight, MapPin, Phone } from 'lucide-react';
 
-// Sample article data - In a real app, this would come from an API/CMS
-const article = {
-  title: 'Les trésors cachés de l\'Ardèche : Guide complet',
-  excerpt: 'Explorez les merveilles naturelles et culturelles de l\'Ardèche, des Gorges aux villages médiévaux.',
-  image: '/images/presentation/gorges.jpg',
-  category: 'Destinations',
-  readTime: '5 min',
-  date: '15 Mars 2024',
-  author: {
-    name: 'Pascale',
-    image: '/images/logo/logo.avif',
-    role: 'Propriétaire du Mas d\'Eylieux'
+const articles = [
+  {
+    id: 1,
+    slug: 'guide-saint-montan-ardeche',
+    title: 'Saint-Montan : Guide Complet du Village Médiéval (2024)',
+    excerpt: 'Découvrez les secrets de Saint-Montan : restaurants, commerces, événements. Guide écrit par une famille locale installée depuis 30 ans.',
+    image: '/images/presentation/chateau.jpg',
+    category: 'Guide Local',
+    readTime: '8 min',
+    date: '2024-03-15',
+    author: 'Pascale'
   },
-  content: `
-    <h2>Une terre de contrastes et de beautés</h2>
-    <p>L'Ardèche est une terre qui ne cesse d'émerveiller ses visiteurs. Entre ses gorges spectaculaires, ses villages perchés et sa gastronomie unique, chaque coin de ce département recèle des trésors à découvrir.</p>
-    
-    <h2>Les incontournables de l'Ardèche</h2>
-    <p>Parmi les sites à ne pas manquer lors de votre séjour :</p>
-    <ul>
-      <li>Les Gorges de l'Ardèche et le Pont d'Arc</li>
-      <li>La Grotte Chauvet 2</li>
-      <li>Le village médiéval de Saint-Montan</li>
-      <li>Les champs de lavande du plateau ardéchois</li>
-    </ul>
+  {
+    id: 2,
+    slug: 'gorges-ardeche-depuis-saint-montan',
+    title: 'Gorges de l\'Ardèche : Itinéraire depuis Saint-Montan (12km)',
+    excerpt: 'Notre guide détaillé pour accéder aux Gorges depuis votre gîte. Parking gratuit, meilleurs points de vue et conseils de locaux.',
+    image: '/images/presentation/gorges.jpg',
+    category: 'Itinéraires',
+    readTime: '6 min',
+    date: '2024-03-10'
+  },
+  {
+    id: 3,
+    slug: 'marches-locaux-saint-montan',
+    title: 'Marchés Autour de Saint-Montan : Notre Guide 2024',
+    excerpt: 'Les meilleurs marchés locaux : Saint-Montan (jeudi matin), Bourg-Saint-Andéol (mercredi), Viviers (samedi). Producteurs et horaires.',
+    image: '/images/presentation/Image7.avif',
+    category: 'Vie Locale',
+    readTime: '5 min',
+    date: '2024-03-05'
+  }
+];
 
-    <h2>Activités et expériences uniques</h2>
-    <p>L'Ardèche offre une multitude d'activités pour tous les goûts :</p>
-    <ul>
-      <li>Descente en canoë des Gorges</li>
-      <li>Randonnées sur les sentiers balisés</li>
-      <li>Dégustation de produits locaux</li>
-      <li>Visites de caves viticoles</li>
-    </ul>
-  `,
-  relatedArticles: [
-    {
-      slug: 'activites-famille-ardeche',
-      title: 'Top 10 des activités en famille en Ardèche',
-      image: '/images/informations/canoe.jpg'
-    },
-    {
-      slug: 'gastronomie-ardeche',
-      title: 'Saveurs de l\'Ardèche : Guide gastronomique',
-      image: '/images/presentation/Image7.avif'
-    }
-  ]
-};
+const categories = [
+  'Tous',
+  'Guide Local',
+  'Itinéraires',
+  'Vie Locale',
+  'Activités',
+  'Restaurants'
+];
 
-export default function BlogPost() {
+export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredArticles = articles.filter(article => {
+    const matchesCategory = selectedCategory === 'Tous' || article.category === selectedCategory;
+    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <div className="relative h-[60vh] w-full">
         <Image
-          src={article.image}
-          alt={article.title}
+          src="/images/presentation/chateau.jpg"
+          alt="Vue aérienne de Saint-Montan en Ardèche, son château médiéval et ses ruelles pittoresques"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white space-y-6 px-4 max-w-4xl mx-auto">
+          <div className="text-center text-white space-y-6 px-4">
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold tracking-tight"
+              className="text-5xl md:text-6xl font-bold tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              {article.title}
+              Guide Local Saint-Montan
             </motion.h1>
+            <motion.p 
+              className="text-xl max-w-2xl mx-auto font-light"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Conseils d&apos;une famille ardéchoise pour votre séjour
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="flex items-center gap-2 text-white/90">
+                <MapPin className="w-5 h-5" />
+                <span>Saint-Montan, Ardèche (07220)</span>
+              </div>
+              <div className="flex items-center gap-2 text-white/90">
+                <Phone className="w-5 h-5" />
+                <a href="tel:+33683060226" className="hover:underline">06 83 06 02 26</a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Article Content */}
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Article Meta */}
-        <div className="flex flex-wrap items-center gap-6 mb-8 text-gray-600">
-          <Link 
-            href="/blog"
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Retour aux articles
-          </Link>
-          <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            {article.date}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-12">
+          <div className="relative flex-1 max-w-md">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Rechercher un article..."
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
           </div>
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
-            {article.readTime} de lecture
-          </div>
-        </div>
-
-        {/* Author Info */}
-        <div className="flex items-center gap-4 mb-8">
-          <Image
-            src={article.author.image}
-            alt={article.author.name}
-            width={48}
-            height={48}
-            className="rounded-full"
-          />
-          <div>
-            <h3 className="font-medium">{article.author.name}</h3>
-            <p className="text-sm text-gray-600">{article.author.role}</p>
-          </div>
-        </div>
-
-        {/* Article Content */}
-        <article className="prose prose-lg max-w-none mb-12">
-          <div dangerouslySetInnerHTML={{ __html: article.content }} />
-        </article>
-
-        {/* Related Articles */}
-        <div className="border-t pt-12">
-          <h2 className="text-2xl font-semibold mb-6">Articles similaires</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {article.relatedArticles.map((relatedArticle) => (
-              <Link 
-                key={relatedArticle.slug}
-                href={`/blog/${relatedArticle.slug}`}
-                className="group"
+          <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full transition-colors whitespace-nowrap ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
               >
-                <div className="relative h-48 rounded-xl overflow-hidden mb-4">
-                  <Image
-                    src={relatedArticle.image}
-                    alt={relatedArticle.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-lg font-medium group-hover:text-blue-600 transition-colors">
-                  {relatedArticle.title}
-                </h3>
-              </Link>
+                {category}
+              </button>
             ))}
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredArticles.map((article) => (
+            <motion.article
+              key={article.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <Link href={`/blog/${article.slug}`}>
+                <div className="relative h-48">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                      {article.category}
+                    </span>
+                    <span className="text-sm text-gray-500">
+                      {article.readTime}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2 line-clamp-2">
+                    {article.title}
+                  </h2>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center text-blue-600 group">
+                    <span className="font-medium">Lire l&apos;article</span>
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
+                  </div>
+                </div>
+              </Link>
+            </motion.article>
+          ))}
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight } from 'lucide-react';
+import { Search, Filter, ArrowRight, ChevronDown } from 'lucide-react';
 
 // Sample blog data - In a real app, this would come from an API/CMS
 const articles = [
@@ -48,6 +48,57 @@ const categories = [
   'Culture',
   'Nature'
 ];
+
+// FAQ data
+const faqs = [
+  {
+    id: 1,
+    question: "Comment se rendre à Saint-Montan ?",
+    answer: "Saint-Montan est accessible en voiture depuis l'autoroute A7, sortie Montélimar Sud. Le village se trouve à environ 20 minutes de la sortie. En train, la gare la plus proche est celle de Montélimar, puis il faut prendre un bus ou un taxi."
+  },
+  {
+    id: 2,
+    question: "Quels sont les meilleurs moments pour visiter ?",
+    answer: "La période idéale s'étend d'avril à octobre. Le printemps offre un climat doux et des paysages fleuris, l'été est parfait pour les activités de plein air, et l'automne propose des couleurs magnifiques avec moins de touristes."
+  },
+  {
+    id: 3,
+    question: "Y a-t-il des restaurants dans le village ?",
+    answer: "Oui, Saint-Montan compte plusieurs restaurants de qualité, notamment 'La Table de la Fontaine' au cœur du village et 'L'Auberge de Montfleury' avec sa terrasse panoramique. Nous recommandons de réserver en haute saison."
+  },
+  {
+    id: 4,
+    question: "Que faire avec des enfants à Saint-Montan ?",
+    answer: "Le village offre de nombreuses activités familiales : visite du château médiéval, chasse au trésor dans les ruelles, randonnées adaptées, et baignade dans l'Ardèche à proximité. La grotte Chauvet 2 est également à 30 minutes en voiture."
+  }
+];
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-200 last:border-0">
+      <button
+        className="flex justify-between items-center w-full py-6 text-left"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="text-lg font-medium text-gray-900">{question}</span>
+        <ChevronDown 
+          className={`w-5 h-5 text-gray-500 transition-transform ${
+            isOpen ? 'transform rotate-180' : ''
+          }`}
+        />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+        }`}
+      >
+        <p className="text-gray-600">{answer}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -168,6 +219,28 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="max-w-3xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Questions Fréquentes
+          </h2>
+          <p className="text-gray-600">
+            Tout ce que vous devez savoir pour votre séjour à Saint-Montan
+          </p>
+        </div>
+        
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          {faqs.map((faq) => (
+            <FAQItem
+              key={faq.id}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
