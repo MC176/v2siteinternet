@@ -1,6 +1,9 @@
 'use client'
 import React, { useEffect } from 'react';
-import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape, ArrowRight } from 'lucide-react';
+import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider, CookingPot as Hiking, MapPin, Mountain, Compass, TreePine, Wind, Tent, Camera, Grape, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const destinations = [
   {
@@ -152,6 +155,127 @@ function App() {
         </div>
       </div>
 
+      {/* Blog Introduction Section */}
+      <div 
+        className="relative min-h-screen py-32 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/images/informations/sunset.jpg")',
+        }}
+      >
+<div className="absolute inset-0 bg-black/50"></div>
+<div className="relative mx-auto px-4">
+  <div className="flex flex-col items-center text-center text-white space-y-12">
+    
+    {/* Titre */}
+    <div className="space-y-6 max-w-3xl">
+      <h2 className="text-5xl md:text-6xl font-light tracking-wide leading-tight">
+        Notre Ardèche 
+      </h2>
+    </div>
+
+    {/* Bouton Explorer notre blog */}
+    <a 
+      href="/blog" 
+      className="group relative inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-500 overflow-hidden"
+    >
+      <span className="relative z-10 font-medium group-hover:text-white transition-colors duration-300">
+        <BookOpen className="inline-block w-5 h-5 mr-2" />
+        Notre carnet de voyage
+      </span>
+      <ChevronRight className="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+    </a>
+
+    {/* Sous-titre */}
+    <p className="text-xl font-light tracking-wide text-white/90">
+       
+    </p>
+
+            {/* Articles Carousel */}
+            <div className="w-screen -mx-4 mt-12 overflow-hidden">
+              <div className="px-8">
+                <Slider
+                  dots={false}
+                  infinite={true}
+                  speed={14000}
+                  slidesToShow={3}
+                  slidesToScroll={1}
+                  autoplay={true}
+                  autoplaySpeed={0}
+                  cssEase="linear"
+                  pauseOnHover={true}
+                  className="overflow-visible"
+                  responsive={[
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 2,
+                      }
+                    },
+                    {
+                      breakpoint: 640,
+                      settings: {
+                        slidesToShow: 1,
+                      }
+                    }
+                  ]}
+                >
+                  <div className="px-3">
+                    <a 
+                      href="/blog/gastronomie-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Gastronomie Ardéchoise</p>
+                    </a>
+                  </div>
+                  <div className="px-3">
+                    <a 
+                      href="/blog/decouvrir-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Découvrir l'Ardèche</p>
+                    </a>
+                  </div>
+                  <div className="px-3">
+                    <a 
+                      href="/blog/activites-famille-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Activités en Famille</p>
+                    </a>
+                  </div>
+                  {/* Duplicate items for smooth infinite scroll */}
+                  <div className="px-3">
+                    <a 
+                      href="/blog/gastronomie-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Gastronomie Ardéchoise</p>
+                    </a>
+                  </div>
+                  <div className="px-3">
+                    <a 
+                      href="/blog/decouvrir-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Découvrir l'Ardèche</p>
+                    </a>
+                  </div>
+                  <div className="px-3">
+                    <a 
+                      href="/blog/activites-famille-ardeche"
+                      className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
+                    >
+                      <p className="text-sm font-medium truncate group-hover:text-white">Activités en Famille</p>
+                    </a>
+                  </div>
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Activities Title Section */}
       <div className="py-16 text-center bg-white">
         <h2 className="text-4xl font-light tracking-widest text-gray-900 mb-4">ACTIVITÉS À DÉCOUVRIR</h2>
@@ -215,7 +339,7 @@ function App() {
         />
         <div className="relative text-center text-white z-10">
           <h2 className="text-6xl font-light tracking-widest mb-4">L&apos;ARDÈCHE</h2>
-          <p className="text-xl tracking-wide uppercase">VIVEZ LE FARNIENTE ARDÈCHOIX</p>
+          <p className="text-xl tracking-wide uppercase">VIVEZ LE FARNIENTE ARDÉCHOIS</p>
         </div>
       </div>
 
