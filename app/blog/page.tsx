@@ -1,44 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, ChevronDown } from 'lucide-react';
+import { Search, ArrowRight } from 'lucide-react';
 
-// Sample blog data - In a real app, this would come from an API/CMS
-const articles = [
-  {
-    id: 1,
-    slug: 'decouvrir-ardeche',
-    title: 'Les trésors cachés de l\'Ardèche : Guide complet',
-    excerpt: 'Explorez les merveilles naturelles et culturelles de l\'Ardèche, des Gorges aux villages médiévaux.',
-    image: '/images/presentation/gorges.jpg',
-    category: 'Destinations',
-    readTime: '5 min',
-    date: '2024-03-15'
-  },
-  {
-    id: 2,
-    slug: 'activites-famille-ardeche',
-    title: 'Top 10 des activités en famille en Ardèche',
-    excerpt: 'Des activités pour tous les âges : canoë, spéléologie, randonnées et plus encore.',
-    image: '/images/informations/canoe.jpg',
-    category: 'Activités',
-    readTime: '4 min',
-    date: '2024-03-10'
-  },
-  {
-    id: 3,
-    slug: 'gastronomie-ardeche',
-    title: 'Saveurs de l\'Ardèche : Guide gastronomique',
-    excerpt: 'Découvrez les spécialités locales et les meilleurs restaurants de la région.',
-    image: '/images/presentation/Image7.avif',
-    category: 'Gastronomie',
-    readTime: '6 min',
-    date: '2024-03-05'
-  }
-];
+interface BlogPost {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  image?: string;
+  slug: string;
+  category?: string;
+}
 
 const categories = [
   'Tous',
@@ -49,80 +24,59 @@ const categories = [
   'Nature'
 ];
 
-// FAQ data
-const faqs = [
-  {
-    id: 1,
-    question: "Comment se rendre à Saint-Montan ?",
-    answer: "Saint-Montan est accessible en voiture depuis l'autoroute A7, sortie Montélimar Sud. Le village se trouve à environ 20 minutes de la sortie. En train, la gare la plus proche est celle de Montélimar, puis il faut prendre un bus ou un taxi."
-  },
-  {
-    id: 2,
-    question: "Quels sont les meilleurs moments pour visiter ?",
-    answer: "La période idéale s'étend d'avril à octobre. Le printemps offre un climat doux et des paysages fleuris, l'été est parfait pour les activités de plein air, et l'automne propose des couleurs magnifiques avec moins de touristes."
-  },
-  {
-    id: 3,
-    question: "Y a-t-il des restaurants dans le village ?",
-    answer: "Oui, Saint-Montan compte plusieurs restaurants de qualité, notamment 'La Table de la Fontaine' au cœur du village et 'L'Auberge de Montfleury' avec sa terrasse panoramique. Nous recommandons de réserver en haute saison."
-  },
-  {
-    id: 4,
-    question: "Que faire avec des enfants à Saint-Montan ?",
-    answer: "Le village offre de nombreuses activités familiales : visite du château médiéval, chasse au trésor dans les ruelles, randonnées adaptées, et baignade dans l'Ardèche à proximité. La grotte Chauvet 2 est également à 30 minutes en voiture."
-  }
-];
-
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b border-gray-200 last:border-0">
-      <button
-        className="flex justify-between items-center w-full py-6 text-left"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span className="text-lg font-medium text-gray-900">{question}</span>
-        <ChevronDown 
-          className={`w-5 h-5 text-gray-500 transition-transform ${
-            isOpen ? 'transform rotate-180' : ''
-          }`}
-        />
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 pb-6' : 'max-h-0'
-        }`}
-      >
-        <p className="text-gray-600">{answer}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function BlogPage() {
-  const [selectedCategory, setSelectedCategory] = useState('Tous');
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
 
-  const filteredArticles = articles.filter(article => {
-    const matchesCategory = selectedCategory === 'Tous' || article.category === selectedCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch('/api/blog');
+        if (!response.ok) {
+          throw new Error('Failed to fetch posts');
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  const filteredPosts = posts.filter(post => {
+    const matchesSearch = (
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    const matchesCategory = selectedCategory === 'Tous' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[60vh] w-full">
-        <Image
-          src="/images/presentation/Image7.avif"
-          alt="Blog hero image"
-          fill
-          className="object-cover"
-          priority
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/images/presentation/Image7.avif")',
+            filter: 'brightness(0.65)'
+          }}
         />
-        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white space-y-6 px-4">
             <motion.h1 
@@ -177,37 +131,40 @@ export default function BlogPage() {
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredArticles.map((article) => (
+          {filteredPosts.map((post) => (
             <motion.article
-              key={article.id}
+              key={post.slug}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
-              <Link href={`/blog/${article.slug}`}>
-                <div className="relative h-48">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              <Link href={`/blog/${post.slug}`}>
+                {post.image && (
+                  <div className="relative h-48">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                      {article.category}
-                    </span>
+                  <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-500">
-                      {article.readTime}
+                      {new Date(post.date).toLocaleDateString('fr-FR')}
                     </span>
+                    {post.category && (
+                      <span className="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                    )}
                   </div>
                   <h2 className="text-xl font-semibold mb-2 line-clamp-2">
-                    {article.title}
+                    {post.title}
                   </h2>
                   <p className="text-gray-600 mb-4 line-clamp-3">
-                    {article.excerpt}
+                    {post.excerpt}
                   </p>
                   <div className="flex items-center text-blue-600 group">
                     <span className="font-medium">Lire l&apos;article</span>
@@ -218,29 +175,13 @@ export default function BlogPage() {
             </motion.article>
           ))}
         </div>
-      </div>
 
-      {/* FAQ Section */}
-      <section className="max-w-3xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Questions Fréquentes
-          </h2>
-          <p className="text-gray-600">
-            Tout ce que vous devez savoir pour votre séjour à Saint-Montan
-          </p>
-        </div>
-        
-        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          {faqs.map((faq) => (
-            <FAQItem
-              key={faq.id}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          ))}
-        </div>
-      </section>
+        {filteredPosts.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-600">Aucun article ne correspond à votre recherche.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
