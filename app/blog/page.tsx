@@ -50,9 +50,9 @@ export default function BlogPage() {
   }, []);
 
   const filteredPosts = posts.filter(post => {
-    const matchesSearch = (
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+    const matchesSearch = searchQuery === '' || (
+      (post.title?.toLowerCase() || '').includes(searchQuery.toLowerCase()) ||
+      (post.excerpt?.toLowerCase() || '').includes(searchQuery.toLowerCase())
     );
     const matchesCategory = selectedCategory === 'Tous' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;

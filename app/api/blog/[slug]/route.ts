@@ -1,23 +1,25 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import { getPostBySlug } from '@/lib/blog';
 
 export async function GET(
   request: Request,
   { params }: { params: { slug: string } }
 ) {
   try {
-    const contentDir = path.join(process.cwd(), 'content', 'blog');
-    const filePath = path.join(contentDir, `${params.slug}.json`);
+    const post = getPostBySlug(params.slug);
     
-    const fileContent = await fs.readFile(filePath, 'utf-8');
-    const post = JSON.parse(fileContent);
+    if (!post) {
+      return NextResponse.json(
+        { error: 'Article non trouvé' },
+        { status: 404 }
+      );
+    }
 
     return NextResponse.json(post);
   } catch (error) {
     return NextResponse.json(
-      { error: 'Article non trouvé' },
-      { status: 404 }
+      { error: 'Erreur lors de la récupération de l\'article' },
+      { status: 500 }
     );
   }
 }
