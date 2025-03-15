@@ -1,12 +1,19 @@
 import { NextResponse } from 'next/server';
 import { getPostBySlug } from '@/lib/blog';
 
+// Define the correct type for the request context
+type RequestContext = {
+  params: {
+    slug: string;
+  };
+};
+
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } }
+  context: RequestContext
 ) {
   try {
-    const post = getPostBySlug(params.slug);
+    const post = getPostBySlug(context.params.slug);
     
     if (!post) {
       return NextResponse.json(
