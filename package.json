@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-token": "ts-node scripts/generate-test-token.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -87,6 +88,7 @@
   "devDependencies": {
     "@types/markdown-it": "^13.0.7",
     "@types/react-slick": "^0.23.13",
-    "@types/sanitize-html": "^2.11.0"
+    "@types/sanitize-html": "^2.11.0",
+    "ts-node": "^10.9.2"
   }
 }
