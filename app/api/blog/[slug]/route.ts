@@ -1,19 +1,13 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getPostBySlug } from '@/lib/blog';
 
-// Utiliser une interface correspondant au format de Next.js plus récent
-interface RequestContext {
-  params: {
-    slug: string;
-  };
-}
-
 export async function GET(
-  request: Request,
-  context: RequestContext
+  request: NextRequest,
+  { params }: { params: Record<string, string> }
 ) {
   try {
-    const post = getPostBySlug(context.params.slug);
+    const slug = params.slug;
+    const post = getPostBySlug(slug);
     
     if (!post) {
       return NextResponse.json(
