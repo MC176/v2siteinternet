@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getPostBySlug } from '@/lib/blog';
 
+// Version la plus simple possible
 export async function GET(
-  request: NextRequest,
-  { params }: { params: Record<string, string> }
+  req: NextRequest,
+  { params }: any
 ) {
   try {
     const slug = params.slug;
