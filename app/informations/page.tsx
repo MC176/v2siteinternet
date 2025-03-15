@@ -61,22 +61,22 @@ const faqs = [
   {
     id: 1,
     question: "Comment se rendre à Saint-Montan ?",
-    answer: "Saint-Montan est accessible en voiture depuis l'autoroute A7, sortie Montélimar Sud. Le village se trouve à environ 20 minutes de la sortie. En train, la gare la plus proche est celle de Montélimar, puis il faut prendre un bus ou un taxi."
+    answer: "Saint-Montan est accessible en voiture depuis l&apos;autoroute A7, sortie Montélimar Sud. Le village se trouve à environ 20 minutes de la sortie. En train, la gare la plus proche est celle de Montélimar, puis il faut prendre un bus ou un taxi."
   },
   {
     id: 2,
     question: "Quels sont les meilleurs moments pour visiter ?",
-    answer: "La période idéale s'étend d'avril à octobre. Le printemps offre un climat doux et des paysages fleuris, l'été est parfait pour les activités de plein air, et l'automne propose des couleurs magnifiques avec moins de touristes."
+    answer: "La période idéale s&apos;étend d&apos;avril à octobre. Le printemps offre un climat doux et des paysages fleuris, l&apos;été est parfait pour les activités de plein air, et l&apos;automne propose des couleurs magnifiques avec moins de touristes."
   },
   {
     id: 3,
     question: "Y a-t-il des restaurants dans le village ?",
-    answer: "Oui, Saint-Montan compte plusieurs restaurants de qualité, notamment 'La Table de la Fontaine' au cœur du village et 'L'Auberge de Montfleury' avec sa terrasse panoramique. Nous recommandons de réserver en haute saison."
+    answer: "Oui, Saint-Montan compte plusieurs restaurants de qualité, notamment &apos;La Table de la Fontaine&apos; au cœur du village et &apos;L&apos;Auberge de Montfleury&apos; avec sa terrasse panoramique. Nous recommandons de réserver en haute saison."
   },
   {
     id: 4,
     question: "Que faire avec des enfants à Saint-Montan ?",
-    answer: "Le village offre de nombreuses activités familiales : visite du château médiéval, chasse au trésor dans les ruelles, randonnées adaptées, et baignade dans l'Ardèche à proximité. La grotte Chauvet 2 est également à 30 minutes en voiture."
+    answer: "Le village offre de nombreuses activités familiales : visite du château médiéval, chasse au trésor dans les ruelles, randonnées adaptées, et baignade dans l&apos;Ardèche à proximité. La grotte Chauvet 2 est également à 30 minutes en voiture."
   }
 ];
 
