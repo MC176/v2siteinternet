@@ -14,7 +14,7 @@ export async function GET(
         { status: 404 }
       );
     }
-
+    
     return NextResponse.json(post);
   } catch (error) {
     return NextResponse.json(
