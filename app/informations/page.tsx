@@ -280,7 +280,7 @@ function App() {
                       className="block bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 w-72 group"
                     >
                       <p className="text-sm font-medium truncate group-hover:text-white">
-                        Découvrir l'Ardèche
+                        Découvrir l&apos;Ardèche
                       </p>
                     </a>
                   </div>
