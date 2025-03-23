@@ -2,11 +2,13 @@
 
 import Link from 'next/link'
 import { Instagram, Facebook, Globe } from 'lucide-react'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLanguage } from '@/lib/LanguageContext'
+import { useTranslation } from '@/lib/translations'
 
 const Footer = () => {
-  const switchLanguage = (lang: string) => {
-    console.log(`Switching to ${lang}`)
-  }
+  const { language } = useLanguage();
+  const t = useTranslation();
 
   return (
     <footer className="bg-gray-100 py-3">
@@ -18,13 +20,13 @@ const Footer = () => {
               href="/cgu"
               className="text-xs text-gray-600 hover:text-gray-900 transition-colors underline block"
             >
-              Conditions Générales d&apos;Utilisation
+              {t('termsOfUse')}
             </Link>
             <Link
               href="/cgv"
               className="text-xs text-gray-600 hover:text-gray-900 transition-colors underline block"
             >
-              Conditions Générales de Vente
+              {t('termsOfSale')}
             </Link>
           </div>
 
@@ -35,7 +37,7 @@ const Footer = () => {
               href="/blog"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              Blog
+              {t('blog')}
             </Link>
 
             {/* Social Media Links */}
@@ -58,18 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Language Switcher */}
-          <div className="flex items-center gap-1">
-            <button
-              onClick={() => switchLanguage('fr')}
-              className="w-5 h-5 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/fr.svg"
-                alt="French"
-                className="w-full h-full object-cover"
-              />
-            </button>
-          </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </footer>
