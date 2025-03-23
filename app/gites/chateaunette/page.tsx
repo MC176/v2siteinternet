@@ -2,78 +2,80 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import du composant Image de Next.js
+import Image from 'next/image';
+import { useTranslation } from '@/lib/translations';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const { t } = useTranslation();
 
   const climateData = [
     {
       image: "/images/gites/chateaunette/entree.avif",
-      title: "Entrée du gîte",
-      description: "Lauriers roses"
+      title: t('climateData.entreeTitle'),
+      description: t('climateData.entreeDescription'),
     },
     {
       image: "/images/gites/citronniers/vue.avif",
-      title: "Gîte Chateaunette",
-      description: "Superficie de 59m²"
+      title: t('climateData.chateaunetteTitle'),
+      description: t('climateData.chateaunetteDescription'),
     },
     {
       image: "/images/gites/citronniers/photo12.avif",
-      title: "Vue de la terrasse",
-      description: "Le gîte donne sur cour intérieure"
+      title: t('climateData.terrasseTitle'),
+      description: t('climateData.terrasseDescription'),
     },
     {
       image: "/images/gites/chateaunette/vueduhaut.avif",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      title: t('climateData.terrasseViewTitle'),
+      description: t('climateData.terrasseViewDescription'),
     },
     {
       image: "/images/gites/chateaunette/cuisine.avif",
-      title: "Espace cuisine",
-      description: "Toute équipée"
+      title: t('climateData.cuisineTitle'),
+      description: t('climateData.cuisineDescription'),
     },
     {
       image: "/images/gites/chateaunette/cuisineproche.avif",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
+      title: t('climateData.cuisineCornerTitle'),
+      description: t('climateData.cuisineCornerDescription'),
     },
     {
       image: "/images/gites/chateaunette/chambre.avif",
-      title: "Chambre des Lilas",
-      description: "Lit 2 places 160cm"
+      title: t('climateData.lilasRoomTitle'),
+      description: t('climateData.lilasRoomDescription'),
     },
     {
       image: "/images/gites/chateaunette/chambre2.avif",
-      title: "Chambre de la Lavande",
-      description: "Lit 2 places 140cm"
+      title: t('climateData.lavenderRoomTitle'),
+      description: t('climateData.lavenderRoomDescription'),
     },
     {
       image: "/images/gites/chateaunette/depuisfenetre.avif",
-      title: "Vue de Chateaunette",
-      description: "Depuis la chambre"
+      title: t('climateData.chateaunetteViewTitle'),
+      description: t('climateData.chateaunetteViewDescription'),
     },
     {
       image: "/images/gites/chateaunette/salon.avif",
-      title: "Salon",
-      description: "Mezzazine avec accès au lit"
+      title: t('climateData.livingRoomTitle'),
+      description: t('climateData.livingRoomDescription'),
     },
     {
       image: "/images/gites/chateaunette/mezzanine.avif",
-      title: "Mezzazzine",
-      description: "Lit 1 place"
+      title: t('climateData.mezzanineTitle'),
+      description: t('climateData.mezzanineDescription'),
     },
     {
       image: "/images/gites/chateaunette/piscine.avif",
-      title: "Piscine",
-      description: "Profondeur : 1m10 - 2m20"
+      title: t('climateData.poolTitle'),
+      description: t('climateData.poolDescription'),
     },
     {
       image: "/images/gites/chateaunette/nuit.avif",
-      title: "Piscine de nuit",
-      description: "Eclairage nocturne disponible"
+      title: t('climateData.nightPoolTitle'),
+      description: t('climateData.nightPoolDescription'),
     },
   ];
 
@@ -136,9 +138,11 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Chateaunette
+            {t('cottageTitle')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un gîte aux grands volumes</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">
+            {t('cottageSubtitle')}
+          </p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -158,13 +162,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un gîte lumineux et spacieux
+                {t('cottageDescriptionTitle')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Le gîte Châteaunette est le plus grand des hébergements du Mas.
-                Doté de deux chambres, d&apos;une mezzanine avec lit, et d&apos;une grande cuisine équipée,
-                il allie charme authentique et confort moderne. La terrasse, orientée Est,
-                invite à des repas conviviaux avec vue sur la nature environnante.
+                {t('cottageDescription')}
               </p>
             </div>
 
@@ -174,31 +175,32 @@ function App() {
                   <Users className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">7</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">
+                  {t('capacity')}
+                </div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">59</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">
+                  {t('surface')}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Introduction Section */}
+        {/* Section Histoire */}
         <section className="relative py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                L&apos;Histoire de Chateaunette
+                {t('cottageHistoryTitle')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Lorsque nos premiers hôtes découvrirent ce gîte, ils le baptisèrent &quot;Châteaunette&quot;,
-                tant les grands espaces ainsi que la hauteur sous plafond leur rappelaient un petit château. Spacieux et lumineux, avec ses deux chambres,
-                son salon et sa mezzanine, il offre un véritable espace de vie où le confort moderne côtoie
-                l&apos;authenticité du mas.
+                {t('cottageHistoryText')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>
@@ -242,7 +244,7 @@ function App() {
           </button>
         </div>
 
-        {/* Services & Prestations d'Exception moved before final quote */}
+        {/* Services & Prestations d'Exception */}
         <div className="mt-16 luxury-section">
           <div className="text-left mb-2">
             <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display'] mb-6"></h2>
@@ -252,31 +254,33 @@ function App() {
 
         <div className="bg-white py-6 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ses points forts</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              {t('strongPointsTitle')}
+            </h2>
             <div className="flex flex-wrap gap-6 items-center">
               <div className="flex items-center gap-2">
                 <Car className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Parking privé</span>
+                <span className="text-gray-700">{t('parking')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Wifi className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Connexion Wi-Fi gratuite</span>
+                <span className="text-gray-700">{t('wifi')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <DoorOpen className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Escaliers</span>
+                <span className="text-gray-700">{t('stairs')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Chambres familiales</span>
+                <span className="text-gray-700">{t('familyRooms')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Ban className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Logement non-fumeurs</span>
+                <span className="text-gray-700">{t('nonSmoking')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Umbrella className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700">Terrasse</span>
+                <span className="text-gray-700">{t('terrace')}</span>
               </div>
             </div>
           </div>
@@ -284,46 +288,51 @@ function App() {
 
         <div className="mt-6 bg-gray-50 py-6">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">Équipements et services</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-8 border-r border-gray-300 pr-4">
+              {t('equipmentAndServicesTitle')}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Car className="w-5 h-5 text-blue-900" />
-                    Parking privé
+                    {t('parking')}
                   </h3>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-blue-900" />
-                    <span className="text-gray-600 text-sm">Places de Parking </span>
+                    <span className="text-gray-600 text-sm">
+                      {t('parkingSpaces')}
+                    </span>
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Wifi className="w-5 h-5 text-blue-900" />
-                    Internet
+                    {t('internet')}
                   </h3>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-blue-900" />
-                    <span className="text-gray-600 text-sm">Wi-Fi accessible à certains endroits</span>
+                    <span className="text-gray-600 text-sm">
+                      {t('wifiAccess')}
+                    </span>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Bed className="w-5 h-5 text-blue-900" />
-                    Chambre
+                    {t('bedroom')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      '2 lits en 160cm & 140cm avec oreillers',
-                      'Draps en option (10€/personne avec serviette)',
-                      'Couvertures',
-                      'Couvertures supplémentaires disponibles',
-                      'Armoire',
-                      'Tables de chevet avec lampe',
-                      'Volets',
-                      'Prises près du lit',
-                      'Table et fer à repasser sur demande',
+                      t('equipment.bed'),
+                      t('equipment.sheets'),
+                      t('equipment.blankets'),
+                      t('equipment.wardrobe'),
+                      t('equipment.nightstand'),
+                      t('equipment.shutters'),
+                      t('equipment.outlets'),
+                      t('equipment.iron'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -338,10 +347,10 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Bath className="w-5 h-5 text-blue-900" />
-                    Salle de bain
+                    {t('bathroom')}
                   </h3>
                   <div className="space-y-1">
-                    {['Douche italienne'].map((item, index) => (
+                    {[t('italianShower')].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
                         <span className="text-gray-600 text-sm">{item}</span>
@@ -353,16 +362,16 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Kitchen className="w-5 h-5 text-blue-900" />
-                    Cuisine
+                    {t('kitchen')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      'Réfrigérateur 2 portes avec partie congélation',
-                      'Plaque de cuisson à induction',
-                      'Four',
-                      'Micro-ondes',
-                      'Hotte aspirante',
-                      'Lave-vaisselle'
+                      t('equipment.fridge'),
+                      t('equipment.inductionCooktop'),
+                      t('equipment.oven'),
+                      t('equipment.microwave'),
+                      t('equipment.hood'),
+                      t('equipment.dishwasher'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -375,14 +384,14 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Utensils className="w-5 h-5 text-blue-900" />
-                    Equipement cuisine
+                    {t('kitchenEquipment')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      'Cafetière (filtre)',
-                      'Nespresso sur demande',
-                      'Bouilloire électrique',
-                      'Grille-pain',
+                      t('equipment.coffeeMaker'),
+                      t('equipment.nespresso'),
+                      t('equipment.kettle'),
+                      t('equipment.toaster'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -397,12 +406,12 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Baby className="w-5 h-5 text-blue-900" />
-                    Équipements pour enfants
+                    {t('childrenEquipment')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      'Lit bébé (sur demande)',
-                      'Chaise haute (sur demande)'
+                      t('equipment.babyBed'),
+                      t('equipment.highChair'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -414,14 +423,14 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Tv className="w-5 h-5 text-blue-900" />
-                    Salon &amp; Divertissement
+                    {t('livingRoomEntertainment')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      '3 lits en 90 (2 séjours & 1 mezzanine)',
-                      'Télévision',
-                      'Livres',
-                      'Jeux de société (sur demande)'
+                      t('equipment.livingRoomBeds'),
+                      t('equipment.tv'),
+                      t('equipment.books'),
+                      t('equipment.boardGames'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -433,15 +442,15 @@ function App() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                     <Sun className="w-5 h-5 text-blue-900" />
-                    Espaces communs
+                    {t('commonSpaces')}
                   </h3>
                   <div className="space-y-1">
                     {[
-                      'Grands espaces (Football, badminton...)',
-                      'Terrasse partagée',
-                      'Terrain de pétanque',
-                      'Tennis de table',
-                      'Baby-foot'
+                      t('equipment.largeSpaces'),
+                      t('equipment.sharedTerrace'),
+                      t('equipment.petanque'),
+                      t('equipment.tableTennis'),
+                      t('equipment.foosball'),
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-blue-900" />
@@ -460,7 +469,7 @@ function App() {
             href="/contact"
             className="inline-flex items-center mt-12 px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
           >
-            <span className="relative z-10">Réserver votre séjour</span>
+            <span className="relative z-10">{t('bookStay')}</span>
             <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
             <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Link>
@@ -469,10 +478,10 @@ function App() {
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <p className="text-black leading-relaxed text-lg italic">
-            &quot;Le bonheur réside dans les petites choses, et souvent dans le calme des pierres anciennes.&quot;
+            {t('finalQuote')}
           </p>
           <p className="text-lg text-gray-600 text-right mt-6">
-            ~ Antoine de Saint-Exupéry, Le Petit Prince
+            {t('finalQuoteAuthor')}
           </p>
         </div>
       </div>
