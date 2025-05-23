@@ -15,7 +15,8 @@
   "home": {
     "heroTitle": "Le Mas d'Eylieux",
     "heroSubtitle": "Een uitzonderlijk landgoed in Zuid-Ardèche",
-    "discoverButton": "Ontdek meer"
+    "discoverButton": "Ontdek ons",
+    "welcomeTitle": "Welkom bij Le Mas d'Eylieux"
   },
   "common": {
     "bookNow": "Nu boeken",
@@ -56,7 +57,81 @@
     }
   },
   "presentation": {
-    "history": "Gebouwd in 1158, is Le Mas d'Eylieux een plek vol geschiedenis. Het herbergt overblijfselen van een kleine Gallo-Romeinse stad en was in de 13e eeuw een halte op de route die koning Lodewijk IX gebruikte. Op weg naar de kathedraal van Viviers zou deze laatste door de regio zijn gereisd, zijn stempel drukkend op dit domein vol authenticiteit. Vandaag de dag blijft Le Mas d'Eylieux betoveren met zijn bewaarde charme en unieke sfeer, getuigen van een rijk historisch erfgoed."
+    "hero": {
+      "title": "Een Oase van Rust",
+      "subtitle": "Kalmte, sereniteit, vakantie."
+    },
+    "welcome": {
+      "title": "Welkom bij Le Mas d'Eylieux",
+      "description": "Ontdek onze 6 uitzonderlijke vakantiehuizen in een stenen huis uit de 12e eeuw, in het hart van een 40 hectare groot domein in het zuiden van de Ardèche."
+    },
+    "farniente": {
+      "title": "De Ardèche",
+      "subtitle": "Dolce Far Niente"
+    },
+    "history": "Gebouwd in 1158, is Le Mas d'Eylieux een plek vol geschiedenis. Het herbergt de overblijfselen van een kleine Gallo-Romeinse stad en was in de 13e eeuw een halte op de route die koning Lodewijk IX gebruikte. Op weg naar de kathedraal van Viviers zou hij door de regio hebben gereisd en zijn sporen hebben achtergelaten in dit authentieke domein. Vandaag blijft Le Mas d'Eylieux betoveren met zijn behouden charme en unieke sfeer, getuigen van een rijk historisch erfgoed.",
+    "receptions": {
+      "title": "Domein-Privatisering",
+      "subtitle": "Voor uw recepties & feesten.",
+      "description": "Een uitzonderlijk kader voor uw familie- of vriendenbijeenkomsten.",
+      "contactButton": "Neem contact met ons op"
+    },
+    "pool": {
+      "title": "Het Zwembad",
+      "subtitle": "Ontspanningsruimte in het hart van het Mas.",
+      "dimensions": "10m x 5m",
+      "depth": "1.10m - 2.20m",
+      "equipment": "Ligbedden, banken en schommel"
+    },
+    "night": {
+      "title": "De Nacht in het Mas",
+      "subtitle": "Nachtverlichting beschikbaar in het hele Mas.",
+      "interior": "Verlichte binnenruimtes",
+      "exterior": "Buitenverlichting",
+      "pool": "Verlicht zwembad"
+    },
+    "pizzaOven": {
+      "title": "Pizza Oven",
+      "subtitle": "De pizza oven staat tot uw beschikking.",
+      "availability": "24/7 beschikbaar",
+      "equipment": "Materiaal ter beschikking gesteld",
+      "capacity": "Tafels, banken en stoelen beschikbaar (40 personen)"
+    },
+    "outdoorSpaces": {
+      "title": "Buitenruimtes",
+      "subtitle": "Geniet van een uitzonderlijke omgeving waar de natuur zich in al zijn diversiteit ontvouwt en een echte toevluchtsoord biedt voor wilde dieren en flora.",
+      "biodiversity": "Biodiversiteit",
+      "nature": "Behouden natuur",
+      "peace": "Toevluchtsoord"
+    },
+    "source": {
+      "title": "De Bron van Mas d'Eylieux",
+      "subtitle": "Deze natuurlijke bron - gefilterd door de bergen - voedt onze vijvers.",
+      "natural": "Natuurlijke bron",
+      "gardens": "Vredige tuinen",
+      "shade": "Beschaduwde gebieden"
+    },
+    "stars": {
+      "title": "De Magie van de Sterren",
+      "subtitle": "Ver van elke lichtvervuiling onthult het firmament zijn mooiste geheimen.",
+      "perseids": {
+        "title": "Augustus-Perseïden",
+        "description": "Ervaar de magie van de mooiste meteorenregen van het jaar, met tot 100 meteoren per uur in een perfect donkere hemel"
+      },
+      "milkyWay": {
+        "title": "Melkweg",
+        "description": "Bewonder onze melkweg in al zijn pracht, met het blote oog zichtbaar dankzij de volledige afwezigheid van lichtvervuiling over meerdere kilometers"
+      },
+      "constellations": {
+        "title": "Sterrenbeelden",
+        "description": "Ontdek de sterrenbeelden tijdens onze zachte en ontspannende observatieavonden onder een onvergelijkbaar heldere hemel"
+      },
+      "bookButton": "Boek uw nacht onder de sterren",
+      "testimonial": {
+        "quote": "Een van de weinige plaatsen in Frankrijk waar de volledige afwezigheid van lichtvervuiling de observatie van de melkweg en vallende sterren onder uitzonderlijke omstandigheden mogelijk maakt.",
+        "author": "Claudine en Armand, Grote Vrienden van het Mas"
+      }
+    }
   },
   "informations": {
     "welcome": {

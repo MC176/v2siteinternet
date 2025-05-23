@@ -15,7 +15,8 @@
   "home": {
     "heroTitle": "Le Mas d'Eylieux",
     "heroSubtitle": "Un domaine d'exception en Ardèche méridionale",
-    "discoverButton": "Découvrir"
+    "discoverButton": "Nous découvrir",
+    "welcomeTitle": "Le Mas d'Eylieux vous accueille"
   },
   "common": {
     "bookNow": "Réserver",
@@ -35,19 +36,418 @@
   "gites": {
     "maisonette": {
       "title": "L'Exception du Mas : une Ode à la Sérénité",
-      "description": "Un duplex au charme fou, isolé du mas et proche de la piscine. Son architecture rappelle celle d'une maison de conte de fées, avec son salon à l'étage et sa chambre douillette en rez-de-chaussée. Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un nid douillet en hiver."
+      "subtitle": "Un duplex au charme fou, isolé du mas et proche de la piscine",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Un duplex au charme fou, isolé du mas et proche de la piscine. Son architecture rappelle celle d'une maison de conte de fées, avec son salon à l'étage et sa chambre douillette en rez-de-chaussée. Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un nid douillet en hiver.",
+      "introduction": {
+        "title": "Un duplex au charme fou",
+        "description": "Un duplex au charme fou, isolé du mas et proche de la piscine. Son architecture rappelle celle d'une maison de conte de fées, avec son salon à l'étage et sa chambre douillette en rez-de-chaussée. Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un nid douillet en hiver."
+      },
+      "gallery": {
+        "entrance": {
+          "title": "Entrée du gîte",
+          "description": "Lauriers roses"
+        },
+        "view": {
+          "title": "Gîte Maisonette",
+          "description": "Superficie de 59m²"
+        },
+        "terrace": {
+          "title": "Vue de la terrasse",
+          "description": "Le gîte donne sur cour intérieure"
+        },
+        "terraceView": {
+          "title": "La vue de la terrasse",
+          "description": "Verdure à perte de vue"
+        },
+        "kitchen": {
+          "title": "Espace cuisine",
+          "description": "Toute équipée"
+        },
+        "kitchenCorner": {
+          "title": "Coin cuisine",
+          "description": "Cuisine équipée"
+        },
+        "bedroomLilac": {
+          "title": "Chambre des Lilas",
+          "description": "Lit 2 places 160cm"
+        },
+        "bedroomLavender": {
+          "title": "Chambre de la Lavande",
+          "description": "Lit 2 places 140cm"
+        },
+        "bedroomView": {
+          "title": "Vue de Maisonette",
+          "description": "Depuis la chambre"
+        },
+        "livingRoom": {
+          "title": "Salon",
+          "description": "Mezzazine avec accès au lit"
+        },
+        "mezzanine": {
+          "title": "Mezzazzine",
+          "description": "Lit 1 place"
+        },
+        "pool": {
+          "title": "Piscine",
+          "description": "Profondeur : 1m10 - 2m20"
+        },
+        "poolNight": {
+          "title": "Piscine de nuit",
+          "description": "Eclairage nocturne disponible"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
     },
     "chateaunette": {
-      "title": "L'Histoire de Chateaunette",
-      "description": "Lorsque nos premiers hôtes découvrirent cette maison, ils la baptisèrent 'Chateaunette', car l'espace et les hauts plafonds leur rappelaient un petit château. Spacieux et lumineux, avec deux chambres, un salon et une mezzanine, il offre un véritable espace de vie où le confort moderne se mêle à l'authenticité du mas."
+      "title": "Chateaunette",
+      "subtitle": "Un gîte aux grands volumes",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Le gîte Châteaunette est le plus grand des hébergements du Mas. Doté de deux chambres, d'une mezzanine avec lit, et d'une grande cuisine équipée, il allie charme authentique et confort moderne. La terrasse, orientée Est, invite à des repas conviviaux avec vue sur la nature environnante.",
+      "introduction": {
+        "title": "Un gîte lumineux et spacieux",
+        "description": "Le gîte Châteaunette est le plus grand des hébergements du Mas. Doté de deux chambres, d'une mezzanine avec lit, et d'une grande cuisine équipée, il allie charme authentique et confort moderne. La terrasse, orientée Est, invite à des repas conviviaux avec vue sur la nature environnante."
+      },
+      "gallery": {
+        "entrance": {
+          "title": "Entrée du gîte",
+          "description": "Lauriers roses"
+        },
+        "view": {
+          "title": "Gîte Chateaunette",
+          "description": "Superficie de 59m²"
+        },
+        "terrace": {
+          "title": "Vue de la terrasse",
+          "description": "Le gîte donne sur cour intérieure"
+        },
+        "terraceView": {
+          "title": "La vue de la terrasse",
+          "description": "Verdure à perte de vue"
+        },
+        "kitchen": {
+          "title": "Espace cuisine",
+          "description": "Toute équipée"
+        },
+        "kitchenCorner": {
+          "title": "Coin cuisine",
+          "description": "Cuisine équipée"
+        },
+        "bedroomLilac": {
+          "title": "Chambre des Lilas",
+          "description": "Lit 2 places 160cm"
+        },
+        "bedroomLavender": {
+          "title": "Chambre de la Lavande",
+          "description": "Lit 2 places 140cm"
+        },
+        "bedroomView": {
+          "title": "Vue de Chateaunette",
+          "description": "Depuis la chambre"
+        },
+        "livingRoom": {
+          "title": "Salon",
+          "description": "Mezzazine avec accès au lit"
+        },
+        "mezzanine": {
+          "title": "Mezzazzine",
+          "description": "Lit 1 place"
+        },
+        "pool": {
+          "title": "Piscine",
+          "description": "Profondeur : 1m10 - 2m20"
+        },
+        "poolNight": {
+          "title": "Piscine de nuit",
+          "description": "Eclairage nocturne disponible"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
     },
     "coteSource": {
-      "title": "Au Rythme de l'Eau",
-      "description": "Surplombant les jardins, ce gîte possède une terrasse exceptionnelle avec des balustrades donnant sur la nature environnante. Il doit son nom à la source naturelle qui alimente ces terres depuis des siècles, irriguant les jardins et le bassin aux nénuphars. Une oasis de fraîcheur et de sérénité au cœur de l'Ardèche."
+      "title": "Côté Source",
+      "subtitle": "Une terrasse avec vue à couper le souffle",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Avec sa terrasse panoramique exceptionnelle, bordée de balustres, le gîte Côté Source surplombe les jardins du Mas et la source millénaire qui irrigue encore aujourd'hui nos bassins. Témoignage du passé, cette eau précieuse était essentielle aux générations qui nous ont précédés, façonnant la vie du domaine bien avant l'arrivée de l'eau courante. Depuis votre terrasse, vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars et saules pleureurs, un véritable tableau vivant évoluant au fil des saisons.",
+      "introduction": {
+        "title": "Un belvédère ouvert sur la nature",
+        "description": "Avec sa terrasse panoramique exceptionnelle, bordée de balustres, le gîte Côté Source surplombe les jardins du Mas et la source millénaire qui irrigue encore aujourd'hui nos bassins. Témoignage du passé, cette eau précieuse était essentielle aux générations qui nous ont précédés, façonnant la vie du domaine bien avant l'arrivée de l'eau courante. Depuis votre terrasse, vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars et saules pleureurs, un véritable tableau vivant évoluant au fil des saisons."
+      },
+      "gallery": {
+        "terrace": {
+          "title": "Vue de la terrasse",
+          "description": "Un coucher de soleil lors du dîner"
+        },
+        "terraceCharm": {
+          "title": "Le charme de la terrasse",
+          "description": "Superficie de 61 m²"
+        },
+        "nature": {
+          "title": "Exposition pleine nature",
+          "description": "Votre vue chaque jour"
+        },
+        "viewpoint": {
+          "title": "Un autre point de vue",
+          "description": "Le seul vis-à-vis est avec la nature"
+        },
+        "livingRoom": {
+          "title": "Espace salon",
+          "description": "Décoration sobre et moderne"
+        },
+        "bathroom": {
+          "title": "Salle de bain",
+          "description": "Douche italienne"
+        },
+        "bedroomMagnolia": {
+          "title": "Chambre Magniolia",
+          "description": "Lit 2 places 140 cm"
+        },
+        "bedroomRosemary": {
+          "title": "Chambre Romarin",
+          "description": "Lit 2 places 160 cm"
+        },
+        "kitchen": {
+          "title": "Cuisine",
+          "description": "Aménagement très lumineux"
+        },
+        "kitchenView": {
+          "title": "Depuis la cuisine",
+          "description": "Vue panoramique de notre Domaine"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
+    },
+    "list": {
+      "title": "Nos gîtes d'exception",
+      "subtitle": "Découvrez nos gîtes de charme en Ardèche, où authenticité et modernité se rencontrent pour des séjours inoubliables.",
+      "pricePerNight": "/nuit",
+      "seeMore": "En savoir plus",
+      "discoverPrivatisation": "Découvrez nos offres de privatisation",
+      "features": {
+        "terrace": "Grande terrasse panoramique de 60m²",
+        "view": "Vue sur le domaine",
+        "spaces": "Grands espaces",
+        "porch": "Porche en pierre, entrée plein de charme",
+        "authentic": "Attrait authentique et confort moderne",
+        "panorama": "Vue panoramique sur la nature environnante",
+        "brightness": "Luminosité exceptionnelle",
+        "height": "Gîte en hauteur",
+        "vegetation": "Végétation luxuriante et apaisante",
+        "gardenView": "Vue sur les jardins intérieurs",
+        "naturalLight": "Lumière naturelle",
+        "shadedEsplanade": "Esplanade ombragée",
+        "warmDuplex": "Dupleix chaleureux",
+        "atypicalCharm": "Charme atypique",
+        "spacious": "Spacieux et lumineux",
+        "highCeiling": "Grande hauteur sous plafond",
+        "convivial": "Esprit convivial et familial"
+      },
+      "privatisation": {
+        "receptions": {
+          "title": "Réceptions",
+          "description": "Anniversaires et célébrations extraordinaires dans un cadre convivial et naturel."
+        },
+        "seminars": {
+          "title": "Séminaires",
+          "description": "Espaces de réunion, activités team-building et hébergement tout confort."
+        },
+        "events": {
+          "title": "Événements festifs",
+          "description": "Enterrements de vie de célibataire dans un cadre privé et raffiné."
+        },
+        "family": {
+          "title": "Réunions familiales",
+          "description": "Cousinades et retrouvailles dans un environnement spacieux et convivial."
+        }
+      },
+      "location": "Ardèche"
+    },
+    "noisettiers": {
+      "title": "Noisetiers",
+      "subtitle": "Un gîte lumineux face aux Noisetiers",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Le gîte Noisetier bénéficie d'un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. Accessible par un porche en pierre plein de caractère, il mêle subtilement tradition et modernité. Son intérieur, décoré dans des tons rappelant la teinte dorée des noisettes, procure une atmosphère douce et apaisante. Ce lieu, où l'on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l'esprit du Mas : un havre de paix où nature et confort se rejoignent.",
+      "introduction": {
+        "title": "L'Orée du Noisetier",
+        "description": "Ce gîte doit son nom aux noisetiers qui l'entourent. Accessible par un petit porche au cachet indéniable, il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude, parfait pour des vacances au soleil dans le Sud de l'Ardèche."
+      },
+      "gallery": {
+        "entrance": {
+          "title": "Entrée du gîte",
+          "description": "Entrée sous le porche en pierre"
+        },
+        "terrace": {
+          "title": "Vue depuis le porche",
+          "description": "Idéal pour un petit déjeuner proche de la piscine"
+        },
+        "livingRoom": {
+          "title": "Salon",
+          "description": "Pièce principale avec cheminée décorative"
+        },
+        "kitchen": {
+          "title": "Cuisine",
+          "description": "Cuisine moderne et équipée"
+        },
+        "bedroom": {
+          "title": "Chambre",
+          "description": "Sol en travertin - fraicheur lors des nuits d'été"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
+    },
+    "figuiers": {
+      "title": "Figuiers",
+      "subtitle": "Une oasis perchée avec vue panoramique",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Situé au point le plus haut du domaine, le gîte Figuier séduit par sa vue spectaculaire et son intérieur baigné de lumière. Grâce à de larges baies vitrées, le salon offre un panorama sur la nature environnante, plongeant les visiteurs dans une immersion totale avec les paysages ardéchois. Sa salle de bain rénovée, sa cuisine moderne et équipée, ainsi que sa spacieuse terrasse bordée de balustres font de ce gîte un lieu d'exception. Parfait pour des moments de détente, on peut y déguster des figues et profiter du ciel étoilé de l'Ardèche.",
+      "introduction": {
+        "title": "Le Gîte du Soleil",
+        "description": "Perché en hauteur, Figuiers est le gîte qui offre les plus belles vues du domaine. Son salon baigne dans la lumière avec une vision panoramique sur la végétation luxuriante. Sa salle de bain et sa cuisine moderne récemment refaites en font un parfait équilibre entre confort et authenticité."
+      },
+      "gallery": {
+        "view": {
+          "title": "Vue depuis le gîte",
+          "description": "Une véritable prise de hauteur"
+        },
+        "livingRoom": {
+          "title": "Salon",
+          "description": "Pour un bain de soleil"
+        },
+        "kitchen": {
+          "title": "Cuisine",
+          "description": "Moderne et Design"
+        },
+        "bathroom": {
+          "title": "Salle de bain",
+          "description": "Douche à l'italienne moderne"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
+    },
+    "citronniers": {
+      "title": "Citronniers",
+      "subtitle": "Un havre de fraîcheur et de verdure",
+      "heroImageAlt": "Paysage méditerranéen",
+      "description": "Donnant directement sur la cour fleurie du Mas, le gîte Citronnier est entouré de roses trémières et de citronniers dont les fruits parfumés évoquent la douceur méditerranéenne. Son intérieur lumineux, où le soleil pénètre sans jamais surchauffer, garantit une fraîcheur agréable même en plein été. Tempéré, même en été, ce gîte offre un confort naturel à ses occupants. Chaque matin, le spectacle des rayons dorés illuminant la cour, mêlé au parfum des fleurs, fait de cet endroit un véritable havre de paix.",
+      "introduction": {
+        "title": "L'Escapade acidulée",
+        "description": "Ce gîte doit son nom aux citronniers qui bordent sa cour, offrant chaque année des fruits parfumés que nous avons plaisir à partager. Entouré de fleurs et baigné de lumière, il est une véritable bulle de bien-être pour se reconnecter à la nature."
+      },
+      "gallery": {
+        "livingRoom": {
+          "title": "Salon du gîte",
+          "description": "Très lumineux, bain de soleil"
+        },
+        "view": {
+          "title": "Gîte Citronniers",
+          "description": "Vue sur la cour intérieure fleurie"
+        },
+        "bedroom": {
+          "title": "Chambre",
+          "description": "Lit 140cm avec nombreux rangements"
+        },
+        "terrace": {
+          "title": "Espace fraicheur",
+          "description": "Possibilité de se reposer à l'extérieur"
+        },
+        "bathroom": {
+          "title": "Salle de bain",
+          "description": "Douche italienne"
+        },
+        "courtyard": {
+          "title": "Verdure cour intérieure",
+          "description": "Roses tremières parmi les plantes"
+        },
+        "nature": {
+          "title": "Nature et microhabitat",
+          "description": "A quelques mètres du gîte"
+        }
+      },
+      "capacity": "Nombre de personnes",
+      "surface": "Superficie en mètres carrés"
     }
   },
   "presentation": {
-    "history": "Construit en 1158, Le Mas d'Eylieux est un lieu chargé d'histoire. Il abrite les vestiges d'une petite cité gallo-romaine et fut au XIIIe siècle une halte sur la route empruntée par le roi Louis IX. En route vers la cathédrale de Viviers, ce dernier aurait traversé la région, laissant son empreinte sur ce domaine empreint d'authenticité. Aujourd'hui, Le Mas d'Eylieux continue de charmer par son charme préservé et son atmosphère unique, témoins d'un riche patrimoine historique."
+    "hero": {
+      "title": "Un havre de paix",
+      "subtitle": "Calme, sérénité, vacances."
+    },
+    "welcome": {
+      "title": "Bienvenue au Mas d'Eylieux",
+      "description": "Découvrez nos 6 gîtes d'exception au sein d'un Mas rénové en pierres du XIIe siècle, au cœur d'un domaine de 40 hectares, en Ardèche méridionale."
+    },
+    "farniente": {
+      "title": "Le Farniente",
+      "subtitle": "Ardéchois"
+    },
+    "history": "Construit en 1158, le Mas d'Eylieux est un lieu chargé d'histoire. Il abrite des vestiges d'une petite cité gallo-romaine et fut, au XIIIe siècle, une halte sur la route empruntée par le roi Louis IX. En chemin vers la cathédrale de Viviers, ce dernier aurait traversé la région, marquant de son passage ce domaine empreint d'authenticité. Aujourd'hui encore, le Mas d'Eylieux séduit par son charme préservé et son atmosphère unique, témoins d'un riche héritage historique.",
+    "receptions": {
+      "title": "Privatisation du domaine",
+      "subtitle": "Pour vos réceptions & fêtes.",
+      "description": "Un cadre exceptionnel pour vos événements en famille ou entre amis.",
+      "contactButton": "Nous contacter"
+    },
+    "pool": {
+      "title": "La piscine",
+      "subtitle": "Espace de détente au coeur du Mas.",
+      "dimensions": "10m x 5m",
+      "depth": "1.10m - 2.20m",
+      "equipment": "Transats, bancs et balancelle"
+    },
+    "night": {
+      "title": "La nuit au Mas",
+      "subtitle": "Éclairage nocturne disponible dans l'ensemble du Mas.",
+      "interior": "Espaces intérieurs lumineux",
+      "exterior": "Lumières extérieures",
+      "pool": "Piscine éclairée"
+    },
+    "pizzaOven": {
+      "title": "Four à pizza",
+      "subtitle": "Le four à pizza est à votre disposition.",
+      "availability": "Disponible 24/7",
+      "equipment": "Matériel fourni",
+      "capacity": "Tables, bancs et chaises disponibles (40 personnes)"
+    },
+    "outdoorSpaces": {
+      "title": "Espaces extérieurs",
+      "subtitle": "Profitez d'un cadre exceptionnel où la nature s'épanouit dans toute sa diversité, offrant un véritable havre de paix pour la faune et la flore.",
+      "biodiversity": "Biodiversité",
+      "nature": "Nature préservée",
+      "peace": "Havre de paix"
+    },
+    "source": {
+      "title": "La Source du Mas d'Eylieux",
+      "subtitle": "Cette source naturelle - filtrée par les montagnes - alimente nos bassins.",
+      "natural": "Source naturelle",
+      "gardens": "Jardins paisibles",
+      "shade": "Espaces ombragés"
+    },
+    "stars": {
+      "title": "La magie des étoiles",
+      "subtitle": "Loin de toute pollution lumineuse, le firmament révèle ses plus beaux secrets.",
+      "perseids": {
+        "title": "Perséides d'Août",
+        "description": "Vivez la magie de la plus belle pluie d'étoiles filantes de l'année, avec jusqu'à 100 météores par heure dans un ciel parfaitement noir"
+      },
+      "milkyWay": {
+        "title": "Voie Lactée",
+        "description": "Admirez notre galaxie dans toute sa splendeur, visible à l'œil nu grâce à l'absence totale de pollution lumineuse sur plusieurs kilomètres"
+      },
+      "constellations": {
+        "title": "Constellations",
+        "description": "Découvrez les constellations lors de nos soirées d'observation douces et reposantes sous un ciel d'une luminosité inégalée"
+      },
+      "bookButton": "Réservez votre nuit sous les étoiles",
+      "testimonial": {
+        "quote": "Un des rares endroits en France où l'absence totale de pollution lumineuse permet d'observer la Voie Lactée et les étoiles filantes dans des conditions exceptionnelles.",
+        "author": "Claudine et Armand, Grands Amis du Mas"
+      }
+    }
   },
   "informations": {
     "welcome": {

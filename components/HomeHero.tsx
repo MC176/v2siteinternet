@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Instagram, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 // Lazy load YouTube component
 const YouTube = lazy(() => import('react-youtube'));
@@ -81,9 +82,9 @@ const InstagramGallery = () => {
 };
 
 const HomeHero = () => {
-  const [isClient, setIsClient] = useState(true); // Immediately set to true
-  const [isVideoVisible, setIsVideoVisible] = useState(true); // Immediately set to true
-
+  const [isClient, setIsClient] = useState(true);
+  const [isVideoVisible, setIsVideoVisible] = useState(true);
+  const t = useTranslations('home');
 
   useEffect(() => {
     setIsClient(true);
@@ -131,7 +132,7 @@ const HomeHero = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50 z-10" />
 
-        <div className="relative z-20 h-full flex items-center justify-center text-center">
+        <div className="relative z-20 flex items-center justify-center h-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,16 +140,16 @@ const HomeHero = () => {
             className="text-white px-4"
           >
             <h1 className="text-4xl md:text-7xl font-bold mb-6">
-              Le Mas d&apos;Eylieux
+              {t('heroTitle')}
             </h1>
             <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto font-light">
-              Un domaine d&apos;exception au Sud de l&apos;Ardèche
+              {t('heroSubtitle')}
             </p>
             <Link
               href="/presentation"
               className="inline-flex items-center px-8 py-3 md:px-12 md:py-4 bg-white text-black rounded-full transition-colors duration-300 hover:bg-black hover:text-white group"
             >
-              <span className="relative z-10">Nous découvrir</span>
+              <span className="relative z-10">{t('discoverButton')}</span>
               <ArrowRight className="ml-2 w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>
@@ -158,7 +159,7 @@ const HomeHero = () => {
       <section className="bg-gray-50 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between mb-6 md:mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Le Mas d&apos;Eylieux vous accueille</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t('welcomeTitle')}</h2>
           </div>
           <InstagramGallery />
         </div>

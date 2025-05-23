@@ -14,28 +14,28 @@ function App() {
   const climateData = [
     {
       image: "/images/gites/noisettiers/porche.avif",
-      title: "Entrée du gîte",
-      description: "Entrée sous le porche en pierre"
+      title: t('gallery.entrance.title'),
+      description: t('gallery.entrance.description')
     },
     {
       image: "/images/gites/noisettiers/terrasse.avif",
-      title: "Vue depuis le porche",
-      description: "Idéal pour un petit déjeuner proche de la piscine"
-    },    
+      title: t('gallery.terrace.title'),
+      description: t('gallery.terrace.description')
+    },
     {
       image: "/images/gites/noisettiers/salon.avif",
-      title: "Salon",
-      description: "Pièce principale avec cheminée décorative"
-    },    
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
+    },
     {
       image: "/images/gites/noisettiers/cuisine.avif",
-      title: "Cuisine",
-      description: "Cuisine moderne et équipée"
+      title: t('gallery.kitchen.title'),
+      description: t('gallery.kitchen.description')
     },
     {
       image: "/images/gites/noisettiers/chambre2.avif",
-      title: "Chambre",
-      description: "Sol en travertin - fraicheur lors des nuits d'été"
+      title: t('gallery.bedroom.title'),
+      description: t('gallery.bedroom.description')
     },
   ];
 
@@ -98,9 +98,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Noisetiers
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un gîte lumineux face aux Noisetiers </p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -110,7 +110,7 @@ function App() {
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src="/images/gites/noisettiers/ping.avif"
-              alt="Paysage méditerranéen"
+              alt={t('heroImageAlt')}
               fill
               style={{ objectFit: 'cover' }}
               className="transition-transform duration-700 group-hover:scale-105"
@@ -121,90 +121,85 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un ballet de lumière parmi les Noisetiers
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-              Le gîte Noisetier bénéficie d&apos;un charme naturel renforcé par son emplacement privilégié, offrant une vue imprenable sur les couchers de soleil estivaux. 
-              Accessible par un porche en pierre plein de caractère, il mêle subtilement tradition et modernité. Son intérieur, décoré dans des tons rappelant la teinte dorée des noisettes, 
-              procure une atmosphère douce et apaisante. Ce lieu, 
-              où l&apos;on retrouve parfois des truffes cachées sous les arbres, incarne pleinement l&apos;esprit du Mas : un havre de paix où nature et confort se rejoignent.
+                {t('description')}
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-8">
-            <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
+              <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">2</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
         </div>
 
-      {/* Introduction Section */}
-      <section className="relative py-32 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              L&apos;Orée du Noisetier
-            </h2>
-            <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Ce gîte doit son nom aux noisetiers qui l&apos;entourent. Accessible par un petit porche au cachet indéniable, 
-              il offre une vue imprenable sur les couchers de soleil ardéchois. Un lieu de charme et de quiétude,
-              parfait pour des vacances au soleil dans le Sud de l&apos;Ardèche.
-            </p>
-            <div className="h-px w-24 bg-stone-300 mx-auto"></div>
+        {/* Introduction Section */}
+        <section className="relative py-32 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
+                {t('introduction.title')}
+              </h2>
+              <p className="text-lg leading-relaxed text-stone-600 mb-12">
+                {t('introduction.description')}
+              </p>
+              <div className="h-px w-24 bg-stone-300 mx-auto"></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Photo Gallery Section */}
-      <div className="mt-16 mb-24 relative overflow-hidden">
-        <div className="flex gap-8">
-          {visibleImages.map((item, index) => (
-            <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={800}
-                height={500}
-                style={{ objectFit: 'cover' }}
-                className="h-[500px] transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
-                <div className="text-white">
-                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm opacity-90">{item.description}</p>
+        {/* Photo Gallery Section */}
+        <div className="mt-16 mb-24 relative overflow-hidden">
+          <div className="flex gap-8">
+            {visibleImages.map((item, index) => (
+              <div key={index} className="relative overflow-hidden rounded-xl group w-[calc(33.333%-1.33rem)] flex-shrink-0 shadow-lg">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={800}
+                  height={500}
+                  style={{ objectFit: 'cover' }}
+                  className="h-[500px] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+                  <div className="text-white">
+                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm opacity-90">{item.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <button 
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-          aria-label="Précédent"
-        >
-          <ChevronLeft className="w-6 h-6 text-gray-800" />
-        </button>
-        <button 
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
-          aria-label="Suivant"
-        >
-          <ChevronRight className="w-6 h-6 text-gray-800" />
-        </button>
-      </div>
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            aria-label="Précédent"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-800" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+            aria-label="Suivant"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-800" />
+          </button>
+        </div>
 
         <div className="bg-white py-6 border-b border-gray-100">
           <div className="max-w-7xl mx-auto px-4">

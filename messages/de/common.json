@@ -15,7 +15,8 @@
   "home": {
     "heroTitle": "Le Mas d'Eylieux",
     "heroSubtitle": "Ein außergewöhnliches Anwesen in der südlichen Ardèche",
-    "discoverButton": "Entdecken"
+    "discoverButton": "Entdecken Sie uns",
+    "welcomeTitle": "Willkommen im Mas d'Eylieux"
   },
   "common": {
     "bookNow": "Jetzt buchen",
@@ -47,7 +48,81 @@
     }
   },
   "presentation": {
-    "history": "Erbaut im Jahr 1158, ist Le Mas d'Eylieux ein Ort voller Geschichte. Es beherbergt die Überreste einer kleinen gallo-römischen Stadt und war im 13. Jahrhundert eine Station auf der Route, die König Ludwig IX. nutzte. Auf dem Weg zur Kathedrale von Viviers soll dieser durch die Region gereist sein und seine Spuren in diesem authentischen Anwesen hinterlassen haben. Heute bezaubert Le Mas d'Eylieux weiterhin mit seinem erhaltenen Charme und seiner einzigartigen Atmosphäre, Zeugen eines reichen historischen Erbes."
+    "hero": {
+      "title": "Eine Oase der Ruhe",
+      "subtitle": "Ruhe, Gelassenheit, Urlaub."
+    },
+    "welcome": {
+      "title": "Willkommen im Mas d'Eylieux",
+      "description": "Entdecken Sie unsere 6 außergewöhnlichen Ferienhäuser in einem aus dem 12. Jahrhundert stammenden Steinhaus, im Herzen eines 40 Hektar großen Anwesens in der südlichen Ardèche."
+    },
+    "farniente": {
+      "title": "Die Ardèche",
+      "subtitle": "Dolce Far Niente"
+    },
+    "history": "Erbaut im Jahr 1158, ist Le Mas d'Eylieux ein Ort voller Geschichte. Es beherbergt die Überreste einer kleinen gallo-römischen Stadt und war im 13. Jahrhundert eine Station auf der Route, die König Ludwig IX. nutzte. Auf dem Weg zur Kathedrale von Viviers soll dieser durch die Region gereist sein und seine Spuren in diesem authentischen Anwesen hinterlassen haben. Heute bezaubert Le Mas d'Eylieux weiterhin mit seinem erhaltenen Charme und seiner einzigartigen Atmosphäre, Zeugen eines reichen historischen Erbes.",
+    "receptions": {
+      "title": "Anwesen-Privatisierung",
+      "subtitle": "Für Ihre Empfänge & Feiern.",
+      "description": "Ein außergewöhnlicher Rahmen für Ihre Familien- oder Freundesveranstaltungen.",
+      "contactButton": "Kontaktieren Sie uns"
+    },
+    "pool": {
+      "title": "Der Swimmingpool",
+      "subtitle": "Erholungsraum im Herzen des Mas.",
+      "dimensions": "10m x 5m",
+      "depth": "1.10m - 2.20m",
+      "equipment": "Liegen, Bänke und Schaukel"
+    },
+    "night": {
+      "title": "Die Nacht im Mas",
+      "subtitle": "Nachtbeleuchtung im gesamten Mas verfügbar.",
+      "interior": "Helle Innenräume",
+      "exterior": "Außenbeleuchtung",
+      "pool": "Beleuchteter Pool"
+    },
+    "pizzaOven": {
+      "title": "Pizzaofen",
+      "subtitle": "Der Pizzaofen steht Ihnen zur Verfügung.",
+      "availability": "24/7 verfügbar",
+      "equipment": "Ausrüstung gestellt",
+      "capacity": "Tische, Bänke und Stühle verfügbar (40 Personen)"
+    },
+    "outdoorSpaces": {
+      "title": "Außenbereiche",
+      "subtitle": "Genießen Sie eine außergewöhnliche Umgebung, in der sich die Natur in ihrer ganzen Vielfalt entfaltet und einen echten Zufluchtsort für Wildtiere und Flora bietet.",
+      "biodiversity": "Biodiversität",
+      "nature": "Erhaltene Natur",
+      "peace": "Zufluchtsort"
+    },
+    "source": {
+      "title": "Die Quelle des Mas d'Eylieux",
+      "subtitle": "Diese natürliche Quelle - gefiltert durch die Berge - speist unsere Teiche.",
+      "natural": "Natürliche Quelle",
+      "gardens": "Friedliche Gärten",
+      "shade": "Beschattete Bereiche"
+    },
+    "stars": {
+      "title": "Die Magie der Sterne",
+      "subtitle": "Fernab von jeglicher Lichtverschmutzung offenbart das Firmament seine schönsten Geheimnisse.",
+      "perseids": {
+        "title": "August-Perseiden",
+        "description": "Erleben Sie die Magie des schönsten Meteoritenschauers des Jahres, mit bis zu 100 Meteoren pro Stunde in einem perfekt dunklen Himmel"
+      },
+      "milkyWay": {
+        "title": "Milchstraße",
+        "description": "Bewundern Sie unsere Galaxie in ihrer ganzen Pracht, mit bloßem Auge sichtbar dank der völligen Abwesenheit von Lichtverschmutzung über mehrere Kilometer"
+      },
+      "constellations": {
+        "title": "Sternbilder",
+        "description": "Entdecken Sie die Sternbilder während unserer sanften und entspannenden Beobachtungsabende unter einem unvergleichlich hellen Himmel"
+      },
+      "bookButton": "Buchen Sie Ihre Nacht unter den Sternen",
+      "testimonial": {
+        "quote": "Einer der wenigen Orte in Frankreich, an denen die völlige Abwesenheit von Lichtverschmutzung die Beobachtung der Milchstraße und der Sternschnuppen unter außergewöhnlichen Bedingungen ermöglicht.",
+        "author": "Claudine und Armand, Große Freunde des Mas"
+      }
+    }
   },
   "informations": {
     "welcome": {

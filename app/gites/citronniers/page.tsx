@@ -13,39 +13,39 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/citronniers/interieur.avif",
-      title: "Salon du gîte",
-      description: "Très lumineux, bain de soleil"
+      image: "/images/gites/citronniers/salon.avif",
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
     },
     {
-      image: "/images/gites/citronniers/salon2.avif",
-      title: "Gîte Citronniers",
-      description: "Vue sur la cour intérieure fleurie"
-    },    
+      image: "/images/gites/citronniers/vue.avif",
+      title: t('gallery.view.title'),
+      description: t('gallery.view.description')
+    },
     {
       image: "/images/gites/citronniers/chambre.avif",
-      title: "Chambre",
-      description: "Lit 140cm avec nombreux rangements"
-    },    
+      title: t('gallery.bedroom.title'),
+      description: t('gallery.bedroom.description')
+    },
     {
       image: "/images/gites/citronniers/terrasse.avif",
-      title: "Espace fraicheur",
-      description: "Possibilité de se reposer à l'extérieur"
+      title: t('gallery.terrace.title'),
+      description: t('gallery.terrace.description')
     },
     {
       image: "/images/gites/citronniers/sdb.avif",
-      title: "Salle de bain",
-      description: "Douche italienne"
+      title: t('gallery.bathroom.title'),
+      description: t('gallery.bathroom.description')
     },
     {
       image: "/images/gites/citronniers/cour.avif",
-      title: "Verdure cour intérieure",
-      description: "Roses tremières parmi les plantes"
+      title: t('gallery.courtyard.title'),
+      description: t('gallery.courtyard.description')
     },
     {
-      image: "/images/gites/citronniers/olivie.avif",
-      title: "Nature et microhabitat",
-      description: "A quelques mètres du gîte"
+      image: "/images/gites/citronniers/nature.avif",
+      title: t('gallery.nature.title'),
+      description: t('gallery.nature.description')
     }
   ];
 
@@ -99,7 +99,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/citronniers/premiersalon.png")',
+            backgroundImage: 'url("/images/gites/citronniers/vue.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -108,9 +108,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Citronniers
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un havre de fraîcheur et de verdure</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -119,8 +119,8 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/images/gites/citronniers/devant.avif"
-              alt="Paysage méditerranéen"
+              src="/images/gites/citronniers/vue.avif"
+              alt={t('heroImageAlt')}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -131,13 +131,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un grand zeste d&apos;Ardèche
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Donnant directement sur la cour fleurie du Mas, le gîte Citronnier est entouré de roses trémières et de citronniers dont les fruits parfumés
-                 évoquent la douceur méditerranéenne. Son intérieur lumineux, où le soleil pénètre sans jamais surchauffer,
-                  garantit une fraîcheur agréable même en plein été. Tempéré, même en été, ce gîte offre un confort naturel à ses occupants.
-                   Chaque matin, le spectacle des rayons dorés illuminant la cour, mêlé au parfum des fleurs, fait de cet endroit un véritable havre de paix.
+                {t('description')}
               </p>
             </div>
 
@@ -145,16 +142,16 @@ function App() {
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">3</div>
+                  <div className="text-4xl font-light text-blue-900">2</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">40</div>
+                  <div className="text-4xl font-light text-blue-900">35</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
@@ -165,12 +162,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                L&apos;Escapade acidulée
+                {t('introduction.title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Ce gîte doit son nom aux citronniers qui bordent sa cour, 
-                offrant chaque année des fruits parfumés que nous avons plaisir à partager. Entouré de fleurs et baigné de lumière, 
-                il est une véritable bulle de bien-être pour se reconnecter à la nature.
+                {t('introduction.description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>

@@ -15,7 +15,8 @@
   "home": {
     "heroTitle": "Le Mas d'Eylieux",
     "heroSubtitle": "An exceptional estate in Southern Ardèche",
-    "discoverButton": "Discover"
+    "discoverButton": "Discover Us",
+    "welcomeTitle": "Welcome to Le Mas d'Eylieux"
   },
   "common": {
     "bookNow": "Book Now",
@@ -47,7 +48,81 @@
     }
   },
   "presentation": {
-    "history": "Built in 1158, Le Mas d'Eylieux is a place full of history. It houses the remains of a small Gallo-Roman city and was a stop on the route used by King Louis IX in the 13th century. On his way to Viviers Cathedral, the latter would have traveled through the region, leaving his mark on this domain full of authenticity. Today, Le Mas d'Eylieux continues to charm with its preserved charm and unique atmosphere, witnesses to a rich historical heritage."
+    "hero": {
+      "title": "A Haven of Peace",
+      "subtitle": "Calm, serenity, vacation."
+    },
+    "welcome": {
+      "title": "Welcome to Le Mas d'Eylieux",
+      "description": "Discover our 6 exceptional cottages within a 12th-century stone Mas, in the heart of a 40-hectare estate in Southern Ardèche."
+    },
+    "farniente": {
+      "title": "The Ardèche",
+      "subtitle": "Dolce Far Niente"
+    },
+    "history": "Built in 1158, Le Mas d'Eylieux is a place full of history. It houses the remains of a small Gallo-Roman city and was a stop on the route used by King Louis IX in the 13th century. On his way to Viviers Cathedral, the latter would have traveled through the region, leaving his mark on this domain full of authenticity. Today, Le Mas d'Eylieux continues to charm with its preserved charm and unique atmosphere, witnesses to a rich historical heritage.",
+    "receptions": {
+      "title": "Domain Privatization",
+      "subtitle": "For your receptions & parties.",
+      "description": "An exceptional setting for your family or friends events.",
+      "contactButton": "Contact Us"
+    },
+    "pool": {
+      "title": "The Swimming Pool",
+      "subtitle": "Relaxation space in the heart of the Mas.",
+      "dimensions": "10m x 5m",
+      "depth": "1.10m - 2.20m",
+      "equipment": "Deck chairs, benches and swing"
+    },
+    "night": {
+      "title": "Night at the Mas",
+      "subtitle": "Night lighting available throughout the Mas.",
+      "interior": "Bright interior spaces",
+      "exterior": "Exterior lights",
+      "pool": "Lighted pool"
+    },
+    "pizzaOven": {
+      "title": "Pizza Oven",
+      "subtitle": "The pizza oven is at your disposal.",
+      "availability": "Available 24/7",
+      "equipment": "Equipment provided",
+      "capacity": "Tables, benches and chairs available (40 people)"
+    },
+    "outdoorSpaces": {
+      "title": "Outdoor Spaces",
+      "subtitle": "Enjoy an exceptional setting where nature flourishes in all its diversity, offering a true haven of peace for wildlife and flora.",
+      "biodiversity": "Biodiversity",
+      "nature": "Preserved nature",
+      "peace": "Haven of peace"
+    },
+    "source": {
+      "title": "The Source of Le Mas d'Eylieux",
+      "subtitle": "This natural spring - filtered by the mountains - feeds our ponds.",
+      "natural": "Natural spring",
+      "gardens": "Peaceful gardens",
+      "shade": "Shaded spaces"
+    },
+    "stars": {
+      "title": "The Magic of Stars",
+      "subtitle": "Far from any light pollution, the firmament reveals its most beautiful secrets.",
+      "perseids": {
+        "title": "August Perseids",
+        "description": "Experience the magic of the most beautiful meteor shower of the year, with up to 100 meteors per hour in a perfectly dark sky"
+      },
+      "milkyWay": {
+        "title": "Milky Way",
+        "description": "Admire our galaxy in all its splendor, visible to the naked eye thanks to the total absence of light pollution for several kilometers"
+      },
+      "constellations": {
+        "title": "Constellations",
+        "description": "Discover the constellations during our gentle and relaxing observation evenings under an unmatched sky brightness"
+      },
+      "bookButton": "Book your night under the stars",
+      "testimonial": {
+        "quote": "One of the few places in France where the total absence of light pollution allows observing the Milky Way and shooting stars in exceptional conditions.",
+        "author": "Claudine and Armand, Great Friends of the Mas"
+      }
+    }
   },
   "informations": {
     "welcome": {

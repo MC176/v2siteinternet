@@ -65,7 +65,7 @@ function App() {
     <div className="relative">
       {/* Hero Section */}
       <div className="relative h-screen">
-      <div 
+        <div 
           className="hero-image absolute inset-0 bg-cover bg-center scale-110"
           style={{
             backgroundImage: 'url("/images/gites/noisettiers/piscinevue.avif")',
@@ -76,25 +76,24 @@ function App() {
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in">
-            Un havre de paix
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-center max-w-3xl font-light tracking-wide">
-            Calme, sérénité, vacances.
+            {t('hero.subtitle')}
           </p>
           <ChevronDown className="absolute bottom-8 animate-bounce w-8 h-8 cursor-pointer hover:scale-110 transition-transform" />
         </div>
       </div>
 
       {/* Introduction Section */}
-      <section className=" relative py-32 bg-white">
+      <section className="relative py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-              Bienvenue au Mas d&apos;Eylieux
+              {t('welcome.title')}
             </h2>
             <p className="text-lg leading-relaxed text-stone-600 mb-12">
-              Découvrez nos 6 gîtes d&apos;exception au sein d&apos;un Mas rénové en pierres du XIIe siècle, <br/>
-              au cœur d&apos;un domaine de 40 hectares, en Ardèche méridionale.
+              {t('welcome.description')}
             </p>
             <div className="h-px w-24 bg-stone-300 mx-auto"></div>
           </div>
@@ -102,15 +101,14 @@ function App() {
       </section>
 
       {/* Combined Historical and Farniente Section */}
-      <section className="relative py-20 bg-stone-100">
+      <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-poppins font-light text-stone-800 tracking-[0.1em] mb-2">
-               
+                {t('farniente.title')}
               </h2>
-              <span className="text-2xl md:text-3xl text-stone-600 tracking-wide"> Le Farniente </span>
-              <span className="text-2xl md:text-3xl text-stone-600 italic tracking-wide"> Ardéchois</span>
+              <span className="text-2xl md:text-3xl text-stone-600 tracking-wide"> {t('farniente.subtitle')} </span>
               <div className="w-24 h-1 bg-stone-300 mx-auto mt-8"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -151,10 +149,10 @@ function App() {
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Privatisation du domaine
+          {t('receptions.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Pour vos réceptions & fêtes.
+          {t('receptions.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -174,14 +172,14 @@ function App() {
         ))}
       </div>
       <div className="text-center">
-        <p className="text-lg text-stone-600 mb-8">Un cadre exceptionnel pour vos événements en famille ou entre amis.</p>
+        <p className="text-lg text-stone-600 mb-8">{t('receptions.description')}</p>
         <a
           href="/contact"
           className="group inline-flex items-center px-12 py-4 bg-white border border-black rounded-full relative overflow-hidden transition-colors duration-300"
         >
           <span className="relative z-10 font-medium group-hover:text-white transition-colors duration-300">
             <Phone className="inline-block w-5 h-5 mr-2" />
-               Nous contacter
+            {t('receptions.contactButton')}
           </span>
           <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:text-white transition-colors duration-300" />
           <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -197,10 +195,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          La piscine
+          {t('pool.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Espace de détente au coeur du Mas.
+          {t('pool.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -267,21 +265,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Ruler className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">10m x 5m</span>
+          <span className="text-stone-600">{t('pool.dimensions')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Waves className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">1.10m - 2.20m</span>
+          <span className="text-stone-600">{t('pool.depth')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Heart className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Transats, bancs et balancelle</span>
+          <span className="text-stone-600">{t('pool.equipment')}</span>
         </div>
       </div>
     </div>
@@ -295,10 +293,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          La nuit au Mas
+          {t('night.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Éclairage nocturne disponible dans l&apos;ensemble du Mas.
+          {t('night.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -365,21 +363,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Clock className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Espaces intérieurs lumineux</span>
+          <span className="text-stone-600">{t('night.interior')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Waves className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Lumières extérieures</span>
+          <span className="text-stone-600">{t('night.exterior')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Heart className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Piscine éclairée</span>
+          <span className="text-stone-600">{t('night.pool')}</span>
         </div>
       </div>
     </div>
@@ -393,10 +391,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Four à pizza
+          {t('pizzaOven.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-          Le four à pizza est à votre disposition.
+          {t('pizzaOven.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -429,21 +427,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Clock className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Disponible 24/7</span>
+          <span className="text-stone-600">{t('pizzaOven.availability')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <CheckCircle className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Matériel fourni</span>
+          <span className="text-stone-600">{t('pizzaOven.equipment')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <MapPin className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Tables, bancs et chaises disponibles (40 personnes)</span>
+          <span className="text-stone-600">{t('pizzaOven.capacity')}</span>
         </div>
       </div>
     </div>
@@ -456,11 +454,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          Espaces extérieurs
+          {t('outdoorSpaces.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-        Profitez d&apos;un cadre exceptionnel où la nature s&apos;épanouit dans toute sa diversité,
-         offrant un véritable havre de paix pour la faune et la flore.
+          {t('outdoorSpaces.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -492,21 +489,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <TreePine className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Biodiversité</span>
+          <span className="text-stone-600">{t('outdoorSpaces.biodiversity')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Mountain className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Nature préservée</span>
+          <span className="text-stone-600">{t('outdoorSpaces.nature')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Coffee className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Havre de paix</span>
+          <span className="text-stone-600">{t('outdoorSpaces.peace')}</span>
         </div>
       </div>
     </div>
@@ -519,10 +516,10 @@ function App() {
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl mb-6 font-light text-stone-800 tracking-wide">
-          La Source du Mas d&apos;Eylieux
+          {t('source.title')}
         </h2>
         <p className="text-lg text-stone-600 max-w-3xl mx-auto">
-        Cette source naturelle - filtrée par les montagnes - alimente nos bassins. 
+          {t('source.subtitle')}
         </p>
         <div className="w-24 h-1 bg-stone-300 mx-auto mt-4"></div>
       </div>
@@ -554,21 +551,21 @@ function App() {
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <TreePine className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Source naturelle</span>
+          <span className="text-stone-600">{t('source.natural')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Mountain className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Jardins paisibles</span>
+          <span className="text-stone-600">{t('source.gardens')}</span>
         </div>
         <div className="h-px md:h-8 w-8 md:w-px bg-stone-200" />
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center">
             <Coffee className="w-6 h-6 text-stone-600" />
           </div>
-          <span className="text-stone-600">Espaces ombragés</span>
+          <span className="text-stone-600">{t('source.shade')}</span>
         </div>
       </div>
     </div>
@@ -576,7 +573,7 @@ function App() {
 </section>
 
      {/* Enhanced Stargazing Section */}
-     <section className="relative py-32">
+     <section className="relative py-24 bg-stone-50">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
@@ -594,28 +591,28 @@ function App() {
                 </div>
               </div>
               <h2 className="text-4xl md:text-6xl font-light mb-8 tracking-wide">
-                La magie des étoiles
+                {t('stars.title')}
               </h2>
               <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-3xl mx-auto">
-                Loin de toute pollution lumineuse, le firmament révèle ses plus beaux secrets.
+                {t('stars.subtitle')}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Moon className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Perséides d&apos;Août</h3>
-                <p className="text-stone-300">Vivez la magie de la plus belle pluie d&apos;étoiles filantes de l&apos;année, avec jusqu&apos;à 100 météores par heure dans un ciel parfaitement noir</p>
+                <h3 className="text-xl font-light mb-3 text-white">{t('stars.perseids.title')}</h3>
+                <p className="text-stone-300">{t('stars.perseids.description')}</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Star className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Voie Lactée</h3>
-                <p className="text-stone-300">Admirez notre galaxie dans toute sa splendeur, visible à l&apos;œil nu grâce à l&apos;absence totale de pollution lumineuse sur plusieurs kilomètres</p>
+                <h3 className="text-xl font-light mb-3 text-white">{t('stars.milkyWay.title')}</h3>
+                <p className="text-stone-300">{t('stars.milkyWay.description')}</p>
               </div>
               <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all hover:transform hover:scale-105 hover:bg-white/10">
                 <Telescope className="w-12 h-12 mb-6 mx-auto text-white" />
-                <h3 className="text-xl font-light mb-3 text-white">Constellations</h3>
-                <p className="text-stone-300">Découvrez les constellations lors de nos soirées d&apos;observation douces et reposantes sous un ciel d&apos;une luminosité inégalée</p>
+                <h3 className="text-xl font-light mb-3 text-white">{t('stars.constellations.title')}</h3>
+                <p className="text-stone-300">{t('stars.constellations.description')}</p>
               </div>
             </div>
 
@@ -623,7 +620,7 @@ function App() {
               href="/contact"
               className="inline-flex items-center px-12 py-4 bg-white border border-black text-black rounded-full transition-colors duration-300 hover:bg-black hover:border-white hover:text-white relative overflow-hidden group"
             >
-              Réservez votre nuit sous les étoiles
+              {t('stars.bookButton')}
             </a>
 
             <div className="max-w-2xl mx-auto relative">
@@ -635,12 +632,10 @@ function App() {
                     <br />
                     <br />
                     <br />
-                    &quot;Un des rares endroits en France où l&apos;absence totale de pollution lumineuse
-                    permet d&apos;observer la Voie Lactée et les étoiles filantes dans des conditions
-                    exceptionnelles.&quot;
+                    "{t('stars.testimonial.quote')}"
                   </p>
                   <p className="text-lg text-stone-200 text-right mt-6">
-                    Claudine et Armand, Grands Amis du Mas
+                    {t('stars.testimonial.author')}
                   </p>
                 </div>
               </div>

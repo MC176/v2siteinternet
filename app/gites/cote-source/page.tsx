@@ -14,54 +14,54 @@ function App() {
   const climateData = [
     {
       image: "/images/gites/cote-source/photo1.png",
-      title: "Vue de la terrasse",
-      description: "Un coucher de soleil lors du dîner"
+      title: t('gallery.terrace.title'),
+      description: t('gallery.terrace.description')
     },
     {
       image: "/images/gites/cote-source/photo2.avif",
-      title: "Le charme de la terrasse",
-      description: "Superficie de 61 m²"
-    },    
+      title: t('gallery.terraceCharm.title'),
+      description: t('gallery.terraceCharm.description')
+    },
     {
       image: "/images/gites/cote-source/photo4.avif",
-      title: "Exposition pleine nature",
-      description: "Votre vue chaque jour"
-    },    
+      title: t('gallery.nature.title'),
+      description: t('gallery.nature.description')
+    },
     {
       image: "/images/gites/cote-source/photo8.avif",
-      title: "Un autre point de vue",
-      description: "Le seul vis-à-vis est avec la nature"
+      title: t('gallery.viewpoint.title'),
+      description: t('gallery.viewpoint.description')
     },
     {
       image: "/images/gites/cote-source/photo12.avif",
-      title: "Espace salon",
-      description: "Décoration sobre et moderne"
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
     },
     {
       image: "/images/gites/cote-source/photo9.avif",
-      title: "Salle de bain",
-      description: "Douche italienne"
+      title: t('gallery.bathroom.title'),
+      description: t('gallery.bathroom.description')
     },
     {
       image: "/images/gites/cote-source/chambre.png",
-      title: "Chambre Magniolia",
-      description: "Lit 2 places 140 cm"
+      title: t('gallery.bedroomMagnolia.title'),
+      description: t('gallery.bedroomMagnolia.description')
     },
     {
       image: "/images/gites/cote-source/photo10.avif",
-      title: "Chambre Romarin",
-      description: "Lit 2 places 160 cm"
+      title: t('gallery.bedroomRosemary.title'),
+      description: t('gallery.bedroomRosemary.description')
     },
     {
       image: "/images/gites/cote-source/cuisine.avif",
-      title: "Cuisine",
-      description: "Aménagement très lumineux"
+      title: t('gallery.kitchen.title'),
+      description: t('gallery.kitchen.description')
     },
     {
       image: "/images/gites/cote-source/cuisine2.avif",
-      title: "Depuis la cuisine",
-      description: "Vue panoramique de notre Domaine"
-    },
+      title: t('gallery.kitchenView.title'),
+      description: t('gallery.kitchenView.description')
+    }
   ];
 
   useEffect(() => {
@@ -123,9 +123,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Côté Source
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une terrasse avec vue à couper le souffle</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -135,7 +135,7 @@ function App() {
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src="/images/gites/cote-source/table.avif"
-              alt="Paysage méditerranéen"
+              alt={t('heroImageAlt')}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -146,14 +146,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un belvédère ouvert sur la nature
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Avec sa terrasse panoramique exceptionnelle, bordée de balustres, le gîte Côté Source surplombe les jardins du Mas et 
-                la source millénaire qui irrigue encore aujourd&apos;hui nos bassins. Témoignage du passé, cette eau précieuse était essentielle aux générations 
-                qui nous ont précédés, façonnant la vie du domaine bien avant l&apos;arrivée de l&apos;eau courante. Depuis votre terrasse, 
-                vous pourrez admirer cette nature préservée, avec son bassin naturel où se mêlent nénuphars 
-                et saules pleureurs, un véritable tableau vivant évoluant au fil des saisons.
+                {t('description')}
               </p>
             </div>
 
@@ -163,14 +159,14 @@ function App() {
                   <Users className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">4</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">50</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
@@ -181,10 +177,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                {t('title')}
+                {t('introduction.title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                {t('description')}
+                {t('introduction.description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>

@@ -14,69 +14,69 @@ function App() {
   const climateData = [
     {
       image: "/images/gites/chateaunette/entree.avif",
-      title: "Entrée du gîte",
-      description: "Lauriers roses"
+      title: t('gallery.entrance.title'),
+      description: t('gallery.entrance.description')
     },
     {
       image: "/images/gites/citronniers/vue.avif",
-      title: "Gîte Chateaunette",
-      description: "Superficie de 59m²"
+      title: t('gallery.view.title'),
+      description: t('gallery.view.description')
     },
     {
       image: "/images/gites/citronniers/photo12.avif",
-      title: "Vue de la terrasse",
-      description: "Le gîte donne sur cour intérieure"
+      title: t('gallery.terrace.title'),
+      description: t('gallery.terrace.description')
     },
     {
       image: "/images/gites/chateaunette/vueduhaut.avif",
-      title: "La vue de la terrasse",
-      description: "Verdure à perte de vue"
+      title: t('gallery.terraceView.title'),
+      description: t('gallery.terraceView.description')
     },
     {
       image: "/images/gites/chateaunette/cuisine.avif",
-      title: "Espace cuisine",
-      description: "Toute équipée"
+      title: t('gallery.kitchen.title'),
+      description: t('gallery.kitchen.description')
     },
     {
       image: "/images/gites/chateaunette/cuisineproche.avif",
-      title: "Coin cuisine",
-      description: "Cuisine équipée"
+      title: t('gallery.kitchenCorner.title'),
+      description: t('gallery.kitchenCorner.description')
     },
     {
       image: "/images/gites/chateaunette/chambre.avif",
-      title: "Chambre des Lilas",
-      description: "Lit 2 places 160cm"
+      title: t('gallery.bedroomLilac.title'),
+      description: t('gallery.bedroomLilac.description')
     },
     {
       image: "/images/gites/chateaunette/chambre2.avif",
-      title: "Chambre de la Lavande",
-      description: "Lit 2 places 140cm"
+      title: t('gallery.bedroomLavender.title'),
+      description: t('gallery.bedroomLavender.description')
     },
     {
       image: "/images/gites/chateaunette/depuisfenetre.avif",
-      title: "Vue de Chateaunette",
-      description: "Depuis la chambre"
+      title: t('gallery.bedroomView.title'),
+      description: t('gallery.bedroomView.description')
     },
     {
       image: "/images/gites/chateaunette/salon.avif",
-      title: "Salon",
-      description: "Mezzazine avec accès au lit"
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
     },
     {
       image: "/images/gites/chateaunette/mezzanine.avif",
-      title: "Mezzazzine",
-      description: "Lit 1 place"
+      title: t('gallery.mezzanine.title'),
+      description: t('gallery.mezzanine.description')
     },
     {
       image: "/images/gites/chateaunette/piscine.avif",
-      title: "Piscine",
-      description: "Profondeur : 1m10 - 2m20"
+      title: t('gallery.pool.title'),
+      description: t('gallery.pool.description')
     },
     {
       image: "/images/gites/chateaunette/nuit.avif",
-      title: "Piscine de nuit",
-      description: "Eclairage nocturne disponible"
-    },
+      title: t('gallery.poolNight.title'),
+      description: t('gallery.poolNight.description')
+    }
   ];
 
   useEffect(() => {
@@ -138,9 +138,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Chateaunette
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un gîte aux grands volumes</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -150,7 +150,7 @@ function App() {
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src="/images/gites/citronniers/photo11.avif"
-              alt="Paysage méditerranéen"
+              alt={t('heroImageAlt')}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -160,13 +160,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Un gîte lumineux et spacieux
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Le gîte Châteaunette est le plus grand des hébergements du Mas.
-                Doté de deux chambres, d&apos;une mezzanine avec lit, et d&apos;une grande cuisine équipée,
-                il allie charme authentique et confort moderne. La terrasse, orientée Est,
-                invite à des repas conviviaux avec vue sur la nature environnante.
+                {t('description')}
               </p>
             </div>
 
@@ -176,14 +173,14 @@ function App() {
                   <Users className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">7</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">59</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
@@ -194,10 +191,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                {t('title')}
+                {t('introduction.title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                {t('description')}
+                {t('introduction.description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>
@@ -212,8 +209,9 @@ function App() {
                   src={item.image}
                   alt={item.title}
                   width={500}
-                  height={500}
-                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  height={400}
+                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
                   <div className="text-white">
@@ -225,14 +223,14 @@ function App() {
             ))}
           </div>
 
-          <button
+          <button 
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
             aria-label="Précédent"
           >
             <ChevronLeft className="w-6 h-6 text-gray-800" />
           </button>
-          <button
+          <button 
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
             aria-label="Suivant"

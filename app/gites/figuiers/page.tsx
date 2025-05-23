@@ -14,23 +14,23 @@ function App() {
   const climateData = [
     {
       image: "/images/gites/figuiers/vue5.avif",
-      title: "Vue depuis le gîte",
-      description: "Une véritable prise de hauteur"
+      title: t('gallery.view.title'),
+      description: t('gallery.view.description')
     },
     {
       image: "/images/gites/figuiers/table.avif",
-      title: "Salon",
-      description: "Pour un bain de soleil"
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
     },    
     {
       image: "/images/gites/figuiers/Cuisine 2.jpeg",
-      title: "Cuisine",
-      description: "Moderne et Design"
+      title: t('gallery.kitchen.title'),
+      description: t('gallery.kitchen.description')
     },    
     {
       image: "/images/gites/figuiers/image1.avif",
-      title: "Salle de bain",
-      description: "Douche à l&apos;italienne moderne"
+      title: t('gallery.bathroom.title'),
+      description: t('gallery.bathroom.description')
     },
   ];
 
@@ -93,9 +93,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Figuiers
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Une oasis perchée avec vue panoramique</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -105,7 +105,7 @@ function App() {
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src="/images/gites/figuiers/vue4.avif"
-              alt="Paysage méditerranéen"
+              alt={t('heroImageAlt')}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -116,14 +116,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Une vue panoramique exceptionnelle
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Situé au point le plus haut du domaine, le gîte Figuier séduit par sa vue spectaculaire et son intérieur baigné de lumière. 
-                Grâce à de larges baies vitrées, le salon offre un panorama sur la nature environnante, 
-                plongeant les visiteurs dans une immersion totale avec les paysages ardéchois. Sa salle de bain rénovée, sa cuisine moderne et équipée, 
-                ainsi que sa spacieuse terrasse bordée de balustres font de ce gîte un lieu d&apos;exception. 
-                Parfait pour des moments de détente, on peut y déguster des figues et profiter du ciel étoilé de l&apos;Ardèche.
+                {t('description')}
               </p>
             </div>
 
@@ -133,14 +129,14 @@ function App() {
                   <Users className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">3</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
                   <div className="text-4xl font-light text-blue-900">40</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
@@ -151,12 +147,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                Le Gîte du Soleil
+                {t('introduction.title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Perché en hauteur, Figuiers est le gîte qui offre les plus belles vues du domaine. 
-                Son salon baigne dans la lumière avec une vision panoramique sur la végétation luxuriante. 
-                Sa salle de bain et sa cuisine moderne récemment refaites en font un parfait équilibre entre confort et authenticité.
+                {t('introduction.description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>

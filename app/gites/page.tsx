@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Star, Users, Calendar, ArrowRight, Users2, GlassWater, Building2, PartyPopper, Users2Icon, ChevronDown } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const gites = [
   {
@@ -91,6 +92,7 @@ const privatisationFeatures = [
 ];
 
 function GitesPage() {
+  const t = useTranslations('gites.list');
   const scrollToPrivatisation = () => {
     const privatisationSection = document.getElementById('privatisation');
     privatisationSection?.scrollIntoView({ behavior: 'smooth' });
@@ -102,7 +104,7 @@ function GitesPage() {
       <div className="relative h-[80vh] w-full overflow-hidden">
         <img 
           src="/images/gites/cote-source/photo5.avif"
-          alt="Vue panoramique des gîtes"
+          alt={t('heroImageAlt')}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
@@ -112,10 +114,8 @@ function GitesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl font-bold mb-4">Nos gîtes d&apos;exception</h1>
-            <p className="text-xl max-w-2xl mx-auto">
-              Découvrez nos gîtes de charme en Ardèche, où authenticité et modernité se rencontrent pour des séjours inoubliables.
-            </p>
+            <h1 className="text-6xl font-bold mb-4">{t('title')}</h1>
+            <p className="text-xl max-w-2xl mx-auto">{t('subtitle')}</p>
           </motion.div>
         </div>
       </div>
@@ -148,14 +148,14 @@ function GitesPage() {
 
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">{gite.name}</h2>
+                      <h2 className="text-2xl font-bold text-gray-900">{t(`${gite.name}.title`)}</h2>
                       <div className="text-right">
                         <span className="text-2xl font-bold text-indigo-600">{gite.price}</span>
-                        <span className="text-gray-500 text-sm">/nuit</span>
+                        <span className="text-gray-500 text-sm">{t('pricePerNight')}</span>
                       </div>
                     </div>
 
-                    <p className="text-gray-600 mb-4">{gite.description}</p>
+                    <p className="text-gray-600 mb-4">{t(`${gite.name}.description`)}</p>
 
                     <div className="flex items-center gap-4 mb-6">
                       <div className="flex items-center gap-1">
@@ -164,7 +164,7 @@ function GitesPage() {
                       </div>
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-600">Ardèche</span>
+                        <span className="text-sm text-gray-600">{t('location')}</span>
                       </div>
                     </div>
 
@@ -172,13 +172,13 @@ function GitesPage() {
                       {gite.features.map((feature, i) => (
                         <div key={i} className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-indigo-600"></div>
-                          <span className="text-sm text-gray-600">{feature}</span>
+                          <span className="text-sm text-gray-600">{t(`features.${feature}`)}</span>
                         </div>
                       ))}
                     </div>
 
                     <button className="w-full bg-indigo-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-indigo-700 transition-colors">
-                      En savoir plus
+                      {t('seeMore')}
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -197,7 +197,7 @@ function GitesPage() {
           transition={{ delay: 1.2 }}
           whileHover={{ y: 5 }}
         >
-          <p className="text-lg font-semibold text-indigo-600 mb-2">Découvrez nos offres de privatisation</p>
+          <p className="text-lg font-semibold text-indigo-600 mb-2">{t('discoverPrivatisation')}</p>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -222,7 +222,7 @@ function GitesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
               >
-                Privatisez l&apos;ensemble de nos gîtes
+                {t('privatizeAll')}
               </motion.h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -237,8 +237,8 @@ function GitesPage() {
                     <div className="bg-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-black mb-2">{t(`privatisation.${feature.title}.title`)}</h3>
+                    <p className="text-gray-600">{t(`privatisation.${feature.title}.description`)}</p>
                   </motion.div>
                 ))}
               </div>
@@ -251,7 +251,7 @@ function GitesPage() {
                 transition={{ delay: 1.6 }}
                 whileHover={{ y: -2 }}
               >
-                <span className="relative z-10">Contactez-nous pour une offre personnalisée</span>
+                <span className="relative z-10">{t('contactUs')}</span>
                 <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
                 <div className="absolute inset-0 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </motion.a>

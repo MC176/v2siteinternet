@@ -13,30 +13,70 @@ function App() {
 
   const climateData = [
     {
-      image: "/images/gites/maisonnette/montagne.avif",
-      title: "Gîte Maisonnette",
-      description: "Vue en hauteur du gîte"
-    },    
-    {
-      image: "/images/gites/maisonnette/vegetation.avif",
-      title: "En pleine nature",
-      description: "Derrière ces agaves, une entrée - la voyez-vous?"
-    },    
-    {
-      image: "/images/gites/maisonnette/chambre.avif",
-      title: "Coin Chambre",
-      description: "Ambiance cosy et délicate"
+      image: "/images/gites/maisonette/entree.avif",
+      title: t('gallery.entrance.title'),
+      description: t('gallery.entrance.description')
     },
     {
-      image: "/images/gites/maisonnette/coincuisine.avif",
-      title: "Espace Cuisine",
-      description: "Cuisine minimaliste et moderne"
+      image: "/images/gites/maisonette/vue.avif",
+      title: t('gallery.view.title'),
+      description: t('gallery.view.description')
     },
     {
-      image: "/images/gites/maisonnette/salledeau.avif",
-      title: "Salle de bain",
-      description: "Douche italienne"
+      image: "/images/gites/maisonette/photo12.avif",
+      title: t('gallery.terrace.title'),
+      description: t('gallery.terrace.description')
     },
+    {
+      image: "/images/gites/maisonette/vueduhaut.avif",
+      title: t('gallery.terraceView.title'),
+      description: t('gallery.terraceView.description')
+    },
+    {
+      image: "/images/gites/maisonette/cuisine.avif",
+      title: t('gallery.kitchen.title'),
+      description: t('gallery.kitchen.description')
+    },
+    {
+      image: "/images/gites/maisonette/cuisineproche.avif",
+      title: t('gallery.kitchenCorner.title'),
+      description: t('gallery.kitchenCorner.description')
+    },
+    {
+      image: "/images/gites/maisonette/chambre.avif",
+      title: t('gallery.bedroomLilac.title'),
+      description: t('gallery.bedroomLilac.description')
+    },
+    {
+      image: "/images/gites/maisonette/chambre2.avif",
+      title: t('gallery.bedroomLavender.title'),
+      description: t('gallery.bedroomLavender.description')
+    },
+    {
+      image: "/images/gites/maisonette/depuisfenetre.avif",
+      title: t('gallery.bedroomView.title'),
+      description: t('gallery.bedroomView.description')
+    },
+    {
+      image: "/images/gites/maisonette/salon.avif",
+      title: t('gallery.livingRoom.title'),
+      description: t('gallery.livingRoom.description')
+    },
+    {
+      image: "/images/gites/maisonette/mezzanine.avif",
+      title: t('gallery.mezzanine.title'),
+      description: t('gallery.mezzanine.description')
+    },
+    {
+      image: "/images/gites/maisonette/piscine.avif",
+      title: t('gallery.pool.title'),
+      description: t('gallery.pool.description')
+    },
+    {
+      image: "/images/gites/maisonette/nuit.avif",
+      title: t('gallery.poolNight.title'),
+      description: t('gallery.poolNight.description')
+    }
   ];
 
   useEffect(() => {
@@ -89,7 +129,7 @@ function App() {
           ref={parallaxRef}
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/images/gites/maisonnette/tondeuse.avif")',
+            backgroundImage: 'url("/images/gites/maisonette/photo17.avif")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateZ(0)',
@@ -98,9 +138,9 @@ function App() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-light mb-6 font-['Playfair_Display'] tracking-wider">
-            Maisonnette
+            {t('title')}
           </h1>
-          <p className="text-2xl font-light mb-12 tracking-widest uppercase">Un nid douillet proche de la piscine</p>
+          <p className="text-2xl font-light mb-12 tracking-widest uppercase">{t('subtitle')}</p>
           <ChevronDown className="animate-bounce w-8 h-8 mt-8" />
         </div>
       </div>
@@ -109,11 +149,10 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="relative h-[700px] group overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/images/gites/maisonnette/grenadier.avif"
-              alt="Paysage méditerranéen"
+              src="/images/gites/maisonette/photo11.avif"
+              alt={t('heroImageAlt')}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
@@ -121,13 +160,10 @@ function App() {
           <div className="flex flex-col justify-center space-y-12">
             <div className="space-y-8">
               <h2 className="text-4xl font-light text-gray-900 font-['Playfair_Display']">
-                Entre Soleil et Mûrier
+                {t('introduction.title')}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Derrière sa façade discrète, la Maisonnette cache une architecture spéciale en Ardèche. Son entrée semblable à celle d&apos;une maison traditionnelle, 
-                donne accès à un duplex astucieusement aménagé. À l&apos;étage, un salon cosy, baigné de lumière, 
-                invite à la détente, tandis qu&apos;en contrebas, la chambre et la salle d&apos;eau offrent un espace nuit confortable et paisible. 
-                À l&apos;extérieur, un mûrier ombrage la terrasse, et vous accorde un coin frais et agréable même en plein été.
+                {t('description')}
               </p>
             </div>
 
@@ -135,16 +171,16 @@ function App() {
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">2</div>
+                  <div className="text-4xl font-light text-blue-900">7</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Nombre de personnes</div>
+                <div className="text-sm text-gray-600 mt-3">{t('capacity')}</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-xl transition-all hover:shadow-xl border border-gray-100">
                 <div className="flex items-center justify-center gap-3">
                   <Home className="w-8 h-8 text-blue-900" />
-                  <div className="text-4xl font-light text-blue-900">31</div>
+                  <div className="text-4xl font-light text-blue-900">59</div>
                 </div>
-                <div className="text-sm text-gray-600 mt-3">Superficie en mètres carrés</div>
+                <div className="text-sm text-gray-600 mt-3">{t('surface')}</div>
               </div>
             </div>
           </div>
@@ -155,10 +191,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                {t('title')}
+                {t('introduction.title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                {t('description')}
+                {t('introduction.description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>
@@ -173,8 +209,8 @@ function App() {
                   src={item.image}
                   alt={item.title}
                   width={500}
-                  height={500}
-                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  height={400}
+                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
