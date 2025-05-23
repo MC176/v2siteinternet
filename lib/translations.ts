@@ -2,7 +2,7 @@
 
 import { useLanguage } from './LanguageContext';
 
-export type Language = 'fr' | 'en' | 'nl';
+export type Language = 'fr' | 'en' | 'de' | 'nl';
 
 // Définition des clés de traduction par section
 type NavigationKeys = 'home' | 'domain' | 'cottages' | 'information' | 'reviews' | 'contact';
@@ -219,6 +219,86 @@ const translations: Translations = {
     terrace: 'Terrace',
     finalQuote: 'Happiness lies in the little things, and often in the calm of ancient stones.',
     finalQuoteAuthor: '~ Antoine de Saint-Exupéry, The Little Prince',
+  },
+  de: {
+    // Navigation
+    home: 'Startseite',
+    domain: 'Das Anwesen',
+    cottages: 'Unsere Ferienhäuser',
+    information: 'Informationen',
+    reviews: 'Bewertungen',
+    contact: 'Kontakt',
+
+    // Footer
+    termsOfUse: 'Nutzungsbedingungen',
+    termsOfSale: 'Allgemeine Geschäftsbedingungen',
+    blog: 'Blog',
+
+    // Homepage
+    heroTitle: 'Le Mas d\'Eylieux',
+    heroSubtitle: 'Ein außergewöhnliches Anwesen im Süden der Ardèche',
+    discoverButton: 'Mehr entdecken',
+
+    // Common
+    bookNow: 'Jetzt buchen',
+    learnMore: 'Mehr erfahren',
+    contactUs: 'Kontaktieren Sie uns',
+
+    // Cottages
+    capacity: 'Kapazität',
+    surface: 'Fläche',
+    equipment: 'Ausstattung',
+    features: 'Besonderheiten',
+
+    // Reviews
+    reviewsTitle: 'Ihre Bewertungen',
+    leaveReview: 'Bewertung schreiben',
+
+    // Information page
+    infoHeroTitle: 'ENTDECKUNGEN',
+    infoHeroSubtitle: 'Eine Auswahl einzigartiger Erlebnisse in der südlichen Ardèche',
+    welcomeTitle: 'Willkommen in der Ardèche',
+    welcomeText: 'Le Mas d\'Eylieux liegt in den Höhen von Saint Montan, in der Ardèche, zwischen Lyon und Marseille.',
+    activitiesTitle: 'AKTIVITÄTEN ZU ENTDEKKEN',
+    activitiesSubtitle: 'Erkunden Sie die Wunder unserer Region',
+    
+    // Activities
+    canoeing: 'ARDÈCHE-SCHLUCHTEN ABFAHRT',
+    canoeingDesc: 'Befahren Sie die majestätischen Ardèche-Schluchten mit Kanu oder Kajak mit Ihren Liebsten für ein unvergessliches Abenteuer.',
+    chauvetCave: 'CHAUVET-HÖHLE',
+    chauvetCaveDesc: 'Entdecken Sie die Chauvet-Höhle, ein UNESCO-Weltkulturerbe, und bewondern Sie ihre außergewöhnlichen prähistorischen Malereien.',
+    hiking: 'WANDERN IN DER NÄHE VON MAS D\'EYLIEUX',
+    hikingDesc: 'Entfliehen Sie in die Ardèche-Wildnis und folgen Sie malerischen Pfaden durch abwechslungsreiche Landschaften.',
+    castle: 'MITTELALTERLICHE BURG VON SAINT MONTAN',
+    castleDesc: 'Entdecken Sie eine befestigte Burg. Erkunden Sie ihre Festungsmauern, Gassen und tauchen Sie in die Geschichte des Dorfes ein.',
+    lavender: 'DAS LAVENDELMUSEUM',
+    lavenderDesc: 'Entdecken Sie die Geheimnisse des Lavendels im Lavendelmuseum und tauchen Sie in die Geschichte dieser emblematischen provenzalischen Pflanze ein.',
+    speleology: 'HÖHLENFORSCHUNG IN DER ARDÈCHE',
+    speleologyDesc: 'Entdecken Sie die Höhlen der Ardèche und erkunden Sie ihre unterirdischen Wunder in Sicherheit.',
+
+    // FAQ
+    faqTitle: 'Häufig gestellte Fragen',
+    faqSubtitle: 'Alles, was Sie für Ihren Aufenthalt in Saint-Montan wissen müssen',
+
+    // Buttons
+    bookButton: 'Aktivität buchen',
+    viewWebsite: 'Website besuchen',
+
+    // Chateaunette specific translations
+    cottageTitle: 'Chateaunette',
+    cottageSubtitle: 'Ein geräumiges Ferienhaus',
+    cottageDescription: 'Das Chateaunette ist die größte Unterkunft im Mas. Mit zwei Schlafzimmern, einer Galerie mit Bett und einer voll ausgestatteten Küche vereint es authentischen Charme und modernen Komfort. Die nach Osten ausgerichtete Terrasse lädt zu geselligen Mahlzeiten mit Blick auf die umgebende Natur ein.',
+    cottageHistoryTitle: 'Die Geschichte von Chateaunette',
+    cottageHistoryText: 'Als unsere ersten Gäste dieses Haus entdeckten, nannten sie es "Chateaunette", da die Weite und die hohen Decken sie an ein kleines Schloss erinnerten. Geräumig und hell, mit zwei Schlafzimmern, einem Wohnzimmer und einer Galerie, bietet es einen echten Wohnraum, in dem moderner Komfort auf die Authentizität des Mas trifft.',
+    bookStay: 'Aufenthalt buchen',
+    parking: 'Privatparkplatz',
+    wifi: 'Kostenloses WLAN',
+    stairs: 'Treppen',
+    familyRooms: 'Familienzimmer',
+    nonSmoking: 'Nichtraucherunterkunft',
+    terrace: 'Terrasse',
+    finalQuote: 'Das Glück liegt in den kleinen Dingen und oft in der Ruhe alter Steine.',
+    finalQuoteAuthor: '~ Antoine de Saint-Exupéry, Der kleine Prinz',
   },
   nl: {
     // Existing translations...

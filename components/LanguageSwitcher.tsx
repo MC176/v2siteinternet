@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
       >
         <Image
           src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/fr.svg"
-          alt="French"
+          alt="Français"
           width={24}
           height={24}
           className="w-full h-full object-cover"
@@ -37,6 +37,20 @@ export default function LanguageSwitcher() {
         />
       </button>
       <button
+        onClick={() => setLanguage('de')}
+        className={`w-6 h-6 rounded-full overflow-hidden hover:opacity-80 transition-opacity ${
+          language === 'de' ? 'ring-2 ring-blue-500' : ''
+        }`}
+      >
+        <Image
+          src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/de.svg"
+          alt="Deutsch"
+          width={24}
+          height={24}
+          className="w-full h-full object-cover"
+        />
+      </button>
+      <button
         onClick={() => setLanguage('nl')}
         className={`w-6 h-6 rounded-full overflow-hidden hover:opacity-80 transition-opacity ${
           language === 'nl' ? 'ring-2 ring-blue-500' : ''
@@ -44,7 +58,7 @@ export default function LanguageSwitcher() {
       >
         <Image
           src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/nl.svg"
-          alt="Dutch"
+          alt="Nederlands"
           width={24}
           height={24}
           className="w-full h-full object-cover"
