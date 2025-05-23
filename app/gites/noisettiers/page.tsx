@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const t = useTranslations('gites.noisettiers');
 
   const climateData = [
     {
@@ -419,7 +421,7 @@ function App() {
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <p className="text-black leading-relaxed text-lg italic">
-            &quot;Les arbres ont cette sagesse silencieuse qui traverse les siècles. À l&apos;ombre du noisetier, le temps ralentit et la nature reprend ses droits.&quot;
+            {t('quote')}
           </p>
           <p className="text-lg text-grey-600 text-right mt-6">
                    ~ Extrait du guide d&apos;initiation à la Botanique

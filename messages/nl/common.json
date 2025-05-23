@@ -1,0 +1,69 @@
+{
+  "navigation": {
+    "home": "Home",
+    "domain": "Het Domein",
+    "cottages": "Onze Gîtes",
+    "information": "Informatie",
+    "reviews": "Beoordelingen",
+    "contact": "Contact"
+  },
+  "footer": {
+    "termsOfUse": "Gebruiksvoorwaarden",
+    "termsOfSale": "Verkoopvoorwaarden",
+    "blog": "Blog"
+  },
+  "home": {
+    "heroTitle": "Le Mas d'Eylieux",
+    "heroSubtitle": "Een uitzonderlijk landgoed in Zuid-Ardèche",
+    "discoverButton": "Ontdek meer"
+  },
+  "common": {
+    "bookNow": "Nu boeken",
+    "learnMore": "Meer informatie",
+    "contactUs": "Neem contact op"
+  },
+  "cottages": {
+    "capacity": "Capaciteit",
+    "surface": "Oppervlakte",
+    "equipment": "Uitrusting",
+    "features": "Kenmerken"
+  },
+  "reviews": {
+    "title": "Uw Beoordelingen",
+    "leaveReview": "Schrijf een beoordeling"
+  },
+  "gites": {
+    "maisonette": {
+      "title": "De Uitzondering van het Mas: een Ode aan de Sereniteit",
+      "description": "Een duplex met een geweldige charme, geïsoleerd van het mas en dicht bij het zwembad. De architectuur doet denken aan een sprookjeshuisje, met zijn woonkamer op de eerste verdieping en zijn gezellige slaapkamer op de begane grond. Beschermd door een oude moerbeiboom, biedt het aangename koelte in de zomer en een knus nest in de winter."
+    },
+    "chateaunette": {
+      "title": "Het Verhaal van Chateaunette",
+      "description": "Toen onze eerste gasten dit huisje ontdekten, noemden ze het 'Chateaunette', omdat de ruimte en hoge plafonds hen deden denken aan een klein kasteel. Ruim en licht, met twee slaapkamers, een woonkamer en een mezzanine, biedt het een echte leefruimte waar modern comfort samenkomt met de authenticiteit van het mas."
+    },
+    "coteSource": {
+      "title": "In het Ritme van het Water",
+      "description": "Met uitzicht op de tuinen, heeft dit huisje een uitzonderlijk terras met balustrades die uitkijken op de omringende natuur. Het dankt zijn naam aan de natuurlijke bron die al eeuwenlang deze gronden voedt, de tuinen en de waterlelievijver irrigeert. Een oase van koelte en sereniteit in het hart van de Ardèche."
+    },
+    "citronniers": {
+      "quote": "Niets is levendiger dan het licht dat speelt op citroenboombladeren, noch zachter dan de lucht die geurend is van zijn vruchten. Een hoekje natuur waar elke ademtocht een uitnodiging lijkt tot sereniteit."
+    },
+    "figuiers": {
+      "quote": "Onder de takken van de vijgenboom vind je altijd een schaduwplek en een moment van vrede. Waar hij groeit, is de aarde gul en kalmeert de geest."
+    },
+    "noisettiers": {
+      "quote": "Bomen hebben die stille wijsheid die de eeuwen doorstaat. In de schaduw van de hazelaar vertraagt de tijd en neemt de natuur haar rechten terug."
+    }
+  },
+  "presentation": {
+    "history": "Gebouwd in 1158, is Le Mas d'Eylieux een plek vol geschiedenis. Het herbergt overblijfselen van een kleine Gallo-Romeinse stad en was in de 13e eeuw een halte op de route die koning Lodewijk IX gebruikte. Op weg naar de kathedraal van Viviers zou deze laatste door de regio zijn gereisd, zijn stempel drukkend op dit domein vol authenticiteit. Vandaag de dag blijft Le Mas d'Eylieux betoveren met zijn bewaarde charme en unieke sfeer, getuigen van een rijk historisch erfgoed."
+  },
+  "informations": {
+    "welcome": {
+      "title": "Welkom in de Ardèche",
+      "subtitle": "Een ideaal gelegen domein",
+      "location": "Le Mas d'Eylieux ligt in de heuvels van Saint Montan, in de Ardèche, tussen Lyon en Marseille.",
+      "transport": "We zijn ongeveer 25 minuten van het station van Montélimar en iets meer dan een uur van het TGV-station van Avignon."
+    }
+  }
+} 

@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
+import { useTranslations } from 'next-intl';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const t = useTranslations('gites.coteSource');
 
   const climateData = [
     {
@@ -179,12 +181,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                Au Rythme de l’Eau
+                {t('title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Dominant les jardins, ce gîte bénéficie d’une terrasse exceptionnelle avec balustrades ouvrant sur la nature environnante. 
-                Il tient son nom de la source naturelle qui, depuis des siècles, abreuve ces terres, irriguant les jardins et le bassin aux nénuphars. 
-                Une oasis de fraîcheur et de sérénité en plein cœur de l’Ardèche.
+                {t('description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>

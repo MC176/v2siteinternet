@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
+import { useTranslations } from 'next-intl';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null); // Correction ici
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const t = useTranslations('gites.maisonette');
 
   const climateData = [
     {
@@ -153,12 +155,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                L&apos;Exception du Mas : une Ode à la sérénité
+                {t('title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Un duplex au charme fou, isolé du mas et proche de la piscine. 
-                Son architecture rappelle une maisonnette de conte, avec son salon en étage et sa chambre cosy en rez-de-chaussée. 
-                Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un cocon douillet en hiver.
+                {t('description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>

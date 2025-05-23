@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "domain": "Le Domaine",
+    "cottages": "Nos Gîtes",
+    "information": "Informations",
+    "reviews": "Avis",
+    "contact": "Contact"
+  },
+  "footer": {
+    "termsOfUse": "Conditions d'utilisation",
+    "termsOfSale": "Conditions de vente",
+    "blog": "Blog"
+  },
+  "home": {
+    "heroTitle": "Le Mas d'Eylieux",
+    "heroSubtitle": "Un domaine d'exception en Ardèche méridionale",
+    "discoverButton": "Découvrir"
+  },
+  "common": {
+    "bookNow": "Réserver",
+    "learnMore": "En savoir plus",
+    "contactUs": "Nous contacter"
+  },
+  "cottages": {
+    "capacity": "Capacité",
+    "surface": "Surface",
+    "equipment": "Équipement",
+    "features": "Caractéristiques"
+  },
+  "reviews": {
+    "title": "Vos Avis",
+    "leaveReview": "Laisser un avis"
+  },
+  "gites": {
+    "maisonette": {
+      "title": "L'Exception du Mas : une Ode à la Sérénité",
+      "description": "Un duplex au charme fou, isolé du mas et proche de la piscine. Son architecture rappelle celle d'une maison de conte de fées, avec son salon à l'étage et sa chambre douillette en rez-de-chaussée. Protégé par un vieux mûrier, il offre une fraîcheur agréable en été et un nid douillet en hiver."
+    },
+    "chateaunette": {
+      "title": "L'Histoire de Chateaunette",
+      "description": "Lorsque nos premiers hôtes découvrirent cette maison, ils la baptisèrent 'Chateaunette', car l'espace et les hauts plafonds leur rappelaient un petit château. Spacieux et lumineux, avec deux chambres, un salon et une mezzanine, il offre un véritable espace de vie où le confort moderne se mêle à l'authenticité du mas."
+    },
+    "coteSource": {
+      "title": "Au Rythme de l'Eau",
+      "description": "Surplombant les jardins, ce gîte possède une terrasse exceptionnelle avec des balustrades donnant sur la nature environnante. Il doit son nom à la source naturelle qui alimente ces terres depuis des siècles, irriguant les jardins et le bassin aux nénuphars. Une oasis de fraîcheur et de sérénité au cœur de l'Ardèche."
+    }
+  },
+  "presentation": {
+    "history": "Construit en 1158, Le Mas d'Eylieux est un lieu chargé d'histoire. Il abrite les vestiges d'une petite cité gallo-romaine et fut au XIIIe siècle une halte sur la route empruntée par le roi Louis IX. En route vers la cathédrale de Viviers, ce dernier aurait traversé la région, laissant son empreinte sur ce domaine empreint d'authenticité. Aujourd'hui, Le Mas d'Eylieux continue de charmer par son charme préservé et son atmosphère unique, témoins d'un riche patrimoine historique."
+  },
+  "informations": {
+    "welcome": {
+      "title": "Bienvenue en Ardèche",
+      "subtitle": "Un domaine idéalement situé",
+      "location": "Le Mas d'Eylieux se trouve dans les collines de Saint Montan, en Ardèche, entre Lyon et Marseille.",
+      "transport": "Nous sommes à environ 25 minutes de la gare de Montélimar et un peu plus d'une heure de la gare TGV d'Avignon."
+    }
+  }
+} 

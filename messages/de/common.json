@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "domain": "Das Anwesen",
+    "cottages": "Unsere Ferienhäuser",
+    "information": "Informationen",
+    "reviews": "Bewertungen",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "termsOfUse": "Nutzungsbedingungen",
+    "termsOfSale": "Verkaufsbedingungen",
+    "blog": "Blog"
+  },
+  "home": {
+    "heroTitle": "Le Mas d'Eylieux",
+    "heroSubtitle": "Ein außergewöhnliches Anwesen in der südlichen Ardèche",
+    "discoverButton": "Entdecken"
+  },
+  "common": {
+    "bookNow": "Jetzt buchen",
+    "learnMore": "Mehr erfahren",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "cottages": {
+    "capacity": "Kapazität",
+    "surface": "Fläche",
+    "equipment": "Ausstattung",
+    "features": "Eigenschaften"
+  },
+  "reviews": {
+    "title": "Ihre Bewertungen",
+    "leaveReview": "Bewertung schreiben"
+  },
+  "gites": {
+    "maisonette": {
+      "title": "Die Ausnahme des Mas: eine Ode an die Gelassenheit",
+      "description": "Ein charmantes Duplex, isoliert vom Mas und in der Nähe des Pools. Seine Architektur erinnert an ein Märchenhaus, mit Wohnzimmer im Obergeschoss und gemütlichem Schlafzimmer im Erdgeschoss. Geschützt von einem alten Maulbeerbaum bietet es im Sommer angenehme Kühle und im Winter ein gemütliches Nest."
+    },
+    "chateaunette": {
+      "title": "Die Geschichte von Chateaunette",
+      "description": "Als unsere ersten Gäste dieses Haus entdeckten, nannten sie es 'Chateaunette', weil der Raum und die hohen Decken sie an ein kleines Schloss erinnerten. Geräumig und hell, mit zwei Schlafzimmern, einem Wohnzimmer und einer Galerie, bietet es einen echten Wohnraum, in dem moderner Komfort auf die Authentizität des Mas trifft."
+    },
+    "coteSource": {
+      "title": "Im Rhythmus des Wassers",
+      "description": "Mit Blick auf die Gärten verfügt dieses Ferienhaus über eine außergewöhnliche Terrasse mit Balustraden, die den Blick auf die umgebende Natur freigeben. Es verdankt seinen Namen der natürlichen Quelle, die diese Ländereien seit Jahrhunderten bewässert und die Gärten und den Seerosenteich speist. Eine Oase der Kühle und Gelassenheit im Herzen der Ardèche."
+    }
+  },
+  "presentation": {
+    "history": "Erbaut im Jahr 1158, ist Le Mas d'Eylieux ein Ort voller Geschichte. Es beherbergt die Überreste einer kleinen gallo-römischen Stadt und war im 13. Jahrhundert eine Station auf der Route, die König Ludwig IX. nutzte. Auf dem Weg zur Kathedrale von Viviers soll dieser durch die Region gereist sein und seine Spuren in diesem authentischen Anwesen hinterlassen haben. Heute bezaubert Le Mas d'Eylieux weiterhin mit seinem erhaltenen Charme und seiner einzigartigen Atmosphäre, Zeugen eines reichen historischen Erbes."
+  },
+  "informations": {
+    "welcome": {
+      "title": "Willkommen in der Ardèche",
+      "subtitle": "Ein ideal gelegenes Anwesen",
+      "location": "Le Mas d'Eylieux befindet sich in den Hügeln von Saint Montan, in der Ardèche, zwischen Lyon und Marseille.",
+      "transport": "Wir sind etwa 25 Minuten vom Bahnhof Montélimar und etwas mehr als eine Stunde vom TGV-Bahnhof Avignon entfernt."
+    }
+  }
+} 

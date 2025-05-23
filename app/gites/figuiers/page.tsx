@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
+import { useTranslations } from 'next-intl';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null); // Correction ici
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const t = useTranslations('gites.figuiers');
 
   const climateData = [
     {
@@ -426,7 +428,7 @@ function App() {
         {/* Section Finale Améliorée */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <p className="text-black leading-relaxed text-lg italic">
-            &quot;Sous les branches du figuier, on trouve toujours un coin d’ombre et un instant de paix. Là où il pousse, la terre est généreuse et l’esprit s’apaise.&quot;
+            {t('quote')}
           </p>
           <p className="text-lg text-gray-600 text-right mt-2">
              ~ Proverbe Méditerranéen

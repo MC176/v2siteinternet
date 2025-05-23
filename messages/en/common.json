@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Home",
+    "domain": "The Domain",
+    "cottages": "Our Cottages",
+    "information": "Information",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "footer": {
+    "termsOfUse": "Terms of Use",
+    "termsOfSale": "Terms of Sale",
+    "blog": "Blog"
+  },
+  "home": {
+    "heroTitle": "Le Mas d'Eylieux",
+    "heroSubtitle": "An exceptional estate in Southern Ardèche",
+    "discoverButton": "Discover"
+  },
+  "common": {
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us"
+  },
+  "cottages": {
+    "capacity": "Capacity",
+    "surface": "Surface",
+    "equipment": "Equipment",
+    "features": "Features"
+  },
+  "reviews": {
+    "title": "Your Reviews",
+    "leaveReview": "Leave a Review"
+  },
+  "gites": {
+    "maisonette": {
+      "title": "The Mas Exception: an Ode to Serenity",
+      "description": "A charming duplex, isolated from the mas and close to the pool. Its architecture resembles a fairy tale house, with its living room upstairs and cozy bedroom on the ground floor. Protected by an old mulberry tree, it offers pleasant coolness in summer and a cozy nest in winter."
+    },
+    "chateaunette": {
+      "title": "The Story of Chateaunette",
+      "description": "When our first guests discovered this house, they named it 'Chateaunette' because the space and high ceilings reminded them of a small castle. Spacious and bright, with two bedrooms, a living room, and a mezzanine, it offers a real living space where modern comfort meets the authenticity of the mas."
+    },
+    "coteSource": {
+      "title": "In the Rhythm of Water",
+      "description": "Overlooking the gardens, this cottage has an exceptional terrace with balustrades overlooking the surrounding nature. It owes its name to the natural spring that has been feeding these lands for centuries, irrigating the gardens and the water lily pond. An oasis of coolness and serenity in the heart of Ardèche."
+    }
+  },
+  "presentation": {
+    "history": "Built in 1158, Le Mas d'Eylieux is a place full of history. It houses the remains of a small Gallo-Roman city and was a stop on the route used by King Louis IX in the 13th century. On his way to Viviers Cathedral, the latter would have traveled through the region, leaving his mark on this domain full of authenticity. Today, Le Mas d'Eylieux continues to charm with its preserved charm and unique atmosphere, witnesses to a rich historical heritage."
+  },
+  "informations": {
+    "welcome": {
+      "title": "Welcome to Ardèche",
+      "subtitle": "An ideally located domain",
+      "location": "Le Mas d'Eylieux is located in the hills of Saint Montan, in Ardèche, between Lyon and Marseille.",
+      "transport": "We are about 25 minutes from Montélimar station and just over an hour from Avignon TGV station."
+    }
+  }
+} 

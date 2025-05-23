@@ -4,6 +4,7 @@ import { Save as Cave, Indent as Lavender, Cake as Kayak, Sliders as HangGlider,
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useTranslations } from 'next-intl';
 
 const destinations = [
   {
@@ -108,6 +109,8 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 function App() {
+  const t = useTranslations('informations.welcome');
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -178,25 +181,25 @@ function App() {
             <div className="space-y-12">
               <div className="space-y-4">
                 <h2 className="text-6xl font-cormorant font-light tracking-wider text-gray-900 leading-tight">
-                  Bienvenue<br/>en Ardèche
+                  {t('title')}
                 </h2>
               </div>
               
               <div className="space-y-8">
                 <h3 className="text-2xl font-montserrat font-light tracking-widest text-gray-800 leading-relaxed">
-                  Un domaine idéalement situé
+                  {t('subtitle')}
                 </h3>
                 
                 <div className="space-y-6">
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                    Le Mas d&apos;Eylieux se situe sur les hauteurs de Saint Montan, en Ardèche, localisé entre Lyon et Marseille. 
+                      {t('location')}
                     </p>
                   </div>
                   
                   <div className="relative pl-8 border-l-2 border-gray-400">
                     <p className="font-montserrat font-light text-gray-700 tracking-wide text-lg leading-relaxed">
-                    Nous sommes à environ 25 minutes de la gare de Montélimar et à un peu plus d&apos;une heure de la Gare TGV d&apos;Avignon.
+                      {t('transport')}
                     </p>
                   </div>
                 </div>

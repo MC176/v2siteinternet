@@ -3,11 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, Wine, Utensils, Wifi, Coffee, Sun, Bath, Tv, BookOpen, Gamepad2, Refrigerator, Pen as Oven, DoorOpen, Baby, Bed, ShowerHead as Shower, Twitch as Kitchen, Car, Users, Ban, Plane, Umbrella, Check, Home, User, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import du composant Image de Next.js
+import { useTranslations } from 'next-intl';
 
 function App() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const t = useTranslations('gites.chateaunette');
 
   const climateData = [
     {
@@ -192,13 +194,10 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-wider mb-8">
-                L&apos;Histoire de Chateaunette
+                {t('title')}
               </h2>
               <p className="text-lg leading-relaxed text-stone-600 mb-12">
-                Lorsque nos premiers hôtes découvrirent ce gîte, ils le baptisèrent &quot;Châteaunette&quot;,
-                tant les grands espaces ainsi que la hauteur sous plafond leur rappelaient un petit château. Spacieux et lumineux, avec ses deux chambres,
-                son salon et sa mezzanine, il offre un véritable espace de vie où le confort moderne côtoie
-                l&apos;authenticité du mas.
+                {t('description')}
               </p>
               <div className="h-px w-24 bg-stone-300 mx-auto"></div>
             </div>
